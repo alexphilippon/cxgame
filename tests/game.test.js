@@ -268,4 +268,11 @@ assert.deepStrictEqual(G.drawRider('s', ['x', 'y', 'z']), G.drawRider('s', ['x',
   assert.strictEqual(G.pickAnalysis(race, 'me', { a: pk('x1') }, r2, ids), null);
 }
 
+{ // petit globe par catégorie
+  const R = { 'E01-ELI-H': [{ ath: 'a', rank: 1 }], 'E03-U23-H': [{ ath: 'b', rank: 1 }] };
+  const pk = { 'E01-ELI-H': { a: 'a' }, 'E03-U23-H': { a: 'b' } };
+  assert.strictEqual(G.categoryScore('ELI', pk, R), 100);
+  assert.strictEqual(G.categoryScore('U23', pk, R), 133, 'Euros U23 : 100 × 4/3 arrondi');
+  assert.strictEqual(G.categoryScore('U19', pk, R), 0);
+}
 console.log('Tous les tests passent.');

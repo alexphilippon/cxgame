@@ -182,6 +182,10 @@
     const bonus = worldsBonus(picksOfPlayer, results, opts).total;
     return { races, bonus, total: races + bonus };
   }
+  /** « Petit globe » : points d'une catégorie d'âge (Élite, U23, U19), hommes et femmes, desks et Mondiaux (courses seulement, sans bonus). */
+  function categoryScore(cat, picksOfPlayer, results) {
+    return Object.keys(D.RACES).reduce((s, id) => { const r = raceOf(id); return r.cat === cat ? s + (scoreRace(r, picksOfPlayer && picksOfPlayer[id], results) || 0) : s; }, 0);
+  }
   /** Classements : général (desks + Mondiaux) et par desk. */
   function generalScore(picksOfPlayer, results, opts) {
     const desks = D.DESKS.map((d) => deskScore(d.id, picksOfPlayer, results));
@@ -249,7 +253,7 @@
   const api = {
     parisInstant, setOverrides, raceOf, raceStart, activeRaces, sessionOfRace, raceLockTime, raceLocked, sessionRaces, sessionDeadline, sessionEnd, sessionState,
     pointsForRank, effectiveAthlete, substitute, dnsPending, hash53, drawRider, DRAW_TOP, autoDraws, scoreRace, worldsWinner, worldsBonus,
-    pickAnalysis, sessionScore, deskScore, worldsScore, generalScore, usedInDesk, deskIdOf,
+    pickAnalysis, sessionScore, deskScore, worldsScore, generalScore, categoryScore, usedInDesk, deskIdOf,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CX_GAME = api;

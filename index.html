@@ -1,48 +1,100 @@
 <!doctype html>
-<html lang="fr" data-theme="flandre">
+<html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CX GAME – cyclo-cross 2026-27</title>
-<meta name="description" content="Jeu de pronostics cyclo-cross : un coureur par course, un coureur une seule fois par desk.">
-<meta name="theme-color" content="#f2c200">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="img/icon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Archivo+Black&display=swap">
-<link rel="stylesheet" href="css/style.css">
-<script>
-  try { var t = localStorage.getItem('cxgame.theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CX GAME 🚴</title>
+  <meta name="description" content="Cyclo-cross 2026-27 : le jeu des pronostics. Un coureur par course, un coureur une seule fois par desk.">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icon.svg">
+  <meta name="theme-color" content="#12100a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CX GAME">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&family=Bungee&display=swap" rel="stylesheet">
+  <script>try{var t=localStorage.getItem("cxgame.theme");if(t==="boue"||t==="tomorrowland"){document.documentElement.setAttribute("data-theme","nuit");document.documentElement.setAttribute("data-skin",t)}else if(t==="neige"||t==="foret")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="mast">
-  <div class="mast__in">
-    <h1 class="brand"><span class="brand__cx">CX</span> GAME <small>cyclo-cross 2026-27</small></h1>
-    <div class="mast__tools">
-      <label class="sr" for="theme">Ambiance</label>
-      <select id="theme" class="sel" title="Ambiance">
-        <option value="flandre">Flandre</option><option value="boue">Boue</option><option value="neige">Neige</option><option value="foret">Forêt</option><option value="tomorrowland">Tomorrowland</option>
-      </select>
+  <a class="skip" href="#panel">Aller au contenu</a>
+
+  <header class="masthead">
+    <svg class="masthead__art" viewBox="0 0 1000 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
+      <g class="stars"><circle cx="470" cy="24" r="1.6"/><circle cx="540" cy="60" r="1.2"/><circle cx="610" cy="18" r="1.8"/><circle cx="660" cy="70" r="1.2"/><circle cx="700" cy="30" r="1.5"/><circle cx="830" cy="26" r="1.4"/><circle cx="900" cy="70" r="1.8"/><circle cx="960" cy="34" r="1.3"/><circle cx="985" cy="100" r="1.2"/></g>
+      <g class="rays" stroke-width="3" stroke-linecap="round" opacity=".7">
+        <line x1="760" y1="70" x2="760" y2="24"/><line x1="760" y1="70" x2="804" y2="32"/><line x1="760" y1="70" x2="716" y2="32"/>
+      </g>
+      <circle class="sun" cx="760" cy="86" r="40" opacity=".92"/>
+      <path class="mt-back" d="M430 300V190C520 120 600 175 690 152S850 112 1000 172V300Z"/>
+      <path class="mt-mid" d="M470 300V232C580 172 700 232 820 202S960 212 1000 218V300Z"/>
+      <path class="mt-front" d="M540 300C640 250 760 272 860 246S980 262 1000 258V300Z"/>
+      <g class="mt-tree">
+        <rect x="610" y="244" width="5" height="30"/><rect x="662" y="244" width="5" height="30"/><rect x="606" y="250" width="66" height="7"/><rect x="606" y="262" width="66" height="7"/>
+        <rect x="930" y="238" width="5" height="34"/><path d="M935 238l30 8-30 8z"/>
+      </g>
+      <g class="rider" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(770 232)">
+        <circle cx="0" cy="22" r="17" stroke-width="4"/><circle cx="52" cy="22" r="17" stroke-width="4"/>
+        <path d="M0 22L18 0L40 0L52 22M18 0L26 22M26 22L40 0" stroke-width="4"/><path d="M20 -22L30 -4L40 0" stroke-width="6"/><circle cx="19" cy="-30" r="6" class="riderf" stroke="none"/>
+      </g>
+      <path class="ground" d="M430 300Q600 278 760 292T1000 284V300Z" opacity=".95"/>
+    </svg>
+    <div class="mast-actions" id="mastact" hidden></div>
+    <div class="masthead__frame">
+      <div class="brand">
+      <div class="lg">
+        <svg class="lg__skis" viewBox="0 0 120 150" focusable="false"><g fill="none" stroke-linecap="round"><circle class="sk-rim" cx="60" cy="75" r="50" stroke-width="22"/><circle class="sk-body" cx="60" cy="75" r="50" stroke-width="15"/><path class="sk-body" d="M60 28V122M13 75H107M27 42L93 108M93 42L27 108" stroke-width="4"/></g><circle class="sk-bind" cx="60" cy="75" r="11"/></svg>
+        <h1 class="masthead__title lg__t" aria-label="CX GAME"><span aria-hidden="true">CX GAME</span></h1>
+      </div>
+      <p class="masthead__sub">Cyclo-cross Élites, U23 et U19<br>Saison 2026-27</p>
+      </div>
     </div>
-  </div>
-  <svg class="mast__art" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path class="art1" d="M0 60 L0 38 C120 10 220 52 360 30 S600 8 760 34 S1000 54 1200 22 L1200 60Z"/><path class="art2" d="M0 60 L0 48 C160 30 300 58 480 44 S800 28 1000 48 S1140 40 1200 44 L1200 60Z"/></svg>
-</header>
-<nav id="tabs" class="tabs" aria-label="Sections"></nav>
-<div id="skfind"></div>
-<div id="userbar" class="userbar"></div>
-<main id="panel" class="panel" aria-live="polite"><p class="none">Chargement…</p></main>
-<footer class="foot">CX GAME · adaptation du SKI GAME · données : UCI, cyclocross24.com</footer>
-<div id="modal" class="modal" hidden></div>
-<div id="tip" class="tip" hidden></div>
-<script src="js/config.js"></script>
-<script src="js/data.js"></script>
-<script src="js/names.js"></script>
-<script src="js/game.js"></script>
-<script src="js/athletes.js"></script>
-<script src="js/results.js"></script>
-<script src="js/store.js"></script>
-<script src="js/app.js"></script>
-<script>if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) navigator.serviceWorker.register('sw.js').catch(function () {});</script>
+  </header>
+
+  <nav class="tabs" aria-label="Sections du jeu">
+    <div class="tabs__wrap"><div class="tabs__row" role="tablist" id="tabs"></div>
+    <button type="button" class="skfind" id="skfind" title="Chercher un coureur" aria-label="Chercher un coureur ou une coureuse"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button></div>
+  </nav>
+
+  <div id="userbar" class="userbar" hidden></div>
+
+  <main id="panel" class="panel" tabindex="-1" aria-live="polite"></main>
+
+  <p class="credits">Classements et résultats : UCI, cyclocross24.com</p>
+  <p class="installrow" id="installrow" hidden><button type="button" class="btn btn--ghost btn--sm" data-install>📲 Installer l’app sur mon téléphone</button></p>
+
+  <footer class="atelier">
+    <details>
+      <summary>Atelier de la maquette</summary>
+      <div class="atelier__body">
+        <p>Mode local : rien n’est partagé entre les joueurs, tout reste dans ce navigateur.</p>
+        <div class="atelier__row">
+          <button type="button" class="btn btn--ghost" id="btn-reset">Effacer mes choix</button>
+        </div>
+        <div class="atelier__row">
+          <label for="sim-date">Date simulée</label>
+          <input type="datetime-local" id="sim-date">
+          <button type="button" class="btn btn--ghost" id="btn-now">Revenir à maintenant</button>
+        </div>
+      </div>
+    </details>
+  </footer>
+
+  <div id="modal" class="modal" hidden></div>
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/names.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/athletes.js"></script>
+  <script src="js/results.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/share.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

@@ -19,7 +19,7 @@
     const userObj = () => { const u = db.users.find((x) => x.uid === uid); return u ? { uid: u.uid, email: u.email, name: (db.players[u.uid] || {}).name || u.email } : null; };
     const emitAuth = () => authCbs.forEach((cb) => cb(userObj()));
     const emit = (k) => { if (!handlers[k]) return; const d = db[k];
-      handlers[k](k === 'players' ? Object.keys(d).map((id) => Object.assign({ id }, d[id])) : k === 'athletes' ? Object.keys(d).map((id) => Object.assign({ id }, d[id])) : JSON.parse(JSON.stringify(d))); };
+      handlers[k](k === 'players' ? Object.keys(d).map((id) => Object.assign({ id }, d[id])) : k === 'athletes' ? Object.keys(d).map((id) => Object.assign({ id }, d[id])) : JSON.parse(JSON.stringify(d === undefined ? {} : d))); };
     const emitAll = () => Object.keys(handlers).forEach(emit);
     let ideasCb = null;
     const api = {
