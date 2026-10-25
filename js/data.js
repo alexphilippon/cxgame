@@ -59,6 +59,11 @@
 32|XO|Bruxelles|2027-02-14
 `;
 
+  // Euros et Mondiaux : un U23 rapporte 2/3 des points d'un Élite, un U19 1/3. Multiplicateur = base × k / 3.
+  // (Un U23 peut aussi courir en Élite : le pool dépend de la catégorie de la COURSE, pas de l'âge du coureur.)
+  const CAT_K = { ELI: 3, U23: 2, U19: 1 };
+  const multOf = (base, cat) => (base * CAT_K[cat]) / 3;
+
   const pad = (n) => String(n).padStart(2, '0');
   const raceId = (ev, cat, g) => `${ev}-${cat}-${g}`;
 
@@ -87,7 +92,7 @@
       Object.keys(BIG).forEach((k) => {
         const [cat, g] = k.split('-');
         const id = raceId(ev, cat, g);
-        addRace({ id, ev, serie, cat, gender: g, n: e.n, place, date: EURO_DAYS[BIG[k].day], time: BIG[k].time, mult: 2, kind: 'euro' });
+        addRace({ id, ev, serie, cat, gender: g, n: e.n, place, date: EURO_DAYS[BIG[k].day], time: BIG[k].time, mult: multOf(2, cat), kind: 'euro' });
         e.races.push(id);
       });
     } else {
@@ -105,7 +110,7 @@
   Object.keys(BIG).forEach((k) => {
     const [cat, g] = k.split('-');
     const id = raceId('MO', cat, g);
-    addRace({ id, ev: 'MO', serie: 'MO', cat, gender: g, n: 0, place: 'Ostende', date: WORLDS_DAYS[BIG[k].day], time: BIG[k].time, dateKnown: false, mult: 3, kind: 'mondial' });
+    addRace({ id, ev: 'MO', serie: 'MO', cat, gender: g, n: 0, place: 'Ostende', date: WORLDS_DAYS[BIG[k].day], time: BIG[k].time, dateKnown: false, mult: multOf(3, cat), kind: 'mondial' });
     WORLDS_RACES.push(id);
   });
 
@@ -127,8 +132,9 @@
   const POINTS = [100, 80, 60, 50, 45, 40, 36, 32, 29, 26, 24, 22, 20, 18, 16,
     15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-  // Bonus des Mondiaux (modifiables par l'admin) : une catégorie d'âge dont le joueur a les deux vainqueurs H+F ; les six titres.
-  const WORLDS_BONUS = { pair: 200, all: 600 };
+  // Bonus des Mondiaux (modifiables par l'admin) : les deux vainqueurs H+F d'une catégorie d'âge (selon la catégorie, mêmes proportions 1 / 2/3 / 1/3,
+  // valeurs provisoires à valider) ; les six titres.
+  const WORLDS_BONUS = { pair: { ELI: 200, U23: 133, U19: 67 }, all: 600 };
 
   const api = { CATS, CAT_ORDER, GENDERS, SERIES, EVENTS, RACES, SESSIONS, WORLDS, DESKS, POINTS, WORLDS_BONUS, deskOfDate };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

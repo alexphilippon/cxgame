@@ -1,9 +1,10 @@
 /* CX GAME – règles du jeu (fonctions pures, testables sous Node)
    Adapté du Ski game. Différences voulues :
    - un coureur ne peut être pris qu'une fois par desk, par genre ET par catégorie d'âge ;
-   - DNS / DNF / DSQ : 0 point et le coureur reste grillé jusqu'au desk suivant (au ski, un titulaire DNS était libéré) ;
+   - DNF / DSQ : 0 point et le coureur reste grillé jusqu'au desk suivant ; DNS : 0 point mais le titulaire est LIBÉRÉ (rejouable), le remplaçant joué est grillé ;
    - « pulled » (retiré par les commissaires) : garde son rang officiel ;
-   - tirage au sort parmi les 20 premiers dossards ; plus de finales ×2 ; Euros ×2, Mondiaux ×3 avec bonus par catégorie d'âge. */
+   - tirage au sort parmi les 20 premiers dossards ; plus de finales ×2 ;
+   - Euros ×2 et Mondiaux ×3 pour les Élites, U23 aux 2/3 et U19 au 1/3 de ces points (points arrondis à l'entier par course) ; bonus des Mondiaux par catégorie d'âge. */
 (function (root) {
   'use strict';
   const D = typeof module !== 'undefined' && module.exports ? require('./data.js') : root.CX_DATA;
@@ -143,7 +144,7 @@
     if (!ath) return 0;
     const e = findEntry(results, race.id, ath);
     if (!e || OUT.has(e.status) || !e.rank) return 0; // DNS, DNF, DSQ ou absent du classement
-    return pointsForRank(e.rank) * race.mult;
+    return Math.round(pointsForRank(e.rank) * race.mult); // U23/U19 aux Euros : 2/3 et 1/3 → arrondi à l'entier
   }
 
   /* ---------- Bonus des Mondiaux ---------- */
@@ -151,9 +152,11 @@
     const e = ((results && results[raceId]) || []).find((x) => !OUT.has(x.status) && x.rank === 1);
     return e ? e.ath : null;
   }
-  /** Par catégorie d'âge : les deux vainqueurs H+F → +pair (200 par défaut). Les six titres → +all (600 par défaut). Cumulables. */
+  /** Par catégorie d'âge : les deux vainqueurs H+F → +pair[cat] (Élite 200, U23 133, U19 67 par défaut). Les six titres → +all (600). Cumulables.
+      opts : { pair: { ELI, U23, U19 } (partiel accepté), all }. */
   function worldsBonus(picksOfPlayer, results, opts) {
-    const cfg = Object.assign({}, D.WORLDS_BONUS, opts || {});
+    const o = opts || {};
+    const cfg = { pair: Object.assign({}, D.WORLDS_BONUS.pair, o.pair), all: o.all !== undefined ? o.all : D.WORLDS_BONUS.all };
     const won = {};
     D.WORLDS.races.forEach((id) => {
       const w = worldsWinner(results, id);
@@ -161,7 +164,7 @@
     });
     const lines = [];
     D.CAT_ORDER.forEach((c) => {
-      if (won[`MO-${c}-H`] && won[`MO-${c}-F`]) lines.push({ label: D.CATS[c].fr + ' : les deux vainqueurs', pts: cfg.pair });
+      if (won[`MO-${c}-H`] && won[`MO-${c}-F`]) lines.push({ label: D.CATS[c].fr + ' : les deux vainqueurs', pts: cfg.pair[c] });
     });
     if (D.WORLDS.races.every((id) => won[id])) lines.push({ label: 'Les six titres', pts: cfg.all });
     return { lines, total: lines.reduce((s, l) => s + l.pts, 0) };
@@ -187,9 +190,9 @@
   }
 
   /* ---------- Contrainte « un coureur une seule fois par desk, par genre et par catégorie d'âge » ---------- */
-  /** Coureurs déjà « grillés » dans le desk (deskId 0 = bloc Mondiaux), pour un genre et une catégorie, hors la course `exceptRaceId`.
-      Le titulaire reste grillé même s'il est DNS, DNF ou DSQ ; si un DNS est remplacé, le remplaçant (ou le tiré au sort) est grillé aussi.
-      Une course annulée libère son coureur. */
+  /** Coureurs déjà « grillés » dans le desk (deskId 0 = bloc Mondiaux), pour un genre et une catégorie de COURSE, hors la course `exceptRaceId`.
+      Le titulaire reste grillé s'il est DNF ou DSQ. S'il est DNS (résultat connu), il est libéré et rejouable : seul compte celui qui a pris le départ
+      (remplaçant, sinon tiré au sort). Une course annulée libère son coureur. */
   function usedInDesk(deskId, gender, cat, picksOfPlayer, exceptRaceId, results) {
     const used = new Set();
     const scope = deskId === 0 ? [D.WORLDS] : D.SESSIONS.filter((s) => s.desk === deskId);
@@ -198,8 +201,8 @@
         if (r.gender !== gender || r.cat !== cat || r.id === exceptRaceId || r.cancelled) return;
         const p = picksOfPlayer && picksOfPlayer[r.id];
         if (!p || !p.a) return;
+        if (isDNS(results, r.id, p.a)) { const sub = substitute(p, results, r.id); if (sub) used.add(sub); return; }
         used.add(p.a);
-        if (isDNS(results, r.id, p.a)) { const sub = substitute(p, results, r.id); if (sub) used.add(sub); }
       });
     });
     return used;

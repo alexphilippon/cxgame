@@ -47,10 +47,14 @@ assert.strictEqual(D.RACES['E03-U19-F'].date, '2026-11-07');
 assert.strictEqual(D.RACES['E03-U19-H'].date, '2026-11-08');
 assert.strictEqual(sess(3).races.length, 6, 'Euros : 6 courses (Élite, U23, U19 × H/F)');
 // multiplicateurs
-assert.strictEqual(races.filter((r) => r.mult === 2).length, 6, 'Euros ×2');
-assert.ok(races.filter((r) => r.mult === 2).every((r) => r.kind === 'euro'));
-assert.strictEqual(races.filter((r) => r.mult === 3).length, 6, 'Mondiaux ×3');
-assert.ok(races.filter((r) => r.mult === 3).every((r) => r.kind === 'mondial'));
+const mults = (kind, cat) => [...new Set(races.filter((r) => r.kind === kind && r.cat === cat).map((r) => r.mult))];
+assert.deepStrictEqual(mults('euro', 'ELI'), [2], 'Euros Élites ×2');
+assert.deepStrictEqual(mults('euro', 'U23'), [4 / 3], 'Euros U23 : 2/3 des points Élites');
+assert.deepStrictEqual(mults('euro', 'U19'), [2 / 3], 'Euros U19 : 1/3 des points Élites');
+assert.deepStrictEqual(mults('mondial', 'ELI'), [3], 'Mondiaux Élites ×3');
+assert.deepStrictEqual(mults('mondial', 'U23'), [2], 'Mondiaux U23 ×2');
+assert.deepStrictEqual(mults('mondial', 'U19'), [1], 'Mondiaux U19 ×1');
+assert.ok(races.filter((r) => r.kind === 'cx').every((r) => r.mult === 1), 'courses ordinaires ×1');
 // honnêteté sur les données provisoires
 assert.ok(races.every((r) => r.timeKnown === false), 'aucune heure de départ confirmée à ce stade');
 assert.ok(D.WORLDS.races.every((id) => D.RACES[id].dateKnown === false), 'jours des Mondiaux non confirmés');
@@ -89,6 +93,19 @@ assert.strictEqual(sc(RH, { a: 'zzz' }), 0, 'absent du classement');
 assert.strictEqual(sc('E01-ELI-F', { a: 'a' }), null, 'pas de résultat');
 assert.strictEqual(sc('E03-ELI-H', { a: 'a' }), 200, 'Euros ×2');
 assert.strictEqual(sc('MO-ELI-H', { a: 'a' }), 300, 'Mondiaux ×3');
+// U23 / U19 aux Euros et Mondiaux : 2/3 et 1/3 des points Élites, arrondis à l'entier par course
+const resU = {
+  'E03-U23-H': [{ ath: 'a', rank: 1 }, { ath: 'b', rank: 2 }], 'E03-U19-H': [{ ath: 'a', rank: 1 }, { ath: 'b', rank: 2 }],
+  'MO-U23-H': [{ ath: 'a', rank: 1 }], 'MO-U19-H': [{ ath: 'a', rank: 1 }], 'MO-U23-F': [{ ath: 'a', rank: 3 }],
+};
+const scU = (id, a) => G.scoreRace(D.RACES[id], { a }, resU);
+assert.strictEqual(scU('E03-U23-H', 'a'), 133, 'Euros U23 victoire : 100 × 4/3 = 133');
+assert.strictEqual(scU('E03-U23-H', 'b'), 107, 'Euros U23 2e : 80 × 4/3 = 106,7 → 107');
+assert.strictEqual(scU('E03-U19-H', 'a'), 67, 'Euros U19 victoire : 100 × 2/3 = 67');
+assert.strictEqual(scU('E03-U19-H', 'b'), 53, 'Euros U19 2e : 80 × 2/3 = 53,3 → 53');
+assert.strictEqual(scU('MO-U23-H', 'a'), 200, 'Mondiaux U23 victoire = 2/3 de 300');
+assert.strictEqual(scU('MO-U19-H', 'a'), 100, 'Mondiaux U19 victoire = 1/3 de 300');
+assert.strictEqual(scU('MO-U23-F', 'a'), 120, 'Mondiaux U23 3e : 60 × 2');
 assert.strictEqual(G.effectiveAthlete({ a: 'd', d: 'z' }, res, RH), 'z', 'tirage au sort quand titulaire et remplaçant absents');
 assert.strictEqual(G.effectiveAthlete({ a: 'd', b: 'd2', d: 'z' }, { [RH]: [{ ath: 'd', status: 'DNS' }, { ath: 'd2', status: 'DNS' }] }, RH), 'z', 'remplaçant aussi DNS : tirage');
 assert.strictEqual(G.effectiveAthlete({ a: 'd', b: 'b', d: 'z' }, res, RH), 'b', 'le remplaçant prime sur le tirage');
@@ -107,20 +124,23 @@ assert.strictEqual(G.sessionScore(sess(3), picksTot, res), 200);
 assert.strictEqual(G.generalScore(picksTot, res).total, 300);
 assert.deepStrictEqual(G.generalScore(picksTot, res).desks, [300, 0, 0]);
 
-// ---- Bonus des Mondiaux : +200 par catégorie d'âge (H+F), +600 pour les six titres, cumulables
+// ---- Bonus des Mondiaux : par catégorie d'âge (H+F) : Élite 200, U23 133, U19 67 ; +600 pour les six titres, cumulables
 const wres = {}, picksAll = {};
 D.WORLDS.races.forEach((id) => { wres[id] = [{ ath: 'w' + id, rank: 1 }]; picksAll[id] = { a: 'w' + id }; });
 const only = (ids) => Object.fromEntries(ids.map((id) => [id, { a: 'w' + id }]));
-assert.strictEqual(G.worldsBonus(picksAll, wres).total, 3 * 200 + 600, 'six titres : 1200 cumulés');
+assert.strictEqual(G.worldsBonus(picksAll, wres).total, 200 + 133 + 67 + 600, 'six titres : 1000 cumulés');
 assert.strictEqual(G.worldsBonus(picksAll, wres).lines.length, 4);
-assert.strictEqual(G.worldsBonus(only(['MO-U23-H', 'MO-U23-F']), wres).total, 200, 'une catégorie : 200');
-assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-ELI-F', 'MO-U19-H', 'MO-U19-F']), wres).total, 400, 'deux catégories : 400');
+assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-ELI-F']), wres).total, 200, 'paire Élite : 200');
+assert.strictEqual(G.worldsBonus(only(['MO-U23-H', 'MO-U23-F']), wres).total, 133, 'paire U23 : 133');
+assert.strictEqual(G.worldsBonus(only(['MO-U19-H', 'MO-U19-F']), wres).total, 67, 'paire U19 : 67');
+assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-ELI-F', 'MO-U19-H', 'MO-U19-F']), wres).total, 267, 'deux catégories : 200 + 67');
 assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-U23-H', 'MO-U19-H']), wres).total, 0, 'trois hommes seuls : pas de bonus');
 assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-U23-F']), wres).total, 0, 'H et F de catégories différentes : rien');
 assert.strictEqual(G.worldsBonus({}, wres).total, 0);
-assert.strictEqual(G.worldsBonus(picksAll, wres, { pair: 150, all: 500 }).total, 3 * 150 + 500, 'valeurs du bonus modifiables');
-assert.strictEqual(G.worldsScore(picksAll, wres).total, 6 * 300 + 1200, 'total Mondiaux : 6 victoires ×300 + 1200');
-assert.strictEqual(G.worldsScore(picksAll, wres).races, 1800);
+assert.strictEqual(G.worldsBonus(picksAll, wres, { pair: { ELI: 150, U23: 100, U19: 50 }, all: 500 }).total, 150 + 100 + 50 + 500, 'valeurs du bonus modifiables');
+assert.strictEqual(G.worldsBonus(picksAll, wres, { pair: { U19: 80 } }).total, 200 + 133 + 80 + 600, 'modification partielle');
+assert.strictEqual(G.worldsScore(picksAll, wres).races, 2 * 300 + 2 * 200 + 2 * 100, 'six victoires : 600 + 400 + 200');
+assert.strictEqual(G.worldsScore(picksAll, wres).total, 1200 + 1000);
 // un vainqueur DNS remplacé par le vainqueur : le bonus suit le coureur effectif
 const wDns = { 'MO-ELI-H': [{ ath: 'p', status: 'DNS' }, { ath: 'q', rank: 1 }] };
 assert.strictEqual(G.worldsWinner(wDns, 'MO-ELI-H'), 'q');
@@ -143,13 +163,15 @@ const wp = { 'MO-U23-H': { a: 'p' }, 'MO-ELI-F': { a: 'q' } };
 assert.ok(G.usedInDesk(0, 'H', 'U23', wp, null).has('p') && !G.usedInDesk(0, 'H', 'ELI', wp, null).has('p'), 'Mondiaux : pool par catégorie');
 assert.ok(G.usedInDesk(0, 'F', 'ELI', wp, null).has('q') && !G.usedInDesk(0, 'H', 'ELI', wp, null).has('q'), 'Mondiaux : pool par genre');
 assert.ok(!G.usedInDesk(3, 'H', 'U23', wp, null).has('p'), 'Mondiaux : hors desk 3');
-// DNS / DNF / DSQ : le titulaire reste grillé ; un remplaçant qui joue l'est aussi
+// DNS : titulaire libéré (rejouable), remplaçant ou tiré au sort grillé. DNF / DSQ : titulaire grillé.
 const rd = { 'E01-ELI-H': [{ ath: 'a', status: 'DNS' }, { ath: 'b', rank: 2 }] };
 const ud = G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'a', b: 'b' } }, null, rd);
-assert.ok(ud.has('a') && ud.has('b') && ud.size === 2, 'DNS : titulaire ET remplaçant grillés');
-assert.deepStrictEqual([...G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'a' } }, null, rd)], ['a'], 'DNS sans remplaçant : titulaire grillé');
+assert.ok(!ud.has('a') && ud.has('b') && ud.size === 1, 'DNS : titulaire libéré, remplaçant grillé');
+assert.strictEqual(G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'a' } }, null, rd).size, 0, 'DNS sans remplaçant : personne de grillé');
 const ud2 = G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'a', d: 'z' } }, null, rd);
-assert.ok(ud2.has('a') && ud2.has('z'), 'DNS : le coureur tiré au sort est grillé');
+assert.ok(!ud2.has('a') && ud2.has('z'), 'DNS : le coureur tiré au sort est grillé');
+const ud3 = G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'a', b: 'b2', d: 'z' } }, null, { 'E01-ELI-H': [{ ath: 'a', status: 'DNS' }, { ath: 'b2', status: 'DNS' }] });
+assert.ok(!ud3.has('a') && !ud3.has('b2') && ud3.has('z'), 'titulaire et remplaçant DNS : seul le tiré au sort est grillé');
 assert.ok(G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'c' } }, null, { 'E01-ELI-H': [{ ath: 'c', status: 'DNF' }] }).has('c'), 'DNF : grillé');
 assert.ok(G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'e' } }, null, { 'E01-ELI-H': [{ ath: 'e', status: 'DSQ' }] }).has('e'), 'DSQ : grillé');
 assert.ok(G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'f' } }, null, { 'E01-ELI-H': [{ ath: 'f', rank: 25, status: 'PULLED' }] }).has('f'), 'pulled : grillé');
