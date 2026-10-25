@@ -152,7 +152,7 @@
     const e = ((results && results[raceId]) || []).find((x) => !OUT.has(x.status) && x.rank === 1);
     return e ? e.ath : null;
   }
-  /** Par catégorie d'âge : les deux vainqueurs H+F → +pair[cat] (Élite 200, U23 133, U19 67 par défaut). Les six titres → +all (600). Cumulables.
+  /** Par catégorie d'âge : les deux vainqueurs H+F → +pair[cat] (Élite 200, U23 130, U19 70 par défaut). Les six titres → +all (600). Cumulables.
       opts : { pair: { ELI, U23, U19 } (partiel accepté), all }. */
   function worldsBonus(picksOfPlayer, results, opts) {
     const o = opts || {};

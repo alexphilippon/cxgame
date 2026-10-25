@@ -124,21 +124,21 @@ assert.strictEqual(G.sessionScore(sess(3), picksTot, res), 200);
 assert.strictEqual(G.generalScore(picksTot, res).total, 300);
 assert.deepStrictEqual(G.generalScore(picksTot, res).desks, [300, 0, 0]);
 
-// ---- Bonus des Mondiaux : par catégorie d'âge (H+F) : Élite 200, U23 133, U19 67 ; +600 pour les six titres, cumulables
+// ---- Bonus des Mondiaux : par catégorie d'âge (H+F) : Élite 200, U23 130, U19 70 ; +600 pour les six titres, cumulables
 const wres = {}, picksAll = {};
 D.WORLDS.races.forEach((id) => { wres[id] = [{ ath: 'w' + id, rank: 1 }]; picksAll[id] = { a: 'w' + id }; });
 const only = (ids) => Object.fromEntries(ids.map((id) => [id, { a: 'w' + id }]));
-assert.strictEqual(G.worldsBonus(picksAll, wres).total, 200 + 133 + 67 + 600, 'six titres : 1000 cumulés');
+assert.strictEqual(G.worldsBonus(picksAll, wres).total, 200 + 130 + 70 + 600, 'six titres : 1000 cumulés');
 assert.strictEqual(G.worldsBonus(picksAll, wres).lines.length, 4);
 assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-ELI-F']), wres).total, 200, 'paire Élite : 200');
-assert.strictEqual(G.worldsBonus(only(['MO-U23-H', 'MO-U23-F']), wres).total, 133, 'paire U23 : 133');
-assert.strictEqual(G.worldsBonus(only(['MO-U19-H', 'MO-U19-F']), wres).total, 67, 'paire U19 : 67');
-assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-ELI-F', 'MO-U19-H', 'MO-U19-F']), wres).total, 267, 'deux catégories : 200 + 67');
+assert.strictEqual(G.worldsBonus(only(['MO-U23-H', 'MO-U23-F']), wres).total, 130, 'paire U23 : 130');
+assert.strictEqual(G.worldsBonus(only(['MO-U19-H', 'MO-U19-F']), wres).total, 70, 'paire U19 : 70');
+assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-ELI-F', 'MO-U19-H', 'MO-U19-F']), wres).total, 270, 'deux catégories : 200 + 70');
 assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-U23-H', 'MO-U19-H']), wres).total, 0, 'trois hommes seuls : pas de bonus');
 assert.strictEqual(G.worldsBonus(only(['MO-ELI-H', 'MO-U23-F']), wres).total, 0, 'H et F de catégories différentes : rien');
 assert.strictEqual(G.worldsBonus({}, wres).total, 0);
 assert.strictEqual(G.worldsBonus(picksAll, wres, { pair: { ELI: 150, U23: 100, U19: 50 }, all: 500 }).total, 150 + 100 + 50 + 500, 'valeurs du bonus modifiables');
-assert.strictEqual(G.worldsBonus(picksAll, wres, { pair: { U19: 80 } }).total, 200 + 133 + 80 + 600, 'modification partielle');
+assert.strictEqual(G.worldsBonus(picksAll, wres, { pair: { U19: 80 } }).total, 200 + 130 + 80 + 600, 'modification partielle');
 assert.strictEqual(G.worldsScore(picksAll, wres).races, 2 * 300 + 2 * 200 + 2 * 100, 'six victoires : 600 + 400 + 200');
 assert.strictEqual(G.worldsScore(picksAll, wres).total, 1200 + 1000);
 // un vainqueur DNS remplacé par le vainqueur : le bonus suit le coureur effectif

@@ -133,8 +133,8 @@
     15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
   // Bonus des Mondiaux (modifiables par l'admin) : les deux vainqueurs H+F d'une catégorie d'âge (selon la catégorie, mêmes proportions 1 / 2/3 / 1/3,
-  // valeurs provisoires à valider) ; les six titres.
-  const WORLDS_BONUS = { pair: { ELI: 200, U23: 133, U19: 67 }, all: 600 };
+  // valeurs rondes proposées, à valider) ; les six titres.
+  const WORLDS_BONUS = { pair: { ELI: 200, U23: 130, U19: 70 }, all: 600 };
 
   const api = { CATS, CAT_ORDER, GENDERS, SERIES, EVENTS, RACES, SESSIONS, WORLDS, DESKS, POINTS, WORLDS_BONUS, deskOfDate };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
