@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
 const http = require('http'), fs = require('fs'), path = require('path');
 const root = path.resolve(__dirname, '..'), out = process.argv[2] || '/tmp';
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.webmanifest': 'application/json' };
-const srv = http.createServer((q, r) => { let f = path.join(root, decodeURIComponent(q.url.split('?')[0])); if (f.endsWith('/')) f += 'index.html'; fs.readFile(f, (e, d) => { if (e) { r.writeHead(404); r.end(); } else { r.writeHead(200, { 'Content-Type': types[path.extname(f)] || 'text/plain' }); r.end(d); } }); }).listen(8123);
+const srv = http.createServer((q, r) => { const u = decodeURIComponent(q.url.split('?')[0]); if (u === '/js/config.js') { r.writeHead(200, { 'Content-Type': 'text/javascript' }); r.end('window.CX_CONFIG = { firebase: null, adminEmail: "" };'); return; } let f = path.join(root, u); if (f.endsWith('/')) f += 'index.html'; fs.readFile(f, (e, d) => { if (e) { r.writeHead(404); r.end(); } else { r.writeHead(200, { 'Content-Type': types[path.extname(f)] || 'text/plain' }); r.end(d); } }); }).listen(8123);
 (async () => {
   const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 1100, height: 900 } });
   const errs = []; pg.on('pageerror', (e) => errs.push(e.message)); pg.on('console', (m) => { if (m.type() === 'error' && !/flagcdn|fonts|ERR_|Failed to load|404/.test(m.text())) errs.push(m.text()); });
