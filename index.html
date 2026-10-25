@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr" data-theme="flandre">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CX GAME – cyclo-cross 2026-27</title>
+<meta name="description" content="Jeu de pronostics cyclo-cross : un coureur par course, un coureur une seule fois par desk.">
+<meta name="theme-color" content="#f2c200">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Archivo+Black&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script>
+  try { var t = localStorage.getItem('cxgame.theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="mast">
+  <div class="mast__in">
+    <h1 class="brand"><span class="brand__cx">CX</span> GAME <small>cyclo-cross 2026-27</small></h1>
+    <div class="mast__tools">
+      <label class="sr" for="theme">Ambiance</label>
+      <select id="theme" class="sel" title="Ambiance">
+        <option value="flandre">Flandre</option><option value="boue">Boue</option><option value="neige">Neige</option><option value="foret">Forêt</option><option value="tomorrowland">Tomorrowland</option>
+      </select>
+    </div>
+  </div>
+  <svg class="mast__art" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path class="art1" d="M0 60 L0 38 C120 10 220 52 360 30 S600 8 760 34 S1000 54 1200 22 L1200 60Z"/><path class="art2" d="M0 60 L0 48 C160 30 300 58 480 44 S800 28 1000 48 S1140 40 1200 44 L1200 60Z"/></svg>
+</header>
+<nav id="tabs" class="tabs" aria-label="Sections"></nav>
+<div id="skfind"></div>
+<div id="userbar" class="userbar"></div>
+<main id="panel" class="panel" aria-live="polite"><p class="none">Chargement…</p></main>
+<footer class="foot">CX GAME · adaptation du SKI GAME · données : UCI, cyclocross24.com</footer>
+<div id="modal" class="modal" hidden></div>
+<div id="tip" class="tip" hidden></div>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/names.js"></script>
+<script src="js/game.js"></script>
+<script src="js/athletes.js"></script>
+<script src="js/results.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+<script>if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) navigator.serviceWorker.register('sw.js').catch(function () {});</script>
+</body>
+</html>

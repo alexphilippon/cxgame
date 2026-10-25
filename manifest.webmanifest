@@ -1,0 +1,10 @@
+{
+  "name": "CX GAME",
+  "short_name": "CX GAME",
+  "description": "Jeu de pronostics cyclo-cross 2026-27",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#16130d",
+  "theme_color": "#f2c200",
+  "icons": [{ "src": "img/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
