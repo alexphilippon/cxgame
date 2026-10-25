@@ -1,0 +1,102 @@
+# Classement UCI cyclo-cross 2026-2027, Femmes Élite (100 premières). Source : https://cyclocross24.com/fr/uciranking/2026-2027/WE/ , relevé le 2026-10-25.
+# Format : rang|NOM Prénom|pays|équipe|points
+1|BRAND Lucinda|Pays-Bas|Baloise Verzekeringen - Het Poetsbureau Lions|3300
+2|ALVARADO Ceylin Del Carmen|Pays-Bas|Fenix - Premier Tech|2146
+3|FOUQUENET Amandine|France|Pauwels Sauzen - Altez Industriebouw|2090
+4|VAN ALPHEN Aniek|Pays-Bas|777TV CX Team|1985
+5|PIETERSE Puck|Pays-Bas|Fenix - Premier Tech|1710
+6|BAKKER Manon|Pays-Bas||1668
+7|VAN DER HEIJDEN Inge|Pays-Bas|Crelan - Corendon|1645
+8|ZEMANOVÁ Kristyna|République Tchèque|Crelan - Corendon|1524
+9|BENTVELD Leonie|Pays-Bas|Pauwels Sauzen - Altez Industriebouw|1413
+10|VAN ANROOIJ Shirin|Pays-Bas||1286
+11|NORBERT RIBEROLLE Marion|Belgique|Crelan - Corendon|1181
+12|BETSEMA Denise|Pays-Bas|De Ceuster Bouwkranen|1109
+13|SCHREIBER Marie|Luxembourg||1010
+14|BROUWERS Julie|Belgique|Charles Liégeois CX Team|1010
+15|GERY Célia|France|Specialized TMRW|1000
+16|MCGILL Sidney|Canada||958
+17|CLAUZEL Hélène|France|777TV CX Team|956
+18|BRAMATI Lucia|Italie|FAS Airport Services - Guerciotti|886
+19|CASASOLA Sara|Italie|Crelan - Corendon|840
+20|RODRIGUEZ REVERT Sofia|Espagne|Nesta - MMR CX Team|767
+21|MULLER Amandine|France|Specialized TMRW|758
+22|REVOL Lise|France|Fenix - Premier Tech|750
+23|GARIBOLDI Rebecca|Italie|De Ceuster Bouwkranen|730
+24|PELLIZOTTI Giorgia|Italie||714
+25|VAS Blanka Kata|Hongrie||705
+26|BUKOVSKÁ Barbora|République Tchèque|Fenix - Premier Tech|680
+27|MOORS Fleur|Belgique||678
+28|NEFF Jolanda|Suisse||649
+29|BORELLO Carlotta|Italie||641
+30|BACKSTEDT Zoe|Grande Bretagne||623
+31|GUNSALUS Lizzy|États Unis||588
+32|WORST Annemarie|Pays-Bas|Baloise Verzekeringen - Het Poetsbureau Lions|563
+33|CHLADONOVÁ Viktória|Slovaquie|Visma - Lease a Bike|556
+34|CREES Xan|Grande Bretagne||554
+35|HARTOG Larissa|Pays-Bas||549
+36|KRZYSTALA Zuzanna|Pologne||547
+37|GONZALEZ BLANCO Lucia|Espagne|Nesta - MMR CX Team|521
+38|HLADIKOVÁ Katerina|République Tchèque|Brilon Racing Team MB|508
+39|HEIGL Nadja|Autriche||481
+40|SARKISOV Alyssa|États Unis|CXD Trek Bikes|464
+41|ESTERMANN Rebekka|Suisse||457
+42|DESPREZ Lison|France|AS Bike Racing - France Literie|445
+43|HUBER Shana|Suisse||443
+44|FERRI Elisa|Italie|FAS Airport Services - Guerciotti|439
+45|CUSACK Lidia|États Unis|CXD Trek Bikes|437
+46|ASELTINE Mia|États Unis|Competitive Edge Racing|426
+47|CRABBÉ Kiona|Belgique||424
+48|CLAUZEL Perrine|France|Sebmotobikes CX Team|403
+49|ZOERNER Lauren|États Unis||402
+50|CARRIER Rafaelle|Canada||393
+51|JOCHEMS Nynke|Pays-Bas||392
+52|MUSGRAVE Kaya|États Unis|Competitive Edge Racing|387
+53|PICHON Laly|France|Decathlon CMA CGM|382
+54|VERSLUIS Isis|Pays-Bas||378
+55|CUETO VEGA Sara|Espagne|Unicaja - Gijon|378
+56|AZZETTI Nicole|Italie|Ale CX Team|373
+57|ROCHETTE Maghalie|Canada||367
+58|DOUDEROVÁ Katerina|République Tchèque||367
+59|MOLENGRAAF Lauren|Pays-Bas|777TV CX Team|358
+60|VERVLOET Sterre|Belgique|Charles Liégeois CX Team|355
+61|HAVILAND Alexa|Canada||347
+62|VERDONSCHOT Laura|Belgique||343
+63|BRUCHNER Regina|Hongrie||337
+64|KNOX Peggy|Grande Bretagne||332
+65|KNOLL Nico|Canada||327
+66|KALIS Bloeme|Pays-Bas||324
+67|DURAFFOURG Lauriane|France||323
+68|GROHOVÁ Lucie|République Tchèque||315
+69|ROCHE Zoe|Grande Bretagne|Decathlon CMA CGM|306
+70|MEGALE Anna|États Unis||293
+71|BIANCHI Elisa|Italie||292
+72|FRANCK Alicia|Belgique||287
+73|PEETERS Jinse|Belgique|De Ceuster Bouwkranen|286
+74|MORICHON Anais|France||284
+75|GALLEZOT Electa|France|Sebmotobikes CX Team|281
+76|GUTIERREZ VELARDE Aitana|Espagne||276
+77|VALADE Alexandra|France||276
+78|WENZEL Liv|Luxembourg|Sebmotobikes CX Team|274
+79|HURTELOUP Adèle|France|Team CX TPM|273
+80|LOPEZ DE SAN ROMAN Vida|États Unis||272
+81|LAMBERT Zelie|France|Sebmotobikes CX Team|262
+82|DE SCHOESITTER Shanyl|Belgique|Pauwels Sauzen - Altez Industriebouw|258
+83|BANULS PUENTE Carla|Espagne||253
+84|SARKISOV Katherine|États Unis||251
+85|KUCHARSKA Antonina|Pologne||245
+86|NIEUWENHUIS Rianne|Pays-Bas||243
+87|RIGHETTO Nicole|Italie||242
+88|PEETERS Zita|Belgique|De Ceuster Bouwkranen|241
+89|LAFORCE Oda|Norvège||240
+90|LISBYGD Ann-Dorthe|Danemark||236
+91|KELLERMAN Makena|États Unis||232
+92|WATSON Ada|États Unis|CXD Trek Bikes|230
+93|FOLDAGER NIELSEN Mille|Danemark||223
+94|JURADO ROUMIEUX Noémie|France||219
+95|KRAHL Judith|Allemagne||210
+96|ELIZALDE Lucie|France||208
+97|STERN Léa|Suisse||207
+98|MULLINS Kira|États Unis||200
+99|PANUSOVÁ Anna|République Tchèque||200
+100|ISHIDA Yui|Japon||200

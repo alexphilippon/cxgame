@@ -1,0 +1,102 @@
+# Classement UCI cyclo-cross 2026-2027, Hommes Élite (100 premiers). Source : https://cyclocross24.com/uciranking/ , relevé le 2026-10-25.
+# Format : rang|NOM Prénom|pays|équipe|points
+1|VANDEPUTTE Niels|Belgique|Alpecin - Premier Tech|2250
+2|VAN DER POEL Mathieu|Pays-Bas|Alpecin - Premier Tech|2240
+3|NYS Thibau|Belgique|Baloise Verzekeringen - Het Poetsbureau Lions|2153
+4|DEL GROSSO Tibor|Pays-Bas|Alpecin - Premier Tech|1792
+5|VANTHOURENHOUT Michael|Belgique|Pauwels Sauzen - Altez Industriebouw|1779
+6|NIEUWENHUIS Joris|Pays-Bas|Heizomat - Cube|1573
+7|ORTS LLORET Felipe|Espagne||1426
+8|AERTS Toon|Belgique|Charles Liégeois CX Team|1364
+9|WYSEURE Joran|Belgique|Crelan - Corendon|1131
+10|VERSTRYNGE Emiel|Belgique|Crelan - Corendon|1119
+11|SWEECK Laurens|Belgique|Crelan - Corendon|1113
+12|HENDRIKX Mees|Pays-Bas|Team Bomba JOIN|1067
+13|KUYPERS Gerben|Belgique|Pauwels Sauzen - Altez Industriebouw|963
+14|MICHELS Jente|Belgique|Alpecin - Premier Tech|952
+15|VAN DER HAAR Lars|Pays-Bas||934
+16|MASON Cameron|Royaume-Uni|777TV CX Team|930
+17|KUHN Kevin|Suisse|Heizomat - Cube|907
+18|KAMP Ryan|Pays-Bas|Team Bomba JOIN|899
+19|RONHAAR Pim|Pays-Bas|Baloise Verzekeringen - Het Poetsbureau Lions|846
+20|SPARFEL Aubin|France|Decathlon CMA CGM|836
+21|VANDEBOSCH Toon|Belgique|Crelan - Corendon|792
+22|FONTANA Filippo|Italie||787
+23|BOROS Michael|Tchéquie||693
+24|HAVERDINGS David|Pays-Bas|Alpecin - Premier Tech|686
+25|CORSUS Yordi|Belgique|Pauwels Sauzen - Altez Industriebouw|662
+26|MEEUSSEN Witse|Belgique|Crelan - Corendon|587
+27|JUNQUERA SAN MILLAN Mario|Espagne|Unicaja - Gijon|586
+28|CLARK Tyler|Canada||581
+29|LELANDAIS Rémi|France|AS Bike Racing - France Literie|563
+30|BERTOLINI Gioele|Italie|Ale CX Team|528
+31|STROHMEYER Andrew|États-Unis|Competitive Edge Racing|527
+32|GROSLAMBERT Martin|France|Sebmotobikes CX Team|524
+33|MENUT David|France||515
+34|BAZANT Krystof|Tchéquie||489
+35|MEIN Thomas|Royaume-Uni|Hope Factory Racing|481
+36|GROENENDAAL Bailey|Danemark||480
+37|BESHIR Tofik|Éthiopie|CXD Trek Bikes|480
+38|BOMMENEL Nathan|France||476
+39|FIALA Matyás|Tchéquie||472
+40|GABRIEL Timothé|France|Team CX TPM|456
+41|VIEZZI Stefano|Italie|Alpecin - Premier Tech|449
+42|CEOLIN Federico|Italie|FAS Airport Services - Guerciotti|442
+43|VAN DE PUTTE Victor|Belgique|Charles Liégeois CX Team|438
+44|JANSSEN Wout|Belgique||438
+45|VAN LIEROP Danny|Pays-Bas|Heizomat - Cube|435
+46|TAKÁCS Zsombor|Hongrie||425
+47|MIRA BONASTRE Raul|Espagne|Nesta - MMR CX Team|404
+48|DEBORD Romain|France|AS Bike Racing - France Literie|399
+49|JEZEK Vaclav|Tchéquie||390
+50|SUAREZ FERNANDEZ Kevin|Espagne||388
+51|KONWA Marek|Pologne||386
+52|VAN DEN EIJNDEN Guus|Pays-Bas|777TV CX Team|374
+53|THOMAS Théo|France|Sebmotobikes CX Team|374
+54|SOMMER Lars|Suisse||366
+55|BRUNNER Eric|États-Unis|Competitive Edge Racing|357
+56|VANDENBERGHE Viktor|Belgique|Pauwels Sauzen - Altez Industriebouw|352
+57|INGUANZO MACHO Gonzalo|Espagne||350
+58|ZAKRAJSEK Dylan|États-Unis|Competitive Edge Racing|341
+59|COOTE Henry|États-Unis||338
+60|VAN DEN BOER Arthur|Belgique|Baloise Verzekeringen - Het Poetsbureau Lions|325
+61|AGOSTINACCHIO Filippo|Italie||323
+62|VAS Barnabás|Hongrie||312
+63|DOCKX Aaron|Belgique|Alpecin - Premier Tech|311
+64|DRUMMOND Ryan|États-Unis|Competitive Edge Racing|301
+65|VAN AERT Wout|Belgique|Visma - Lease a Bike|290
+66|DE MOYER Kenay|Belgique||286
+67|VAN KEMPEN Jules|États-Unis||283
+68|SOLEN Keije|Pays-Bas|Charles Liégeois CX Team|281
+69|DE BRUYCKERE Kay|Belgique|Pauwels Sauzen - Altez Industriebouw|281
+70|MATTERN Miles|États-Unis|CXD Trek Bikes|275
+71|AGOSTINACCHIO Mattia|Italie||261
+72|DAVID Alexis|France|AS Bike Racing - France Literie|259
+73|ROUILLER Loris|Suisse||255
+74|RISBERG David|Suède||250
+75|HORNY Clément|Belgique||250
+76|OERTZEN Max Heiner|Allemagne|Radsport Nagel CX Team|247
+77|ODA Hijiri|Japon||244
+78|LEJEUNE Giel|Belgique|Alpecin - Premier Tech|234
+79|RIMAN Jakub|Tchéquie||232
+80|GRIGOLINI Filippo|Italie|Decathlon CMA CGM|230
+81|LOOCKX Lander|Belgique||228
+82|BISIAUX Léo|France||224
+83|CONAWAY Calvin|États-Unis||224
+84|ULIK Matej|Slovaquie||224
+85|SCOTT Cody|Canada||222
+86|SIMON Jules|France|AS Bike Racing - France Literie|216
+87|DEGENKOLB Hannes|Allemagne|Heizomat - Cube|216
+88|DE BRAUWERE Sil|Belgique|Pauwels Sauzen - Altez Industriebouw|213
+89|TURNER Jacob|Nouvelle-Zélande||211
+90|BARD Nicolas|Suisse||207
+91|SOUSA Rafael|Portugal||204
+92|VERRIER Tristan|France||199
+93|FREDERICK Ben|États-Unis||197
+94|JOT Matéo|France||196
+95|FERDINANDE Anton|Belgique|Pauwels Sauzen - Altez Industriebouw|192
+96|VANDEN EYNDE Mats|Belgique|Baloise Verzekeringen - Het Poetsbureau Lions|185
+97|HARTER Luca|Allemagne||183
+98|SIPPY Ivan|États-Unis||180
+99|SICHTA Michal|Slovaquie||179
+100|BETTENDORFF Loic|Luxembourg||172
