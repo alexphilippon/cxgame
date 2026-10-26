@@ -1,0 +1,112 @@
+                                                                UITSLAG / RESULTAT
+
+                                                          MOL - Veldrijden Klasse 2 UCI
+
+               23/12/2024
+
+Reeks 1                                                        Zilvermeercross-Men Elite                         Sleut 11014
+Organisator: GOLAZO SPORTS NV - Afstand: 10.0Km - Gem. Sn: 9.5Km/u                                               #Dln: 80
+
+Plaats Nr Naam                                   UCICode             UCIid            Cat         Club                                  Tijd
+1       1    VAN DER POEL Mathieu                NED19950119         100 079 462 03   EL.PTT      ADC                                   0h59´41.0"
+2       6    SWEECK Laurens                      BEL19931217         100 069 126 46   EL.CMC      CRC                                   1h00´44.0"   +1´03.0"
+3       3    VANTHOURENHOUT Michael              BEL19931210         100 071 556 51   EL.CMC      PSB                                   1h01´16.0"   +1´35.0"
+4       8    WYSEURE Joran                       BEL20010109         100 649 217 77   EL.CMC      CRC                                   1h01´22.0"   +1´41.0"
+5       5    VANDEPUTTE Niels                    BEL20000919         100 163 276 09   EL.CMC      ADC                                   1h01´36.0"   +1´55.0"
+6       4    VAN DER HAAR Lars                   NED19910723         100 061 186 60   ELITE       BALOISE TREK LIONS                    1h01´49.0"   +2´08.0"
+7       12   KUHN Kevin                          SUI19980218         100 097 467 63   ELITE       CHARLES LIÉGEOIS ROASTERY CX          1h01´55.0"   +2´14.0"
+8       7    ORTS LLORET Felipe                  ESP19950401         100 090 047 15   EL.CP       RIDLEY RACING TEAM                    1h02´10.0"   +2´29.0"
+9       32   SOETE Daan                          BEL19941219         100 075 736 60   EL.CMC      RRT                                   1h02´59.0"   +3´18.0"
+10      20   LOOCKX Lander                       BEL19970425         100 093 608 84   EL.CP       TDT                                   1h03´05.0"   +3´24.0"
+11      24   JANSSEN Wout                        BEL20020129         100 649 720 95   U23M        CYCLIS - VAN DEN PLAS CYCLING         1h03´05.0"   +3´24.0"
+12      25   HORNY Clement                       BEL20001111         100 164 198 58   UMTBEL      BHW                                   1h03´59.0"   +4´18.0"
+13      18   LAURYSSEN Yorben                    BEL20020125         100 649 715 90   U23.C       PSB                                   1h04´11.0"   +4´30.0"
+14      26   AERTS Thijs                         BEL19961103         100 086 322 73   EL.CMC      CLR                                   1h04´31.0"   +4´50.0"
+15      22   BAERS Arne                          BEL20020327         100 649 794 72   U23.C       LDD                                   1h04´31.0"   +4´50.0"
+16      39   VAN GRIEKEN Stan                    BEL20050331         100 650 974 88   U23M        STAGECO CYCLING TEAM                  1h04´34.0"   +4´53.0"
+17      35   VRACHTEN Arne                       BEL19990223         100 109 563 34   ELITE2M     ALFASUN - AS CONSTRUCT CYCLING        1h04´38.0"   +4´57.0"
+18      41   MEEUSEN Tom                         BEL19881107         100 033 416 32   EL.MC       CYCLIS - VAN DEN PLAS CYCLING         1h04´47.0"   +5´06.0"
+19      2    ISERBYT Eli                         BEL19971022         100 093 350 20   EL.CMC      PSB                                   1h04´50.0"   +5´09.0"
+20      49   SIEMONS Julian                      BEL19991016         100 155 221 05   ELITE2M     CYCLIS - VAN DEN PLAS CYCLING         1h04´58.0"   +5´17.0"
+21      17   HUYBS Ward                          BEL20021121         100 650 055 42   U23.C       BTL                                   1h05´08.0"   +5´27.0"
+22      48   DE VET Sander                       BEL20000916         100 163 931 82   ELITE2M     ALFASUN - BASSO TEAM FLANDERS         1h05´08.0"   +5´27.0"
+23      60   VAN DEN BROECK Arno                 BEL20000404         100 164 861 42   ELITE2M     CYCLIS - VAN DEN PLAS CYCLING         2r
+24      33   BARD Nicolas                        SUI20001223         100 165 689 94   ELITE MEN   LA PéDALE BULLOISE                    2r
+25      19   RODRIGUEZ NOVOA Miguel              ESP20030423         100 392 358 74   U23 MEN     SUPERMERCADOS FROIZ. G.D.             2r
+26      34   GEVAERT Miles                       BEL20040729         100 650 666 71   U23M        TOMABEL-INOFEC CYCLINGTEAM            2r
+27      45   SPRANGERS Bram                      BEL20050710         100 651 067 84   U23M        LOTTO-X-OATS ATHLETES FOR HOPE        2r
+28      81   BOSSAERTS Senn                      BEL20060709         100 651 487 19   JUNIOR      AA DRINK YOUNG LIONS                  3r
+29      63   RIJVERS Max                         NED20060811         100 231 160 90   JUNIOR      TIGERR CYCLING TEAM                   3r
+30      38   DE MOYER Kenay                      BEL20040722         100 650 660 65   U23.C       PSB                                   3r
+31      28   MARASCO Lorenzo                     FRA19980330         100 235 300 59   ELITE       SEBMOTOBIKES CX TEAM                  4r
+32      31   CRISPIN Mickaël                     FRA19980407         100 735 106 24   ELITE       CROSS TEAM LEGENDRE                   4r
+33      43   CEULEMANS Niels                     BEL20041001         100 650 738 46   U23M        LRG-CYCLING TEAM                      4r
+34      57   DAVID Alexis                        FRA20050422         100 914 332 91   U23 MEN     Amical Cycliste Bisontine             4r
+35      76   JANSE Stef                          BEL20010420         100 649 366 32   ELITE2M     YOUNG CYCLING TALENT D&D              4r
+36      88   DAELMANS Bengt                      BEL20041130         100 660 800 20   U23M        CYCLIS - VAN DEN PLAS CYCLING         4r
+37      40   GASSNER Michael                     GER19991206         100 593 154 80   ELITE MEN   RSV Moosburg                          4r
+38      21   VAN DEN BROEK Axel                  BEL20060503         100 651 413 42   JUNIOR      ACROG-TORMANS                         4r
+39      27   GREIJUS Paul                        SWE20050210         100 226 286 66   U23M        BAUHAUS SPORTKLUBB                    4r
+40      82   MEEUSEN Ruben                       BEL20021211         100 650 080 67   U23M        VAN GORP PROJECTS - CYCLING TE        4r
+41      80   VAN DEN BERGH Toon                  BEL20041013         100 650 751 59   U23M        YOUNG CYCLING TALENT D&D              4r
+42      37   HAMM Florian                        GER19991108         100 111 965 11   ELITE2M     RSV GARCHING                          4r
+43      47   ANDERLE Florian                     GER19970112         100 485 699 04   ELITE MEN   RSV Stadtilm                          4r
+44      56   LEMBRECHTS Ruben                    BEL20020703         100 758 226 58   U23M        VAN GORP PROJECTS - CYCLING TE        4r
+45      84   VAN STAEYEN Maarten                 BEL19980101         100 148 268 36   ELITE2M     CYCLIS - VAN DEN PLAS CYCLING         5r
+46      75   SMITS Rune                          BEL19990625         100 155 305 89   ELITE2M     Individueel                           5r
+47      61   SHELTON Noah                        USA20060829         101 177 425 23   U23 MEN     BEAR CX                               5r
+48      92   BERCKMOES Jenno                     BEL20010204         100 649 275 38   EL.CP       LOT                                   5r
+49      87   ALLAER Thorben                      BEL20060704         100 651 477 09   JUNIOR      STARBIKES - VISTABUILD                5r
+50      73   VILLAR THIERY Aubin                 FRA20060612         100 770 304 11   JUNIOR      EC CHATEAU THIERRY                    5r
+51      65   DRIES Tjalle                        BEL20060712         100 651 490 22   JUNIOR      TD CYLING                             5r
+52      54   PECK Justin                         USA20030215         100 624 397 89   U23 MEN     Bear CX                               5r
+53      52   GUÉRIN Morgan                       SUI20041027         100 552 548 20   U23         OBOR-BIKE AID CYCLING TEAM            5r
+54      55   KING Carden                         USA20050429         100 659 990 83   U23 (M)     TRIPLE CROWN WORKSHOP                 5r
+55      36   KOCKELMANN Raphaël                  LUX19990510         100 153 331 55   ELITE       CRABBE TOITURES - CC CHEVIGNY         5r
+
+
+                                                                                                                            23/12/2024 - 16:45:23 - 1 / 2
+                                                                UITSLAG / RESULTAT
+
+                                                          MOL - Veldrijden Klasse 2 UCI
+
+               23/12/2024
+
+Reeks 1                                                        Zilvermeercross-Men Elite                           Sleut 11014
+Organisator: GOLAZO SPORTS NV - Afstand: 10.0Km - Gem. Sn: 9.5Km/u                                                 #Dln: 80
+
+Plaats Nr Naam                                   UCICode             UCIid            Cat         Club                                      Tijd
+56      44 KOCKELMANN Mathieu                    LUX20040131         100 349 978 83   U17M        CC CHEVIGNY                               5r
+57      86 DEVALLEE Matheo                       BEL20060311         100 972 767 35   JUNIOR      CRABBE - DSTNY                            5r
+58      77 LEAERTS Yelle                         BEL19941105         100 093 473 46   ELITE2M     YOUNG CYCLING TALENT D&D                  5r
+59      46 SARGENT Liam                          CAN20040829         100 618 384 90   U23 MEN     BROAD STREET                              5r
+60      64 DELGROSSO Ethan                       USA20050321         100 930 471 31   U23 MEN     COMPETITIVE EDGE RACING                   5r
+61      66 MERINO Fabian                         CAN19910911         101 193 381 71   ELITE MEN   Broad Street Breakaway                    5r
+62      42 GALAN CORTAZAR Unax                   ESP20060717         101 069 613 75   U23M        Miribilla btt elkartea                    5r
+63      95 VAN DER MOLEN Rik                     NED20061118         100 918 440 28   JUNIOR      WV OTTO EBBENS                            6r
+64      97 ARTZ Huub                             NED20020514         100 227 977 11   JUNIOR      WV SCHIJNDEL                              6r
+65      68 TURNER Jacob                          NZL20030524         100 883 077 70   U23 MEN     SOUTHERN CROSS CX                         6r
+66      79 DECKERS Toon                          BEL20061209         100 720 537 05   JUNIOR      WAC TEAM VZW                              6r
+67      85 GOOVAERTS Jarne                       BEL20051017         100 651 166 86   U23M        WOUTIM-DEXTERS SPORT                      6r
+68      83 GORIS Niels                           BEL20040121         100 721 412 07   U23M        LRG-CYCLING TEAM                          6r
+69      67 KAJI Tetsuki                          JPN19991217         100 110 588 89   ELITE       OLANDA BASE/WATERSLEY                     6r
+70      58 PARENTI Nicola                        ITA19960119         100 136 945 62   ELITE2      BIKE ACADEMY RACING TEAM                  6r
+71      90 SEGERS Seppe                          BEL20060627         100 855 658 05   JUNIOR      Individueel                               6r
+72      72 GÓMEZ VEGA Marcos                     ESP20031006         100 418 854 89   U23         RECAMBIOS CALLEJO                         6r
+73      51 STARK Filip                           SWE20000919         100 222 935 13   ELITE       RYSKA POSTEN SK                           7r
+74      70 LUKŠAS Dovydas                        LTU20021226         100 365 925 25   U23         Lithuanian CX National Team               7r
+75      100 CHALMERS Scott                       GBR19870623         100 048 424 05   ELITE MEN   MEGASPEED RACING                          7r
+76      93 GODDEN Robin                          GBR19000101         100 188 828 50   ELITE MEN   Hope Factory Racing                       7r
+77      94 KAETHOVEN Tayim                       NED20060208         100 231 797 48   U23M        TWC HET SNELLE WIEL                       7r
+78      99 LEZARD William                        GBR20011106         101 271 634 45   ELITE MEN   Magspeed Racing                           8r
+        71 BOLZAN Edoardo                        ITA20040521         100 287 867 52   U23 MEN     G.S. WINNERBIKE                           DNF
+        59 CECCHI Filippo                        ITA20021210         100 301 964 84   U23 MEN     Bike Academy Racing Team                  DNS
+
+
+#Dln: 80           #DNS: 1             #DNF: 1                                                                                                            11014
+
+
+
+
+                                                                                                                                23/12/2024 - 16:45:23 - 2 / 2
+

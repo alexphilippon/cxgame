@@ -1,0 +1,85 @@
+                                                               UITSLAG / RESULTAT
+
+                                                           NIEL - Veldrijden Juniors UCI
+
+               11/11/2021
+
+Reeks 1                                              Superprestige Jaarmarktcross Juniores                       Sleut 4628
+Organisator: GOLAZO SPORTS NV - Afstand: 14.4Km - Gem. Sn: 18.33Km/u                                             #Dln: 55
+
+Plaats Nr Naam                                    UCICode              UCIid            Cat      Club                                  Tijd
+1       9 BAUWENS Senne                           BEL20040608          100 650 604 09   JUNIOR   C.T. KEUKENS BUYSSE KNESSELARE        0h42´44.0"
+2       16 NUYENS Wies                            BEL20050217          100 650 926 40   U17M     SMART CYCLING DOLTCINI GEN Z          0h42´48.0"   +4.0"
+3       14 GEVAERT Miles                          BEL20040729          100 650 666 71   JUNIOR   TOMABEL-INOFEC CYCLINGTEAM            0h43´15.0"   +31.0"
+4       5 KUSCHLA Silas                           GER20040309          100 364 008 48   JUNIOR   WAC TEAM                              0h43´50.0"   +1´06.0"
+5       12 DHONDT Robbe                           BEL20040625          100 727 445 26   JUNIOR   BIKE-ADVICE CYCLING TEAM              0h44´15.0"   +1´31.0"
+6       15 VAN DER HEYDEN Dario                   BEL20040215          100 650 505 07   JUNIOR   AA DRINK YOUNG LIONS                  0h45´08.0"   +2´24.0"
+7       22 JAMIN Antoine                          BEL20050323          100 642 718 77   U17M     SUPER BIKERS ECOLE VTT                0h45´14.0"   +2´30.0"
+8       25 DE BRAUWERE Sil                        BEL20050411          100 909 150 50   U17M     CYCLOCROSS TEAM MJ WOOD               0h45´17.0"   +2´33.0"
+9       18 BELLON Damon                           BEL20040901          100 650 703 11   JUNIOR   BELLONI CYCLING TEAM                  0h45´30.0"   +2´46.0"
+10      45 MOREELS Kilian                         BEL20040803          100 650 675 80   JUNIOR   AA DRINK YOUNG LIONS                  0h45´34.0"   +2´50.0"
+11      20 JANSSENS Willem                        BEL20050217          100 650 925 39   U17M     AA DRINK YOUNG LIONS                  0h45´54.0"   +3´10.0"
+12      60 HEIRBAUT Toon                          BEL20050302          100 650 942 56   U17M     BERT CONTAINERS - PAUWELS SAUZ        0h45´59.0"   +3´15.0"
+13      52 PRESTAGE Sebastian                     BEL20041123          100 650 798 09   JUNIOR   DEBONDT VERANDAS CYCLING TEAM         0h46´17.0"   +3´33.0"
+14      66 DOCKX Gilles                           BEL20050307          100 650 947 61   U17M     HEIST CYCLING TEAM (HCT)              0h46´17.0"   +3´33.0"
+15      30 DELBARGE Victor                        BEL20041202          100 650 805 16   JUNIOR   CYCLING TEAM LUC WALLAYS - JON        0h46´17.0"   +3´33.0"
+16      43 VAN LOOCKE Lars                        BEL20051129          100 846 317 73   U17M     CYCLOCROSS TEAM MJ WOOD               0h46´17.0"   +3´33.0"
+17      41 OP DE BEECK Brent                      BEL20051031          100 713 096 33   U17M     YOUNG CYCLING TALENT D&D              0h46´44.0"   +4´00.0"
+18      77 BAERT Brent                            BEL20040823          100 650 696 04   JUNIOR   CYCLING TEAM LUC WALLAYS - JON        0h46´44.0"   +4´00.0"
+19      21 D´HOUST Yani                           BEL20040304          100 650 521 23   JUNIOR   BIKE-ADVICE CYCLING TEAM              0h46´47.0"   +4´03.0"
+20      31 WOUTERS Jelle                          BEL20050522          100 651 021 38   U17M     TEAM KEMPEN                           0h47´00.0"   +4´16.0"
+21      17 CEULEMANS Jarne                        BEL20040814          100 650 689 94   JUNIOR   IKO-CRELAN                            0h47´12.0"   +4´28.0"
+22      34 DE CLERCQ Arne                         BEL20040527          100 650 593 95   JUNIOR   ASFRA RACING TEAM                     0h47´35.0"   +4´51.0"
+23      40 POLUS Jorben                           BEL20050810          100 651 100 20   U17M     ACROG - TORMANS BALEN BC              0h47´44.0"   +5´00.0"
+24      44 JACOBS Rune                            BEL20040922          100 650 730 38   JUNIOR   AA DRINK YOUNG LIONS                  0h47´53.0"   +5´09.0"
+25      70 PLAS Yaël                              NED20050405          100 232 765 46   U17M     STAPPENBELT                           0h47´53.0"   +5´09.0"
+26      51 VANHOUDT Yenthe                        BEL20040817          100 647 913 34   JUNIOR   OPTIMUS-ARGENTA CYCLING TEAM          0h48´05.0"   +5´21.0"
+27      53 VAN DEN MEERSSCHE Warre                BEL20040718          100 650 658 63   JUNIOR   TOMABEL-INOFEC CYCLINGTEAM            0h48´30.0"   +5´46.0"
+28      27 VAN LOMMEL Lennert                     BEL20050529          100 651 034 51   U17M     STAGECO CYCLING TEAM                  0h48´36.0"   +5´52.0"
+29      11 MARCHAND Robbe                         BEL20050923          100 898 409 76   U17M     CYCLOCROSS TEAM MJ WOOD               0h48´37.0"   +5´53.0"
+30      58 VAN DER POEL Tim                       NED20050205          100 232 822 06   U17M     DRC DE MOL                            0h49´03.0"   +6´19.0"
+31      69 DE VOS Seppe                           BEL20050811          100 651 102 22   U17M     VAN MOER LOGISTICS CYCLING TEA        0h49´12.0"   +6´28.0"
+32      32 SMETS Jarne                            BEL20040930          100 929 766 05   JUNIOR   TEAM KEMPEN                           0h49´14.0"   +6´30.0"
+33      37 RUYSSEVELDT Jan                        BEL20050111          101 071 367 83   U17M     SMART CYCLING DOLTCINI GEN Z          0h49´28.0"   +6´44.0"
+34      26 GABRIELS Jasper                        BEL20040310          100 231 751 02   JUNIOR   TEAM KEMPEN                           0h49´35.0"   +6´51.0"
+35      33 VAN DE GEHUCHTE Daan                   BEL20050518          100 849 393 45   U17M     VAN MOER LOGISTICS CYCLING TEA        0h49´39.0"   +6´55.0"
+36      39 VUYLSTEKE Tom                          BEL20050204          100 783 296 05   U17M     ACROG - TORMANS BALEN BC              0h49´51.0"   +7´07.0"
+37      63 DELAERE Lewis                          BEL20050728          100 651 092 12   U17M     CYCLOCROSS TEAM MJ WOOD               0h50´31.0"   +7´47.0"
+38      50 ANTHEUNIS Siebren                      BEL20050707          100 651 064 81   U17M     DEBONDT VERANDAS CYCLING TEAM         0h50´36.0"   +7´52.0"
+39      24 MAERTENS Yoran                         BEL20050920          100 651 139 59   U17M     WIELERCLUB "ONDER ONS - PARIKE        0h50´47.0"   +8´03.0"
+40      55 ULENAERS Jente                         BEL20050519          100 760 509 13   U17M     WIELERCLUB NOORD-LIMBURG              0h51´32.0"   +8´48.0"
+41      76 WEMMERS Thijs                          NED20051017          100 934 584 70   U17M     JAN VAN ARCKEL                        1r
+42      46 DEKORT Jens                            BEL20040817          100 868 237 71   JUNIOR   WESTFIT                               1r
+43      72 JOIJE Joppe                            BEL20051024          100 766 822 21   U17M     TOMABEL-INOFEC CYCLINGTEAM            1r
+44      68 VAN DER LINDEN Sjoerd                  NED20051014          100 726 413 61   U17M     WV SCHIJNDEL                          2r
+45      78 BENHADDOU Jaro                         BEL20050209          100 650 915 29   U17M     DE KASTELSE DURVERS V.Z.W.            2r
+46      49 CASTELEYN Chaunes                      BEL20050620          100 651 046 63   U17M     CYCLOCROSS TEAM MJ WOOD               2r
+47      38 VAN MALDEREN Beau                      BEL20050825          100 991 582 32   U17M     AVIA-RUDYCO-JANATRANS CYCLING         2r
+        8 GEUDENS Robbe                           BEL20040126          100 650 476 75   JUNIOR   ACROG - TORMANS BALEN BC              DNF
+        10 VAN DEN BERGH Toon                     BEL20041013          100 650 751 59   JUNIOR   AA DRINK YOUNG LIONS                  DNF
+        19 VAN DEN BOER Seppe                     BEL20051128          100 859 817 90   U17M     AA DRINK YOUNG LIONS                  DNF
+        29 LENAERS Milan                          BEL20040519          100 650 588 90   JUNIOR   CYCLING TEAM LUC WALLAYS - JON        DNF
+        35 DHONDT Ibe                             BEL20050503          100 651 001 18   U17M     BIKE-ADVICE CYCLING TEAM              DNF
+        48 VANHAECKE Arno                         BEL20040925          100 650 733 41   JUNIOR   CYCLING TEAM LUC WALLAYS - JON        DNF
+        56 VAN GRIEKEN Stan                       BEL20050331          100 650 974 88   U17M     ACROG - TORMANS BALEN BC              DNF
+        74 PALMS Yens                             BEL20050316          101 017 474 25   U17M     CRABBE TOITURES - CC CHEVIGNY         DNF
+
+
+                                                                                                                            11/11/2021 - 12:57:35 - 1 / 2
+                                                               UITSLAG / RESULTAT
+
+                                                           NIEL - Veldrijden Juniors UCI
+
+               11/11/2021
+
+Reeks 1                                              Superprestige Jaarmarktcross Juniores   Sleut 4628
+Organisator: GOLAZO SPORTS NV - Afstand: 14.4Km - Gem. Sn: 18.33Km/u                         #Dln: 55
+
+
+#Dln: 55           #DNS: 0             #DNF: 8                                                                                     4628
+
+
+
+
+                                                                                                        11/11/2021 - 12:57:35 - 2 / 2
+

@@ -1,0 +1,62 @@
+                                                              UITSLAG / RESULTAT
+
+                                           HEXIA CYCLO-CROSS GULLEGEM - Veldrijden
+                                                         Juniors UCI
+               07/01/2023
+
+Reeks 1                                                                 Hoofdreeks                        Sleut 6857
+Organisator: HEXIA CYCLOCROSS GULLEGEM - Rondes of afstand niet ingegeven                                 #Dln: 43
+
+Plaats Nr Naam                                     UCICode             Cat           Club                                       Tijd
+1          4 TAKÁCS Zsombor                        HUN20060106         JUNIOR        SUPERIOR RACING TEAM                       0h42´39.0"
+2          23 VANHOUDT Yoren                       BEL20060502         JUNIOR        WOUTIM-OPTIMUS-ARGENTA CYCLING             0h42´57.0"   +18.0"
+3          16 VAN LOOCKE Lars                      BEL20051129         JUNIOR        CYCLOCROSS TEAM MJ WOOD                    0h43´02.0"   +23.0"
+4          6 SIMON Jules                           FRA20060219         JUNIOR MEN    US METRO TRANSPORTS                        0h43´06.0"   +27.0"
+5          11 POELVOORDE Tars                      BEL20051125         JUNIOR        WIELERCLUB "ONDER - ONS PARIKE             0h43´06.0"   +27.0"
+6          21 VAN GRIEKEN Stan                     BEL20050331         JUNIOR        ACROG-TORMANS                              0h43´25.0"   +46.0"
+7          12 GREIJUS Paul                         SWE20050210         JUNIOR        WAC TEAM                                   0h43´31.0"   +52.0"
+8          26 SPRANGERS Bram                       BEL20050710         JUNIOR        ATHLETES FOR HOPE                          0h43´34.0"   +55.0"
+9          24 DE BRAUWERE Sil                      BEL20050411         JUNIOR        CYCLOCROSS TEAM MJ WOOD                    0h43´46.0"   +1´07.0"
+10         30 DRIES Tjalle                         BEL20060712         JUNIOR        TEAM KEMPEN                                0h43´59.0"   +1´20.0"
+11         34 MAERTENS Yoran                       BEL20050920         JUNIOR        WIELERCLUB "ONDER - ONS PARIKE             0h44´04.0"   +1´25.0"
+12         15 RAPINZ Henry                         USA20060502         JUNIOR MEN    EuroCrossAcademy                           0h44´06.0"   +1´27.0"
+13         19 NIEUWENHUIS Patrick                  NED20050828         JUNIOR        W.V. METEOOR ASSEN-RODEN                   0h44´10.0"   +1´31.0"
+14         27 DEKIEN Miel                          BEL20060406         JUNIOR        CYCLOCROSS TEAM MJ WOOD                    0h44´16.0"   +1´37.0"
+15         43 JACOBS Ieben                         BEL20061107         JUNIOR        WAC TEAM VZW                               0h44´32.0"   +1´53.0"
+16         10 BRYAN Leif                           USA20051024         JUNIOR MEN    EuroCrossAcademy                           0h44´37.0"   +1´58.0"
+17         45 MAES Fabian                          BEL20060828         JUNIOR        WAC TEAM VZW                               0h44´38.0"   +1´59.0"
+18         47 GRISEL Matys                         FRA20050714         JUNIOR M      CCNOGENT SUR OISE                          0h44´44.0"   +2´05.0"
+19         46 MASSET Allan                         FRA20050226         JUNIOR M      EC TOURQUENNOISE                           0h44´49.0"   +2´10.0"
+20         18 MERLOV Ville                         SWE20050317         JUNIOR        ROSLINS CYKELKLUBB                         0h44´52.0"   +2´13.0"
+21         9 BROWN Ian                             USA20050221         JUNIOR MEN    EuroCrossAcademy                           0h45´03.0"   +2´24.0"
+22         17 HALVERSON James                      USA20061116         JUNIOR MEN    EuroCrossAcademy                           0h45´17.0"   +2´38.0"
+23         62 DE VOS Seppe                         BEL20050811         JUNIOR        VAN MOER LOGISTICS CYCLING TEA             0h45´33.0"   +2´54.0"
+24         35 BONNAY Lucas                         FRA20050506         JUNIOR M      E C TOURQUENNOISE                          0h45´36.0"   +2´57.0"
+25         51 WOUTERS Jelle                        BEL20050522         JUNIOR        TEAM KEMPEN                                0h45´42.0"   +3´03.0"
+26         52 DE NEVE Hannes                       BEL20050610         JUNIOR        KON. VC ´T MEETJESLAND - KNESS             0h45´46.0"   +3´07.0"
+27         53 DE BAENE Thor                        BEL20060629         JUNIOR        GAVERZICHT-BE OKAY-VAN MOSSEL              0h45´52.0"   +3´13.0"
+28         20 COSPER Dillon                        USA20061015         JUNIOR        COSPER                                     0h45´58.0"   +3´19.0"
+29         64 DEVALLEE Matheo                      BEL20060311         JUNIOR        CRABBE TOITURES - CC CHEVIGNY              0h46´12.0"   +3´33.0"
+30         22 KING Carden                          USA20050429         JUNIOR        CHARGE BC XC RACING                        0h46´14.0"   +3´35.0"
+31         37 VILLAR THIERY Aubin                  FRA20060612         JUNIOR MEN    EC CHATEAU THIERRY                         0h46´14.0"   +3´35.0"
+32         66 ANDERSEN Nicolai                     DEN20060121         JUNIOR M      CK AARHUS                                  0h46´31.0"   +3´52.0"
+33         59 DELAERE Lewis                        BEL20050728         JUNIOR        CYCLOCROSS TEAM MJ WOOD                    0h46´55.0"   +4´16.0"
+34         44 ANTHEUNIS Siebren                    BEL20050707         JUNIOR        VAN MOER LOGISTICS CYCLING TEA             0h47´39.0"   +5´00.0"
+35         63 MAES Brent                           BEL20060604         JUNIOR        TOMABEL-INOFEC CYCLINGTEAM                 0h47´57.0"   +5´18.0"
+36         14 VAN SNICK Nathan                     FRA20061110         JUNIOR        EC VALLEE DE L´AISNE                       0h48´08.0"   +5´29.0"
+37         61 CASTELEYN Chaunes                    BEL20050620         JUNIOR        TEAM ATOM 6                                0h49´18.0"   +6´39.0"
+38         67 COOPMAN Kjell                        BEL20060427         JUNIOR        AA DRINK YOUNG LIONS                       0h49´27.0"   +6´48.0"
+39         38 BROUSSEAU NOEL Benjamin              CAN20060523         JUNIOR MEN    Vélo 2000                                  1r
+40         65 THEUNYNCK Daan                       BEL20060208         JUNIOR        CYCLING TEAM HOUTLAND-WESTKUST             2r
+41         60 DEVIGNE Augustin                     FRA20060211         JUNIOR M      PEDALE MADELEINOISE                        2r
+           39 VAN DER VEKEN Luca                   NED20060827         JUNIOR M      WILLEBRORD WIL VOORUIT                     DNF
+           49 CRIEL Merlijn                        BEL20061216         JUNIOR        Individueel                                DNF
+
+
+#Dln: 43           #DNS: 0            #DNF: 2                                                                                                    6857
+
+
+
+
+                                                                                                                      07/01/2023 - 11:54:36 - 1 / 1
+

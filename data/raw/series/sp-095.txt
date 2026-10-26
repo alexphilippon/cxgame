@@ -1,0 +1,104 @@
+                                                                UITSLAG / RESULTAT
+
+                                                       DIEGEM - Veldrijden Juniors UCI
+
+              28/12/2022
+
+Reeks 1                                                       Superprestige Men Junior                Sleut 6705
+Organisator: SINT-ANNA-VOORUIT-DIEGEM VZW - Afstand: 16.0Km - Gem. Sn: 22.0Km/u                       #Dln: 72
+
+Plaats Nr Naam                         UCICode          UCIid            Cat             Club                                 Tijd
+1       17 REMIJN Senna                NED20060122 100 230 723 41 U17M                   ACROG-TORMANS                        0h39´58.0"
+2       5 VANDENBERGHE Viktor          BEL20050426 100 879 604 89 JUNIOR                 BERT CONTAINERS - DOLTCINI           0h40´12.0" +14.0"
+3       3 JEŽEK Václav                 CZE20050308 100 478 183 54 JUNIOR                 BRILON RACING TEAM                   0h40´18.0" +20.0"
+4       35 SOLEN Keije                 NED20060327 100 232 467 39 U17M                   HANZE RENNERS ZWOLLE                 0h40´22.0" +24.0"
+5       9 NUYENS Wies                  BEL20050217 100 650 926 40 JUNIOR                 BERT CONTAINERS - DOLTCINI           0h40´37.0" +39.0"
+6       13 HAVERDINGS Floris           NED20061013 100 490 106 46 U17M                   METEOOR ASSEN RODEN                  0h40´59.0" +1´01.0"
+7       2 VAN DEN EIJNDEN Guus         NED20051003 100 227 874 05 JUNIOR                 APB                                  0h41´19.0" +1´21.0"
+8       4 ACKERT Ian                   CAN20050306 100 542 795 64 JUNIOR                 CANADA NATIONAL TEAM                 0h41´26.0" +1´28.0"
+9       7 NIELSEN Daniel               DEN20050717 100 514 892 00 JUNIOR                 ROSKILDE CYCLE RING                  0h41´42.0" +1´44.0"
+10      15 VIJFVINKEL Mika             NED20050601 100 234 191 17 JUNIOR                 PROXIMUS-ALPHAMOTORHOMES-DOLTC       0h41´49.0" +1´51.0"
+11      52 SCHOOFS Jasper              BEL20060330 100 651 391 20 U17M                   ACROG-TORMANS                        0h42´00.0" +2´02.0"
+12      21 JAMIN Antoine               BEL20050323 100 642 718 77 JUNIOR                 BHW                                  0h42´02.0" +2´04.0"
+13      27 POELVOORDE Tars             BEL20051125 100 885 069 25 JUNIOR                 TRUST MTB TEAM VZW                   0h42´10.0" +2´12.0"
+14      16 MARCHAND Robbe              BEL20050923 100 898 409 76 JUNIOR                 CYCLOCROSS TEAM MJ WOOD              0h42´13.0" +2´15.0"
+15      34 DUBOIS Clement              FRA20050510 100 662 109 68 HOMMES JUNIORS         Vélophile Naintréenne                0h42´29.0" +2´31.0"
+16      18 GRINDLEY Sebastian          GBR20060424 100 965 254 88 U17                    GARDEN SHED UK                       0h42´31.0" +2´33.0"
+17      8 KUBA Jakub                   CZE20050724 100 473 347 68 JUNIOR MEN             TJ AUTO ŠKODA Mladá Boleslav         0h42´40.0" +2´42.0"
+18      20 STOKES Ben                  USA20050102 100 719 350 79 JUNIOR MEN             EuroCrossAcademy                     0h42´51.0" +2´53.0"
+19      31 JANSSENS Willem             BEL20050217 100 650 925 39 JUNIOR                 AA DRINK YOUNG LIONS                 0h43´06.0" +3´08.0"
+20      28 GARNIER Matteo              FRA20050627 100 661 511 52 JUNIOR HOMMES          VCP LOUDEAC                          0h43´14.0" +3´16.0"
+21      10 VAS Barnabás                HUN20060223 100 236 564 62 YOUTH MEN - U17        MERIDA MARATON TEAM CST HUNGAR       0h43´22.0" +3´24.0"
+22      38 MERLOV Ville                SWE20050317 100 490 057 94 JUNIOR                 ROSLINS CYKELKLUBB                   0h43´30.0" +3´32.0"
+23      55 DRIES Tjalle                BEL20060712 100 651 490 22 U17M                   TEAM KEMPEN                          0h43´34.0" +3´36.0"
+24      25 ŠUMPÍK Pavel                CZE20060911 100 473 739 72 JUNIOR MEN             Jaroslav Kulhavy Cycling Team        0h43´41.0" +3´43.0"
+25      41 FISHER Scott                GBR20050303 100 992 474 51 U17M                   BARROW CENTRAL WHEELERS              0h43´44.0" +3´46.0"
+26      84 BOSSAERTS Senn              BEL20060709 100 651 487 19 U17M                   AA DRINK YOUNG LIONS                 0h43´48.0" +3´50.0"
+27      44 DE BRAUWERE Sil             BEL20050411 100 909 150 50 JUNIOR                 CYCLOCROSS TEAM MJ WOOD              0h43´54.0" +3´56.0"
+28      73 POLUS Jorben                BEL20050810 100 651 100 20 JUNIOR                 ACROG-TORMANS                        0h44´07.0" +4´09.0"
+29      26 BRYAN Leif                  USA20051024 101 178 403 31 JUNIOR MEN             EuroCrossAcademy                     0h44´08.0" +4´10.0"
+30      69 DE ROOS Mads                NED20060219 100 231 217 50 U17M                   WSV DE PEDDELAARS                    0h44´08.0" +4´10.0"
+31      32 RAPINZ Henry                USA20060502 100 719 676 17 JUNIOR MEN             EuroCrossAcademy                     0h44´11.0" +4´13.0"
+32      47 PEKA Matj                   CZE20060203 100 681 319 72 JUNIOR MEN             BRILON RACING TEAM MB                0h44´11.0" +4´13.0"
+33      53 NAGENGAST Ruud Junior       NED20060208 100 234 006 26 YOUTH MEN - U17        WSV de Peddelaars                    0h44´20.0" +4´22.0"
+34      37 COMANIUK Mika               CAN20050304 100 610 631 00 JUNIOR MEN             Cycling Canada                       0h44´21.0" +4´23.0"
+35      59 DOPPKE Kacper               POL20060408 100 924 695 75 JUNIOR MEN             K.S Klif Chapowo                     0h44´24.0" +4´26.0"
+36      82 ALLAER Thorben              BEL20060704 100 651 477 09 U17M                   BERT CONTAINERS - DOLTCINI           0h44´42.0" +4´44.0"
+37      42 VAN GRIEKEN Stan            BEL20050331 100 650 974 88 JUNIOR                 ACROG-TORMANS                        0h44´53.0" +4´55.0"
+38      62 VAN DER VEKEN Luca          NED20060827 100 230 801 22 YOUTH MEN - U17        WILLEBRORD WIL VOORUIT               0h44´56.0" +4´58.0"
+39      50 ADASZAK Ksawery             POL20061211 100 703 821 70 MODZIE MCZYNI - U17    AKADEMIA KOLARSKA BONECKI-TEAM       0h45´04.0" +5´06.0"
+40      23 BROWN Ian                   USA20050221 100 655 464 19 JUNIOR MEN             EuroCrossAcademy                     0h45´08.0" +5´10.0"
+41      57 DURET Thibaud               FRA20050407 100 699 891 20 HOMMES JUNIORS         U.C.CHATEAUROUX                      0h45´13.0" +5´15.0"
+42      46 HURT Joel Darren            GBR20060424 100 631 069 68 JUNIOR                 DCC                                  0h45´18.0" +5´20.0"
+43      43 KING Carden                 USA20050429 100 659 990 83 JUNIOR MEN             CHARGE BC XC RACING                  0h45´18.0" +5´20.0"
+44      83 DE NEVE Hannes              BEL20050610 100 780 454 73 JUNIOR                 KON. VC ´T MEETJESLAND - KNESS       0h45´25.0" +5´27.0"
+45      33 HALVERSON James             USA20061116 101 182 716 76 JUNIOR MEN             EuroCrossAcademy                     0h45´30.0" +5´32.0"
+46      75 DEVALLEE Matheo             BEL20060311 101 230 130 57 U17M                   ACROG-TORMANS                        0h45´33.0" +5´35.0"
+47      63 VAN SNICK Nathan            FRA20061110 100 672 170 41 JUNIOR                 EC VALLEE DE L´AISNE                 0h45´39.0" +5´41.0"
+48      92 PASCO Luc                   FRA20060302 100 664 524 58 JUNIOR MEN             VS Quimperois                        0h45´45.0" +5´47.0"
+49      89 DE BAENE Thor               BEL20060629 100 651 472 04 U17M                   GAVERZICHT - BE OKAY - AGS           0h45´46.0" +5´48.0"
+50      74 DEFOOR Sander               BEL20060708 100 651 484 16 U17M                   C.T. KEUKENS BUYSSE KNESSELARE       0h45´46.0" +5´48.0"
+51      61 JOIJE Joppe                 BEL20051024 100 766 822 21 JUNIOR                 TOMABEL-INOFEC CYCLINGTEAM           0h45´54.0" +5´56.0"
+52      60 DE GROOT Quin               NED20051214 100 231 015 42 JUNIOR                 ORCTA                                0h45´59.0" +6´01.0"
+53      66 DAVIES Oscar                GBR20060403 101 333 501 26 JUNIOR MEN             CC Abergavenny                       0h46´14.0" +6´16.0"
+54      67 MASCIARELLI Stefano         ITA20061030 100 316 033 88 U17M                   WIELERCLUB "ONDER ONS - PARIKE       0h46´20.0" +6´22.0"
+55      30 DUARTE Filipe               CAN20060219 100 607 834 16 JUNIOR MEN             CYCLING CANADA                       0h46´26.0" +6´28.0"
+
+
+                                                                                                                 28/12/2022 - 18:11:48 - 1 / 2
+                                                                UITSLAG / RESULTAT
+
+                                                       DIEGEM - Veldrijden Juniors UCI
+
+              28/12/2022
+
+Reeks 1                                                       Superprestige Men Junior                  Sleut 6705
+Organisator: SINT-ANNA-VOORUIT-DIEGEM VZW - Afstand: 16.0Km - Gem. Sn: 22.0Km/u                         #Dln: 72
+
+Plaats Nr Naam                         UCICode          UCIid            Cat             Club                                   Tijd
+56      56 BONAFINI Edoardo            ITA20060420      100 630 093 62 JUNIOR MEN        A favore del ciclismo                  1r
+57      65 HRADISKÝ Zdenk              CZE20060930      100 583 274 94 JUNIOR MEN        Brilon Racing Team MB                  1r
+58      91 KERMORGANT Malo             FRA20060528      100 586 365 81 JUNIOR MEN        VS QUIMPEROIS                          1r
+59      96 NAHON Emile                 BEL20050714      101 198 025 59 JUNIOR            COMITE REGIONAL HAINAUT                1r
+60      72 WATKINS-WILSON Joe          GBR20061003      100 965 149 80 U17               NORTH CHESHIRE CLARION                 1r
+61      76 COSYNS Sander               BEL20061003      101 114 509 60 U17M              WIELERCLUB "ONDER ONS - PARIKE         1r
+62      93 STRICOT Enzo                FRA20061020      100 907 655 10 HOMMES JUNIORS    Team Oxygène Ploudal Portsall          2r
+63      51 COPPOLA Ben                 GBR20061201      100 964 079 77 YOUTH MEN - U15   Four4th                                2r
+64      87 DEVIGNE Augustin            FRA20060211      100 675 176 40 U17M              PEDALE MADELEINOISE                    2r
+        1 CORSUS Yordi                 BEL20051115      100 651 195 18 JUNIOR            BERT CONTAINERS - DOLTCINI             DNF
+        11 MATTERN Miles               USA20060824      101 169 202 45 YOUTH MEN - U17   EuroCrossAcademy                       DNF
+        24 OAKLEY Reuben               GBR20050915      100 949 946 09 JUNIOR MEN        GBR NATIONAL TEAM                      DNF
+        29 FRIEDEL David               CZE20060626      100 554 814 55 JUNIOR MEN        DK BIKESHOP Racing Team                DNF
+        40 LIGHTFOOT Mark              GBR20050626      100 865 814 73 U17M              WELWYN WHEELERS                        DNF
+        79 VAN DIJCK Victor            BEL20050402      100 650 977 91 JUNIOR            VAN MOSSEL HEIST CYCLING TEAM          DNF
+        88 ANTHEUNIS Siebren           BEL20050707      100 651 064 81 JUNIOR            VAN MOER LOGISTICS CYCLING TEA         DNF
+        48 DEKIEN Miel                 BEL20060406      100 651 396 25 U17M              CYCLOCROSS TEAM MJ WOOD                DNS
+
+
+#Dln: 72           #DNS: 1            #DNF: 7                                                                                                 6705
+
+
+
+
+                                                                                                                   28/12/2022 - 18:11:48 - 2 / 2
+

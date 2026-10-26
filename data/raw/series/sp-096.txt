@@ -1,0 +1,116 @@
+                                                              UITSLAG / RESULTAT
+
+                                                         DIEGEM - Veldrijden Vrouwen
+
+              28/12/2022
+
+Reeks 1                                                         Superprestige Women                            Sleut 6704
+Organisator: SINT-ANNA-VOORUIT-DIEGEM VZW - Afstand: 16.0Km - Gem. Sn: 20.12Km/u                               #Dln: 84
+
+Plaats Nr Naam                                UCICode          UCIid               Cat            Club                                 Tijd
+1       1    PIETERSE Puck                    NED20020513      100 234 336 65      DE             ALPECIN-FENIX                        0h44´09.0"
+2       6    VAN ANROOIJ Shirin               NED20020205      100 228 375 21      DE             BALOISE TREK LIONS                   0h44´39.0" +30.0"
+3       4    ALVARADO Ceylin Del Carmen       NED19980806      100 098 573 05      DEPROF         AFC                                  0h45´11.0" +1´02.0"
+4       5    VAN DER HEIJDEN Inge             NED19990812      100 105 928 85      DE             777                                  0h45´18.0" +1´09.0"
+5       7    VAS Kata Blanka                  HUN20010903      100 236 562 60      DE.UCI         TEAM SD WORX                         0h45´32.0" +1´23.0"
+6       12   PERSICO Silvia                   ITA19970725      100 107 539 47      DE.UCI         VALCAR - TRAVEL & SERVICE            0h45´40.0" +1´31.0"
+7       18   BACKSTEDT Zoe                    GBR20040924      100 542 584 47      DE             EF EDUCATION-TIBCO-SVB               0h45´54.0" +1´45.0"
+8       3    BETSEMA Denise                   NED19930123      100 076 546 94      DE             PAUWELS SAUZEN - BINGOAL             0h46´08.0" +1´59.0"
+9       8    WORST Annemarie                  NED19951219      100 080 829 12      DEPROF         777                                  0h46´24.0" +2´15.0"
+10      9    VAN ALPHEN Aniek                 NED19990201      100 155 413 03      DE             777                                  0h46´29.0" +2´20.0"
+11      21   CASASOLA Sara                    ITA19991129      100 109 989 72      U23            SERVETTO - PIUMATE - BELTRAMI        0h46´35.0" +2´26.0"
+12      16   BURQUIER Line                    FRA20030507      100 657 947 77      DE             A.S BIKE CROSSTEAM                   0h46´50.0" +2´41.0"
+13      11   SCHREIBER Marie                  LUX20030417      100 349 984 89      DE             TORMANS-CIRCUS CYCLO CROSS TEA       0h47´05.0" +2´56.0"
+14      22   LECHNER Eva                      ITA19850701      100 032 790 85      DE             STARCASINO CX TEAM                   0h47´06.0" +2´57.0"
+15      17   CLAUZEL Perrine                  FRA19940405      100 077 031 94      Elite Women    AS BIKE CROSS TEAM                   0h47´09.0" +3´00.0"
+16      10   HONSINGER Clara                  USA19970605      100 110 372 67      DE             EF EDUCATION- TIBCO- SVB             0h47´09.0" +3´00.0"
+17      15   VERDONSCHOT Laura                BEL19961204      100 091 262 66      DEPROF         DE CEUSTER-BONACHE CYCLING TEA       0h47´47.0" +3´38.0"
+18      14   NORBERT RIBEROLLE Marion         BEL19990107      100 262 683 88      DEPROF         CRF                                  0h48´33.0" +4´24.0"
+19      46   FERRAND PREVOT Pauline           FRA19920210      100 066 298 31      ELITE          CANYON / /SRAM RACING                0h48´43.0" +4´34.0"
+20      34   BARONI Francesca                 ITA19991104      100 109 988 71      DE             PISSEI - GROUP T.O.M.                0h48´54.0" +4´45.0"
+21      87   BORGHESI Letizia                 ITA19981016      100 148 199 64      U23            EF EDUCATION- TIBCO- SVB             0h48´58.0" +4´49.0"
+22      19   HOLMGREN Ava                     CAN20050522      100 546 037 08      U19            HARDWOOD NEXT                        0h49´02.0" +4´53.0"
+23      32   COUZENS Millie                   GBR20031029      100 797 860 19      U23            PLANTUR-PURA                         0h49´09.0" +5´00.0"
+24      61   MUL Malwina                      POL20040228      100 484 038 89      DJ             KLKS "AZALIA" BRZÓZA KRÓLEWSKA       0h49´21.0" +5´12.0"
+25      24   TRUYEN Marthe                    BEL19990930      100 110 267 59      DE.UCI         CRF                                  0h49´42.0" +5´33.0"
+26      23   HOLMGREN Isabella                CAN20050522      100 546 035 06      JUNIOR WOMEN   CYCLING CANADA                       0h50´17.0" +6´08.0"
+27      28   HEIGL Nadja                      AUT19960215      100 086 238 86      DE             KTM ALCHEMIST RACING TEAM            0h50´25.0" +6´16.0"
+28      37   VIDON Amandine                   FRA20000329      100 271 619 03      DE             VELO CLUB AMBERIEU                   0h50´29.0" +6´20.0"
+29      26   HLADÍKOVÁ Kateina                CZE20040207      100 477 653 09      Women junior   Brilon Racing Team                   0h50´45.0" +6´36.0"
+30      25   BERNSTEIN Caitlin                USA19890402      100 155 056 34      ELITE WOMEN    Easton Overland / MCGOVERN Cyc       0h50´52.0" +6´43.0"
+31      30   MEGALE Anna                      USA19910410      100 659 489 67      DE.UCI         TREK CYCLOCROSS COLLECTIVE           0h51´15.0" +7´06.0"
+32      39   BARHOUMI Zina                    SUI19960712      100 093 546 22      DE             RSC AARETAL MüNSINGEN                1r
+33      94   DEFOUR Lara                      BEL19971112      100 155 183 64      DE.UCI         MUL                                  1r
+34      67   BASTIAENSSEN Fauve               BEL19971022      101 074 455 67      DE.UCI         PGT                                  1r
+35      84   PORLIER Roxanne                  FRA20041112      100 759 661 38      U23 WOMEN      étoile cycliste château Thierr       1r
+36      65   BORGHESI Giada                   ITA20021127      100 306 460 21      DE             TEAM LAPIERRE TRENTINO               1r
+37      49   MULLER Cyriane                   FRA19880805      100 109 964 47      DE             CX TPM                               1r
+38      43   BIALEK Antonina                  POL19980110      100 588 016 83      ELITE WOMEN    POLISH CYCLING FEDERATION            1r
+39      68   KLAES Lise                       FRA20051028      100 682 376 62      DJ             AS TRéPORT CYCLISME                  1r
+40      63   BRIAND Manon                     FRA20040819      100 710 053 94      FEMMES U23     Ardennes Cross team gecibat          1r
+41      60   DE SMEDT Febe                    BEL20040715      100 650 655 60      DJ             ACROG-TORMANS                        2r
+42      89   DEVIGNE Camille                  FRA20021215      100 675 174 38      DE.UCI         MULTUM ACCOUNTANTS LADIES CYCL       2r
+43      79   DOUDROVÁ Kateina                 CZE20060326      100 824 057 26      JUNIOR WOMEN   Jaroslav Kulhavy Cycling Team        2r
+44      92   BONNAFOUS Lea                    FRA19970212      100 283 695 51      ELITE WOMEN    ALBI VELO SPORT                      2r
+45      29   CREES Xan                        GBR20001227      100 235 058 11      DE             TEAM SPECTRA WIGGLE P/B VITUS        2r
+46      48   MURPHY Niamh                     GBR20050830      100 994 620 63      DJ             GBR NATIONAL TEAM                    2r
+47      69   BUNEA Wendy                      ROU20060429      100 676 514 20      JUNIOR WOMEN   Cs next sports                       2r
+48      75   WHITESIDE Freya                  GBR20051110      100 989 716 09      DJ             PH MAS PAUL MILNES                   2r
+49      90   JAMES Ruby                       GBR19920817      100 068 128 18      DE.UCI         HOPE FACTORY RACING                  2r
+50      64   BELL Libby                       GBR20050430      100 831 146 34      DJ             GARDEN SHED UK-RIBBLE-VERGE SP       2r
+51      77   HURTELOUP Adèle                  FRA20041207      100 687 564 12      DE             TEAM OFFROAD WILINK BRUSSELS C       2r
+52      97   PERRYMAN Amy                     GBR20011228      100 238 764 31      DE             MONTEZUMA´S RACE TEAM                2r
+53      74   BOND Jorja                       USA20060112      100 563 064 60      JUNIOR WOMEN   EuroCrossAcademy                     2r
+54      47   JOHNSON Haylee                   USA20060318      101 184 962 91      JUNIOR WOMEN   EuroCrossAcademy                     2r
+55      27   CUETO VEGA Sara                  ESP19940216      100 089 812 71      ELITE FEM.     ARRUEDA CYCLOCROSS TEAM              2r
+
+
+                                                                                                                          28/12/2022 - 20:14:19 - 1 / 2
+                                                              UITSLAG / RESULTAT
+
+                                                         DIEGEM - Veldrijden Vrouwen
+
+              28/12/2022
+
+Reeks 1                                                         Superprestige Women                            Sleut 6704
+Organisator: SINT-ANNA-VOORUIT-DIEGEM VZW - Afstand: 16.0Km - Gem. Sn: 20.12Km/u                               #Dln: 84
+
+Plaats Nr Naam                                UCICode          UCIid               Cat            Club                                 Tijd
+56      72 VAN DER VEKEN Jana                 BEL20050922      100 651 141 61      DJ             ACROG-TORMANS                        2r
+57      93 DAVIS Ellen                        USA20060621      100 980 798 15      JUNIOR WOMEN   EuroCrossAcademy                     2r
+58      58 TREPTE Evelyne                     SUI19820929      100 908 485 64      ELITE WOMEN    VC Horgen                            2r
+59      66 LE DANTEC Gwennig                  FRA19920501      100 235 690 61      DAMES ELITE    ROUE D'OR CONFLANAISE                2r
+60      88 RIGAUX Alizee                      FRA20041026      100 686 950 77      U23 WOMEN      CC MONCONTOUR                        2r
+61      51 BAKER Alderney                     GBR20010520      100 238 555 16      DE             TEAM EMPELLA CYCLO-CROSS.COM         2r
+62      70 FURRER Muriel                      SUI20060701      100 935 478 91      U17V           VC MEILEN/BIKO DO IT RACING TE       2r
+63      95 DELCOMMUNE Juline                  BEL20040330      100 783 331 40      DJ             TEAM WILINK BRUSSELS CYCLING         2r
+64      100 PIETERSE Isa                      NED20000127      100 234 285 14      DE             U.S.W.V. DE DOMRENNER                2r
+65      98 ZWAENEPOEL Tessa                   BEL20010927      100 649 525 94      DE.UCI         PRO                                  2r
+66      76 MANSFIELD Lotta                    GBR20030427      100 592 327 29      DE             MONTEZUMA’S RACE TEAM                2r
+67      96 STEFFENHAGEN Diana                 GER19851209      100 155 405 92      DE             RSV SEEHEIM 1971                     2r
+68      56 POLLOCK Madeleine                  CAN20050601      100 802 402 02      JUNIOR WOMEN   Cycling Canada                       2r
+69      71 HLUDZINSKI Haydn                   USA20060210      100 967 078 69      JUNIOR WOMEN   EuroCrossAcademy                     2r
+70      82 JOZKOWICZ Maja                     POL20061129      100 687 681 32      JUNIOR WOMEN   K.S. KLIF CHLAPOWO                   2r
+71      52 RODGERS Geza                       CAN20060702      100 500 884 57      JUNIOR WOMEN   CYCLING CANADA                       2r
+72      86 LISSAMAN Florence                  GBR20051126      100 838 893 21      JUNIOR WOMEN   Newark Castle                        2r
+73      55 COOGAN CISEK Corey                 USA19771008      101 000 480 06      DE.UCI         Triple C Racing - WP Cycles          2r
+74      59 ASPHOLM Finley                     FIN20060904      100 967 212 09      JUNIOR WOMEN   EUROCROSSACADEMY                     2r
+75      41 MATULA Alicja                      POL20060718      100 799 687 03      JUNIOR WOMEN   WARSZAWSKI KLUB KOLARSKI             2r
+76      85 RUBINO Rachel                      USA19840430      100 110 805 15      ELITE WOMEN    NICE BIKES                           3r
+77      78 SCHÄTTI Michelle                   SUI19990417      100 110 597 01      DE             VC WÄDENSWIL                         3r
+78      57 WESTENFELDER Elsa                  USA20050511      101 177 522 23      JUNIOR WOMEN   EuroCrossAcademy                     3r
+79      53 JAQUET Prisca                      SUI20030716      100 347 829 68      Junior         VTT Balcon du Jura                   3r
+80      81 REILLY Katie                       IRL20050225      100 527 186 72      JUNIOR WOMEN   Orwell wheelers                      3r
+        33 KAPTHEIJNS Maud                    NED19940928      100 094 848 63      DE.UCI         *DESCHACHT-GROUP HENS-CONTAINE       DNF
+        44 KELLY Siobhan                      CAN19960412      100 088 597 20      DE             BLACK DOG RACING                     DNF
+        83 MAZUREK Malgorzata                 POL19941125      100 081 478 79      ELITE WOMEN    UKS Krupiski Suszec Konwa Bik        DNF
+        36 KUYK-WHITE Taylor                  USA19871011      100 235 070 23      DE.UCI         NICE BIKES                           DNS
+
+
+#Dln: 84           #DNS: 1            #DNF: 3                                                                                                        6704
+
+
+
+
+                                                                                                                          28/12/2022 - 20:14:19 - 2 / 2
+

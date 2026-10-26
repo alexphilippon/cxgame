@@ -1,0 +1,61 @@
+                                                              UITSLAG / RESULTAT
+
+                                                      GAVERE - Veldrijden Juniors UCI
+
+              12/02/2022
+
+Reeks 1                                                   Telenet Superprestige Juniors                   Sleut 5151
+Organisator: NOVAVRIENDEN ASPER VZW - Afstand: 15.12Km - Gem. Sn: 18.99Km/u                               #Dln: 42
+
+Plaats Nr Naam                                UCICode          UCIid            Cat      Club                                   Tijd
+1       3 HAVERDINGS David                    NED20040401      100 490 105 45   JUNIOR   METEOOR ASSEN RODEN                    0h43´04.0"
+2       2 CORSUS Yordi                        BEL20051115      100 651 195 18   JUNIOR   BERT CONTAINERS - DOLTCINI             0h44´28.0"   +1´24.0"
+3       1 DOCKX Aaron                         BEL20040628      100 650 629 34   JUNIOR   IKO-CRELAN                             0h45´38.0"   +2´34.0"
+4       5 DE MOYER Kenay                      BEL20040722      100 650 660 65   JUNIOR   ACROG-TORMANS                          0h45´58.0"   +2´54.0"
+5       12 VAN DEN EIJNDEN Guus               NED20051003      100 227 874 05   JUNIOR   APB                                    0h46´14.0"   +3´10.0"
+6       4 VANDENBERGHE Viktor                 BEL20050426      100 879 604 89   JUNIOR   BERT CONTAINERS - DOLTCINI             0h47´10.0"   +4´06.0"
+7       17 POELVOORDE Tars                    BEL20051125      100 885 069 25   JUNIOR   TRUST MTB TEAM VZW                     0h47´51.0"   +4´47.0"
+8       11 CEULEMANS Niels                    BEL20041001      100 650 738 46   JUNIOR   BERT CONTAINERS - DOLTCINI             0h47´54.0"   +4´50.0"
+9       14 MARCHAND Robbe                     BEL20050923      100 898 409 76   JUNIOR   CYCLOCROSS TEAM MJ WOOD                0h48´21.0"   +5´17.0"
+10      25 PRESTAGE Sebastian                 BEL20041123      100 650 798 09   JUNIOR   DEBONDT VERANDAS CYCLING TEAM          0h48´29.0"   +5´25.0"
+11      7 DE BRUYCKERE Kay                    BEL20040321      100 650 536 38   JUNIOR   BERT CONTAINERS - DOLTCINI             0h48´37.0"   +5´33.0"
+12      41 DECLERCQ Jean-Bapiste              BEL20041214      100 721 144 30   JUNIOR   ISOREX CYCLING TEAM                    0h49´06.0"   +6´02.0"
+13      8 KUSCHLA Silas                       GER20040309      100 364 008 48   JUNIOR   WAC TEAM                               0h49´18.0"   +6´14.0"
+14      29 DE CLERCQ Arne                     BEL20040527      100 650 593 95   JUNIOR   ASFRA RACING TEAM                      0h49´34.0"   +6´30.0"
+15      15 VAN DEN BERGH Toon                 BEL20041013      100 650 751 59   JUNIOR   AA DRINK YOUNG LIONS                   0h49´42.0"   +6´38.0"
+16      26 MAERTENS Yoran                     BEL20050920      100 651 139 59   JUNIOR   WIELERCLUB "ONDER ONS - PARIKE         0h49´49.0"   +6´45.0"
+17      20 DE BRAUWERE Sil                    BEL20050411      100 909 150 50   JUNIOR   CYCLOCROSS TEAM MJ WOOD                0h49´55.0"   +6´51.0"
+18      21 CEULEMANS Jarne                    BEL20040814      100 650 689 94   JUNIOR   IKO-CRELAN                             0h50´05.0"   +7´01.0"
+19      24 WILLEKENS Rob                      BEL20050607      100 861 944 83   JUNIOR   ACROG-TORMANS                          1r
+20      16 DE NYS Milan                       BEL20041116      100 650 787 95   JUNIOR   ALFASUN ALFACOOL CYCLING TEAM          1r
+21      42 NACHTERGAELE Diego                 BEL20050710      100 651 068 85   JUNIOR   BIKE-ADVICE CYCLING TEAM               1r
+22      19 VANHOUDT Yenthe                    BEL20040817      100 647 913 34   JUNIOR   OPTIMUS-ARGENTA CYCLING TEAM           2r
+23      39 DE NEVE Hannes                     BEL20050610      100 780 454 73   JUNIOR   KON. VC ´T MEETJESLAND - KNESS         2r
+24      23 MOREELS Kilian                     BEL20040803      100 650 675 80   JUNIOR   AA DRINK YOUNG LIONS                   2r
+25      33 OP DE BEECK Brent                  BEL20051031      100 713 096 33   JUNIOR   YOUNG CYCLING TALENT D&D               2r
+26      49 CANNOOT Lance                      BEL20050812      100 651 107 27   JUNIOR   AA DRINK YOUNG LIONS                   2r
+27      45 VERSTRAETE Rune                    BEL20050802      100 651 096 16   JUNIOR   C.T. KEUKENS BUYSSE KNESSELARE         2r
+28      38 ANTHEUNIS Siebren                  BEL20050707      100 651 064 81   JUNIOR   VAN MOER LOGISTICS CYCLING TEA         3r
+29      36 DE GROOTE Loïc                     BEL20041114      100 650 784 92   JUNIOR   WIELERCLUB "ONDER ONS - PARIKE         3r
+30      35 DE GROOTE Gaëtan                   BEL20041114      100 650 785 93   JUNIOR   WIELERCLUB "ONDER ONS - PARIKE         3r
+31      34 CASTELEYN Chaunes                  BEL20050620      100 651 046 63   JUNIOR   CYCLOCROSS TEAM MJ WOOD                3r
+32      28 DIERICK Romain                     BEL20050512      100 651 013 30   JUNIOR   AVIA-RUDYCO CYCLING TEAM               3r
+33      50 THEUNISSE Arthur                   BEL20050914      100 651 132 52   JUNIOR   KVC NOORDZEEMEEUW                      3r
+34      44 VAN HEESWIJK Max                   NED20040527      100 952 293 28   JUNIOR   WV SCHIJNDEL                           3r
+35      27 CREMMERY Flor                      BEL20050509      100 651 007 24   JUNIOR   CYCLING TEAM HOUTLAND-WESTKUST         3r
+36      37 VAN OUDENHOVEN Jurgen              NED20040422      101 077 111 07   JUNIOR   WV SCHIJNDEL                           4r
+37      47 LENAERS Milan                      BEL20040519      100 650 588 90   JUNIOR   CYCLING TEAM LUC WALLAYS - JON         4r
+        10 URKENS Ferre                       BEL20051203      100 651 203 26   JUNIOR   CX Team Deschacht-Hens-Maes Co         DNF
+        13 VAN DEN BOER Seppe                 BEL20051128      100 859 817 90   JUNIOR   AA DRINK YOUNG LIONS                   DNF
+        22 D´HOUST Yani                       BEL20040304      100 650 521 23   JUNIOR   CYCLOCROSS TEAM MJ WOOD                DNF
+        30 GABRIELS Jasper                    BEL20040310      100 231 751 02   JUNIOR   TEAM KEMPEN                            DNF
+        52 JACOBS Joren                       BEL20050417      100 650 990 07   JUNIOR   AA DRINK YOUNG LIONS                   DNF
+
+
+#Dln: 42           #DNS: 0            #DNF: 5                                                                                                   5151
+
+
+
+
+                                                                                                                     12/02/2022 - 12:45:25 - 1 / 1
+

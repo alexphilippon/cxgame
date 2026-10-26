@@ -1,0 +1,91 @@
+                                                              UITSLAG / RESULTAT
+
+                                           CYCLOCROSS GULLEGEM - Veldrijden Klasse
+                                                         2 UCI
+              04/01/2025
+
+Reeks 1                                                TELENET Superprestige Gullegem                   Sleut 11072
+Organisator: CYCLOCROSS GULLEGEM - Afstand: 21.2Km - Gem. Sn: 19.43Km/u                                 #Dln: 59
+
+Plaats Nr Naam                                    UCICode           Cat           Club                                       Tijd
+1        20 VAN AERT Wout                         BEL19940915       ME-WT-MC      TVL                                        1h01´25.0"
+2        1 ISERBYT Eli                            BEL19971022       ME-CT-MC      PSC                                        1h01´35.0"   +10.0"
+3        2 VANTHOURENHOUT Michael                 BEL19931210       ME-CT-MC      PSC                                        1h01´56.0"   +31.0"
+4        5 WYSEURE Joran                          BEL20010109       ME-CX-MC      CRC                                        1h02´05.0"   +40.0"
+5        3 VANDEPUTTE Niels                       BEL20000919       ME-CX-MC      ADD                                        1h02´28.0"   +1´03.0"
+6        14 KAMP Ryan                             NED20001212       EL.CMC        FENIX-DECEUNINCK                           1h02´32.0"   +1´07.0"
+7        7 ORTS LLORET Felipe                     ESP19950401       EL.CP         RIDLEY RACING TEAM                         1h02´32.0"   +1´07.0"
+8        9 VERSTRYNGE Emiel                       BEL20020204       ME-CX-MC      CRC                                        1h02´33.0"   +1´08.0"
+9        13 MASON Cameron                         GBR20000818       ELITE         SEVEN RACING                               1h02´39.0"   +1´14.0"
+10       4 VAN DER HAAR Lars                      NED19910723       ELITE         BALOISE GLOWI LIONS                        1h02´59.0"   +1´34.0"
+11       25 DE BRUYCKERE Kay                      BEL20040321       MU-CT-MC      PSC                                        1h03´14.0"   +1´49.0"
+12       12 KUHN Kevin                            SUI19980218       ELITE         CHARLES LIÉGEOIS ROASTERY CX               1h03´28.0"   +2´03.0"
+13       23 LOOCKX Lander                         BEL19970425       ME-PT-MC      RKT                                        1h03´36.0"   +2´11.0"
+14       6 SWEECK Laurens                         BEL19931217       ME-CX-MC      CRC                                        1h03´57.0"   +2´32.0"
+15       10 VANDEBOSCH Toon                       BEL19990619       ME-CX-MC      CRC                                        1h04´04.0"   +2´39.0"
+16       41 MEEUSEN Tom                           BEL19881107       ME-IND-MC     CYCLIS - VAN DEN PLAS CYCLING              1h04´06.0"   +2´41.0"
+17       30 AERTS Thijs                           BEL19961103       ME-CX-MC      CLR                                        1h04´16.0"   +2´51.0"
+18       15 VENTURINI Clement                     FRA19931016       ELITE         ARKEA TEAM                                 1h04´28.0"   +3´03.0"
+19       32 VERMEERSCH Gianni                     BEL19921119       ME-WT-MC      ADC                                        1h05´04.0"   +3´39.0"
+20       29 GROSLAMBERT Martin                    FRA20020107       U23 HOMMES    vc ornans                                  1h05´13.0"   +3´48.0"
+21       11 MERLIER Tim                           BEL19921030       ME-WT-MC      SQS                                        1h05´23.0"   +3´58.0"
+22       16 VAN DE PUTTE Victor                   BEL20020520       ME-CT-MC      DHF                                        1h05´28.0"   +4´03.0"
+23       27 JANSSEN Wout                          BEL20020129       ME            CYCLIS - VAN DEN PLAS CYCLING              1h05´32.0"   +4´07.0"
+24       18 HUYBS Ward                            BEL20021121       ME-CT-ZC      BGL                                        1h05´51.0"   +4´26.0"
+25       36 BEHRENS Eike                          GER20050830       JUNIOR MEN    HRV Hamburg Germany                        1h06´36.0"   +5´11.0"
+26       39 DE MOYER Kenay                        BEL20040722       MU-CT-ZC      PSC                                        1h06´50.0"   +5´25.0"
+27       47 DE VET Sander                         BEL20000916       ME            CRABBE - DSTNY                             1h07´08.0"   +5´43.0"
+28       19 LAURYSSEN Yorben                      BEL20020125       ME-CT-ZC      PSC                                        1h07´28.0"   +6´03.0"
+29       60 ALDERWEIRELD Robin                    BEL19961210       ME            TEAM ATOM 6                                1h07´49.0"   +6´24.0"
+30       42 DELNOIJE Remon                        NED20010713       U23M          TWC DE KEMPEN                              1h07´58.0"   +6´33.0"
+31       46 ST ONGE Maxime                        CAN20051215       U23 MEN       STIMULUS ORBEA                             1h08´00.0"   +6´35.0"
+32       44 SCOTT Tom                             GBR20040918       U23 MEN       Marian University                          1h08´03.0"   +6´38.0"
+33       37 JANOUT Jan                            CZE20060406       U23 (M)       LYKO KLUB PRACHATICE                       1h08´13.0"   +6´48.0"
+34       59 NUYENS Wies                           BEL20050217       MU-CT-ZC      PSC                                        1h08´27.0"   +7´02.0"
+35       61 MORICHON Mathieu                      FRA19950204       ELITE         TEAM ROYALBIKESHOP.COM                     1h08´53.0"   +7´28.0"
+36       75 VAN LOOCKE Lars                       BEL20051129       MU            CAMPE LANCKRIET CYCLING TEAM               1h08´53.0"   +7´28.0"
+37       74 VANHOUDT Yenthe                       BEL20040817       MU            CYCLIS - VAN DEN PLAS CYCLING              1h09´14.0"   +7´49.0"
+38       40 CONAWAY Calvin                        USA20061118       U23M          IGNITION P/B RIGD-LEITNER                  1h09´18.0"   +7´53.0"
+39       34 CRISPIN Mickaël                       FRA19980407       ELITE         CROSS TEAM LEGENDRE                        1h09´20.0"   +7´55.0"
+40       79 VAN DEN BROEK Axel                    BEL20060503       MU-CT-ZC      WNR                                        1h09´32.0"   +8´07.0"
+41       63 DU MOUZA Quentin                      FRA20040504       U23 HOMMES    C’Chartres cyclisme                        1h09´43.0"   +8´18.0"
+42       48 WOODFORD Alexander                    CAN20040828       U23M          CANADA NATIONAL TEAM                       2r
+43       66 ALLAER Thorben                        BEL20060704       MU            VDM-TRAWOBO CYCLING TEAM                   3r
+44       52 MERINO Fabian                         CAN19910911       ELITE MEN     Broad Street Breakaway                     3r
+45       62 DAVIES Cai                            GBR19980702       ELITE 2 (M)   RICHARDSONS TREK DAS                       3r
+46       35 BREGENZER Alex                        GER19981101       ELITE MEN     DREAMERS RACING                            3r
+47       78 ENDO Kosuke                           JPN20050822       U23M          SONIC RACING                               3r
+48       69 BRAMATI Marco                         ITA20060824       U23M          ASD TEAM BRAMATI                           3r
+49       76 VALENTINI Matteo                      ITA20050221       U23 UOMO      BELTRAMI TSA-LA RISORSA UMANA-             3r
+50       38 FERRI Tommaso                         ITA20040918       U23 MEN       FAS AIRPORT SERVICES GUERCIOTT             4r
+51       45 SUZUKI Raito                          JPN20020118       U23 HOMMES    TEAM S1NEO LOUDEAC                         4r
+52       65 FERREIRA Tom                          FRA20060602       U23 MEN       Team cx Chartres                           4r
+53       50 ZECCHINI Simone                       ITA20010611       U23 UOMINI    XPC BELTRAMI TSA COOPERATORI               4r
+54       80 HELIOT Martin                         FRA20021129       MEN U23       TEAM AVESNOIS                              5r
+55       55 OKAYAMA Yuta                          JPN20011003       U23M          MASAYA YOUNG RIDERS                        5r
+
+
+                                                                                                                   04/01/2025 - 16:35:06 - 1 / 2
+                                                              UITSLAG / RESULTAT
+
+                                           CYCLOCROSS GULLEGEM - Veldrijden Klasse
+                                                         2 UCI
+               04/01/2025
+
+Reeks 1                                                TELENET Superprestige Gullegem              Sleut 11072
+Organisator: CYCLOCROSS GULLEGEM - Afstand: 21.2Km - Gem. Sn: 19.43Km/u                            #Dln: 59
+
+Plaats Nr Naam                                    UCICode           Cat       Club                                      Tijd
+           54 KAJI Tetsuki                        JPN19991217       ELITE     OLANDA BASE/WATERSLEY                     DNF
+           56 TURNER Jacob                        NZL20030524       U23 MEN   SOUTHERN CROSS CX                         DNF
+           72 LEMONNIER François                  FRA20020201       ELITE2    CL BARLIN                                 DNF
+           77 SALOMEZ Ydris                       BEL20010227       ME        VZW WP DE MOLENSPURTERS MEULEB            DNF
+
+
+#Dln: 59          #DNS: 0             #DNF: 4                                                                                           11072
+
+
+
+
+                                                                                                              04/01/2025 - 16:35:06 - 2 / 2
+

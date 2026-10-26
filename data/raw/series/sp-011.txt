@@ -1,0 +1,63 @@
+                                                            UITSLAG / RESULTAT
+
+                                             TELENET SUPERPRESTIGE OVERIJSE -
+             26/10/2025                             Veldrijden Klasse 1 UCI
+Reeks 0                                            Druivencross Overijse - Men Elite/U23                    Sleut 12869
+Organisator: WIELERCLUB ´DE SPORTVRIENDEN OVERIJSE´ - Afstand: 27.9Km - Gem. Sn: 26.41Km/u                  #Dln: 46
+
+Plaats Nr Naam                               UCICode         UCIid             Cat           Club                                   Tijd
+1       1 VANTHOURENHOUT Michael             BEL19931210     100 071 556 51    ME-CT-MC      PAUWELS SAUZEN - ALTEZ INDUSTR         1h00´45.0"
+2       9 RONHAAR Pim                        NED20010720     100 231 082 12    ELITE MEN     BALOISE GLOWI LIONS                    1h00´52.0"   +7.0"
+3       8 VERSTRYNGE Emiel                   BEL20020204     100 649 727 05    ME-CX-MC      CRELAN-CORENDON                        1h00´58.0"   +13.0"
+4       3 VANDEPUTTE Niels                   BEL20000919     100 163 276 09    ME-CX-MC      ALPECIN-DECEUNINCK DEVELOPMENT         1h01´00.0"   +15.0"
+5       6 WYSEURE Joran                      BEL20010109     100 649 217 77    ME-CX-MC      CRELAN-CORENDON                        1h01´02.0"   +17.0"
+6       11 NIEUWENHUIS Joris                 NED19960211     100 087 058 33    ELITE MEN     RIDLEY RACING TEAM                     1h01´03.0"   +18.0"
+7       13 MICHELS Jente                     BEL20030217     100 650 143 33    MU-CT-MC      ALPECIN-DECEUNINCK DEVELOPMENT         1h01´04.0"   +19.0"
+8       4 VAN DER HAAR Lars                  NED19910723     100 061 186 60    ELITE MEN     BALOISE GLOWI LIONS                    1h01´14.0"   +29.0"
+9       22 MEEUSSEN Witse                    BEL20010308     100 649 316 79    ME-CX-MC      CRELAN-CORENDON                        1h01´20.0"   +35.0"
+10      15 MASON Cameron                     GBR20000818     100 235 749 23    ELITE MEN     SEVEN RACING                           1h01´26.0"   +41.0"
+11      26 KUYPERS Gerben                    BEL20000201     100 163 227 57    ME-CX-MC      CHARLES-LIÉGEOIS ROASTERY CX           1h01´56.0"   +1´11.0"
+12      17 VANDEBOSCH Toon                   BEL19990619     100 109 436 04    ME-CX-MC      CRELAN-CORENDON                        1h01´56.0"   +1´11.0"
+13      20 VAN DE PUTTE Victor               BEL20020520     100 649 859 40    ME-CX-MC      DESCHACHT-HENS CX TEAM                 1h02´07.0"   +1´22.0"
+14      14 HENDRIKX Mees                     NED20000805     100 165 194 84    ELITE MEN     HEIZOMAT - CUBE                        1h02´09.0"   +1´24.0"
+15      10 KUHN Kevin                        SUI19980218     100 097 467 63    ELITE MEN     HEIZOMAT - CUBE                        1h02´18.0"   +1´33.0"
+16      19 DE BRUYCKERE Kay                  BEL20040321     100 650 536 38    MU-CT-MC      PAUWELS SAUZEN - ALTEZ INDUSTR         1h02´20.0"   +1´35.0"
+17      2 AERTS Toon                         BEL19931019     100 075 860 87    ME-CX-MC      DESCHACHT-HENS CX TEAM                 1h03´20.0"   +2´35.0"
+18      25 VANDENBERGHE Viktor               BEL20050426     100 879 604 89    MU-CT-ZC      PAUWELS SAUZEN - ALTEZ INDUSTR         1h03´23.0"   +2´38.0"
+19      21 HAVERDINGS David                  NED20040401     100 490 105 45    U23 MEN       BALOISE GLOWI LIONS                    1h03´25.0"   +2´40.0"
+20      24 HORNY Clement                     BEL20001111     100 164 198 58    ME-MTB-ZC     BH-WALLONIE MTB TEAM                   1h03´26.0"   +2´41.0"
+21      7 ORTS LLORET Felipe                 ESP19950401     100 090 047 15    EL.CP         RIDLEY RACING TEAM                     1h03´38.0"   +2´53.0"
+22      44 VAN DEN BOER Arthur               BEL20070130     100 992 563 43    MU-CX-ZC      BALOISE GLOWI LIONS                    1h03´43.0"   +2´58.0"
+23      18 VIEZZI Stefano                    ITA20060205     100 308 939 75    U23 MEN       ALPECIN DECEUNINCK DEVELOPMENT         1h03´52.0"   +3´07.0"
+24      16 KAMP Ryan                         NED20001212     100 233 561 66    EL.CMC        ALPECIN-DECEUNINCK DEVELOPMENT         1h04´00.0"   +3´15.0"
+25      40 MAES Fabian                       BEL20060828     100 651 529 61    MU            CYCLIS - VAN DEN PLAS CYCLING          1h04´19.0"   +3´34.0"
+26      23 DE MOYER Kenay                    BEL20040722     100 650 660 65    MU-CT-ZC      PAUWELS SAUZEN - ALTEZ INDUSTR         1h04´20.0"   +3´35.0"
+27      27 DE BRAUWERE Sil                   BEL20050411     100 909 150 50    MU-CT-ZC      PAUWELS SAUZEN - ALTEZ INDUSTR         1h05´06.0"   +4´21.0"
+28      39 ALDERWEIRELD Robin                BEL19961210     100 098 591 23    ME            TEAM ATOM 6                            1h05´27.0"   +4´42.0"
+29      31 DE VET Sander                     BEL20000916     100 163 931 82    ME            TRUSTUP-CC CHEVIGNY                    1h05´29.0"   +4´44.0"
+30      30 JAMIN Antoine                     BEL20050323     100 642 718 77    MU-MTB-ZC     BH-WALLONIE MTB TEAM                   1h05´35.0"   +4´50.0"
+31      36 RIJVERS Max                       NED20060811     100 231 160 90    U23 MEN       RB ZELFBOUW UCT                        1h06´10.0"   +5´25.0"
+32      28 WALTER Luke                       USA20060530     101 179 419 77    U23 MEN       PURE ENERGY DRINK/HARO BIKES B         1h06´31.0"   +5´46.0"
+33      35 MARCHAND Robbe                    BEL20050923     100 898 409 76    MU-CX-ZC      DESCHACHT-HENS CX TEAM                 1h06´38.0"   +5´53.0"
+34      45 VANLAERE Loïc                     BEL20071001     100 651 974 21    MJ            STARBIKES - VISTABUILD                 1h06´51.0"   +6´06.0"
+35      43 VANDEN EYNDE Mats                 BEL20070112     100 865 508 58    MU-CX-ZC      BALOISE GLOWI LIONS                    1h07´32.0"   +6´47.0"
+36      32 OLDHAM Declan                     GBR20070806     101 211 265 10    JUNIOR MEN    HOPE TECH RACING TEAM                  1h07´51.0"   +7´06.0"
+37      46 VAN DEN BERGH Toon                BEL20041013     100 650 751 59    MU            YOUNG CYCLING TALENT D&D               2r
+38      37 CECCHI Filippo                    ITA20021210     100 301 964 84    ELITE MEN     Bike Academy Racing Team               3r
+39      41 DRAKE Giles                       GBR19840420     100 098 517 46    ELITE MEN     WHEELBASE CABTECH CASTELLI             3r
+40      42 HURT Joel Darren                  GBR20060424     100 631 069 68    U23 MEN       DCC                                    3r
+41      49 DEVALLEE Matheo                   BEL20060311     100 972 767 35    MU            ENTENTE CYCLISTE DE WALLONIE           4r
+42      48 BARKER Oliver                     GBR20070128     101 211 945 11    JUNIOR MEN    SHIBDEN CYCLING CLUB                   4r
+        5 SWEECK Laurens                     BEL19931217     100 069 126 46    ME-CX-MC      CRELAN-CORENDON                        DNF
+        12 MEIN Thomas                       GBR19990112     100 162 259 59    ELITE MEN     HOPE FACTORY RACING                    DNF
+        29 GEVAERT Miles                     BEL20040729     100 650 666 71    MU            TOMABEL-INOFEC CYCLINGTEAM             DNF
+        34 PARENTI Nicola                    ITA19960119     100 136 945 62    ELITE MEN     BIKE ACADEMY RACING TEAM               DNF
+
+
+#Dln: 46          #DNS: 0            #DNF: 4                                                                                                      12869
+
+
+
+
+                                                                                                                       26/10/2025 - 16:29:49 - 1 / 1
+

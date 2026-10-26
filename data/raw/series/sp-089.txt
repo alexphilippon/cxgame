@@ -1,0 +1,67 @@
+                                                              UITSLAG / RESULTAT
+
+                                                       BOOM - Veldrijden Klasse 1 UCI
+
+              03/12/2022
+
+Reeks 1                                                      Superprestige De Schorre                       Sleut 6989
+Organisator: PRO-CYCLING VLAANDEREN VZW - Afstand: 26.64Km - Gem. Sn: 25.5Km/u                              #Dln: 48
+
+Plaats Nr Naam                                   UCICode          UCIid            Cat       Club                                 Tijd
+1       1 PIDCOCK Thomas                         GBR19990730      100 109 775 52   EL.PTT    INEOS GRENADIERS                     0h59´42.0"
+2       4 VAN DER HAAR Lars                      NED19910723      100 061 186 60   ELITE     BALOISE TREK LIONS                   0h59´52.0"   +10.0"
+3       3 ISERBYT Eli                            BEL19971022      100 093 350 20   EL.CMC    PAUWELS SAUZEN - BINGOAL             0h59´55.0"   +13.0"
+4       2 VANTHOURENHOUT Michael                 BEL19931210      100 071 556 51   EL.CMC    PAUWELS SAUZEN - BINGOAL             1h00´25.0"   +43.0"
+5       5 SWEECK Laurens                         BEL19931217      100 069 126 46   EL.CMC    CRELAN-FRISTADS                      1h00´52.0"   +1´10.0"
+6       15 KAMP Ryan                             NED20001212      100 233 561 66   U23       PAUWELS SAUZEN - BINGOAL             1h00´59.0"   +1´17.0"
+7       12 ADAMS Jens                            BEL19920605      100 066 439 75   EL.MC     HOLLEBEEKHOEVE CYCLING TEAM          1h01´03.0"   +1´21.0"
+8       6 KUHN Kevin                             SUI19980218      100 097 467 63   ELITE     TORMANS CYCLO CROSS TEAM             1h01´10.0"   +1´28.0"
+9       20 MICHELS Jente                         BEL20030217      100 650 143 33   U23CMC    ALPECIN-DECEUNINCK                   1h01´14.0"   +1´32.0"
+10      8 VANDEPUTTE Niels                       BEL20000919      100 163 276 09   U23CMC    ALPECIN-DECEUNINCK                   1h01´28.0"   +1´46.0"
+11      18 NIEUWENHUIS Joris                     NED19960211      100 087 058 33   ELITE     TEAM SUNWEB                          1h01´31.0"   +1´49.0"
+12      9 VANDEBOSCH Toon                        BEL19990619      100 109 436 04   EL.CMC    ALPECIN-DECEUNINCK                   1h01´50.0"   +2´08.0"
+13      19 VAN DER POEL Mathieu                  NED19950119      100 079 462 03   EL.CP     ALPECIN-DECEUNINCK                   1h02´45.0"   +3´03.0"
+14      17 LOOCKX Lander                         BEL19970425      100 093 608 84   EL.CMC    DESCHACHT-HENS-MAES                  1h02´59.0"   +3´17.0"
+15      21 VAN DE PUTTE Victor                   BEL20020520      100 649 859 40   U23       DESCHACHT- HENS - MAES               1h03´13.0"   +3´31.0"
+16      54 AERTS Thijs                           BEL19961103      100 086 322 73   EL.CMC    BALOISE TREK LIONS                   1h03´15.0"   +3´33.0"
+17      23 HUYBS Ward                            BEL20021121      100 650 055 42   U23.C     BALOISE TREK LIONS                   1h03´38.0"   +3´56.0"
+18      7 ORTS LLORET Felipe                     ESP19950401      100 090 047 15   EL.CP     TEIKA-BH-GSPORT                      1h03´52.0"   +4´10.0"
+19      53 MEIN Thomas                           GBR19990112      100 162 259 59   ELITE     HOPE FACTORY RACING                  1h04´27.0"   +4´45.0"
+20      13 NYS Thibau                            BEL20021112      100 650 048 35   U23CMC    BALOISE TREK LIONS                   1h04´32.0"   +4´50.0"
+21      16 MEEUSEN Tom                           BEL19881107      100 033 416 32   EL.CMC    DESCHACHT-HENS-MAES                  1h04´32.0"   +4´50.0"
+22      27 BELMANS Lennert                       BEL20020215      100 649 744 22   U23.C     CRELAN-FRISTADS                      1h04´43.0"   +5´01.0"
+23      26 LAURYSSEN Yorben                      BEL20020125      100 649 715 90   U23       PAUWELS SAUZEN - BINGOAL             1h04´44.0"   +5´02.0"
+24      25 LILLO Dario                           SUI20020417      100 347 856 95   U23       CX Team Deschacht-Hens-Maes Co       1h04´52.0"   +5´10.0"
+25      11 SOETE Daan                            BEL19941219      100 075 736 60   EL.CMC    DESCHACHT-HENS-MAES                  1h05´08.0"   +5´26.0"
+26      34 JANSSEN Lucas                         NED20030106      100 228 032 66   U23       BEAT CYCLING TEAM                    1h05´16.0"   +5´34.0"
+27      33 ROMBOUTS Seppe                        BEL19980514      100 097 685 87   ELITE2    RB ZELFBOUW UCT                      1h05´39.0"   +5´57.0"
+28      55 BAERS Arne                            BEL20020327      100 649 794 72   U23.C     TORMANS CYCLO CROSS TEAM             1r
+29      30 GROENENDAAL Bailey                    NED20030912      100 228 730 85   U23       WV SCHIJNDEL                         1r
+30      22 MOTTIEZ Gilles                        SUI19970327      100 098 687 22   ELITE2    CROSS TEAM LEGENDRE                  1r
+31      42 WUYTS Mathijs                         BEL19980730      100 109 562 33   ELITE2M   CP X SCO RACING TEAM                 1r
+32      29 VANDERLINDEN Lukas                    BEL20030903      100 650 344 40   U23.C     PAUWELS SAUZEN - BINGOAL             1r
+33      37 VERMOOTE Jelle                        BEL20010829      100 649 499 68   U23.C     TORMANS CYCLO CROSS TEAM             1r
+34      31 VERVOORT Wout                         BEL20010106      100 649 213 73   U23       VAN DEN PLAS - HEPA CYCLING TE       2r
+35      28 VAN LIEROP Danny                      NED20030820      100 233 200 93   U23       ORANGE-BABIES CYCLINGTEAM            3r
+36      35 GROENEN Klaas                         NED19941109      100 490 089 29   ELITE2    CYCLOTEAM.NL                         3r
+37      41 SLUYDTS Toon                          BEL20020109      100 649 687 62   U23       TEAM THIELEMANS - DE HAUWERE         4r
+38      24 JUNQUERA SAN MILLAN Mario             ESP19970128      100 093 718 00   ELITE     COQUE URIA E. C.                     4r
+39      43 VERSTRAELEN Wannes                    BEL20031217      100 650 431 30   U23       VAN GORP PROJECTS - CYCLING TE       4r
+40      39 DELNOIJE Remon                        NED20010713      100 226 841 39   U23       TWC DE KEMPEN                        5r
+41      50 POTTER James                          NED20020324      100 227 898 29   JUNIOR    UWTC DE VOLHARDING                   5r
+42      36 LEMBRECHTS Ruben                      BEL20020703      100 758 226 58   U23       ACROG-TORMANS                        5r
+43      51 VAN LELYVELD Juan                     LUX20040611      100 596 296 21   U23 MEN   UC DIPPACH                           6r
+44      45 HEYMES Gauthier                       FRA19950628      100 282 137 45   ELITE2    CC SARREBOURGEOIS                    6r
+        14 HENDRIKX Mees                         NED20000805      100 165 194 84   ELITE     CRELAN-FRISTADS                      DNF
+        32 NOLAN Sean                            IRL20010912      100 174 649 33   U23       EVOPRO RACING                        DNF
+        46 KAJI Tetsuki                          JPN19991217      100 110 588 89   ELITE     JAPAN PHOTO FINISHE                  DNF
+        47 SCHELLEKENS Tom                       NED20030305      100 232 811 92   JUNIOR    WV SCHIJNDEL                         DNF
+
+
+#Dln: 48          #DNS: 0             #DNF: 4                                                                                                     6989
+
+
+
+
+                                                                                                                       03/12/2022 - 16:30:27 - 1 / 1
+

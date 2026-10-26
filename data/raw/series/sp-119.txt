@@ -1,0 +1,55 @@
+                                                             UITSLAG / RESULTAT
+
+                                                  MERKSPLAS - Veldrijden Juniors UCI
+
+              20/11/2021
+
+Reeks 1                                                      Aardbeiencross - Juniors                     Sleut 4501
+Organisator: DE HOOGSTRAATSE SPURTERS VZW - Afstand: 17.1Km - Gem. Sn: 23.95Km/u                          #Dln: 36
+
+Plaats Nr Naam                             UCICode           UCIid             Cat      Club                                    Tijd
+1       2 HAVERDINGS David                 NED20040401       100 490 105 45    JUNIOR   METEOOR ASSEN RODEN                     0h39´50.0"
+2       1 DOCKX Aaron                      BEL20040628       100 650 629 34    JUNIOR   IKO-CRELAN                              0h39´53.0"   +3.0"
+3       17 JOCHEMS Jelte                   NED20050525       100 233 510 15    JUNIOR   MBC BAR END                             0h39´56.0"   +6.0"
+4       12 VAN DEN EIJNDEN Guus            NED20051003       100 227 874 05    JUNIOR   APB                                     0h40´01.0"   +11.0"
+5       6 KUSCHLA Silas                    GER20040309       100 364 008 48    JUNIOR   WAC TEAM                                0h41´17.0"   +1´27.0"
+6       10 DHONDT Robbe                    BEL20040625       100 727 445 26    JUNIOR   BIKE-ADVICE CYCLING TEAM                0h41´20.0"   +1´30.0"
+7       27 BOUTEN Freek                    NED20050606       100 234 011 31    JUNIOR   CYCLING TEAM LIMBURG                    0h41´21.0"   +1´31.0"
+8       7 URKENS Ferre                     BEL20051203       100 651 203 26    U17M     VZW KONINKLIJKE STOEMPERSCLUB           0h41´22.0"   +1´32.0"
+9       3 JEŽEK Václav                     CZE20050308       100 478 183 54    U17M     IVAR CS-AUTHOR TEAM                     0h41´25.0"   +1´35.0"
+10      11 SAMEC Filip                     CZE20050202       100 473 184 02    Kadet    IVAR CS-AUTHOR TEAM                     0h41´43.0"   +1´53.0"
+11      14 VAN DER HEYDEN Dario            BEL20040215       100 650 505 07    JUNIOR   AA DRINK YOUNG LIONS                    0h41´53.0"   +2´03.0"
+12      18 PRINS Jari                      NED20041018       100 231 600 45    JUNIOR   DE JONGE RENNER                         0h42´06.0"   +2´16.0"
+13      42 VAN REES Christiaan             NED20050428       100 228 159 96    JUNIOR   GRC JAN VAN ARCKEL                      0h42´08.0"   +2´18.0"
+14      15 VAN DEN BERGH Toon              BEL20041013       100 650 751 59    JUNIOR   AA DRINK YOUNG LIONS                    0h42´09.0"   +2´19.0"
+15      47 KLIJN Nick                      NED20040823       100 230 704 22    JUNIOR   RC JAN VAN ARCKEL                       0h42´10.0"   +2´20.0"
+16      45 JANSSENS Willem                 BEL20050217       100 650 925 39    U17M     AA DRINK YOUNG LIONS                    0h42´19.0"   +2´29.0"
+17      25 WOUTERS Jelle                   BEL20050522       100 651 021 38    U17M     TEAM KEMPEN                             0h42´25.0"   +2´35.0"
+18      38 PRESTAGE Sebastian              BEL20041123       100 650 798 09    JUNIOR   DEBONDT VERANDAS CYCLING TEAM           0h42´32.0"   +2´42.0"
+19      31 BAERT Brent                     BEL20040823       100 650 696 04    JUNIOR   CYCLING TEAM LUC WALLAYS - JON          0h42´44.0"   +2´54.0"
+20      51 DOCKX Gilles                    BEL20050307       100 650 947 61    U17M     HEIST CYCLING TEAM (HCT)                0h43´15.0"   +3´25.0"
+21      55 VAN DER VALK Lukas              GER20051108       100 362 275 61    U17M     ACROG - TORMANS BALEN BC                0h43´18.0"   +3´28.0"
+22      56 VAN DER VALK Tom                GER20051108       100 362 187 70    U17M     ACROG - TORMANS BALEN BC                0h43´33.0"   +3´43.0"
+23      21 VUYLSTEKE Tom                   BEL20050204       100 783 296 05    U17M     ACROG - TORMANS BALEN BC                0h44´19.0"   +4´29.0"
+24      36 HARIG Tim                       GER20040614       100 518 026 30    JUNIOR   RV FREIWEG SERRIG/ TEAM BEACON          0h44´27.0"   +4´37.0"
+25      50 VAN DER POEL Tim                NED20050205       100 232 822 06    U17M     DRC DE MOL                              0h44´35.0"   +4´45.0"
+26      35 VANHOOYDONCK Seppe              BEL20040426       100 650 563 65    JUNIOR   OMC MTB CLUB - OPOETEREN                0h44´57.0"   +5´07.0"
+27      28 POLUS Jorben                    BEL20050810       100 651 100 20    U17M     ACROG - TORMANS BALEN BC                0h45´04.0"   +5´14.0"
+28      22 DE CLERCQ Arne                  BEL20040527       100 650 593 95    JUNIOR   ASFRA RACING TEAM                       0h45´24.0"   +5´34.0"
+29      26 VERSTRAETE Rune                 BEL20050802       100 651 096 16    U17M     C.T. KEUKENS BUYSSE KNESSELARE          0h45´39.0"   +5´49.0"
+30      20 DJELIL Yani Angelo              GBR20050212       100 979 443 18    U17M     UNA FORZA RACING                        0h45´47.0"   +5´57.0"
+31      34 SWART Hidde                     NED20050319       100 234 364 93    U17M     DE JONGE RENNER OOSTERHOUT              0h45´54.0"   +6´04.0"
+32      49 BRETHOUWER Yorick               NED20040316       100 232 005 62    JUNIOR   WV DE JONGE RENNER OOSTERHOUT           0h45´58.0"   +6´08.0"
+33      52 DE LAET Milan                   BEL20050524       100 651 031 48    U17M     NETCONNECT CYCLING TEAM                 0h46´02.0"   +6´12.0"
+34      39 DEKORT Jens                     BEL20040817       100 868 237 71    JUNIOR   WESTFIT                                 1r
+35      33 MOORTHAMER Jasper               BEL20050607       100 758 228 60    U17M     NETCONNECT CYCLING TEAM                 2r
+36      53 DE PICKER Colin                 BEL20050614       100 987 513 37    U17M     DEBONDT VERANDAS CYCLING TEAM           3r
+
+
+#Dln: 36          #DNS: 0            #DNF: 0                                                                                                    4501
+
+
+
+
+                                                                                                                     20/11/2021 - 12:55:28 - 1 / 1
+

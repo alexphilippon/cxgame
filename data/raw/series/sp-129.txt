@@ -1,0 +1,58 @@
+                                                              UITSLAG / RESULTAT
+
+                                                        GAVERE - Veldrijden Vrouwen
+
+              12/02/2022
+
+Reeks 1                                                   Telenet Superprestige Women                     Sleut 5133
+Organisator: NOVAVRIENDEN ASPER VZW - Afstand: 15.12Km - Gem. Sn: 17.77Km/u                               #Dln: 39
+
+Plaats Nr Naam                                  UCICode         UCIid            Cat      Club                                   Tijd
+1       1 BRAND Lucinda                         NED19890702     100 066 056 80   DE       BALOISE TREK LIONS                     0h46´33.0"
+2       4 WORST Annemarie                       NED19951219     100 080 829 12   DEPROF   777                                    0h47´08.0"   +35.0"
+3       3 BETSEMA Denise                        NED19930123     100 076 546 94   DE       PAUWELS SAUZEN - BINGOAL               0h47´24.0"   +51.0"
+4       11 BACKSTEDT Zoe                        GBR20040924     100 542 584 47   DE       TORMANS-ACROG                          0h48´04.0"   +1´31.0"
+5       10 VAN ALPHEN Aniek                     NED19990201     100 155 413 03   DE       777                                    0h48´58.0"   +2´25.0"
+6       6 BAKKER Manon                          NED19990715     100 095 216 43   DE       IKO - CRELAN                           0h50´00.0"   +3´27.0"
+7       5 CLAUZEL Hélène                        FRA19980125     100 098 768 06   DE       AS BIKE CROSS TEAM                     0h50´30.0"   +3´57.0"
+8       12 SCHREIBER Marie                      LUX20030417     100 349 984 89   DE       ACROG TORMANS                          0h50´39.0"   +4´06.0"
+9       17 GARIBOLDI Rebecca                    ITA19961216     100 094 207 04   DE       TEAM CINGOLANI                         0h50´44.0"   +4´11.0"
+10      8 NORBERT RIBEROLLE Marion              BEL19990107     100 262 683 88   DEPROF   STARCASINO CX TEAM                     0h51´43.0"   +5´10.0"
+11      14 VERHOEVEN Suzanne                    BEL19960508     100 106 117 80   DE       VONDELMOLEN-DE CEUSTER CYCLING         0h51´54.0"   +5´21.0"
+12      9 CLAUZEL Perrine                       FRA19940405     100 077 031 94   DE       AS BIKE CROSS TEAM                     0h52´22.0"   +5´49.0"
+13      13 VAN LOY Ellen                        BEL19800916     100 070 534 96   DE       VONDELMOLEN-DE CEUSTER CYCLING         0h52´48.0"   +6´15.0"
+14      22 DOBBELAERE Jana                      BEL19960403     100 106 183 49   DE.UCI   STARCASINO CX TEAM                     0h53´10.0"   +6´37.0"
+15      16 TRUYEN Marthe                        BEL19990930     100 110 267 59   DE.UCI   IKO - CRELAN                           0h54´07.0"   +7´34.0"
+16      41 BAELE Lotte                          BEL20030819     100 752 415 67   DE       C.T. KEUKENS BUYSSE KNESSELARE         0h54´36.0"   +8´03.0"
+17      20 BROUWERS Julie                       BEL20021223     100 650 098 85   DE       VONDELMOLEN-DE CEUSTER CYCLING         0h55´14.0"   +8´41.0"
+18      37 CASSIERS Cato                        BEL20000417     101 138 946 53   DE.UCI   STARCASINO CX TEAM                     0h55´31.0"   +8´58.0"
+19      34 BREUGELMANS Rosanne                  BEL19980706     101 179 497 58   DE.UCI   PISSEI - GROEP T.O.M.                  2r
+20      44 DEVIGNE Camille                      FRA20021215     100 675 174 38   DE       MULTUM ACCOUNTANTS LADIES CYCL         2r
+21      21 BASTIAENSSEN Fauve                   BEL19971022     101 074 455 67   DE.UCI   PISSEI - GROEP T.O.M.                  2r
+22      36 VAN DE STEENE Kim                    BEL19860708     100 079 525 66   DE       NEVER GIVE UP BY JOLIEN VERSCH         2r
+23      38 GREENHALGH Laura                     GBR19850902     100 110 604 08   DE       VELOREVOLUTION-WPCYCLES                2r
+24      24 BARTHELS Maïté                       LUX20011123     100 844 499 01   DE       LP07 SCHIFFLANGE                       2r
+25      40 DE VOS Nele                          BEL19980824     100 654 527 52   DE       NEVER GIVE UP BY JOLIEN VERSCH         2r
+26      30 DE BRUYNE Meg                        BEL19960923     100 091 125 26   DE       PROXIMUS-ALPHAMOTORHOMES-DOLTC         2r
+27      23 COOGAN CISEK Corey                   USA19771008     101 000 480 06   DE.UCI   VELOREVOLUTION WPCYCLES                2r
+28      27 ARENSMAN Allison                     USA19940319     100 089 942 07   DE       VELO REVOLUTION-WPCYCLES               3r
+29      42 VERDONCK Christine                   BEL19850402     101 200 857 78   DE       Individueel                            3r
+30      31 ZWAENEPOEL Tessa                     BEL20010927     100 649 525 94   DE.UCI   PROXIMUS - ALPHAMOTORHOMES - D         3r
+31      39 DHONT Kiona                          BEL20030109     100 650 111 01   DE       VONDELMOLEN-DE CEUSTER CYCLING         3r
+32      28 VAN DEN EEDE Chloë                   BEL20040128     100 650 480 79   DJ       PROXIMUS-ALPHAMOTORHOMES-DOLTC         3r
+33      25 VAN DER VEKEN Jana                   BEL20050922     100 651 141 61   DJ       PROXIMUS-ALPHAMOTORHOMES-DOLTC         3r
+34      26 GEOGHEGAN Michelle                   IRL19820621     100 071 356 45   DE       VELOREVOLUTION-WPCYCLES                3r
+35      43 BLANCHAERT Jo                        BEL19700328     100 163 527 66   DE       Individueel                            4r
+        7 FRANCK Alicia                         BEL19941204     100 081 289 84   DEPROF   PROXIMUS - ALPHAMOTORHOMES - D         DNF
+        18 VAN SINAEY Xaydee                    BEL20050516     100 597 877 50   DJ       ACROG-TORMANS                          DNF
+        29 VAN WATERSCHOOT Famke                NED20010126     100 794 673 33   DE       BIKE-ADVICE CYCLING TEAM               DNF
+        45 KAY Anna                             GBR19990506     100 154 706 72   DE       STARCASINO CX TEAM                     DNF
+
+
+#Dln: 39           #DNS: 0            #DNF: 4                                                                                                    5133
+
+
+
+
+                                                                                                                     12/02/2022 - 14:46:11 - 1 / 1
+

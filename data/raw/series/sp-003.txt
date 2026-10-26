@@ -1,0 +1,54 @@
+                                                            UITSLAG / RESULTAT
+
+                                             TELENET SUPERPRESTIGE OVERIJSE -
+             25/10/2026                             Veldrijden Klasse 1 UCI
+Reeks 1                                         TELENET SUPERPRESTIGE OVERIJSE                               Sleut 14927
+Organisator: WIELERCLUB ´DE SPORTVRIENDEN OVERIJSE´ - Afstand: 27.9Km - Gem. Sn: 25.61Km/u                   #Dln: 37
+
+Plaats Nr Naam                               UCICode          UCIid             Cat          Club                                   Tijd
+1       2 VANTHOURENHOUT Michael             BEL19931210      100 071 556 51    ME-PCX-MC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h03´18.0"
+2       14 MEEUSSEN Witse                    BEL20010308      100 649 316 79    ME-CX-MC     CRELAN-CORENDON                        1h03´33.0"   +15.0"
+3       1 VANDEPUTTE Niels                   BEL20000919      100 163 276 09    ME-CT-MC     ALPECIN-PREMIER TECH                   1h03´36.0"   +18.0"
+4       9 MASON Cameron                      GBR20000818      100 235 749 23    ELITE MEN    SEVEN RACING                           1h03´38.0"   +20.0"
+5       10 KUHN Kevin                        SUI19980218      100 097 467 63    ELITE MEN    HEIZOMAT - CUBE                        1h03´47.0"   +29.0"
+6       3 ORTS LLORET Felipe                 ESP19950401      100 090 047 15    ELITE MEN    EUSKALTEL - EUSKADI                    1h03´48.0"   +30.0"
+7       5 WYSEURE Joran                      BEL20010109      100 649 217 77    ME-CX-MC     CRELAN-CORENDON                        1h03´58.0"   +40.0"
+8       22 LOOCKX Lander                     BEL19970425      100 093 608 84    ME-PT-MC     UNIBET ROSE ROCKETS                    1h03´59.0"   +41.0"
+9       18 VAN DE PUTTE Victor               BEL20020520      100 649 859 40    ME-CX-MC     CHARLES LIÉGEOIS CX TEAM               1h04´16.0"   +58.0"
+10      19 VANDENBERGHE Viktor               BEL20050426      100 879 604 89    MU-PCX-ZC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h04´23.0"   +1´05.0"
+11      12 RONHAAR Pim                       NED20010720      100 231 082 12    ELITE MEN    BALOISE VERZEKERINGEN - HET PO         1h04´33.0"   +1´15.0"
+12      6 HENDRIKX Mees                      NED20000805      100 165 194 84    ELITE MEN    TEAM BOMBA JOIN                        1h04´45.0"   +1´27.0"
+13      33 DAELMANS Lars                     BEL20071201      101 194 579 08    MU-PCX-ZC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h04´47.0"   +1´29.0"
+14      16 VIEZZI Stefano                    ITA20060205      100 308 939 75    U23 MEN      ALPECIN-PREMIER TECH DEVELOPME         1h04´53.0"   +1´35.0"
+15      15 MEIN Thomas                       GBR19990112      100 162 259 59    ELITE MEN    HOPE FACTORY RACING                    1h05´15.0"   +1´57.0"
+16      7 KUYPERS Gerben                     BEL20000201      100 163 227 57    ME-PCX-MC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h05´26.0"   +2´08.0"
+17      23 DE BRAUWERE Sil                   BEL20050411      100 909 150 50    MU-PCX-ZC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h05´31.0"   +2´13.0"
+18      13 VANDEBOSCH Toon                   BEL19990619      100 109 436 04    ME-CX-MC     CRELAN-CORENDON                        1h05´47.0"   +2´29.0"
+19      20 DE BRUYCKERE Kay                  BEL20040321      100 650 536 38    MU-PCX-MC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h05´54.0"   +2´36.0"
+20      17 JANSSEN Wout                      BEL20020129      100 649 720 95    ME           CYCLIS - ROOFS FOR ENERGY - VA         1h06´12.0"   +2´54.0"
+21      4 SWEECK Laurens                     BEL19931217      100 069 126 46    ME-CT-MC     CRELAN-CORENDON                        1h06´19.0"   +3´01.0"
+22      24 VANDEN EYNDE Mats                 BEL20070112      100 865 508 58    MU-CX-ZC     BALOISE VERZEKERINGEN - HET PO         1h06´23.0"   +3´05.0"
+23      38 VANLAERE Loïc                     BEL20071001      100 651 974 21    MU-PCX-ZC    PAUWELS SAUZEN - ALTEZ INDUSTR         1h06´36.0"   +3´18.0"
+24      32 LAENEN Ryan                       BEL20070602      100 651 871 15    MU           FIETSSERVICE-MONDRAKER TEAM            1h06´45.0"   +3´27.0"
+25      28 BOSSAERTS Senn                    BEL20060709      100 651 487 19    MU           CYCLIS - ROOFS FOR ENERGY - VA         1h06´55.0"   +3´37.0"
+26      11 KAMP Ryan                         NED20001212      100 233 561 66    ELITE MEN    TEAM BOMBA JOIN                        1h06´56.0"   +3´38.0"
+27      21 VAN DEN BOER Arthur               BEL20070130      100 992 563 43    MU-CX-ZC     BALOISE VERZEKERINGEN - HET PO         1h08´10.0"   +4´52.0"
+28      37 VAN LEE Jari                      BEL20080402      100 652 196 49    MU-CX-ZC     PAUWELS SAUZEN - ALTEZ INDUSTR         1h08´13.0"   +4´55.0"
+29      25 HARVEY Dean                       IRL20030415      100 166 532 64    ELITE MEN                                           1h08´47.0"   +5´29.0"
+30      35 SPRANGERS Bram                    BEL20050710      100 651 067 84    MU           ATAR - VAN GORP PROJECTS CT            2r
+31      29 CECCHI Filippo                    ITA20021210      100 301 964 84    ELITE MEN    BIKE ACADEMY-MARCHINI COSTRUZI         2r
+32      36 VANCOMPERNOLLE Tibo               BEL20060204      100 651 344 70    MU           DL CHEMICALS - EXPERZA CYCLING         2r
+33      39 DANCKAARTS Xander                 BEL20070705      100 777 808 46    MU           VP CONSULTING CYCLING TEAM             3r
+34      30 PARENTI Nicola                    ITA19960119      100 136 945 62    ELITE MEN    BIKE ACADEMY-MARCHINI COSTRUZI         4r
+35      40 MAES Brent                        BEL20060604      101 252 165 73    MU           CYCLOCROSS TEAM MJ WOOD                4r
+        26 HUYBS Ward                        BEL20021121      100 650 055 42    ME           RONDE VAN VLAAMS-BRABANT VZW           DNF
+        31 ARYS Matisse                      BEL20060320      100 651 382 11    MU           KVC NOORDZEEMEEUW                      DNF
+
+
+#Dln: 37          #DNS: 0            #DNF: 2                                                                                                      14927
+
+
+
+
+                                                                                                                        25/10/2026 - 16:28:31 - 1 / 1
+

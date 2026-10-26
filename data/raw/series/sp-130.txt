@@ -1,0 +1,59 @@
+                                                              UITSLAG / RESULTAT
+
+                                                     GAVERE - Veldrijden Klasse 1 UCI
+
+              12/02/2022
+
+Reeks 1                                             Telenet Superprestige Men Elite & U23                  Sleut 5134
+Organisator: NOVAVRIENDEN ASPER VZW - Afstand: 22.68Km - Gem. Sn: 21.57Km/u                                #Dln: 40
+
+Plaats Nr Naam                                  UCICode          UCIid            Cat      Club                                   Tijd
+1       1 VAN DER HAAR Lars                     NED19910723      100 061 186 60   ELITE    BALOISE TREK LIONS                     0h59´08.0"
+2       2 ISERBYT Eli                           BEL19971022      100 093 350 20   EL.CMC   PAUWELS SAUZEN - BINGOAL               1h00´16.0"   +1´08.0"
+3       3 AERTS Toon                            BEL19931019      100 075 860 87   EL.CMC   BALOISE TREK LIONS                     1h00´48.0"   +1´40.0"
+4       4 VANTHOURENHOUT Michael                BEL19931210      100 071 556 51   EL.CMC   PAUWELS SAUZEN - BINGOAL               1h00´53.0"   +1´45.0"
+5       9 SOETE Daan                            BEL19941219      100 075 736 60   EL.CMC   CX TEAM DESCHACHT-GROUP HENS-C         1h01´24.0"   +2´16.0"
+6       8 KUHN Kevin                            SUI19980218      100 097 467 63   ELITE    TORMANS CYCLO CROSS TEAM               1h01´38.0"   +2´30.0"
+7       17 RÜEGG Timon                          SUI19960124      100 087 065 40   ELITE    SWISS RACING ACADEMY                   1h01´43.0"   +2´35.0"
+8       20 WYSEURE Joran                        BEL20010109      100 649 217 77   U23.C    TORMANS CYCLO CROSS TEAM               1h02´07.0"   +2´59.0"
+9       13 KAMP Ryan                            NED20001212      100 233 561 66   U23      PAUWELS SAUZEN - BINGOAL               1h02´25.0"   +3´17.0"
+10      7 VANDEBOSCH Toon                       BEL19990619      100 109 436 04   EL.CMC   PAUWELS SAUZEN - BINGOAL               1h03´12.0"   +4´04.0"
+11      31 BEKAERT Yentl                        BEL19990718      100 109 564 35   EL.CZC   BALOISE TREK LIONS                     1h03´24.0"   +4´16.0"
+12      26 THOMAS Théo                          FRA20010918      100 680 864 05   U23      TORMANS CYCLO CROSS TEAM               1h03´25.0"   +4´17.0"
+13      25 MENUT David                          FRA19920311      100 067 362 28   ELITE    CROSS TEAM LEGENDRE                    1h03´58.0"   +4´50.0"
+14      18 AERTS Thijs                          BEL19961103      100 086 322 73   EL.CMC   BALOISE TREK LIONS                     1h04´14.0"   +5´06.0"
+15      46 MOTTIEZ Gilles                       SUI19970327      100 098 687 22   ELITE2   CROSS TEAM LEGENDRE                    1h04´18.0"   +5´10.0"
+16      12 RONHAAR Pim                          NED20010720      100 231 082 12   ELITE    BALOISE TREK LIONS                     1h04´34.0"   +5´26.0"
+17      10 MEISEN Marcel                        GER19890108      100 048 530 14   ELITE    STEVENS TEAM                           1h04´43.0"   +5´35.0"
+18      41 KIELICH Timo                         BEL19990805      100 109 565 36   EL.CMC   ALPECIN-FENIX DEVELOPMENT TEAM         1h04´47.0"   +5´39.0"
+19      30 BELMANS Lennert                      BEL20020215      100 649 744 22   U23.C    IKO - CRELAN                           1h05´09.0"   +6´01.0"
+20      29 GROENENDAAL Bailey                   NED20030912      100 228 730 85   U23      WV SCHIJNDEL                           1h05´23.0"   +6´15.0"
+21      27 MASCIARELLI Lorenzo                  ITA20031022      100 316 032 87   U23.C    PAUWELS SAUZEN - BINGOAL               1h05´33.0"   +6´25.0"
+22      24 HUBY Antoine                         FRA20010119      100 680 830 68   ELITE    CROSS TEAM LEGENDRE                    1h06´07.0"   +6´59.0"
+23      22 GODRIE Stan                          NED19930109      100 070 970 47   EL.CP    PARKHOTEL VALKENBURG - DESTIL          2r
+24      33 VERVOORT Wout                        BEL20010106      100 649 213 73   U23      VAN DEN PLAS - HEPA CYCLING TE         2r
+25      38 VANDERLINDEN Lukas                   BEL20030903      100 650 344 40   U23.C    PAUWELS SAUZEN - BINGOAL               3r
+26      44 VAN COMPERNOLLE Kenneth              BEL19880330      100 034 000 34   ELITE2   ASFRA RACING TEAM                      3r
+27      37 CRISPIN Mickaël                      FRA19980407      100 735 106 24   ELITE    CROSS TEAM LEGENDRE                    4r
+28      34 PARENTI Nicola                       ITA19960119      100 136 945 62   ELITE2   BIKE ACADEMY RACING TEAM               4r
+29      32 ANDERSON Jonathan                    USA19960522      100 093 512 85   Cat 1    NONE                                   4r
+30      43 PAUWELS Pieter                       BEL20031106      100 650 396 92   U23.C    PAUWELS SAUZEN - BINGOAL               5r
+31      42 SCHMID Silas                         SUI19931111      101 230 855 06   ELITE    RSC AARETAL MüNSINGEN                  5r
+32      40 KAJI Tetsuki                         JPN19991217      100 110 588 89   U23      JAPAN PHOTO FINISHE                    5r
+        5 SWEECK Laurens                        BEL19931217      100 069 126 46   EL.CMC   PAUWELS SAUZEN - BINGOAL               DNF
+        6 VAN KESSEL Corne                      NED19910807      100 061 187 61   EL.PTT   TORMANS CYCLO CROSS TEAM               DNF
+        11 ORTS LLORET Felipe                   ESP19950401      100 090 047 15   EL.CP    TEIKA-BH-GSPORT                        DNF
+        14 HENDRIKX Mees                        NED20000805      100 165 194 84   ELITE    IKO - CRELAN                           DNF
+        15 ADAMS Jens                           BEL19920605      100 066 439 75   EL.MC    HOLLEBEEKHOEVE CYCLING TEAM            DNF
+        19 MEIN Thomas                          GBR19990112      100 162 259 59   ELITE    TORMANS CYCLO CROSS TEAM               DNF
+        28 CASTILLE Noé                         FRA20021117      100 657 622 43   ELITE    CROSS TEAM LEGENDRE                    DNF
+        36 VERHEYEN Thomas                      BEL19970214      100 095 230 57   ELITE2   WIELERCLUB STEEDS VOORAAN V.           DNF
+
+
+#Dln: 40           #DNS: 0            #DNF: 8                                                                                                     5134
+
+
+
+
+                                                                                                                      12/02/2022 - 16:19:43 - 1 / 1
+

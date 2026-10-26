@@ -1,0 +1,84 @@
+                                                             UITSLAG / RESULTAT
+
+                                             RUDDERVOORDE - Veldrijden Klasse 1 UCI
+
+              29/10/2022
+
+Reeks 1                                                               Hoofdreeks                          Sleut 6472
+Organisator: WIJKCOMITE SINT-GODELIEVE RUDDERVOORDE - Rondes of afstand niet ingegeven                    #Dln: 54
+
+Plaats Nr Naam                                   UCICode            Cat              Club                                      Tijd
+1        2 ISERBYT Eli                           BEL19971022        EL.CMC           PAUWELS SAUZEN - BINGOAL                  0h58´03.0"
+2        4 SWEECK Laurens                        BEL19931217        EL.CMC           CRELAN-FRISTADS                           0h58´15.0"   +12.0"
+3        1 VAN DER HAAR Lars                     NED19910723        ELITE            BALOISE TREK LIONS                        0h58´34.0"   +31.0"
+4        5 HERMANS Quinten                       BEL19950729        EL.PTT           TORMANS-CIRCUS CYCLO CROSS TEA            0h58´45.0"   +42.0"
+5        3 VANTHOURENHOUT Michael                BEL19931210        EL.CMC           PAUWELS SAUZEN - BINGOAL                  0h59´13.0"   +1´10.0"
+6        7 VANDEBOSCH Toon                       BEL19990619        EL.CMC           ALPECIN-DECEUNINCK                        0h59´25.0"   +1´22.0"
+7        9 ORTS LLORET Felipe                    ESP19950401        EL.CP            TEIKA-BH-GSPORT                           0h59´32.0"   +1´29.0"
+8        8 VANDEPUTTE Niels                      BEL20000919        U23CMC           ALPECIN-DECEUNINCK                        0h59´37.0"   +1´34.0"
+9        13 HENDRIKX Mees                        NED20000805        ELITE            CRELAN-FRISTADS                           0h59´48.0"   +1´45.0"
+10       6 KUHN Kevin                            SUI19980218        ELITE            TORMANS CYCLO CROSS TEAM                  0h59´52.0"   +1´49.0"
+11       22 KUYPERS Gerben                       BEL20000201        U23              PROXIMUS-ALPHAMOTORHOMES-DOLTC            0h59´57.0"   +1´54.0"
+12       18 WYSEURE Joran                        BEL20010109        U23CMC           CRELAN-FRISTADS                           1h00´00.0"   +1´57.0"
+13       10 BOROŠ Michael                        CZE19920809        EL.CMC           CREDISHOP-FRISTADS                        1h00´05.0"   +2´02.0"
+14       14 KAMP Ryan                            NED20001212        U23              PAUWELS SAUZEN - BINGOAL                  1h00´25.0"   +2´22.0"
+15       12 ADAMS Jens                           BEL19920605        EL.MC            HOLLEBEEKHOEVE CYCLING TEAM               1h00´32.0"   +2´29.0"
+16       26 VAN DE PUTTE Victor                  BEL20020520        U23              CX Team Deschacht-Hens-Maes Co            1h00´43.0"   +2´40.0"
+17       16 SUAREZ FERNANDEZ Kevin               ESP19940614        EL.MC            NESTA - MMR CX TEAM                       1h01´02.0"   +2´59.0"
+18       29 ROMBOUTS Seppe                       BEL19980514        ELITE2           RB ZELFBOUW UCT                           1h01´38.0"   +3´35.0"
+19       40 HORNY Clement                        BEL20001111        U23.C            BH-WALLONIE MTB TEAM                      1h02´01.0"   +3´58.0"
+20       19 AERTS Thijs                          BEL19961103        EL.CMC           BALOISE TREK LIONS                        1h02´16.0"   +4´13.0"
+21       44 ALDERWEIRELD Robin                   BEL19961210        ELITE2           TEAM ATOM 6                               1h02´19.0"   +4´16.0"
+22       36 VERVOORT Wout                        BEL20010106        U23              VAN DEN PLAS - HEPA CYCLING TE            1h02´23.0"   +4´20.0"
+23       39 DE VET Sander                        BEL20000916        U23              BASSO TEAM FLANDERS                       1h02´24.0"   +4´21.0"
+24       28 LAURYSSEN Yorben                     BEL20020125        U23              PAUWELS SAUZEN - BINGOAL                  1h02´32.0"   +4´29.0"
+25       59 DE BRUYCKERE Kay                     BEL20040321        JUNIOR           PAUWELS SAUZEN - BINGOAL                  1h02´35.0"   +4´32.0"
+26       47 UPTEGROVE Pete                       NED20010123        U23              WVSCHIJNDEL                               1h03´55.0"   +5´52.0"
+27       33 BELMANS Lennert                      BEL20020215        U23.C            CRELAN-FRISTADS                           1h04´32.0"   +6´29.0"
+28       58 KUSCHLA Silas                        GER20040309        JUNIOR           WAC TEAM                                  2r
+29       50 ASKEY Ben                            GBR20040314        JUNIOR           BACKSTEDT BIKE PERFORMANCE                2r
+30       49 AVONDTS Mathis                       BEL20030615        U23.C            CRELAN-FRISTADS                           2r
+31       43 CEULEMANS Niels                      BEL20041001        JUNIOR           BERT CONTAINERS - DOLTCINI                2r
+32       46 JACOBS Johan                         SUI19970301        EL.PTT           MOVISTAR TEAM                             3r
+33       30 KOCKELMANN Raphaël                   LUX19990510        U23              CRABBE TOITURES - CC CHEVIGNY             3r
+34       52 CEUSTERS Rune                        BEL20031106        U23              SPORT EN STEUN - LEOPOLDSBURG             3r
+35       34 MÅRD Filip                           SWE20031022        U23              CYCLING RACING TEAM                       3r
+36       27 ERIKSSON David                       SWE19951121        ELITE MEN        Mölndals cykelklubb                       4r
+37       65 RAUSCH Geoffrey                      BEL20030429        U23              CRABBE TOITURES - CC CHEVIGNY             4r
+38       38 JETTE Cameron                        CAN19870701        ELITE2           INDIVIDUEEL                               4r
+39       61 DAHL Alvin                           SWE20041206        U23 MEN          ML Sports Club                            4r
+40       48 DAHLBLOM Acke                        SWE20041209        JUNIOR MEN       SÖDERTÄLJE CK                             4r
+41       32 NOLAN Sean                           IRL20010912        U23              EVOPRO RACING                             4r
+42       68 LEAERTS Yelle                        BEL19941105        ELITE2           YOUNG CYCLING TALENT D&D                  4r
+43       62 PRESTAGE Sebastian                   BEL20041123        JUNIOR           DEBONDT VERANDAS CYCLING TEAM             5r
+44       66 ALM Rasmus                           SWE20040305        Youth men        Trosabyggdens cyklister                   5r
+45       57 JANSEN Hugo                          NED20030830        U23              RTC DE STOFWOLK                           5r
+46       55 HEYMES Gauthier                      FRA19950628        ELITE2           CC SARREBOURGEOIS                         5r
+47       67 BRUYNSEELS Greg                      SVK19990615        U23 MEN          CK DUKLA BRATISLAVA                       7r
+         23 SOETE Daan                           BEL19941219        EL.CMC           DESCHACHT-HENS-MAES                       DNF
+         24 SWEECK Diether                       BEL19931217        EL.MC            Kovéra Keukens CX Team                    DNF
+         25 CHILTON Ben                          GBR20030611        U23 MEN          TEAM SPECTRA WIGGLE P/B VITUS             DNF
+         35 BEKAERT Yentl                        BEL19990718        EL.CZC           BALOISE TREK LIONS                        DNF
+         41 CAREME Grégory                       BEL19991003        ELITE2           GC CYCLING TEAM                           DNF
+         42 JANSSEN Lucas                        NED20030106        U23              BEAT CYCLING TEAM                         DNF
+         51 CHASTAGNER François                  FRA19950507        ELITE2           VC ROUBAIX                                DNF
+
+
+
+                                                                                                                     29/10/2022 - 16:42:29 - 1 / 2
+                                                             UITSLAG / RESULTAT
+
+                                             RUDDERVOORDE - Veldrijden Klasse 1 UCI
+
+              29/10/2022
+
+Reeks 1                                                               Hoofdreeks         Sleut 6472
+Organisator: WIJKCOMITE SINT-GODELIEVE RUDDERVOORDE - Rondes of afstand niet ingegeven   #Dln: 54
+
+#Dln: 54          #DNS: 0            #DNF: 7                                                                                   6472
+
+
+
+
+                                                                                                    29/10/2022 - 16:42:29 - 2 / 2
+

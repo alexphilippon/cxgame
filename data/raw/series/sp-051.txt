@@ -1,0 +1,60 @@
+                                                             UITSLAG / RESULTAT
+
+                                                 MERKSPLAS - Veldrijden Klasse 1 UCI
+
+              16/11/2024
+
+Reeks 1                                                    Aardbeiencross - Men Elite                         Sleut 10736
+Organisator: DE HOOGSTRAATSE SPURTERS VZW - Afstand: 25.65Km - Gem. Sn: 24.41Km/u                             #Dln: 41
+
+Plaats Nr Naam                                 UCICode          UCIid               Cat       Club                                  Tijd
+1       7 SWEECK Laurens                       BEL19931217      100 069 126 46      EL.CMC    CRC                                   1h01´04.0"
+2       28 AERTS Toon                          BEL19931019      100 075 860 87      EL.CMC    DHF                                   1h01´04.0"
+3       4 VAN DER HAAR Lars                    NED19910723      100 061 186 60      ELITE     BALOISE TREK LIONS                    1h01´08.0"   +4.0"
+4       1 NYS Thibau                           BEL20021112      100 650 048 35      U23CMC    BTL                                   1h01´08.0"   +4.0"
+5       5 VANTHOURENHOUT Michael               BEL19931210      100 071 556 51      EL.CMC    PSB                                   1h01´08.0"   +4.0"
+6       3 VANDEPUTTE Niels                     BEL20000919      100 163 276 09      EL.CMC    AFC                                   1h01´10.0"   +6.0"
+7       2 ISERBYT Eli                          BEL19971022      100 093 350 20      EL.CMC    PSB                                   1h01´13.0"   +9.0"
+8       9 ORTS LLORET Felipe                   ESP19950401      100 090 047 15      EL.CP     RIDLEY RACING TEAM                    1h01´18.0"   +14.0"
+9       8 WYSEURE Joran                        BEL20010109      100 649 217 77      EL.CMC    CRC                                   1h01´26.0"   +22.0"
+10      17 MICHELS Jente                       BEL20030217      100 650 143 33      U23CMC    AFC                                   1h01´33.0"   +29.0"
+11      13 KUHN Kevin                          SUI19980218      100 097 467 63      ELITE     CHARLES LIÉGEOIS ROASTERY CX          1h01´42.0"   +38.0"
+12      11 ADAMS Jens                          BEL19920605      100 066 439 75      EL.MC     LOTTO-X-OATS ATHLETES FOR HOPE        1h01´45.0"   +41.0"
+13      15 MEEUSSEN Witse                      BEL20010308      100 649 316 79      EL.CMC    CRC                                   1h01´50.0"   +46.0"
+14      6 RONHAAR Pim                          NED20010720      100 231 082 12      ELITE     BALOISE TREK LIONS                    1h01´56.0"   +52.0"
+15      10 VANDEBOSCH Toon                     BEL19990619      100 109 436 04      EL.CMC    CRC                                   1h02´03.0"   +59.0"
+16      18 VAN KESSEL Corne                    NED19910807      100 061 187 61      EL.CMC    DHF                                   1h02´04.0"   +1´00.0"
+17      24 HAVERDINGS David                    NED20040401      100 490 105 45      U23M      BALOISE TREK LIONS                    1h02´04.0"   +1´00.0"
+18      23 KUYPERS Gerben                      BEL20000201      100 163 227 57      EL.CMC    CLR                                   1h02´09.0"   +1´05.0"
+19      38 SOETE Daan                          BEL19941219      100 075 736 60      EL.CMC    RRT                                   1h02´12.0"   +1´08.0"
+20      20 VAN DE PUTTE Victor                 BEL20020520      100 649 859 40      U23CMC    DHF                                   1h02´16.0"   +1´12.0"
+21      12 KAMP Ryan                           NED20001212      100 233 561 66      EL.CMC    FENIX-DECEUNINCK                      1h02´54.0"   +1´50.0"
+22      21 HENDRIKX Mees                       NED20000805      100 165 194 84      ELITE     HEIZOMAT RADTEAM                      1h03´07.0"   +2´03.0"
+23      25 JANSSEN Wout                        BEL20020129      100 649 720 95      U23M      CYCLIS - VAN DEN PLAS CYCLING         1h03´17.0"   +2´13.0"
+24      16 MASON Cameron                       GBR20000818      100 235 749 23      ELITE     CYCLOCROSS REDS                       1h03´28.0"   +2´24.0"
+25      34 SIEMONS Julian                      BEL19991016      100 155 221 05      ELITE2M   CYCLIS - VAN DEN PLAS CYCLING         1h03´42.0"   +2´38.0"
+26      22 AERTS Thijs                         BEL19961103      100 086 322 73      EL.CMC    CLR                                   1h03´47.0"   +2´43.0"
+27      30 MEEUSEN Tom                         BEL19881107      100 033 416 32      EL.MC     CYCLIS - VAN DEN PLAS CYCLING         1h04´13.0"   +3´09.0"
+28      32 VAN GRIEKEN Stan                    BEL20050331      100 650 974 88      U23M      STAGECO CYCLING TEAM                  1h04´27.0"   +3´23.0"
+29      33 VERHEYEN Thomas                     BEL19970214      100 095 230 57      ELITE2M   RB ZELFBOUW UCT                       1h04´43.0"   +3´39.0"
+30      39 DELNOIJE Remon                      NED20010713      100 226 841 39      U23       TWC DE KEMPEN                         1h04´53.0"   +3´49.0"
+31      29 OERTZEN Max Heiner                  GER20060120      100 361 477 39      JUNIOR    PETER PANE NAGEL CX TEAM              1h05´31.0"   +4´27.0"
+32      37 VAN DEN BROECK Arno                 BEL20000404      100 164 861 42      ELITE2M   CYCLIS - VAN DEN PLAS CYCLING         1h06´09.0"   +5´05.0"
+33      27 VAS Barnabás                        HUN20060223      100 236 564 62      JUNIOR    CUBE CSÖMÖR                           1h07´14.0"   +6´10.0"
+34      43 JACOBS Ieben                        BEL20061107      100 651 600 35      JUNIOR    WAC TEAM VZW                          1h07´25.0"   +6´21.0"
+35      31 MERLÖV Ville                        SWE20050317      100 490 057 94      U23M      ÅSTORPS CK                            1h07´43.0"   +6´39.0"
+36      36 LEMBRECHTS Ruben                    BEL20020703      100 758 226 58      U23M      VAN GORP PROJECTS - CYCLING TE        1h07´43.0"   +6´39.0"
+37      41 GORIS Niels                         BEL20040121      100 721 412 07      U23M      LRG-CYCLING TEAM                      3r
+38      46 ALVAREZ MARTINEZ Hector             ESP20061212      100 410 011 73      U23M      ALFAL DEL PL CC                       3r
+        26 DOCKX Aaron                         BEL20040628      100 650 629 34      U23.C     CRC                                   DNF
+        42 VAN STAEYEN Maarten                 BEL19980101      100 148 268 36      ELITE2M   CYCLIS - VAN DEN PLAS CYCLING         DNF
+        45 HAVERDINGS Floris                   NED20061013      100 490 106 46      JUNIOR    METEOOR ASSEN RODEN                   DNF
+
+
+#Dln: 41          #DNS: 0            #DNF: 3                                                                                                       10736
+
+
+
+
+                                                                                                                         16/11/2024 - 16:28:08 - 1 / 1
+

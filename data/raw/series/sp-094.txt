@@ -1,0 +1,118 @@
+                                                             UITSLAG / RESULTAT
+
+                                            HEUSDEN-ZOLDER - Veldrijden Klasse 1 UCI
+
+              27/12/2022
+
+Reeks 1                                                       Superprestige Men Elite                Sleut 6985
+Organisator: PRO-CYCLING VLAANDEREN VZW - Afstand: 26.55Km - Gem. Sn: 24.21Km/u                      #Dln: 86
+
+Plaats Nr Naam                                    UCICode        UCIid            Cat     Club                                Tijd
+1      3 VAN AERT Wout                            BEL19940915 100 075 859 86 EL.PTT       TJV                                 1h02´30.0"
+2      17 VAN DER POEL Mathieu                    NED19950119 100 079 462 03 EL.CP        AFC                                 1h02´36.0" +6.0"
+3      6 VAN DER HAAR Lars                        NED19910723 100 061 186 60 ELITE        BALOISE TREK LIONS                  1h02´46.0" +16.0"
+4      1 PIDCOCK Thomas                           GBR19990730 100 109 775 52 EL.PTT       INEOS GRENADIERS                    1h02´50.0" +20.0"
+5      2 VANTHOURENHOUT Michael                   BEL19931210 100 071 556 51 EL.CMC       PSB                                 1h03´35.0" +1´05.0"
+6      20 NIEUWENHUIS Joris                       NED19960211 100 087 058 33 ELITE        TEAM SUNWEB                         1h03´49.0" +1´19.0"
+7      93 HERMANS Quinten                         BEL19950729 100 079 451 89 EL.PTT       TCX                                 1h03´50.0" +1´20.0"
+8      5 SWEECK Laurens                           BEL19931217 100 069 126 46 EL.CMC       CRF                                 1h03´54.0" +1´24.0"
+9      7 KUHN Kevin                               SUI19980218 100 097 467 63 ELITE        TORMANS CYCLO CROSS TEAM            1h04´26.0" +1´56.0"
+10     8 VANDEPUTTE Niels                         BEL20000919 100 163 276 09 U23CMC       AFC                                 1h04´27.0" +1´57.0"
+11     4 ISERBYT Eli                              BEL19971022 100 093 350 20 EL.CMC       PSB                                 1h04´28.0" +1´58.0"
+12     10 VANDEBOSCH Toon                         BEL19990619 100 109 436 04 EL.CMC       AFC                                 1h04´28.0" +1´58.0"
+13     12 SOETE Daan                              BEL19941219 100 075 736 60 EL.CMC       DHM                                 1h04´33.0" +2´03.0"
+14     97 KIELICH Timo                            BEL19990805 100 109 565 36 EL.CMC       CRF                                 1h05´14.0" +2´44.0"
+15     11 ORTS LLORET Felipe                      ESP19950401 100 090 047 15 EL.CP        TEIKA-BH-GSPORT                     1h05´18.0" +2´48.0"
+16     22 FERDINANDE Anton                        BEL20000802 100 163 226 56 EL.CMC       DHM                                 1h05´21.0" +2´51.0"
+17     30 DEL GROSSO Tibor                        NED20030727 100 228 125 62 JUNIOR       CALLANT-DOLTCINI CT                 1h05´22.0" +2´52.0"
+18     100 DOCKX Aaron                            BEL20040628 100 650 629 34 JUNIOR       CRELAN-FRISTADS                     1h05´33.0" +3´03.0"
+19     21 VENTURINI Clement                       FRA19931016 100 070 965 42 ELITE        AG2R LA MONDIALE                    1h05´40.0" +3´10.0"
+20     28 HUYBS Ward                              BEL20021121 100 650 055 42 U23.C        BTL                                 1h05´48.0" +3´18.0"
+21     13 KAMP Ryan                               NED20001212 100 233 561 66 U23          PAUWELS SAUZEN - BINGOAL            1h05´54.0" +3´24.0"
+22     38 BAERS Arne                              BEL20020327 100 649 794 72 U23.C        TCX                                 1h05´55.0" +3´25.0"
+23     44 VAN LIEROP Danny                        NED20030820 100 233 200 93 U23          ORANGE-BABIES CYCLINGTEAM           1h06´05.0" +3´35.0"
+24     29 LILLO Dario                             SUI20020417 100 347 856 95 U23          CX Team Deschacht-Hens-Maes Co      1h06´05.0" +3´35.0"
+25     45 BELMANS Lennert                         BEL20020215 100 649 744 22 U23.C        CRF                                 1h06´09.0" +3´39.0"
+26     63 VAN DER POEL David                      NED19920615 100 066 310 43 EL.CP        AFC                                 1h06´10.0" +3´40.0"
+27     48 ŠTYBAR Zdenek                           CZE19851211 100 027 822 64 ELITE        DECEUNINCK - QUICK - STEP           1h06´14.0" +3´44.0"
+28     83 VERMOOTE Jelle                          BEL20010829 100 649 499 68 U23.C        TCX                                 1h07´00.0" +4´30.0"
+29     52 HORNY Clement                           BEL20001111 100 164 198 58 U23.C        BHW                                 1h07´02.0" +4´32.0"
+30     25 ÍMAN Jakub                              CZE20001123 100 234 789 33 U23          TJ AŠ ML. BOLESLAV                  1h07´08.0" +4´38.0"
+31     18 AERTS Thijs                             BEL19961103 100 086 322 73 EL.CMC       BTL                                 1h07´29.0" +4´59.0"
+32     14 WHITE Curtis                            USA19950928 100 080 092 51 ELITE        CANNONDALE/CYCLOCROSSWORLD          1h07´36.0" +5´06.0"
+33     64 DE VET Sander                           BEL20000916 100 163 931 82 U23          BASSO TEAM FLANDERS                 1h07´47.0" +5´17.0"
+34     88 CORTJENS Ryan                           BEL20010108 100 649 216 76 U23.C        AFC                                 1h08´04.0" +5´34.0"
+35     36 FIX Brannan                             USA19970613 100 094 223 20 ELITE2                                           1h08´25.0" +5´55.0"
+36     51 VANDERLINDEN Lukas                      BEL20030903 100 650 344 40 U23.C        PSB                                 1h08´36.0" +6´06.0"
+37     70 GROENEN Klaas                           NED19941109 100 490 089 29 ELITE2       CYCLOTEAM.NL                        1h08´41.0" +6´11.0"
+38     73 SOMMER Lars                             SUI20021011 100 347 795 34 U23 MEN      Heizomat Radteam p/b Kloster K      1h08´52.0" +6´22.0"
+39     66 BEKAERT Yentl                           BEL19990718 100 109 564 35 EL.CZC       BTL                                 1h08´55.0" +6´25.0"
+40     33 THOMAS Théo                             FRA20010918 100 680 864 05 U23          TORMANS CYCLO CROSS TEAM            1h09´25.0" +6´55.0"
+41     43 GROSLAMBERT Martin                      FRA20020107 100 704 727 06 U23 HOMMES   vc ornans                           2r
+42     58 SIEMONS Julian                          BEL19991016 100 155 221 05 ELITE2       VAN DEN PLAS - HEPA CYCLING TE      2r
+43     71 VERHEYEN Thomas                         BEL19970214 100 095 230 57 ELITE2       ANTWERP CYCLING TEAM KONTICH        2r
+44     69 VAN DIJKE Koen                          NED19960416 100 086 254 05 ELITE2       TWC HET SNELLE WIEL                 3r
+45     85 WYLLIE Simon                            GBR20020517 100 843 528 00 JUNIOR       HALESOWEN A CC                      3r
+46     46 HAMM Florian                            GER19991108 100 111 965 11 ELITE2M      RSV GARCHING                        3r
+47     79 JOT Hugo                                FRA20010608 100 680 795 33 U23          ARDENNES CROSS TEAM                 3r
+48     32 DORIGONI Jakob                          ITA19980310 100 097 705 10 ELITE        TORPADO FACTORY TEAM                3r
+49     92 JOT Matéo                               FRA20031204 100 703 239 70 U19          Uvc Charleville Mezieres            3r
+50     98 VERMEERSCH Florian                      BEL19990312 100 109 460 28 EL.PTT       LTS                                 3r
+51     62 PAHLKE Jasper Levi                      GER20020714 100 361 484 46 JUNIOR       STEVENS RACING TEAM                 3r
+52     68 HARTER Luca                             GER20020923 100 364 695 56 JUNIOR       RSV UNNA                            3r
+53     84 VRACHTEN Arne                           BEL19990223 100 109 563 34 ELITE2       ACROG-TORMANS                       3r
+54     27 DILLMAN Andrew                          USA19940101 100 075 738 62 ELITE MEN    Ignition p/b Rigd-Leitner           3r
+55     34 GRAS Yan                                FRA19960107 100 087 055 30 ELITE        TEAM PODICON CC                     3r
+
+
+                                                                                                                27/12/2022 - 16:40:37 - 1 / 2
+                                                             UITSLAG / RESULTAT
+
+                                            HEUSDEN-ZOLDER - Veldrijden Klasse 1 UCI
+
+              27/12/2022
+
+Reeks 1                                                       Superprestige Men Elite          Sleut 6985
+Organisator: PRO-CYCLING VLAANDEREN VZW - Afstand: 26.55Km - Gem. Sn: 24.21Km/u                #Dln: 86
+
+Plaats Nr Naam                                    UCICode        UCIid            Cat   Club                            Tijd
+56     55   KOCKELMANN Raphaël             LUX19990510 100 153 331 55 U23            CRABBE TOITURES - CC CHEVIGNY  3r
+57     82   HÄHNEL Frederik                GER19960418 100 110 757 64 ELITE2                                        3r
+58     57   KUSCHLA Silas                  GER20040309 100 364 008 48 JUNIOR         Stevens Racing Team            4r
+59     31   JUNQUERA SAN MILLAN Mario      ESP19970128 100 093 718 00 ELITE          COQUE URIA E. C.               4r
+60     40   JORGENSEN Mikkel               DEN20010501 100 551 161 88 U23            AARHUS MTB                     4r
+61     49   UPTEGROVE Pete                 NED20010123 100 227 025 29 U23            WVSCHIJNDEL                    4r
+62     74   WOODFORD Alexander             CAN20040828 100 600 718 78 JUNIOR         CANADA NATIONAL TEAM           4r
+63     76   RUSSELL Evan                   CAN20010524 100 489 446 65 U23 MEN        Saris Rouvy Sauerland Team     4r
+64     87   TRAN VAN Antoine               FRA20041130 100 706 555 88 JUNIOR         ALBI VELO SPORT LEROY MERLIN T 4r
+65     72   GASSNER Michael                GER19991206 100 593 154 80 ELITE MEN      RSV Moosburg                   4r
+66     59   OPPIZZI Matteo                 SUI20030305 100 527 793 00 Junior U19     Cannondale - Iland             4r
+67     99   PASQUET Audric                 FRA19900314 100 147 989 48 ELITE MEN      Team Albi Vélo Sport Leroy Mer 4r
+68     96   LAVIGNAC Matthieu              FRA20021115 100 702 048 43 U23 HOMMES     HOPE FACTORY RACING            4r
+69     86   DANIEL Thibault                FRA19971001 100 095 453 86 ELITE MEN      SPRINTER NICE METROPOLE        4r
+70     65   HILDEBRANDT Casey              USA19940717 100 110 244 36 ELITE MEN      Broken Spoke                   5r
+71     54   HEIGL Philipp                  AUT19930908 100 483 815 60 ELITE MEN      SU Bikestore.cc Team           5r
+72     60   ANANIE Ugo                     FRA20021228 100 691 679 53 ELITE          CROSS TEAM LEGENDRE            5r
+73     56   SCOTT Cody                     CAN20020108 100 735 879 21 JUNIOR         CYCLING CANADA                 5r
+74     42   NOLAN Sean                     IRL20010912 100 174 649 33 U23            EVOPRO RACING                  5r
+75     75   LEMBRECHTS Ruben               BEL20020703 100 758 226 58 U23            ACROG-TORMANS                  5r
+76     91   BAGOU Guillaume                FRA20040319 100 663 886 02 JUNIOR         TEAM MOTRIO SAFIR GANOVA       5r
+77     89   JAMES Steven                   GBR19920709 100 068 127 17 ELITE2         STEVEN JAMES                   5r
+78     61   NYSTROM SPENCER Felipe Timoteo CRC19830331 100 586 741 69 ELITE MEN      *                              6r
+79     90   PAINS Xavier                   FRA20030824 100 663 381 79 U23 HOMMES     Team Fima Cyrpeo Alian         6r
+80     95   GONZALEZ SANCHEZ Daniel        ESP20040404 101 108 992 72 HOMBRES JUNIOR Unicaja Banco Gijón            6r
+       50   RODRIGUEZ NOVOA Miguel         ESP20030423 100 392 358 74 U23 MEN        SUPERMERCADOS FROIZ, G.D.      DNF
+       80   STIERWALT Lucas                USA20020426 100 849 143 86 JUNIOR         CANNONDALE CYCLOCROSSWORLD DNF
+       94   PAUWELS Pieter                 BEL20031106 100 650 396 92 U23.C          PSB                            DNF
+       26   BARNES Toby                    GBR20001221 100 165 184 74 U23            SCHAMEL P/B KLOSTER KITCHEN    DNS
+       35   YOUNG Jenson                   GBR20010614 100 238 632 93 U23            GARDEN SHED UK/SCOTT/VERGE SPO DNS
+       67   BARNES Daniel                  GBR20021121 100 668 216 64 U23 MEN        Team Spectra Wiggle p/b Vitus  DNS
+
+
+#Dln: 86          #DNS: 3             #DNF: 3                                                                                        6985
+
+
+
+
+                                                                                                          27/12/2022 - 16:40:37 - 2 / 2
+

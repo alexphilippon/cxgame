@@ -1,0 +1,62 @@
+                                                             UITSLAG / RESULTAT
+
+                                                    OVERIJSE - Veldrijden Juniors UCI
+
+              27/10/2024
+
+Reeks 1                                                       Druivencross - Junioren                         Sleut 11034
+Organisator: WIELERCLUB ´DE SPORTVRIENDEN OVERIJSE´ - Afstand: 15.5Km - Gem. Sn: 22.49Km/u                    #Dln: 43
+
+Plaats Nr Naam                                 UCICode          UCIid             Cat        Club                                   Tijd
+1       6 VAN DEN BOER Arthur                  BEL20070130      100 992 563 43    JUNIOR     AA DRINK YOUNG LIONS                   0h37´43.0"
+2       1 VANDEN EYNDE Mats                    BEL20070112      100 865 508 58    JUNIOR     ACROG-TORMANS                          0h37´46.0"   +3.0"
+3       3 LEJEUNE Giel                         BEL20080623      100 652 249 05    U17M       TEAM DESCHACHT-HENS-MAES               0h37´49.0"   +6.0"
+4       4 JACOBS Lennes                        BEL20071215      100 652 038 85    JUNIOR     WAC TEAM VZW                           0h37´53.0"   +10.0"
+5       5 DE KEERSMAEKER Mathias               BEL20070312      100 651 815 56    JUNIOR     RS-BIKES RACING TEAM PULDERBOS         0h38´08.0"   +25.0"
+6       25 VANLAERE Loïc                       BEL20071001      100 651 974 21    JUNIOR     STARBIKES - VISTABUILD                 0h38´18.0"   +35.0"
+7       14 DE GENDT Leander                    BEL20070904      100 651 948 92    JUNIOR     SMART CYCLING MOTO 6                   0h38´37.0"   +54.0"
+8       13 DEPRAETERE Gust                     BEL20070808      100 846 953 30    JUNIOR     CYCLING TEAM LUC WALLAYS - JON         0h39´04.0"   +1´21.0"
+9       11 JANSSENS Arthur                     BEL20080602      100 652 235 88    U17M       AA DRINK YOUNG LIONS                   0h39´30.0"   +1´47.0"
+10      15 MEEUSEN Lennert                     BEL20070713      100 651 909 53    JUNIOR     WAC TEAM VZW                           0h39´45.0"   +2´02.0"
+11      38 LIPPENS Brent                       BEL20080419      101 060 476 56    U17M       STARBIKES - VISTABUILD                 0h40´16.0"   +2´33.0"
+12      24 ROELS Dima                          BEL20080730      101 053 069 21    U17M       C.T. KEUKENS BUYSSE KNESSELARE         0h40´21.0"   +2´38.0"
+13      22 DECROO Arjen                        BEL20070414      100 651 839 80    JUNIOR     OSTEND AIR COLLEGE                     0h40´26.0"   +2´43.0"
+14      45 GOOSSENAERTS Sebastiaan             BEL20080618      100 993 628 41    U17M       ANTWERP CYCLING TEAM KONTICH           0h40´28.0"   +2´45.0"
+15      44 DE CLERCK Miel                      BEL20080926      100 652 312 68    U17M       C.T. KEUKENS BUYSSE KNESSELARE         0h40´36.0"   +2´53.0"
+16      10 DELMÉ Fausto                        BEL20070424      100 651 847 88    JUNIOR     AA DRINK YOUNG LIONS                   0h40´37.0"   +2´54.0"
+17      19 RENDERS Luca                        BEL20080615      101 258 871 86    U17M       4BIKES WESTFIT                         0h40´56.0"   +3´13.0"
+18      43 DRESSELAERS Roan                    BEL20080815      101 176 674 48    U17M       YOUNG CYCLING TALENT D&D               0h40´56.0"   +3´13.0"
+19      28 GEERTS Len                          BEL20080105      100 779 168 48    U17M       WAC TEAM VZW                           0h41´14.0"   +3´31.0"
+20      17 DE CORTE Myrddin                    BEL20080127      100 652 153 06    U17M       WIELERCLUB "ONDER - ONS PARIKE         0h41´32.0"   +3´49.0"
+21      12 LEYS Matse                          BEL20080719      100 652 270 26    U17M       WOUTIM-DEXTERS SPORT                   0h41´36.0"   +3´53.0"
+22      37 REGOST Louis                        FRA20080528      100 675 179 43    U17 M      OLYMPIQUE GRANDE SYNTHE                0h41´37.0"   +3´54.0"
+23      21 VLAEMINCK Jasper                    BEL20071101      100 652 008 55    JUNIOR     CYCLING TEAM LUC WALLAYS - JON         0h41´49.0"   +4´06.0"
+24      31 SPRANGERS Seppe                     BEL20080226      101 129 806 31    U17M       ACROG-TORMANS                          0h41´55.0"   +4´12.0"
+25      48 JACOBS Josse                        BEL20071025      100 709 101 15    JUNIOR     WAC TEAM VZW                           0h41´57.0"   +4´14.0"
+26      16 INGELAERE Antoine                   FRA20080415      100 974 596 21    U17 M      ES-ARQUES                              0h42´17.0"   +4´34.0"
+27      23 DE KEYSER Mick                      BEL20070519      100 825 542 56    JUNIOR     AA DRINK YOUNG LIONS                   0h42´35.0"   +4´52.0"
+28      41 PARTHOENS Arne                      BEL20070607      100 651 876 20    JUNIOR     SPORT EN STEUN - LEOPOLDSBURG          0h42´44.0"   +5´01.0"
+29      32 VERMIERT Jonas                      BEL20080627      100 652 255 11    U17M       WOUTIM-DEXTERS SPORT                   0h42´59.0"   +5´16.0"
+30      29 IVENS Vince                         BEL20070315      101 127 863 28    JUNIOR     KZLWC - DAVO                           0h43´13.0"   +5´30.0"
+31      30 GOOVAERTS Joppe                     BEL20080608      101 067 833 41    U17M       AA DRINK YOUNG LIONS                   0h43´18.0"   +5´35.0"
+32      34 ADAMS Briek                         BEL20070810      100 651 928 72    JUNIOR     CYELO                                  0h43´46.0"   +6´03.0"
+33      39 LIEWES Jasper                       NED20070823      100 760 329 27    U19M       METEOOR ASSEN RODEN                    0h43´47.0"   +6´04.0"
+34      20 LEFEVRE Fabrice                     BEL20070215      101 149 532 66    JUNIOR     WIELERCLUB "ONDER - ONS PARIKE         0h44´03.0"   +6´20.0"
+35      40 HULSMANS Lander                     BEL20080530      100 652 232 85    U17M       SPORT EN STEUN - LEOPOLDSBURG          0h44´03.0"   +6´20.0"
+36      27 SERNEELS Seppe                      BEL20080116      100 652 139 89    U17M       FIETSSERVICE-MONDRAKER TEAM            0h44´18.0"   +6´35.0"
+37      33 CLAES Rune                          BEL20080205      100 987 660 87    U17M       AA DRINK YOUNG LIONS                   0h44´22.0"   +6´39.0"
+38      42 LAMBIOTTE Yanis                     BEL20070208      100 783 020 20    JUNIOR     CRABBE - DSTNY                         0h45´14.0"   +7´31.0"
+39      26 VANDER BRACHT Sjoerd                BEL20080809      100 717 864 48    U17M       WIELERCLUB "ONDER - ONS PARIKE         0h45´37.0"   +7´54.0"
+40      18 NIJS Stan                           BEL20080303      100 652 179 32    U17M       CYELO                                  0h45´59.0"   +8´16.0"
+41      35 DE GRAUWE Jairo                     BEL20080623      100 943 159 12    U17M       AVIA-RUDYCO CYCLING TEAM               2r
+42      47 MINNE Storm                         BEL20080820      101 223 921 56    U17M       TOMABEL-INOFEC CYCLINGTEAM             2r
+        46 AY Rube                             BEL20081123      101 210 574 95    U17M       TWC HOEKSKE MALEIZEN MTB SCHOO         DNF
+
+
+#Dln: 43          #DNS: 0            #DNF: 1                                                                                                       11034
+
+
+
+
+                                                                                                                         27/10/2024 - 13:14:44 - 1 / 1
+
