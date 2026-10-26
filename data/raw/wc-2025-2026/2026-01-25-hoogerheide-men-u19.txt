@@ -1,0 +1,82 @@
+SUN 25 JAN 2026                                                                                  CYCLO-CROSS
+Start Time: 9:30                                                                                    Men Junior
+
+                                                Individual Results
+    Pos     Nr Name / UCI Cyclocross Team                                          NAT    YOB    Time       Gap
+       1.    7   BRUYERE JOUMARD Soren                                             FRA    2008   41:40         -
+       2.    2   PEZZO ROSOLA Patrik                                                ITA   2008   41:41     +0:01
+       3.   24   NOVAL SUAREZ Benjamin                                             ESP    2008   41:42     +0:02
+       4.   18   HEEREN Delano                                                     NED    2009   42:03     +0:23
+       5.   11   VAN LEE Jari                                                      BEL    2008   42:15     +0:35
+       6.   21   VAN DEN BIGGELAAR Jop                                             NED    2009   42:35     +0:55
+       7.    9   LE PANN Soen                                                      FRA    2008   42:43     +1:03
+       8.   17   VAN LOOKE Cas                                                     BEL    2009   42:44     +1:04
+       9.    3   GRIGOLINI Filippo                                                  ITA   2008   42:55     +1:15
+      10.   23   HOVERS Loek                                                       NED    2009   42:58     +1:18
+      11.    5   CINGOLANI Tommaso                                                  ITA   2009   42:58     +1:18
+      12.   25   FERNANDEZ GARCIA Martin                                           ESP    2008   42:59     +1:19
+      13.   31   JOHN Antonín                                                      CZE    2008   43:01     +1:21
+      14.   51   WILLS Milo                                                        GBR    2008   43:04     +1:24
+      15.   19   GOIJERT Noël                                                      NED    2008   43:06     +1:26
+      16.   52   MIZURO Kacper                                                     POL    2008   43:15     +1:35
+      17.   26   LOPEZ SAINZ Raul                                                  ESP    2008   43:16     +1:36
+      18.   35   BELZILE Emilien                                                   CAN    2008   43:18     +1:38
+      19.   22   VAN HOOF Kai                                                      NED    2009   43:22     +1:42
+      20.   50   TRAFFORD Luke                                                     GBR    2009   43:30     +1:50
+      21.    4   DELL'OLIO Francesco                                                ITA   2009   43:35     +1:55
+      22.   40   HÚSENICA Milan                                                    SVK    2009   43:41     +2:01
+      23.    8   DEVOS Victor                                                      FRA    2009   43:44     +2:04
+      24.   29   CRABBE Matthew                                                    USA    2009   43:46     +2:06
+      25.   32   SVOBODA David                                                     CZE    2008   44:01     +2:21
+      26.   27   BROWN Ethan                                                       USA    2008   44:06     +2:26
+      27.   56   FLEMING Ben                                                       LUX    2009   44:08     +2:28
+      28.   14   LIPPENS Brent                                                     BEL    2008   44:13     +2:33
+      29.   28   HINES Jacob                                                       USA    2009   44:15     +2:35
+      30.   39   ŠICHTA Michal                                                     SVK    2008   44:22     +2:42
+      31.   36   LAMONT Farland                                                    CAN    2008   44:26     +2:46
+      32.   41   MELICHERCÍK Jerguš                                                SVK    2009   44:26     +2:46
+      33.   49   STEED Jacob                                                       GBR    2008   44:31     +2:51
+      34.   13   VANDEN EYNDE Bas                                                  BEL    2009   44:32     +2:52
+      35.   38   FRANKS Grayson                                                    CAN    2008   44:40     +3:00
+      36.   44   BEYER Alwin                                                       GER    2008   44:44     +3:04
+      37.   16   JANSSENS Arthur                                                   BEL    2008   44:54     +3:14
+      38.   43   PRELL Jan                                                         GER    2008   44:58     +3:18
+      39.   33   PAZOUREK Tadeáš                                                   CZE    2009   45:05     +3:25
+      40.   34   JOHN Eduard                                                       CZE    2009   45:16     +3:36
+      41.   61   PÅLSSON GUSTAFSSON Melvin                                         SWE    2009   45:32     +3:52
+      42.   53   GDULA Krzysztof                                                   POL    2008   45:36     +3:56
+      43.   30   MELVIN Porter                                                     USA    2008   45:48     +4:08
+      44.   58   FEHLEN PEREIRA Dawson                                             LUX    2008   45:58     +4:18
+      45.   45   BEYER Oscar                                                       GER    2008   46:02     +4:22
+      46.   59   GRANDE Oliver                                                     AUS    2009   46:17     +4:37
+      47.   46   HILL Valentin                                                     GER    2008   46:25     +4:45
+      48.   15   OSAER Emiel                                                       BEL    2009   46:45     +5:05
+      49.   47   STIMMEL Fabian                                                    GER    2009   47:30     +5:50
+      50.   57   KOENIG Ben                                                        LUX    2009   47:41     +6:01
+      51.   48   SCHLÜTER Gustav                                                   DEN    2009   47:52     +6:12
+      52.   54   ZYGMUNTOWICZ Kacper                                               POL    2009   48:09     +6:29
+            55   BERENCSI Benedek                                                  HUN    2008    DNF
+            60   VIMPANI Hayden                                                    AUS    2008    DNF
+            37   GOERTZ Sagan                                                      CAN    2008    DNS
+
+
+Timing and results provided by ChronoRace   Report created SUN 25 JAN 2026 09:18                         Page 1/2
+SUN 25 JAN 2026                                                                                               CYCLO-CROSS
+Start Time: 9:30                                                                                                 Men Junior
+
+                                                  Individual Results
+  Entries / Nations                    Fastest lap                                     Race configuration        Distance
+       55 / 17          BRUYERE JOUMARD Soren (FRA), 0:06:48, 29.10km/h               185m+6x3.3km               19.98km
+
+ Finished     Lapped     DNF        DSQ        DNS                     Weather                  Temperature      Average
+    52          0         2          0          1                       Sunny                      -2°c          28.772
+
+ Legend:
+ * Under 23                nLAP Lapped with n laps remaining     DNF Did Not Finish       DNS Did Not Start
+ NAT Nation                YOB Year of birth                     DSQ Disqualified         DSQ Disqualified
+
+
+
+
+Timing and results provided by ChronoRace    Report created SUN 25 JAN 2026 09:18                                   Page 2/2
+

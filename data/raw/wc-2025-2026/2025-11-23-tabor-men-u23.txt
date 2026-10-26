@@ -1,0 +1,65 @@
+SUN 23 NOV 2025                                                                                                 CYCLO-CROSS
+Start Time: 11:20                                                                                                Men Under 23
+
+                                                  Individual Results
+    Pos     Nr Name / UCI Cyclocross Team                                            NAT    YOB                 Time          Gap
+       1.      3   HAVERDINGS David                                                  NED    2004                49:08            -
+       2.     16   SPARFEL Aubin                                                     FRA    2006                49:08        +0:00
+       3.     37   VIEZZI Stefano                                                    ITA    2006                49:11        +0:03
+       4.     13   VAN DEN BOER Arthur                                               BEL    2007                49:18        +0:10
+       5.     11   VANDENBERGHE Viktor                                               BEL    2005                49:19        +0:11
+       6.      8   DE BRUYCKERE Kay                                                  BEL    2004                49:19        +0:11
+       7.     24   BAŽANT Kryštof                                                    CZE    2007                49:19        +0:11
+       8.     12   DE BRAUWERE Sil                                                   BEL    2005                49:20        +0:12
+       9.      2   VAN DEN EIJNDEN Guus                                              NED    2005                49:29        +0:21
+      10.     18   SIMON Jules                                                       FRA    2006                49:36        +0:28
+      11.      5   HAVERDINGS Floris                                                 NED    2006                49:42        +0:34
+      12.     10   DE MOYER Kenay                                                    BEL    2004                49:46        +0:38
+      13.      9   CORSUS Yordi                                                      BEL    2005                49:49        +0:41
+      14.      7   MOURIS Michiel                                                    NED    2007                50:06        +0:58
+      15.     17   DEBORD Romain                                                     FRA    2004                50:06        +0:58
+      16.     50   AMEY Oscar                                                        GBR    2007                50:07        +0:59
+      17.      4   SOLEN Keije                                                       NED    2006                50:09        +1:01
+      18.     21   JEŽEK Václav                                                      CZE    2005                50:12        +1:04
+      19.     45   VAS Barnabás                                                      HUN    2006                50:13        +1:05
+      20.     19   LEQUET Corentin                                                   FRA    2004                50:19        +1:11
+      21.     46   TAKÁCS Zsombor                                                    HUN    2006                50:22        +1:14
+      22.     23   HOJKA František                                                   CZE    2005                50:35        +1:27
+      23.     32   BEHRENS Eike                                                      GER    2005                51:12        +2:04
+      24.      6   JOCHEMS Jelte                                                     NED    2005                51:19        +2:11
+      25.     51   OLDHAM Declan                                                     GBR    2007                51:20        +2:12
+      26.     29   DEGENKOLB Hannes                                                  GER    2004                51:21        +2:13
+      27.     30   OERTZEN Max Heiner                                                GER    2006                51:23        +2:15
+      28.     52   ŠOLTÉS Peter                                                      SVK    2007                51:23        +2:15
+      29.     31   KUSCHLA Silas                                                     GER    2004                51:25        +2:17
+      30.     33   KOCHANOWSKI Anton                                                 GER    2007                51:26        +2:18
+      31.     28   HAVEL Matej                                                       CZE    2006                51:34        +2:26
+      32.     41   CONAWAY Calvin                                                    USA    2006                51:35        +2:27
+      33.     39   NIELSEN Weis Daniel                                               DEN    2005                51:39        +2:31
+      34.     43   VOLLMUTH Aidan                                                    USA    2007                51:41        +2:33
+      35.     42   WALTER Luke                                                       USA    2006                51:41        +2:33
+      36.     48   DOPPKE Kacper                                                     POL    2006                51:49        +2:41
+      37.     26   KRISTL Lukáš                                                      CZE    2007                51:58        +2:50
+      38.     27   VIK Matej                                                         CZE    2004                52:10        +3:02
+      39.     22   KERL Maximilian                                                   CZE    2004                52:40        +3:32
+      40.     44   KING Carden                                                       USA    2005                52:40        +3:32
+      41.     34   BÖRNER Finley                                                     GER    2006                53:36        +4:28
+      42.     49   MICHALEC Sebastian                                                SVK    2005                53:58        +4:50
+      43.     40   GUÉRIN Morgan                                                     SUI    2004               -1 LAP
+              20   DAVID Alexis                                                      FRA    2005                 DNS
+
+  Entries / Nations                      Fastest lap                                   Race configuration               Distance
+       44 / 13              HAVERDINGS David (NED), 0:07:56, 24.94km/h                160m+6x3.3km                      19.96km
+
+ Finished     Lapped      DNF       DSQ        DNS                    Weather                      Temperature          Average
+    42          1          0         0          1                      Sunny                          -2°c              24.371
+
+ Legend:
+ * Under 23                nLAP Lapped with n laps remaining    DNF Did Not Finish         DNS Did Not Start
+ NAT Nation                YOB Year of birth                    DSQ Disqualified           DSQ Disqualified
+
+
+
+
+Timing and results provided by ChronoRace   Report created SUN 23 NOV 2025 11:14                                           Page 1/1
+

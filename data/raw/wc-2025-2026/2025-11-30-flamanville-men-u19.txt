@@ -1,0 +1,60 @@
+SUN 30 NOV 2025                                                                                                 CYCLO-CROSS
+Start Time: 9:30                                                                                                   Men Junior
+
+                                                  Individual Results
+    Pos     Nr Name / UCI Cyclocross Team                                             NAT    YOB                Time          Gap
+       1.      2   GRIGOLINI Filippo                                                  ITA    2008               36:42            -
+       2.      6   BRUYERE JOUMARD Soren                                              FRA    2008               36:53        +0:11
+       3.      3   PEZZO ROSOLA Patrik                                                ITA    2008               37:14        +0:32
+       4.     26   HEEREN Delano                                                      NED    2009               37:16        +0:34
+       5.     18   LEJEUNE Giel                                                       BEL    2008               37:29        +0:47
+       6.     32   NOVAL SUAREZ Benjamin                                              ESP    2008               37:32        +0:50
+       7.     20   CORSUS Lars                                                        BEL    2008               37:55        +1:13
+       8.     27   GOIJERT Noël                                                       NED    2008               37:59        +1:17
+       9.     25   TIMMERMANS Cas                                                     NED    2008               38:06        +1:24
+      10.     22   VANDEN EYNDE Bas                                                   BEL    2009               38:08        +1:26
+      11.     19   VAN LEE Jari                                                       BEL    2008               38:08        +1:26
+      12.      7   DEVOS Victor                                                       FRA    2009               38:16        +1:34
+      13.     40   JOHN Antonín                                                       CZE    2008               38:17        +1:35
+      14.      5   DELL'OLIO Francesco                                                ITA    2009               38:17        +1:35
+      15.     24   JANSSENS Arthur                                                    BEL    2008               38:27        +1:45
+      16.     13   LE PANN Soen                                                       FRA    2008               38:31        +1:49
+      17.     44   STEED Jacob                                                        GBR    2008               38:36        +1:54
+      18.     43   TRAFFORD Luke                                                      GBR    2009               38:56        +2:14
+      19.     34   BROWN Melvin Ethan                                                 USA    2008               38:56        +2:14
+      20.     23   OSAER Emiel                                                        BEL    2009               39:03        +2:21
+      21.     31   FERNANDEZ GARCIA Martin                                            ESP    2008               39:06        +2:24
+      22.     29   VAN HOOF Kai                                                       NED    2009               39:12        +2:30
+      23.      4   DEON Pietro                                                        ITA    2008               39:17        +2:35
+      24.      9   CHAINEL Caliste                                                    FRA    2008               39:17        +2:35
+      25.     15   BAUDOUIN Florian                                                   FRA    2009               39:18        +2:36
+      26.     16   MORINIERE Lilian                                                   FRA    2009               39:30        +2:48
+      27.     41   SVOBODA David                                                      CZE    2008               39:34        +2:52
+      28.      8   LE BOURHIS Pierre                                                  FRA    2008               39:34        +2:52
+      29.     33   ROY MOLINA Axel                                                    ESP    2009               39:36        +2:54
+      30.     30   HOVERS Loek                                                        NED    2009               39:39        +2:57
+      31.     11   CLEMENTE Antoine                                                   FRA    2009               39:40        +2:58
+      32.     14   VERRIER Leo                                                        FRA    2008               39:52        +3:10
+      33.     37   CRABBE Matthew                                                     USA    2009               40:03        +3:21
+      34.     39   ZACHAREK Nicholas Rylan                                            USA    2009               40:07        +3:25
+      35.     17   MARTINEAU Axel                                                     FRA    2009               40:08        +3:26
+      36.     35   SCHOLNICK Noah                                                     USA    2009               40:17        +3:35
+      37.     36   HINES Jacob                                                        USA    2009               40:35        +3:53
+      38.     38   REID Kian                                                          USA    2008               40:59        +4:17
+      39.     42   PAZOUREK Tadeáš                                                    CZE    2009               42:12        +5:30
+
+  Entries / Nations                      Fastest lap                                    Race configuration              Distance
+        39 / 8             PEZZO ROSOLA Patrik (ITA), 0:07:17, 23.84km/h              2.95km+5x2.9km                    14.55km
+
+ Finished     Lapped      DNF       DSQ        DNS                     Weather                      Temperature         Average
+    39          0          0         0          0                       Sunny                          8°c              23.777
+
+ Legend:
+ * Under 23                nLAP Lapped with n laps remaining     DNF Did Not Finish         DNS Did Not Start
+ NAT Nation                YOB Year of birth                     DSQ Disqualified           DSQ Disqualified
+
+
+
+
+Timing and results provided by ChronoRace    Report created SUN 30 NOV 2025 09:13                                          Page 1/1
+

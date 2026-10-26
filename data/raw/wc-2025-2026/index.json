@@ -1,0 +1,590 @@
+[
+ {
+  "place": "Tabor",
+  "date": "2025-11-23",
+  "cat": "Men U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/435/435.pdf?t=1763888906",
+  "top3": [
+   "1. Soren Bruyère Joumard (FRA)",
+   "2. Jari Van Lee (BEL)",
+   "3. Filippo Grigolini (ITA)"
+  ],
+  "file": "2025-11-23-tabor-men-u19.txt"
+ },
+ {
+  "place": "Tabor",
+  "date": "2025-11-23",
+  "cat": "Women U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/437/437.pdf?t=1763891705",
+  "top3": [
+   "1. Barbora Bukovská (CZE)",
+   "2. Lise Revol (FRA)",
+   "3. Giorgia Pellizotti (ITA)"
+  ],
+  "file": "2025-11-23-tabor-women-u19.txt"
+ },
+ {
+  "place": "Tabor",
+  "date": "2025-11-23",
+  "cat": "Men U23",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/439/439.pdf?t=1763896720",
+  "top3": [
+   "1. David Haverdings (NED)",
+   "2. Aubin Sparfel (FRA)",
+   "3. Stefano Viezzi (ITA)"
+  ],
+  "file": "2025-11-23-tabor-men-u23.txt"
+ },
+ {
+  "place": "Tabor",
+  "date": "2025-11-23",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/441/441.pdf?t=1763903123",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Sara Casasola (ITA)",
+   "3. Inge van der Heijden (NED)"
+  ],
+  "file": "2025-11-23-tabor-women-elite.txt"
+ },
+ {
+  "place": "Tabor",
+  "date": "2025-11-23",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/443/443.pdf?t=1763909450",
+  "top3": [
+   "1. Thibau Nys (BEL)",
+   "2. Laurens Sweeck (BEL)",
+   "3. Joris Nieuwenhuis (NED)"
+  ],
+  "file": "2025-11-23-tabor-men-elite.txt"
+ },
+ {
+  "place": "Flamanville",
+  "date": "2025-11-30",
+  "cat": "Men U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/445/445.pdf?t=1764494596",
+  "top3": [
+   "1. Filippo Grigolini (ITA)",
+   "2. Soren Bruyère Joumard (FRA)",
+   "3. Patrik Pezzo Rosola (ITA)"
+  ],
+  "file": "2025-11-30-flamanville-men-u19.txt"
+ },
+ {
+  "place": "Flamanville",
+  "date": "2025-11-30",
+  "cat": "Women U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/446/446.pdf?t=1764498853",
+  "top3": [
+   "1. Lise Revol (FRA)",
+   "2. Giorgia Pellizotti (ITA)",
+   "3. Lucie Grohová (CZE)"
+  ],
+  "file": "2025-11-30-flamanville-women-u19.txt"
+ },
+ {
+  "place": "Flamanville",
+  "date": "2025-11-30",
+  "cat": "Men U23",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/447/447.pdf?t=1764505904",
+  "top3": [
+   "1. Aubin Sparfel (FRA)",
+   "2. Yordi Corsus (BEL)",
+   "3. Stefano Viezzi (ITA)"
+  ],
+  "file": "2025-11-30-flamanville-men-u23.txt"
+ },
+ {
+  "place": "Flamanville",
+  "date": "2025-11-30",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/448/448.pdf?t=1764509988",
+  "top3": [
+   "1. Aniek van Alphen (NED)",
+   "2. Amandine Fouquenet (FRA)",
+   "3. Ceylin del Carmen Alvarado (NED)"
+  ],
+  "file": "2025-11-30-flamanville-women-elite.txt"
+ },
+ {
+  "place": "Flamanville",
+  "date": "2025-11-30",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/449/449.pdf?t=1764516154",
+  "top3": [
+   "1. Thibau Nys (BEL)",
+   "2. Lars van der Haar (NED)",
+   "3. Cameron Mason (GBR)"
+  ],
+  "file": "2025-11-30-flamanville-men-elite.txt"
+ },
+ {
+  "place": "Terralba, Sardinia",
+  "date": "2025-12-07",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/451/451.pdf?t=1765124824",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Aniek van Alphen (NED)",
+   "3. Shirin van Anrooij (NED)"
+  ],
+  "file": "2025-12-07-terralba-sardinia-women-elite.txt"
+ },
+ {
+  "place": "Terralba, Sardinia",
+  "date": "2025-12-07",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/450/450.pdf?t=1765124813",
+  "top3": [
+   "1. Michael Vanthourenhout (BEL)",
+   "2. Joris Nieuwenhuis (NED)",
+   "3. Laurens Sweeck (BEL)"
+  ],
+  "file": "2025-12-07-terralba-sardinia-men-elite.txt"
+ },
+ {
+  "place": "Namur",
+  "date": "2025-12-14",
+  "cat": "Boys U17 First year (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/453/453.pdf?t=1765721314",
+  "top3": [
+   "1. Mats Becque (BEL)",
+   "2. Floris Overmeire (BEL)",
+   "3. Jules Mathieux (BEL)"
+  ],
+  "file": "2025-12-14-namur-boys-u17-first-year-no-world-cup.txt"
+ },
+ {
+  "place": "Namur",
+  "date": "2025-12-14",
+  "cat": "Boys U17 Second year (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/454/454.pdf?t=1765721341",
+  "top3": [
+   "1. Lars Peers (BEL)",
+   "2. Tijl Vanhaverbeke (BEL)",
+   "3. Daan Schilders (NED)"
+  ],
+  "file": "2025-12-14-namur-boys-u17-second-year-no-world-cup.txt"
+ },
+ {
+  "place": "Namur",
+  "date": "2025-12-14",
+  "cat": "Men U19 (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/455/455.pdf?t=1765721359",
+  "top3": [
+   "1. Jari Van Lee (BEL)",
+   "2. Bas Vanden Eynde (BEL)",
+   "3. Flynn Delanghe (BEL)"
+  ],
+  "file": "2025-12-14-namur-men-u19-no-world-cup.txt"
+ },
+ {
+  "place": "Namur",
+  "date": "2025-12-14",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/452/452.pdf?t=1765721149",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Aniek van Alphen (NED)",
+   "3. Amandine Fouquenet (FRA)"
+  ],
+  "file": "2025-12-14-namur-women-elite.txt"
+ },
+ {
+  "place": "Namur",
+  "date": "2025-12-14",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/456/456.pdf?t=1765725571",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Thibau Nys (BEL)",
+   "3. Michael Vanthourenhout (BEL)"
+  ],
+  "file": "2025-12-14-namur-men-elite.txt"
+ },
+ {
+  "place": "Antwerpen",
+  "date": "2025-12-20",
+  "cat": "Women U19 (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/457/457.pdf?t=1766228104",
+  "top3": [
+   "1. Zita Peeters (BEL)",
+   "2. Antonie Cermanová (CZE)",
+   "3. Alexa Haviland (CAN)"
+  ],
+  "file": "2025-12-20-antwerpen-women-u19-no-world-cup.txt"
+ },
+ {
+  "place": "Antwerpen",
+  "date": "2025-12-20",
+  "cat": "Men U19 (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/458/458.pdf?t=1766232845",
+  "top3": [
+   "1. Raul Lopez Sainz (ESP)",
+   "2. Benedek Berencsi (HUN)",
+   "3. Luca Renders (BEL)"
+  ],
+  "file": "2025-12-20-antwerpen-men-u19-no-world-cup.txt"
+ },
+ {
+  "place": "Antwerpen",
+  "date": "2025-12-20",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/459/459.pdf?t=1766238571",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Ceylin del Carmen Alvarado (NED)",
+   "3. Aniek van Alphen (NED)"
+  ],
+  "file": "2025-12-20-antwerpen-women-elite.txt"
+ },
+ {
+  "place": "Antwerpen",
+  "date": "2025-12-20",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/460/460.pdf?t=1766244598",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Laurens Sweeck (BEL)",
+   "3. Emiel Verstrynge (BEL)"
+  ],
+  "file": "2025-12-20-antwerpen-men-elite.txt"
+ },
+ {
+  "place": "Koksijde",
+  "date": "2025-12-21",
+  "cat": "Men U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/461/461.pdf?t=1766312166",
+  "top3": [
+   "1. Giel Lejeune (BEL)",
+   "2. Delano Heeren (NED)",
+   "3. Cas Timmermans (NED)"
+  ],
+  "file": "2025-12-21-koksijde-men-u19.txt"
+ },
+ {
+  "place": "Koksijde",
+  "date": "2025-12-21",
+  "cat": "Women U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/462/462.pdf?t=1766335115",
+  "top3": [
+   "1. Lise Revol (FRA)",
+   "2. Laly Pichon (FRA)",
+   "3. Isis Versluis (NED)"
+  ],
+  "file": "2025-12-21-koksijde-women-u19.txt"
+ },
+ {
+  "place": "Koksijde",
+  "date": "2025-12-21",
+  "cat": "Men U23",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/463/463.pdf?t=1766319717",
+  "top3": [
+   "1. David Haverdings (NED)",
+   "2. Aubin Sparfel (FRA)",
+   "3. Guus Van Den Eijnden (NED)"
+  ],
+  "file": "2025-12-21-koksijde-men-u23.txt"
+ },
+ {
+  "place": "Koksijde",
+  "date": "2025-12-21",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/464/464.pdf?t=1766325115",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Shirin van Anrooij (NED)",
+   "3. Ceylin del Carmen Alvarado (NED)"
+  ],
+  "file": "2025-12-21-koksijde-women-elite.txt"
+ },
+ {
+  "place": "Koksijde",
+  "date": "2025-12-21",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/465/465.pdf?t=1766330553",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Laurens Sweeck (BEL)",
+   "3. Niels Vandeputte (BEL)"
+  ],
+  "file": "2025-12-21-koksijde-men-elite.txt"
+ },
+ {
+  "place": "Gavere",
+  "date": "2025-12-26",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/466/466.pdf?t=1766757348",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Amandine Fouquenet (FRA)",
+   "3. Puck Pieterse (NED)"
+  ],
+  "file": "2025-12-26-gavere-women-elite.txt"
+ },
+ {
+  "place": "Gavere",
+  "date": "2025-12-26",
+  "cat": "Men Elite",
+  "pdf": null,
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Thibau Nys (BEL)",
+   "3. Tibor Del Grosso (NED)"
+  ],
+  "file": "2025-12-26-gavere-men-elite.txt"
+ },
+ {
+  "place": "Dendermonde",
+  "date": "2025-12-28",
+  "cat": "Men U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/467/467.pdf?t=1766940837",
+  "top3": [
+   "1. Patrik Pezzo Rosola (ITA)",
+   "2. Filippo Grigolini (ITA)",
+   "3. Giel Lejeune (BEL)"
+  ],
+  "file": "2025-12-28-dendermonde-men-u19.txt"
+ },
+ {
+  "place": "Dendermonde",
+  "date": "2025-12-28",
+  "cat": "Women U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/468/468.pdf?t=1766917996",
+  "top3": [
+   "1. Lise Revol (FRA)",
+   "2. Shana Huber (SUI)",
+   "3. Isis Versluis (NED)"
+  ],
+  "file": "2025-12-28-dendermonde-women-u19.txt"
+ },
+ {
+  "place": "Dendermonde",
+  "date": "2025-12-28",
+  "cat": "Men U23",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/469/469.pdf?t=1766923927",
+  "top3": [
+   "1. David Haverdings (NED)",
+   "2. Arthur Van den Boer (BEL)",
+   "3. Yordi Corsus (BEL)"
+  ],
+  "file": "2025-12-28-dendermonde-men-u23.txt"
+ },
+ {
+  "place": "Dendermonde",
+  "date": "2025-12-28",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/470/470.pdf?t=1766929995",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Puck Pieterse (NED)",
+   "3. Amandine Fouquenet (FRA)"
+  ],
+  "file": "2025-12-28-dendermonde-women-elite.txt"
+ },
+ {
+  "place": "Dendermonde",
+  "date": "2025-12-28",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/471/471.pdf?t=1766935565",
+  "top3": [
+   "1. Thibau Nys (BEL)",
+   "2. Tibor Del Grosso (NED)",
+   "3. Laurens Sweeck (BEL)"
+  ],
+  "file": "2025-12-28-dendermonde-men-elite.txt"
+ },
+ {
+  "place": "Zonhoven",
+  "date": "2026-01-04",
+  "cat": "Women U19 (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/472/472.pdf?t=1767524195",
+  "top3": [
+   "1. Giorgia Pellizotti (ITA)",
+   "2. Rianne Nieuwenhuis (NED)",
+   "3. Zita Peeters (BEL)"
+  ],
+  "file": "2026-01-04-zonhoven-women-u19-no-world-cup.txt"
+ },
+ {
+  "place": "Zonhoven",
+  "date": "2026-01-04",
+  "cat": "Men U19 (no World Cup)",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/473/473.pdf?t=1767528172",
+  "top3": [
+   "1. Filippo Grigolini (ITA)",
+   "2. Jari Van Lee (BEL)",
+   "3. Noël Goijert (NED)"
+  ],
+  "file": "2026-01-04-zonhoven-men-u19-no-world-cup.txt"
+ },
+ {
+  "place": "Zonhoven",
+  "date": "2026-01-04",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/474/474.pdf?t=1767534492",
+  "top3": [
+   "1. Ceylin del Carmen Alvarado (NED)",
+   "2. Lucinda Brand (NED)",
+   "3. Puck Pieterse (NED)"
+  ],
+  "file": "2026-01-04-zonhoven-women-elite.txt"
+ },
+ {
+  "place": "Zonhoven",
+  "date": "2026-01-04",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/475/475.pdf?t=1767540381",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Tibor Del Grosso (NED)",
+   "3. Emiel Verstrynge (BEL)"
+  ],
+  "file": "2026-01-04-zonhoven-men-elite.txt"
+ },
+ {
+  "place": "Benidorm",
+  "date": "2026-01-18",
+  "cat": "Men U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/476/476.pdf?t=1768728527",
+  "top3": [
+   "1. Patrik Pezzo Rosola (ITA)",
+   "2. Giel Lejeune (BEL)",
+   "3. Filippo Grigolini (ITA)"
+  ],
+  "file": "2026-01-18-benidorm-men-u19.txt"
+ },
+ {
+  "place": "Benidorm",
+  "date": "2026-01-18",
+  "cat": "Women U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/477/477.pdf?t=1768732230",
+  "top3": [
+   "1. Giorgia Pellizotti (ITA)",
+   "2. Lise Revol (FRA)",
+   "3. Barbora Bukovská (CZE)"
+  ],
+  "file": "2026-01-18-benidorm-women-u19.txt"
+ },
+ {
+  "place": "Benidorm",
+  "date": "2026-01-18",
+  "cat": "Men U23",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/478/478.pdf?t=1768737567",
+  "top3": [
+   "1. David Haverdings (NED)",
+   "2. Yordi Corsus (BEL)",
+   "3. Aaron Dockx (BEL)"
+  ],
+  "file": "2026-01-18-benidorm-men-u23.txt"
+ },
+ {
+  "place": "Benidorm",
+  "date": "2026-01-18",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/479/479.pdf?t=1768743811",
+  "top3": [
+   "1. Lucinda Brand (NED)",
+   "2. Ceylin del Carmen Alvarado (NED)",
+   "3. Amandine Fouquenet (FRA)"
+  ],
+  "file": "2026-01-18-benidorm-women-elite.txt"
+ },
+ {
+  "place": "Benidorm",
+  "date": "2026-01-18",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/480/480.pdf?t=1768750641",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Thibau Nys (BEL)",
+   "3. Felipe Orts (ESP)"
+  ],
+  "file": "2026-01-18-benidorm-men-elite.txt"
+ },
+ {
+  "place": "Maasmechelen",
+  "date": "2026-01-24",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/481/481.pdf?t=1769263226",
+  "top3": [
+   "1. Puck Pieterse (NED)",
+   "2. Ceylin del Carmen Alvarado (NED)",
+   "3. Amandine Fouquenet (FRA)"
+  ],
+  "file": "2026-01-24-maasmechelen-women-elite.txt"
+ },
+ {
+  "place": "Maasmechelen",
+  "date": "2026-01-24",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/482/482.pdf?t=1769269363",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Tibor Del Grosso (NED)",
+   "3. Niels Vandeputte (BEL)"
+  ],
+  "file": "2026-01-24-maasmechelen-men-elite.txt"
+ },
+ {
+  "place": "Hoogerheide",
+  "date": "2026-01-25",
+  "cat": "Men U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/483/483.pdf?t=1769333370",
+  "top3": [
+   "1. Soren Bruyère Joumard (FRA)",
+   "2. Patrik Pezzo Rosola (ITA)",
+   "3. Benjamin Noval Suarez (ESP)"
+  ],
+  "file": "2026-01-25-hoogerheide-men-u19.txt"
+ },
+ {
+  "place": "Hoogerheide",
+  "date": "2026-01-25",
+  "cat": "Women U19",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/484/484.pdf?t=1769336677",
+  "top3": [
+   "1. Giorgia Pellizotti (ITA)",
+   "2. Barbora Bukovská (CZE)",
+   "3. Shana Huber (SUI)"
+  ],
+  "file": "2026-01-25-hoogerheide-women-u19.txt"
+ },
+ {
+  "place": "Hoogerheide",
+  "date": "2026-01-25",
+  "cat": "Men U23",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/485/485.pdf?t=1769342459",
+  "top3": [
+   "1. Aubin Sparfel (FRA)",
+   "2. David Haverdings (NED)",
+   "3. Stefano Viezzi (ITA)"
+  ],
+  "file": "2026-01-25-hoogerheide-men-u23.txt"
+ },
+ {
+  "place": "Hoogerheide",
+  "date": "2026-01-25",
+  "cat": "Women Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/486/486.pdf?t=1769349035",
+  "top3": [
+   "1. Puck Pieterse (NED)",
+   "2. Kristýna Zemanová (CZE)",
+   "3. Amandine Fouquenet (FRA)"
+  ],
+  "file": "2026-01-25-hoogerheide-women-elite.txt"
+ },
+ {
+  "place": "Hoogerheide",
+  "date": "2026-01-25",
+  "cat": "Men Elite",
+  "pdf": "https://www.ucicyclocrossworldcup.com/storage/rankings/file_results/487/487.pdf?t=1769354907",
+  "top3": [
+   "1. Mathieu van der Poel (NED)",
+   "2. Tibor Del Grosso (NED)",
+   "3. Niels Vandeputte (BEL)"
+  ],
+  "file": "2026-01-25-hoogerheide-men-elite.txt"
+ }
+]

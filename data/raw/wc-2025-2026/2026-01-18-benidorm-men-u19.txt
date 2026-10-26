@@ -1,0 +1,60 @@
+SUN 18 JAN 2026                                                                                                   CYCLO-CROSS
+Start Time: 9:30                                                                                                     Men Junior
+
+                                                   Individual Results
+    Pos     Nr Name / UCI Cyclocross Team                                              NAT    YOB                 Time          Gap
+       1.      3   PEZZO ROSOLA Patrik                                                 ITA    2008                41:17            -
+       2.     11   LEJEUNE Giel                                                        BEL    2008                41:26        +0:09
+       3.      2   GRIGOLINI Filippo                                                   ITA    2008                41:29        +0:12
+       4.     19   NOVAL SUAREZ Benjamin                                               ESP    2008                41:29        +0:12
+       5.     15   HEEREN Delano                                                       NED    2009                41:43        +0:26
+       6.     10   LE PANN Soen                                                        FRA    2008                41:43        +0:26
+       7.     12   VAN LEE Jari                                                        BEL    2008                42:22        +1:05
+       8.     17   GOIJERT Noël                                                        NED    2008                42:28        +1:11
+       9.      4   DELL'OLIO Francesco                                                 ITA    2009                42:37        +1:20
+      10.      8   BRUYERE JOUMARD Soren                                               FRA    2008                42:43        +1:26
+      11.     21   LOPEZ SAINZ Raul                                                    ESP    2008                42:43        +1:26
+      12.     14   VANDEN EYNDE Bas                                                    BEL    2009                42:51        +1:34
+      13.      5   CINGOLANI Tommaso                                                   ITA    2009                42:55        +1:38
+      14.     31   ŠICHTA Michal                                                       SVK    2008                42:57        +1:40
+      15.     18   VAN DEN BIGGELAAR Jop                                               NED    2009                42:58        +1:41
+      16.     20   FERNANDEZ GARCIA Martin                                             ESP    2008                42:59        +1:42
+      17.      7   DEON Pietro                                                         ITA    2008                43:11        +1:54
+      18.     13   CORSUS Lars                                                         BEL    2008                43:31        +2:14
+      19.     29   JOHN Antonín                                                        CZE    2008                43:38        +2:21
+      20.     37   WILLS Milo                                                          GBR    2008                44:00        +2:43
+      21.     32   HÚSENICA Milan                                                      SVK    2009                44:12        +2:55
+      22.     22   CASTIELLO DIAZ Samuel                                               ESP    2008                44:27        +3:10
+      23.     25   MONCHO SIGNES Marc                                                  ESP    2008                44:39        +3:22
+      24.      9   DEVOS Victor                                                        FRA    2009                44:44        +3:27
+      25.     30   SVOBODA David                                                       CZE    2008                44:48        +3:31
+      26.     27   ROY MOLINA Axel                                                     ESP    2009                45:00        +3:43
+      27.     36   STEED Jacob                                                         GBR    2008                45:06        +3:49
+      28.     28   IRIZAR RODRIGUEZ Aner                                               ESP    2008                45:10        +3:53
+      29.     26   JIMENEZ VERA Y FRIAS Pablo                                          ESP    2009                45:27        +4:10
+      30.     23   GANCEDO CORRALES Pelayo                                             ESP    2009                46:23        +5:06
+      31.     38   VIMPANI Hayden                                                      AUS    2008                46:59        +5:42
+      32.     35   TRAFFORD Luke                                                       GBR    2009                47:19        +6:02
+      33.     33   MELICHERCÍK Jerguš                                                  SVK    2009                47:48        +6:31
+      34.     39   MACEDO Francisco                                                    POR    2009                48:26        +7:09
+      35.     24   FARO VALLVERDU Marc                                                 ESP    2009                49:11        +7:54
+      36.     34   SCHERF Lukas                                                        GER    2008                50:09        +8:52
+      37.     40   FOTEINOPOULOS Angelos                                               GRE    2009               -2 LAP
+               6   BOSIO Giovanni                                                      ITA    2009                 DNF
+              16   TIMMERMANS Cas                                                      NED    2008                 DNS
+
+  Entries / Nations                       Fastest lap                                    Race configuration               Distance
+       39 / 12            NOVAL SUAREZ Benjamin (ESP), 0:08:02, 24.64km/h               185m+5x3.3km                      16.68km
+
+ Finished     Lapped      DNF       DSQ         DNS                     Weather                      Temperature          Average
+    36          1          1         0           1                      Cloudy                          12°c              24.241
+
+ Legend:
+ * Under 23                 nLAP Lapped with n laps remaining     DNF Did Not Finish         DNS Did Not Start
+ NAT Nation                 YOB Year of birth                     DSQ Disqualified           DSQ Disqualified
+
+
+
+
+Timing and results provided by ChronoRace     Report created SUN 18 JAN 2026 09:23                                           Page 1/1
+

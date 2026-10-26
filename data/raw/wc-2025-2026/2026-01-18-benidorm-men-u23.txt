@@ -1,0 +1,60 @@
+SUN 18 JAN 2026                                                                                                  CYCLO-CROSS
+Start Time: 12:00                                                                                                 Men Under 23
+
+                                                  Individual Results
+    Pos     Nr Name / UCI Cyclocross Team                                             NAT    YOB                 Time          Gap
+       1.      2   HAVERDINGS David                                                   NED    2004                48:18            -
+       2.      8   CORSUS Yordi                                                       BEL    2005                48:19        +0:01
+       3.     13   DOCKX Aaron                                                        BEL    2004                48:19        +0:01
+       4.     15   SPARFEL Aubin                                                      FRA    2006                48:20        +0:02
+       5.     26   VIEZZI Stefano                                                     ITA    2006                48:29        +0:11
+       6.     16   DEBORD Romain                                                      FRA    2004                48:29        +0:11
+       7.     19   BISIAUX Léo                                                        FRA    2005                48:42        +0:24
+       8.     17   SIMON Jules                                                        FRA    2006                48:49        +0:31
+       9.      3   VAN DEN EIJNDEN Guus                                               NED    2005                48:55        +0:37
+      10.      7   DE BRUYCKERE Kay                                                   BEL    2004                49:03        +0:45
+      11.      4   SOLEN Keije                                                        NED    2006                49:08        +0:50
+      12.     14   VANDEN EYNDE Mats                                                  BEL    2007                49:10        +0:52
+      13.     41   COOTE Henry                                                        USA    2006                49:11        +0:53
+      14.     22   BAŽANT Kryštof                                                     CZE    2007                49:17        +0:59
+      15.      9   VANDENBERGHE Viktor                                                BEL    2005                49:22        +1:04
+      16.      6   REMIJN Senna                                                       NED    2006                49:24        +1:06
+      17.     29   MIRA BONASTRE Raul                                                 ESP    2004                49:30        +1:12
+      18.     12   DE BRAUWERE Sil                                                    BEL    2005                49:39        +1:21
+      19.     20   VASSAL Théophile                                                   FRA    2007                49:49        +1:31
+      20.     25   DEGENKOLB Hannes                                                   GER    2004                49:56        +1:38
+      21.     42   VAS Barnabás                                                       HUN    2006                50:00        +1:42
+      22.     23   KERL Maximilian                                                    CZE    2004                50:07        +1:49
+      23.     43   AMEY Oscar                                                         GBR    2007                50:25        +2:07
+      24.      5   HAVERDINGS Floris                                                  NED    2006                50:49        +2:31
+      25.     34   FERNANDEZ ECHEVARRIA Angel                                         ESP    2005                50:51        +2:33
+      26.     28   CAFUERI Tommaso                                                    ITA    2005                50:52        +2:34
+      27.     32   IVARS SIRERA David                                                 ESP    2006                51:29        +3:11
+      28.     45   ŠOLTÉS Peter                                                       SVK    2007                51:42        +3:24
+      29.     18   DAVID Alexis                                                       FRA    2005                51:53        +3:35
+      30.     33   CASANOVAS COLL Aleix                                               ESP    2006                51:59        +3:41
+      31.     31   REINOSO SANCHEZ Emilio                                             ESP    2005                52:10        +3:52
+      32.     40   DRUMMOND Ryan                                                      USA    2006                52:19        +4:01
+      33.     30   GALAN CORTAZAR Unax                                                ESP    2006                52:24        +4:06
+      34.     35   TRAVIESA CORO Hugo                                                 ESP    2004                52:45        +4:27
+      35.     37   VEGA GONZALEZ Mario                                                ESP    2005                53:37        +5:19
+      36.     36   FERNANDEZ DE LA PEÑA AGUIRRE Beñat                                 ESP    2005                54:00        +5:42
+      37.     39   TAJIMA Ayato                                                       JPN    2007               -2 LAP
+              44   OLDHAM Declan                                                      GBR    2007                 DNF
+              38   ORTEGA SORO Asier                                                  ESP    2007                 DNF
+
+  Entries / Nations                      Fastest lap                                    Race configuration               Distance
+       39 / 12              HAVERDINGS David (NED), 0:07:42, 25.70km/h                 185m+6x3.3km                      19.98km
+
+ Finished     Lapped      DNF       DSQ        DNS                     Weather                      Temperature          Average
+    36          1          2         0          0                      Cloudy                          12°c              24.824
+
+ Legend:
+ * Under 23                nLAP Lapped with n laps remaining     DNF Did Not Finish         DNS Did Not Start
+ NAT Nation                YOB Year of birth                     DSQ Disqualified           DSQ Disqualified
+
+
+
+
+Timing and results provided by ChronoRace    Report created SUN 18 JAN 2026 11:54                                           Page 1/1
+
