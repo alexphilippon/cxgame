@@ -1,6 +1,6 @@
 /* CX GAME – service worker : coquille de l'appli en cache, données toujours rafraîchies. */
-const CACHE = 'cxgame-v1';
-const SHELL = ['./', 'index.html', 'css/style.css', 'js/data.js', 'js/names.js', 'js/game.js', 'js/athletes.js', 'js/results.js', 'js/config.js', 'js/store.js', 'js/app.js', 'manifest.webmanifest', 'img/icon.svg'];
+const CACHE = 'cxgame-v2';
+const SHELL = ['./', 'index.html', 'css/style.css', 'js/data.js', 'js/names.js', 'js/game.js', 'js/athletes.js', 'js/results.js', 'js/config.js', 'js/store.js', 'js/dataroom.js', 'js/app.js', 'manifest.webmanifest', 'img/icon.svg'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', (e) => {

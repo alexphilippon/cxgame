@@ -17,6 +17,9 @@ const srv = http.createServer((q, r) => { const u = decodeURIComponent(q.url.spl
   console.log('choix H:', await pg.inputValue('#pa-E01-ELI-H'));
   await pg.screenshot({ path: out + '/desk1.png' });
   for (const t of ['2', '3', 'w', 'gen']) { await pg.click(`[data-tab="${t}"]`); await pg.waitForTimeout(100); await pg.screenshot({ path: out + '/tab-' + t + '.png' }); }
+  await pg.click('[data-tab="data"]'); await pg.waitForSelector('.dr__tab tbody tr', { timeout: 5000 });
+  console.log('data room lignes:', await pg.locator('.dr__tab tbody tr').count());
+  await pg.click('[data-dr="g:F"]'); await pg.click('[data-hist]'); await pg.waitForSelector('#modal .dtls'); console.log('fiche historique:', await pg.locator('#modal .dtl').count()); await pg.screenshot({ path: out + '/data-room.png' }); await pg.click('[data-close]');
   await pg.click('[data-tab="1"]'); await pg.click('[data-sub="recap"]'); await pg.click('[data-sub="taken"]');
   await pg.fill('#sim-date', '2026-11-01T20:00').catch(() => {}); 
   for (const th of ['boue', 'neige', 'foret', 'tomorrowland', 'flandre']) { await pg.click(`.mast-actions [data-theme-set="${th}"]`); await pg.click('[data-tab="1"]'); await pg.screenshot({ path: out + '/th-' + th + '.png' }); }

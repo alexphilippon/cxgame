@@ -681,9 +681,10 @@
       { id: '3', label: 'Desk 3', note: `${dmOf(D.DESKS[2].from)} au ${dmOf(D.DESKS[2].to)}` },
       { id: 'w', label: 'Mondiaux', note: '29 au 31/01' },
       { id: 'gen', label: 'Classements', note: '' },
+      { id: 'data', label: 'Data room', note: '' },
     ];
   }
-  const TAB_IDS = ['next', '1', '2', '3', 'w', 'gen', 'adm'];
+  const TAB_IDS = ['next', '1', '2', '3', 'w', 'gen', 'data', 'adm'];
   const TAB_ICO = {
     home: '<path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/>',
     next: '<path d="M6 21V4"/><path d="M6 5h11l-2.5 3.5L17 12H6"/>',
@@ -691,9 +692,10 @@
     2: '<rect x="3.5" y="3.5" width="17" height="17" rx="4"/><text x="12" y="16.6" text-anchor="middle" font-size="12" font-weight="800" fill="currentColor" stroke="none">2</text>',
     3: '<rect x="3.5" y="3.5" width="17" height="17" rx="4"/><text x="12" y="16.6" text-anchor="middle" font-size="12" font-weight="800" fill="currentColor" stroke="none">3</text>',
     w: '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c3.2 3 3.2 14 0 17c-3.2-3-3.2-14 0-17z"/>',
+    data: '<ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"/><path d="M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6"/>',
     gen: '<path d="M3 20.5h18"/><rect x="9" y="7.5" width="6" height="13"/><rect x="3" y="13" width="6" height="7.5"/><rect x="15" y="15.5" width="6" height="5"/>',
   };
-  const TAB_SHORT = { next: 'À venir', 1: 'Desk 1', 2: 'Desk 2', 3: 'Desk 3', w: 'Mondiaux', gen: 'Général' };
+  const TAB_SHORT = { next: 'À venir', 1: 'Desk 1', 2: 'Desk 2', 3: 'Desk 3', w: 'Mondiaux', gen: 'Général', data: 'Data' };
   function renderTabs() {
     $('#tabs').innerHTML = tabs().map((t) => {
       const cours = t.id === 'next' && t.label === 'En cours';
@@ -780,7 +782,7 @@
     }));
     rows.sort((a, b) => G.raceStart(a.race) - G.raceStart(b.race));
     openModal(`<h2>${esc(nameOf(id))}</h2>${ATH[id] ? `<p class="hint">${flagOf(ATH[id].nat)} ${esc(ATH[id].nat)} · rang UCI ${esc(ATH[id].rank || '–')}${ATH[id].team ? ' · ' + esc(ATH[id].team) : ''}</p>` : ''}
-      <ul class="dtls">${rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.race))}</strong> <span class="sub">${esc(raceName(x.race))}</span></span><span class="dtl__a">${esc(x.p.name)}</span><span class="dtl__k">${x.sc === null || x.sc === undefined ? '' : `<b>${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span></li>`).join('') || '<li class="none">Pas encore choisi (les choix se révèlent au départ).</li>'}</ul>`);
+      <ul class="dtls">${rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.race))}</strong> <span class="sub">${esc(raceName(x.race))}</span></span><span class="dtl__a">${esc(x.p.name)}</span><span class="dtl__k">${x.sc === null || x.sc === undefined ? '' : `<b>${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span></li>`).join('') || '<li class="none">Pas encore choisi (les choix se révèlent au départ).</li>'}</ul>${window.CX_DATAROOM.histHtml(id)}`);
   }
   function showTip(btn) {
     const tip = $('#tip');
@@ -910,7 +912,7 @@
     if (!state.authReady && !state.demo) { $('#panel').innerHTML = '<p class="hint">Chargement…</p>'; return; }
     if (!state.user) { $('#panel').innerHTML = authPanel(); return; }
     if (state.tab === 'adm' && !isAdmin()) state.tab = 'next';
-    const html = state.tab === 'adm' ? window.CX_ADMIN.render(adminCtx()) : state.tab === 'next' ? nextPanel() : state.tab === 'gen' ? generalPanel() : state.tab === 'w' ? deskPanel(0) : deskPanel(Number(state.tab));
+    const html = state.tab === 'adm' ? window.CX_ADMIN.render(adminCtx()) : state.tab === 'next' ? nextPanel() : state.tab === 'gen' ? generalPanel() : state.tab === 'data' ? window.CX_DATAROOM.render() : state.tab === 'w' ? deskPanel(0) : deskPanel(Number(state.tab));
     const syncWarn = state.user && !state.picksReady && (state.syncErr || state.picksLate) ? '<div class="syncwarn" role="alert"><strong>Tes choix et ceux des autres ne se chargent pas.</strong> Recharge la page ; si ça persiste, désactive ton bloqueur de publicités pour ce site ou essaie un autre navigateur.</div>' : '';
     $('#panel').innerHTML = syncWarn + html;
     $('#panel').setAttribute('aria-labelledby', 'tab-' + state.tab);
@@ -1014,6 +1016,7 @@
     const sendIdea = e.target.closest('[data-idea-send]');
     if (sendIdea) { const t = ($('#idea-t') || {}).value; if (t && t.trim() && store.addIdea) store.addIdea({ uid: state.me, name: state.user.name, text: t.trim() }).then(closeModal).catch(fail); return; }
     const th = e.target.closest('[data-theme-set]'); if (th) { setTheme(th.dataset.themeSet, true); return; }
+    if (window.CX_DATAROOM.click(e.target)) return;
     const rid = e.target.closest('[data-rider]'); if (rid) { riderModal(rid.dataset.rider); return; }
     const rc = e.target.closest('[data-racecard]'); if (rc) { SHARE.open(rc.dataset.racecard); return; }
     if (e.target.closest('[data-settings]')) { settingsModal(); return; }
@@ -1088,6 +1091,7 @@
     }).catch(() => { btns.forEach((b) => { b.disabled = false; b.textContent = '↻ Vérifier le résultat officiel'; }); });
   }
   SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf((ATH[id] || {}).nat), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
+  window.CX_DATAROOM.init({ esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
   const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
   if (TAB_IDS.includes(hash)) state.tab = hash;

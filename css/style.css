@@ -1475,3 +1475,11 @@ html[data-theme='nuit'] .grid caption .info, html[data-theme='nuit'] .session__h
 html[data-theme='neige'] .plate[aria-selected='true'] .plate__note { color: #2c5b78; }
 html[data-skin='tomorrowland'] .plate--w[aria-selected='true'] .plate__label, html[data-skin='tomorrowland'] .plate--w[aria-selected='true'] .plate__note { color: #fff; }
 html[data-skin='tomorrowland'] .plate[aria-selected='true'] .plate__short { color: #0d0b2a; } html[data-skin='tomorrowland'] .plate--w[aria-selected='true'] .plate__short { color: #fff; }
+
+/* Data room : cases de résultats (texte foncé sur fond clair, dans tous les thèmes) */
+.dr__tab .dr__rc { text-align: center; white-space: nowrap; line-height: 1.1; } .dr__tab .dr__rc span { display: block; } .dr__tab .dr__rc small { display: block; font-weight: 500; opacity: .85; }
+.dr__tab .dr__c { text-align: center; font-weight: 700; min-width: 2.6rem; }
+.dr__tab .c-1 { background: #f1cf6a; color: #1b2b44; } .dr__tab .c-2 { background: #cfd8e0; color: #1b2b44; } .dr__tab .c-3 { background: #e0a97a; color: #1b2b44; }
+.dr__tab .c-top { background: #cfe6d6; color: #16331f; } .dr__tab .c-in { background: #eef2f6; color: #1b2b44; font-weight: 500; }
+.dr__tab .c-st { background: #f3d3cf; color: #5a1a12; font-size: .78rem; } .dr__tab .c-none { background: transparent; }
+.dr__tab .rnk--3 { color: #1b2b44; }
