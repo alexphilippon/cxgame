@@ -1,0 +1,18 @@
+name: Résultats Coupe du monde
+# Lancement manuel : onglet Actions > « Résultats Coupe du monde » > Run workflow. Télécharge les classements complets (PDF officiels) de la saison 2025-2026.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  wc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y poppler-utils >/dev/null
+      - run: python3 tools/fetch-wc-results.py 2025-2026
+      - name: Enregistrer
+        run: |
+          git config user.name "cxgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/raw
+          git diff --cached --quiet || (git commit -m "Résultats Coupe du monde 2025-2026 (texte brut des PDF officiels)" && git push)
