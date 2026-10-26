@@ -21,6 +21,16 @@ const srv = http.createServer((q, r) => { const u = decodeURIComponent(q.url.spl
   await pg.fill('#sim-date', '2026-11-01T20:00').catch(() => {}); 
   for (const th of ['boue', 'neige', 'foret', 'tomorrowland', 'flandre']) { await pg.click(`.mast-actions [data-theme-set="${th}"]`); await pg.click('[data-tab="1"]'); await pg.screenshot({ path: out + '/th-' + th + '.png' }); }
   await pg.setViewportSize({ width: 390, height: 800 }); await pg.screenshot({ path: out + '/mobile.png' });
+  // Admin (mode local : l'utilisateur est admin)
+  await pg.click('[data-tab="adm"]'); await pg.waitForSelector('.adm');
+  for (const sub of ['ctl', 'res', 'cal', 'ath', 'idea']) { await pg.click(`[data-adm-sub="${sub}"]`); await pg.waitForTimeout(80); }
+  await pg.click('[data-adm-sub="res"]'); await pg.selectOption('#adm-race', 'E01-ELI-H');
+  await pg.fill('#adm-text', '1 Mathieu van der Poel\n2 Toon Vandebosch\nDNS Niels Vandeputte'); await pg.click('[data-adm="analyse"]');
+  await pg.waitForSelector('[data-adm="save-result"]:not([disabled])'); await pg.click('[data-adm="save-result"]'); await pg.waitForSelector('.adm__msg');
+  console.log('résultat admin:', await pg.textContent('.adm__msg'));
+  await pg.click('[data-adm-sub="cal"]'); await pg.selectOption('#adm-cal', 'E01-ELI-F'); pg.on('dialog', (d) => { console.log('dialogue:', d.message().slice(0, 120)); d.accept(); }); await pg.click('[data-adm="cal-cancel"]'); await pg.waitForSelector('.adm__msg');
+  console.log('calendrier admin:', await pg.textContent('.adm__msg'));
+  await pg.click('[data-tab="1"]'); console.log('annulée visible:', await pg.locator('.flag--off').count());
   console.log('erreurs:', errs); await b.close(); srv.close();
   process.exit(errs.length ? 1 : 0);
 })();

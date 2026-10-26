@@ -23,7 +23,7 @@
     players: [], me: null, picks: {}, results: {},
     tq: '', major: true, tf: 'all',
     raw: { picks: {}, results: {} }, file: null, draws: {}, startlists: null,
-    overrides: {}, ovStore: {}, gsub: 'globes',
+    overrides: {}, ovStore: {}, gsub: 'globes', extra: [], aliases: {}, contacts: {},
   };
 
   /* ---------- Utilitaires ---------- */
@@ -94,6 +94,20 @@
   }
   document.addEventListener('focusout', () => { if (pendingRender) setTimeout(() => { if (!editing()) { pendingRender = false; render(); } }, 0); });
 
+  /** Coureurs ajoutés (Firestore) : intégrés aux noms et aux listes, sauf s'ils ont été fusionnés avec un autre. */
+  const ADDED = {};
+  function rebuildAthletes() {
+    Object.keys(ADDED).forEach((id) => { delete NAMES[id]; delete ATH[id]; });
+    ['H', 'F'].forEach((g) => { LIST[g] = LIST[g].filter((a) => !ADDED[a.id]); });
+    Object.keys(ADDED).forEach((k) => delete ADDED[k]);
+    state.extra.forEach((x) => {
+      if (state.aliases[x.id]) return;
+      ADDED[x.id] = true; NAMES[x.id] = x.name;
+      ATH[x.id] = Object.assign({ cat: 'ELI', nat: '' }, x); LIST[x.gender].push(ATH[x.id]);
+    });
+  }
+  const canon = (id) => { let n = 0; while (id && state.aliases[id] && n++ < 5) id = state.aliases[id]; return id; };
+  const markPlayersSeen = () => { try { localStorage.setItem('cxgame.seenPlayers', JSON.stringify(state.players.map((p) => p.id))); } catch (e) { /* ignoré */ } scheduleRender(); };
   /** Recalcule tout ce qui dérive des données brutes : surcharges du calendrier, choix et résultats. */
   function recompute() {
     if (state.demo) return;
@@ -104,16 +118,16 @@
       Object.entries(state.raw.picks[uid] || {}).forEach(([rid, p]) => {
         if (!p || typeof p !== 'object') return;
         picks[uid][rid] = Object.assign({}, p);
-        [['a', 'na'], ['b', 'nb']].forEach(([k, n]) => { if (p[k] && p[n] && !NAMES[p[k]]) NAMES[p[k]] = p[n]; });   // coureur saisi à la main
+        ['a', 'b', 'd'].forEach((k) => { if (p[k]) picks[uid][rid][k] = canon(p[k]); });
       });
     });
     const res = {}, meta = {};
     Object.entries((state.file && state.file.races) || {}).forEach(([rid, r]) => {   // résultats officiels du dépôt (data/results.json)
-      res[rid] = r.entries || [];
+      res[rid] = (r.entries || []).map((e) => Object.assign({}, e, { ath: canon(e.ath) }));
       (r.entries || []).forEach((e) => { if (e.name && !NAMES[e.ath]) NAMES[e.ath] = e.name; });
       if (r.start) meta[rid] = { start: r.start };
     });
-    Object.entries(state.raw.results).forEach(([rid, entries]) => { res[rid] = entries || []; delete meta[rid]; });
+    Object.entries(state.raw.results).forEach(([rid, entries]) => { res[rid] = (entries || []).map((e) => Object.assign({}, e, { ath: canon(e.ath) })); delete meta[rid]; });
     state.results = res;
     state.draws = G.autoDraws(res, meta, picks); // tirages au sort : fonction pure des données publiques, donc vérifiables
     Object.entries(state.draws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { picks[pid][rid] = Object.assign({}, picks[pid][rid], { d: d.ath, auto: true }); }));
@@ -121,7 +135,7 @@
     scheduleRender();
   }
   function startStore() {
-    store.onAuth((u) => { state.authReady = true; state.user = u; state.me = u ? u.uid : null; if (u && !state.picks[u.uid]) state.picks[u.uid] = {}; introRules(); if (!state.demo) { state.authError = ''; scheduleRender(); } });
+    store.onAuth((u) => { state.authReady = true; state.user = u; state.me = u ? u.uid : null; if (u && !state.picks[u.uid]) state.picks[u.uid] = {}; introRules(); if (u && isAdmin() && store.listenContacts && !state.contactsOn) { state.contactsOn = true; store.listenContacts((o) => { state.contacts = o || {}; scheduleRender(); }); } if (!state.demo) { state.authError = ''; scheduleRender(); } });
     setTimeout(() => { if (!state.picksReady) { state.picksLate = true; scheduleRender(); } }, 12000);
     store.listen({
       players: (list) => { state.players = list.map((x) => ({ id: x.id, name: x.name || x.email || x.id, photo: x.photo || '', blocked: !!x.photoBlocked, lastSeen: Number(x.lastSeen) || 0, theme: x.theme || '' })).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
@@ -131,7 +145,8 @@
       error: () => { state.syncErr = true; scheduleRender(); },
       results: (m) => { state.raw.results = m; recompute(); },
       overrides: (m) => { state.ovStore = m || {}; recompute(); },
-      athletes: () => {},
+      athletes: (l) => { state.extra = l || []; rebuildAthletes(); recompute(); },
+      aliases: (m) => { state.aliases = m || {}; rebuildAthletes(); recompute(); },
     });
   }
   const fail = (e) => { alert('Enregistrement impossible : ' + (e && e.message ? e.message : e) + '\nVérifie ta connexion et réessaie.'); };
@@ -176,7 +191,8 @@
   function poolOf(race) {
     const sl = startListOf(race);
     if (sl) return { start: true, rows: sl.rows.map((r) => ({ id: r.ath, name: r.name, nat: r.nat, bib: r.bib, src: r.name })) };
-    const list = (BASE.lists[`${race.cat}-${race.gender}`] || []).slice().sort((a, b) => norm(listName(a)).localeCompare(norm(listName(b))));
+    const extras = state.extra.filter((x) => !x.pending && !state.aliases[x.id] && x.gender === race.gender && (x.cat || 'ELI') === race.cat && !(BASE.lists[`${race.cat}-${race.gender}`] || []).some((a) => a.id === x.id));
+    const list = (BASE.lists[`${race.cat}-${race.gender}`] || []).concat(extras).slice().sort((a, b) => norm(listName(a)).localeCompare(norm(listName(b))));
     return { start: false, rows: list.map((a) => ({ id: a.id, name: a.name, nat: a.nat, bib: null, src: listName(a) })) };
   }
   const resOf = (race) => state.results[race.id];
@@ -894,7 +910,7 @@
     if (!state.authReady && !state.demo) { $('#panel').innerHTML = '<p class="hint">Chargement…</p>'; return; }
     if (!state.user) { $('#panel').innerHTML = authPanel(); return; }
     if (state.tab === 'adm' && !isAdmin()) state.tab = 'next';
-    const html = state.tab === 'adm' ? '<p class="empty">L’administration arrive à l’étape 6.</p>' : state.tab === 'next' ? nextPanel() : state.tab === 'gen' ? generalPanel() : state.tab === 'w' ? deskPanel(0) : deskPanel(Number(state.tab));
+    const html = state.tab === 'adm' ? window.CX_ADMIN.render(adminCtx()) : state.tab === 'next' ? nextPanel() : state.tab === 'gen' ? generalPanel() : state.tab === 'w' ? deskPanel(0) : deskPanel(Number(state.tab));
     const syncWarn = state.user && !state.picksReady && (state.syncErr || state.picksLate) ? '<div class="syncwarn" role="alert"><strong>Tes choix et ceux des autres ne se chargent pas.</strong> Recharge la page ; si ça persiste, désactive ton bloqueur de publicités pour ce site ou essaie un autre navigateur.</div>' : '';
     $('#panel').innerHTML = syncWarn + html;
     $('#panel').setAttribute('aria-labelledby', 'tab-' + state.tab);
@@ -967,11 +983,17 @@
       if (!name) { render(); return; }
       const k = norm(name).replace(/[^a-z0-9]/g, '');
       const known = LIST[race.gender].find((a) => norm(a.name).replace(/[^a-z0-9]/g, '') === k);
-      if (known) value = known.id; else { value = 'x-' + slugOf(name); NAMES[value] = name; cur['n' + slot] = name; }
+      if (known) value = known.id;
+      else {
+        const id = 'x-' + slugOf(name) + '-' + Math.random().toString(36).slice(2, 6);
+        const a = { id, name, gender: race.gender, cat: race.cat, nat: '', pending: true, createdBy: state.me };
+        state.extra.push(a); rebuildAthletes();
+        try { await store.addAthlete(a); } catch (err) { fail(err); return; }
+        value = id;
+      }
     }
-    if (value) cur[slot] = value; else { delete cur[slot]; delete cur['n' + slot]; }
-    if (slot === 'a') { if (!cur.a || cur.b === cur.a) { delete cur.b; delete cur.nb; } if (!cur.a) delete cur.na; }
-    if (value && value !== '__free__' && ATH[value]) delete cur['n' + slot];
+    if (value) cur[slot] = value; else delete cur[slot];
+    if (slot === 'a') { if (!cur.a || cur.b === cur.a) delete cur.b; }
     delete cur.ts;
     if (cur.a && !('draft' in cur) && !(myPicks()[race.id] || {}).a && sessionDraftMode(sessionOf(race))) cur.draft = true;
     const out = cur.a ? cur : null;
@@ -1066,6 +1088,7 @@
     }).catch(() => { btns.forEach((b) => { b.disabled = false; b.textContent = '↻ Vérifier le résultat officiel'; }); });
   }
   SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf((ATH[id] || {}).nat), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
+  const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
   if (TAB_IDS.includes(hash)) state.tab = hash;
   setTheme(LS.get('cxgame.theme') || 'flandre', false);

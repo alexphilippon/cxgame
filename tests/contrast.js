@@ -16,6 +16,7 @@ const audit = async (shot) => {
     if (el.closest('svg') || el.closest('[hidden]') || el.closest('.skip') || el.closest('.sr') || el.classList.contains('skip')) return;
     const txt = [...el.childNodes].filter((n) => n.nodeType === 3 && n.textContent.trim()).map((n) => n.textContent.trim()).join(' ');
     if (!txt) return;
+    if (el.classList.contains('avatar__in')) { const im = el.parentElement.querySelector('.avatar__img'); if (im && im.complete && im.naturalWidth && im.style.display !== 'none') return; }
     const cs = getComputedStyle(el); if (cs.visibility === 'hidden' || cs.display === 'none' || +cs.opacity === 0) return;
     const fg = parse(cs.color); if (!fg || fg.a === 0) return;
     const rg = document.createRange(); rg.selectNodeContents(el); const r = rg.getBoundingClientRect(); if (r.width < 3 || r.height < 3) return;
@@ -38,7 +39,7 @@ const run = async (pg) => { const shot = (await pg.screenshot({ fullPage: true }
   await pg.fill('#au-name', 'Alex'); await pg.fill('#au-mail', 'a@b.fr'); await pg.fill('#au-pw', 'secret1'); await pg.click('#auth-form button[type=submit]'); await pg.waitForSelector('.forfait');
   await pg.click('[data-tab="1"]'); await pg.click('#pa-E01-ELI-H'); await pg.keyboard.type('vande'); await pg.keyboard.press('Enter'); await pg.waitForTimeout(150); await pg.click('[data-draft]');
   let total = 0;
-  const views = [['next'], ['1'], ['1', 'recap'], ['1', 'taken'], ['2'], ['3'], ['w'], ['gen']];
+  const views = [['adm'], ['next'], ['1'], ['1', 'recap'], ['1', 'taken'], ['2'], ['3'], ['w'], ['gen']];
   for (const th of ['flandre', 'boue', 'neige', 'foret', 'tomorrowland']) {
     await pg.$eval(`.mast-actions [data-theme-set="${th}"]`, (e) => e.click()); await pg.waitForTimeout(600);
     for (const [t, sub] of views) {

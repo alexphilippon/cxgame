@@ -15,3 +15,6 @@ Adaptation du SKI GAME. Site statique (HTML/CSS/JS, sans build).
 3. `js/config.js` : coller la configuration web Firebase et `adminEmail`.
 4. Vercel : importer le dépôt `alexphilippon/cxgame` (projet statique, aucune commande de build).
 Sans configuration, le site tourne en mode local (comptes et choix dans le navigateur, pour essais).
+
+## Administration
+Onglet **Admin** (visible uniquement pour `adminEmail`) : Contrôles (qui a choisi, choix tardifs, joueurs), Résultats (collage d'un classement, secours si `data/results.json` n'est pas à jour), Calendrier (annulation, report, heure), Coureurs (ajout, fusion des noms libres), Idées. Les tirages au sort sont automatiques (dossards publiés).
