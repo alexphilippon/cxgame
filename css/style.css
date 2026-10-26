@@ -1483,3 +1483,10 @@ html[data-skin='tomorrowland'] .plate[aria-selected='true'] .plate__short { colo
 .dr__tab .c-top { background: #cfe6d6; color: #16331f; } .dr__tab .c-in { background: #eef2f6; color: #1b2b44; font-weight: 500; }
 .dr__tab .c-st { background: #f3d3cf; color: #5a1a12; font-size: .78rem; } .dr__tab .c-none { background: transparent; }
 .dr__tab .rnk--3 { color: #1b2b44; }
+/* Data room : cases de résultat lisibles dans tous les thèmes (fond clair + texte foncé), puces de série */
+.dr__tab td.c-1 { background: #f1cf6a !important; color: #1b2b44 !important; } .dr__tab td.c-2 { background: #cfd8e0 !important; color: #1b2b44 !important; } .dr__tab td.c-3 { background: #e0a97a !important; color: #1b2b44 !important; }
+.dr__tab td.c-top { background: #cfe6d6 !important; color: #16331f !important; } .dr__tab td.c-in { background: #eef2f6 !important; color: #1b2b44 !important; } .dr__tab td.c-st { background: #f3d3cf !important; color: #5a1a12 !important; }
+.ffc--all { --c: #44596b; } html[data-theme='nuit'] .ffc--all { --c: #9db4cf; } html[data-theme='nuit'] .ffc--all[aria-pressed='true'] { color: #111a26; }
+.ffc--CdM { --c: #2c5aa6; } .ffc--SP { --c: #9a6b1f; }
+html[data-theme='nuit'] .ffc--CdM { --c: #8fb0e6; } html[data-theme='nuit'] .ffc--SP { --c: #e0b26a; }
+html[data-theme='nuit'] .ffc--CdM[aria-pressed='true'], html[data-theme='nuit'] .ffc--SP[aria-pressed='true'] { color: #111a26; }

@@ -21,6 +21,8 @@ const audit = async (shot) => {
     const fg = parse(cs.color); if (!fg || fg.a === 0) return;
     const rg = document.createRange(); rg.selectNodeContents(el); const r = rg.getBoundingClientRect(); if (r.width < 3 || r.height < 3) return;
     const tw = el.closest('.tablewrap--scroll'); if (tw) { const tr = tw.getBoundingClientRect(); if (r.bottom > tr.bottom || r.top < tr.top || r.right > tr.right || r.left < tr.left) return; }   // partie masquée par le défilement
+    const mc = el.closest('.modal__card'); if (mc && (r.bottom > window.innerHeight || r.top < 0)) return;   // partie du modal visible seulement en le faisant défiler
+    { const cxp = r.left + r.width / 2, cyp = r.top + r.height / 2; if (cxp >= 0 && cyp >= 0 && cxp < window.innerWidth && cyp < window.innerHeight) { const top = document.elementFromPoint(cxp, cyp); if (top && !el.contains(top) && !top.contains(el) && top.closest('#tabs, nav, header, .tabbar, .modal')) return; } }   // masqué par une barre fixe
     const lst = el.closest('.combo__list'); if (lst) { const lr = lst.getBoundingClientRect(); if (r.bottom > lr.bottom || r.top < lr.top) return; }
     const P = 1, x0 = Math.max(0, Math.floor(r.left + scrollX) - P), y0 = Math.max(0, Math.floor(r.top + scrollY) - P), w = Math.min(Math.ceil(r.width) + 2 * P, cv.width - x0), h = Math.min(Math.ceil(r.height) + 2 * P, cv.height - y0); if (w < 4 || h < 4) return;
     const d = cx.getImageData(x0, y0, w, h).data, cnt = {};
@@ -47,7 +49,7 @@ const run = async (pg) => { const shot = (await pg.screenshot({ fullPage: true }
       await pg.click(`[data-tab="${t}"]`); if (sub) await pg.click(`[data-sub="${sub}"]`); await pg.waitForTimeout(450);
       const bad = await run(pg); total += bad.length; bad.slice(0, 12).forEach((x) => console.log(`[${th} ${t}${sub ? '/' + sub : ''}]`, x));
     }
-    await pg.click("[data-rules]"); await pg.waitForTimeout(500); let bad = await run(pg); total += bad.length; bad.slice(0, 8).forEach((x) => console.log(`[${th} règles]`, x)); await pg.click('[data-close]');
+    await pg.evaluate(() => window.scrollTo(0, 0)); await pg.click("[data-rules]"); await pg.waitForTimeout(500); let bad = await run(pg); total += bad.length; bad.slice(0, 8).forEach((x) => console.log(`[${th} règles]`, x)); await pg.click('[data-close]');
     await pg.click('[data-settings]'); bad = await run(pg); total += bad.length; bad.slice(0, 8).forEach((x) => console.log(`[${th} réglages]`, x)); await pg.click('[data-close]');
     await pg.click('[data-tab="1"]'); await pg.click('#pa-E01-ELI-F'); bad = await run(pg); total += bad.length; bad.slice(0, 8).forEach((x) => console.log(`[${th} liste]`, x)); await pg.keyboard.press('Escape');
   }
