@@ -186,6 +186,10 @@
   function categoryScore(cat, picksOfPlayer, results) {
     return Object.keys(D.RACES).reduce((s, id) => { const r = raceOf(id); return r.cat === cat ? s + (scoreRace(r, picksOfPlayer && picksOfPlayer[id], results) || 0) : s; }, 0);
   }
+  /** Quête annexe : classement hommes / femmes (toutes catégories d'âge, desks et Mondiaux, courses seulement, sans bonus). */
+  function genderScore(gender, picksOfPlayer, results) {
+    return Object.keys(D.RACES).reduce((s, id) => { const r = raceOf(id); return r.gender === gender ? s + (scoreRace(r, picksOfPlayer && picksOfPlayer[id], results) || 0) : s; }, 0);
+  }
   /** Classements : général (desks + Mondiaux) et par desk. */
   function generalScore(picksOfPlayer, results, opts) {
     const desks = D.DESKS.map((d) => deskScore(d.id, picksOfPlayer, results));
@@ -253,7 +257,7 @@
   const api = {
     parisInstant, setOverrides, raceOf, raceStart, activeRaces, sessionOfRace, raceLockTime, raceLocked, sessionRaces, sessionDeadline, sessionEnd, sessionState,
     pointsForRank, effectiveAthlete, substitute, dnsPending, hash53, drawRider, DRAW_TOP, autoDraws, scoreRace, worldsWinner, worldsBonus,
-    pickAnalysis, sessionScore, deskScore, worldsScore, generalScore, categoryScore, usedInDesk, deskIdOf,
+    pickAnalysis, sessionScore, deskScore, worldsScore, generalScore, categoryScore, genderScore, usedInDesk, deskIdOf,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CX_GAME = api;

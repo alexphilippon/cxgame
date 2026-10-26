@@ -645,9 +645,9 @@
   }
   function pointsModal(pid, scope) {
     const p = state.players.find((x) => x.id === pid); if (!p) return;
-    const inScope = (r) => scope === 'tot' || (scope === 'w' ? r.kind === 'mondial' : scope.startsWith('cat:') ? r.cat === scope.slice(4) : scope.startsWith('d') ? (r.kind !== 'mondial' && String((sessionOf(r) || {}).desk) === scope.slice(1)) : false);
+    const inScope = (r) => scope === 'tot' || (scope === 'w' ? r.kind === 'mondial' : scope.startsWith('g:') ? r.gender === scope.slice(2) : scope.startsWith('d') ? (r.kind !== 'mondial' && String((sessionOf(r) || {}).desk) === scope.slice(1)) : false);
     const rows = playerRows(pid).filter((x) => inScope(x.r));
-    const label = scope === 'tot' ? 'Classement général' : scope === 'w' ? 'Mondiaux' : scope.startsWith('cat:') ? D.CATS[scope.slice(4)].fr : 'Desk ' + scope.slice(1);
+    const label = scope === 'tot' ? 'Classement général' : scope === 'w' ? 'Mondiaux' : scope.startsWith('g:') ? (scope === 'g:H' ? 'Classement hommes' : 'Classement femmes') : 'Desk ' + scope.slice(1);
     const li = rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.r))}</strong> <span class="sub">${esc(raceName(x.r))} · ${esc(dayOf(x.r.date))}</span></span><span class="dtl__a">${x.has ? skn(x.eff) : '<span class="none">Pas de choix</span>'}</span><span class="dtl__k ${x.pts > 0 ? '' : 'bad'}">${x.e ? esc(x.e.status || ordinal(x.e.rank)) : ''} <b>${x.pts > 0 ? '+' : ''}${x.pts}</b></span></li>`).join('');
     const bonus = (scope === 'w' || scope === 'tot') ? G.worldsBonus(state.picks[pid] || {}, state.results).lines : [];
     const bl = bonus.map((b) => `<li class="dtl"><span class="dtl__r"><strong>Bonus Mondiaux</strong> <span class="sub">${esc(b.label)}</span></span><span class="dtl__a"></span><span class="dtl__k"><b>+${b.pts}</b></span></li>`).join('');
@@ -661,12 +661,12 @@
     const main = `${SHARE.fsOpen()}<div class="tablewrap"><table class="grid grid--rank grid--general cap--gen"><caption>Classement général ${info('Somme des points des trois desks et des Mondiaux, bonus compris.')}</caption>
       <thead><tr><th scope="col" class="num">Rang</th><th scope="col">Joueur</th><th scope="col" class="num th--tot">Total</th><th scope="col" class="num th--d1">Desk 1</th><th scope="col" class="num th--d2">Desk 2</th><th scope="col" class="num th--d3">Desk 3</th><th scope="col" class="num th--w">Mondiaux</th></tr></thead>
       <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pname(r.p)}</th><td class="num total">${ptsBtn(r.v.total, 'tot', r.p.id)}</td>${r.v.desks.map((d, i) => `<td class="num">${ptsBtn(d, 'd' + D.DESKS[i].id, r.p.id)}</td>`).join('')}<td class="num">${ptsBtn(r.v.worlds, 'w', r.p.id)}</td></tr>`).join('')}</tbody></table></div></div>`;
-    const cats = ['ELI', 'U23', 'U19'].map((c) => smallRanking(`Classement ${D.CATS[c].fr.toLowerCase()}`, (pk) => G.categoryScore(c, pk, R), 'cap--' + c, 'cat:' + c)).join('');
+    const cats = [['H', 'hommes', 'ELI'], ['F', 'femmes', 'U19']].map(([g, n, k]) => smallRanking(`Classement ${n}`, (pk) => G.genderScore(g, pk, R), 'cap--' + k, 'g:' + g)).join('');
     const dk = (d) => smallRanking(`Classement du ${d.name}`, (pk) => G.deskScore(d.id, pk, R), 'cap--d' + d.id, 'd' + d.id);
     const wk = smallRanking('Classement des Mondiaux', (pk) => G.worldsScore(pk, R).total, 'cap--w', 'w');
     return `<section class="genpanel"><header class="deskhead"><div><h2>Classements</h2>
       <p class="deskhead__meta">Général : trois desks et les Mondiaux, bonus compris</p></div></header>${none}${main}
-      <h3 class="subtitle">Par catégorie</h3><div class="grid2">${cats}</div>
+      <h3 class="subtitle">Quête annexe : hommes et femmes</h3><div class="grid2">${cats}</div>
       <h3 class="subtitle">Par desk</h3><div class="grid2">${dk(D.DESKS[0])}${dk(D.DESKS[1])}</div><div class="grid2">${wk}${dk(D.DESKS[2])}</div></section>`;
   }
 
@@ -843,13 +843,13 @@
     if (!Object.keys(R).length || !n) return null;
     const rankOf = (fn) => { const r = rankRows((pk) => ({ total: fn(pk) })).find((x) => x.p.id === state.me); return r ? { rank: r.rank, pts: r.v.total } : null; };
     const done = Object.keys(R).map((rid) => G.raceOf(rid)).filter((r) => r && !r.cancelled);
-    return { n, gen: done.length ? rankOf((pk) => G.generalScore(pk, R).total) : null, cats: ['ELI', 'U23', 'U19'].map((c) => (done.some((r) => r.cat === c) ? rankOf((pk) => G.categoryScore(c, pk, R)) : null)) };
+    return { n, gen: done.length ? rankOf((pk) => G.generalScore(pk, R).total) : null, cats: ['H', 'F'].map((g) => (done.some((r) => r.gender === g) ? rankOf((pk) => G.genderScore(g, pk, R)) : null)) };
   }
   const globeBoard = (rk) => {
     const nth = (r) => (r ? ordinal(r.rank) : '-');
     return `<div class="acct__board">
       <button type="button" class="gl gl--big" data-tab="gen" title="Voir le classement général">${globeSvg('big')}<span class="gl__t"><b>${rk ? nth(rk.gen) : '-'}</b><span title="Classement général">GEN</span></span></button>
-      <div class="gl-row">${['ELI', 'U23', 'U19'].map((c, i) => `<button type="button" class="gl gl--sm" data-tab="gen" title="Voir les classements">${globeSvg('sm')}<span class="gl__t"><b>${rk ? nth(rk.cats[i]) : '-'}</b><span>${D.CATS[c].short}</span></span></button>`).join('')}</div>
+      <div class="gl-row">${[['H', 'Hommes'], ['F', 'Femmes']].map(([c, t], i) => `<button type="button" class="gl gl--sm" data-tab="gen" title="Classement ${t.toLowerCase()}">${globeSvg('sm')}<span class="gl__t"><b>${rk ? nth(rk.cats[i]) : '-'}</b><span>${c}</span></span></button>`).join('')}</div>
     </div>`;
   };
   function accountBar() {

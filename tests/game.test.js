@@ -274,5 +274,6 @@ assert.deepStrictEqual(G.drawRider('s', ['x', 'y', 'z']), G.drawRider('s', ['x',
   assert.strictEqual(G.categoryScore('ELI', pk, R), 100);
   assert.strictEqual(G.categoryScore('U23', pk, R), 133, 'Euros U23 : 100 × 4/3 arrondi');
   assert.strictEqual(G.categoryScore('U19', pk, R), 0);
+  assert.ok(G.genderScore('H', pk, R) + G.genderScore('F', pk, R) >= 100, 'quête annexe hommes/femmes');
 }
 console.log('Tous les tests passent.');
