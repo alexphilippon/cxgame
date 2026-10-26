@@ -3,7 +3,8 @@
 (function (root) {
   'use strict';
   let C = null, H = null, loading = false;
-  const ui = { g: 'H', cat: 'ELI', more: false };
+  const ui = { g: 'H', cat: 'ELI', s: 'all', more: false };
+  const SER = { CdM: 'Coupe du monde', SP: 'Superprestige' };
   const init = (ctx) => { C = ctx; };
   const load = () => {
     if (H || loading) return; loading = true;
@@ -18,7 +19,7 @@
   const chip = (attr, v, label, on) => `<button type="button" class="ffc ffc--${v}" data-dr="${attr}:${v}" aria-pressed="${on}">${label}</button>`;
 
   function table() {
-    const races = H.races.filter((r) => r.g === ui.g && r.cat === ui.cat && !r.nowc);
+    const races = H.races.filter((r) => r.g === ui.g && r.cat === ui.cat && !r.nowc && (ui.s === 'all' || r.series === ui.s));
     const by = {};
     races.forEach((r) => r.res.forEach(([id, e]) => { const s = (by[id] = by[id] || { id, pts: 0, n: 0, cells: {} }); s.cells[r.id] = e; s.n++; s.pts += pts(e); }));
     const rows = Object.values(by).sort((a, b) => b.pts - a.pts || a.n - b.n || nameOf(a.id).localeCompare(nameOf(b.id), 'fr'));
@@ -30,12 +31,13 @@
     if (!H) return '<p class="hint">Chargement des résultats…</p>';
     if (H.error) return '<p class="hint">Résultats de la saison passée indisponibles.</p>';
     const { races, rows } = table(), shown = ui.more ? rows : rows.slice(0, 40);
-    const head = races.map((r) => `<th scope="col" class="num dr__rc" title="${C.esc(r.place)} · ${frDate(r)}"><span>${C.esc(r.place.slice(0, 3).toUpperCase())}</span><small>${frDate(r)}</small></th>`).join('');
+    const head = races.map((r) => `<th scope="col" class="num dr__rc" title="${C.esc(SER[r.series] || r.series)} · ${C.esc(r.place)} · ${frDate(r)}"><span>${C.esc(r.place.slice(0, 3).toUpperCase())}</span><small>${frDate(r)}</small></th>`).join('');
     const body = shown.map((r) => `<tr><td class="num"><span class="rnk rnk--${r.rank <= 3 ? r.rank : r.rank <= 10 ? 'c' : 'n'}">${r.rank}</span></td>
       <th scope="row"><button type="button" class="dr__sk dr__lnk" data-hist="${C.esc(r.id)}">${C.flag(natOf(r.id))}<span class="dr__nm">${C.esc(nameOf(r.id))}</span></button></th>
       <td class="num"><b>${r.pts}</b></td>${races.map((x) => { const e = r.cells[x.id]; return `<td class="num dr__c ${cellCls(e)}">${e == null ? '' : e}</td>`; }).join('')}</tr>`).join('');
-    return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Coupe du monde UCI 2025-26 · classements complets, points au barème du jeu</p></div></header>
+    return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Saison 2025-26 · Coupe du monde et Superprestige, classements complets, points au barème du jeu</p></div></header>
       <div class="ff dr__filters" role="group" aria-label="Filtres"><span class="ff__g">${chip('g', 'H', 'Hommes', ui.g === 'H')}${chip('g', 'F', 'Femmes', ui.g === 'F')}</span>
+      <span class="ff__g">${chip('s', 'all', 'Toutes', ui.s === 'all')}${Object.keys(SER).map((k) => chip('s', k, SER[k], ui.s === k)).join('')}</span>
       <span class="ff__g">${['ELI', 'U23', 'U19'].map((c) => chip('cat', c, C.D.CATS[c].short, ui.cat === c)).join('')}</span></div>
       <div class="tablewrap tablewrap--scroll"><table class="grid grid--rank dr__tab"><caption>${ui.g === 'H' ? 'Hommes' : 'Femmes'} ${C.esc(C.D.CATS[ui.cat].fr.toLowerCase())}, ${races.length} courses</caption>
       <thead><tr><th class="num" scope="col">Rang</th><th scope="col">Coureur</th><th class="num" scope="col">Pts</th>${head}</tr></thead><tbody>${body || `<tr><td colspan="${3 + races.length}"><span class="none">Aucun résultat.</span></td></tr>`}</tbody></table></div>
@@ -53,7 +55,7 @@
     const h = historyOf(id);
     if (!h.length) return '';
     const total = h.reduce((a, x) => a + pts(x.e), 0);
-    return `<h3 class="fh">Saison 2025-26 · Coupe du monde</h3><ul class="dtls">${h.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${C.esc(x.race.place)}</strong> <span class="sub">${frDate(x.race)} · ${C.esc(C.D.CATS[x.race.cat].short)}</span></span><span class="dtl__a"></span><span class="dtl__k ${typeof x.e === 'number' ? '' : 'bad'}">${typeof x.e === 'number' ? C.ordinal(x.e) : x.e} <b>${pts(x.e) ? '+' + pts(x.e) : ''}</b></span></li>`).join('')}</ul><p class="dtl__tot">${h.length} courses · ${total} pts (barème du jeu)</p>`;
+    return `<h3 class="fh">Saison 2025-26</h3><ul class="dtls">${h.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${C.esc(x.race.place)}</strong> <span class="sub">${frDate(x.race)} · ${C.esc(SER[x.race.series] || "")} · ${C.esc(C.D.CATS[x.race.cat].short)}</span></span><span class="dtl__a"></span><span class="dtl__k ${typeof x.e === 'number' ? '' : 'bad'}">${typeof x.e === 'number' ? C.ordinal(x.e) : x.e} <b>${pts(x.e) ? '+' + pts(x.e) : ''}</b></span></li>`).join('')}</ul><p class="dtl__tot">${h.length} courses · ${total} pts (barème du jeu)</p>`;
   }
   function histModal(id) {
     load();
@@ -63,7 +65,7 @@
   /** Clic dans la Data room : true si traité. */
   function click(t) {
     const d = t.closest('[data-dr]');
-    if (d) { const [k, v] = d.dataset.dr.split(':'); if (k === 'g') ui.g = v; else if (k === 'cat') ui.cat = v; else if (k === 'more') ui.more = !ui.more; ui.more = k === 'more' ? ui.more : false; C.rerender(); return true; }
+    if (d) { const [k, v] = d.dataset.dr.split(':'); if (k === 'g') ui.g = v; else if (k === 'cat') ui.cat = v; else if (k === 's') ui.s = v; else if (k === 'more') ui.more = !ui.more; ui.more = k === 'more' ? ui.more : false; C.rerender(); return true; }
     const h = t.closest('[data-hist]'); if (h) { histModal(h.dataset.hist); return true; }
     return false;
   }
