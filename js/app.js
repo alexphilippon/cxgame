@@ -49,7 +49,7 @@
   const ordinal = (n) => (n === 1 ? '1er' : `${n}e`);
   const norm = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   /* Drapeaux : images (les emoji de drapeaux ne s'affichent pas sous Windows). */
-  const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Anvers': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'be', 'Sint-Niklaas': 'be', 'Bruxelles': 'be', 'Ostende': 'be' };
+  const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Antwerpen': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'be', 'Sint-Niklaas': 'be', 'Bruxelles': 'be', 'Oostende': 'be' };
   const PLACE_RE = new RegExp(Object.keys(PLACE_CC).sort((a, b) => b.length - a.length).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g');
   const NAT_CC = { BEL: 'be', NED: 'nl', FRA: 'fr', GBR: 'gb', ITA: 'it', SUI: 'ch', CZE: 'cz', GER: 'de', USA: 'us', CAN: 'ca', ESP: 'es', LUX: 'lu', DEN: 'dk', POL: 'pl', SWE: 'se', AUT: 'at', HUN: 'hu', SVK: 'sk', IRL: 'ie', NOR: 'no', AUS: 'au', NZL: 'nz', JPN: 'jp', BRA: 'br', POR: 'pt', SLO: 'si', ISR: 'il', COL: 'co', ARG: 'ar', LAT: 'lv', EST: 'ee', FIN: 'fi', UKR: 'ua', ROU: 'ro', CRO: 'hr' };
   const flagOf = (nat) => { const cc = NAT_CC[String(nat || '').toUpperCase()]; return cc ? `<img class="fl dr__flag" src="https://flagcdn.com/w40/${cc}.png" srcset="https://flagcdn.com/w80/${cc}.png 2x" width="20" height="15" alt="${esc(nat)}" title="${esc(nat)}" loading="lazy" onerror="this.style.display='none'">` : ''; };
@@ -513,13 +513,13 @@
     const total = sessions.reduce((n, s) => n + active(G.sessionRaces(s)).length, 0);
     const chosen = sessions.reduce((n, s) => n + confirmedN(active(G.sessionRaces(s))), 0), drafts = sessions.reduce((n, s) => n + draftN(active(G.sessionRaces(s))), 0);
     const title = dk.name;
-    const meta = `${dmOf(dk.from)} au ${dmOf(dk.to)}, ${total} courses${hasW ? ' dont les Mondiaux d’Ostende (29 au 31 janvier)' : ''}`;
+    const meta = `${dmOf(dk.from)} au ${dmOf(dk.to)}, ${total} courses${hasW ? ' dont les Mondiaux d’Oostende (29 au 31 janvier)' : ''}`;
     const tabs = [['mine', 'Mon desk'], ['recap', 'Récap des joueurs'], ['taken', 'Coureurs pris']].map(([id, label]) =>
       `<button type="button" role="tab" class="seg__btn" aria-selected="${sub === id}" data-sub="${id}" data-key="${key}">${label}</button>`).join('');
     let body;
     if (sub === 'mine') {
       const hasF = (s) => sortedRaces(s).some(passF);
-      body = (sessions.some(hasF) ? sessions.map((s, i) => hasF(s) ? (s === D.WORLDS ? worldsBox() : '') + sessionCard(s, s === D.WORLDS ? 'Championnats du monde, Ostende' : `session ${i + 1} sur ${sessions.filter((x) => x !== D.WORLDS).length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
+      body = (sessions.some(hasF) ? sessions.map((s, i) => hasF(s) ? (s === D.WORLDS ? worldsBox() : '') + sessionCard(s, s === D.WORLDS ? 'Championnats du monde, Oostende' : `session ${i + 1} sur ${sessions.filter((x) => x !== D.WORLDS).length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
         + '<p class="hint">Heures de départ provisoires tant qu’elles ne sont pas confirmées.</p>';
     } else if (sub === 'recap') body = (hasW ? worldsBox() : '') + recapView(key);
     else body = takenView(key);
@@ -711,7 +711,7 @@
       <p>À chaque course, tu choisis <strong>un coureur ou une coureuse</strong> (et, si tu veux, un remplaçant). Il te rapporte des points : <strong>100 pour le 1er, 80, 60, 50, 45…</strong> jusqu’à 1 point pour le 30ᵉ.</p>
       <h3>L’organisation</h3>
       <ul>
-        <li><strong>3 desks</strong> (novembre, décembre, janvier-février) dont les <strong>Mondiaux</strong> d’Ostende (29-31 janvier 2027), qui font partie du Desk 3. Chaque session regroupe les courses d’un même week-end.</li>
+        <li><strong>3 desks</strong> (novembre, décembre, janvier-février) dont les <strong>Mondiaux</strong> d’Oostende (29-31 janvier 2027), qui font partie du Desk 3. Chaque session regroupe les courses d’un même week-end.</li>
         <li>Hommes et femmes sont chacun à part : un choix par course.</li>
         <li>Championnats d’Europe (Zeddam, 7-8 novembre) : <strong>×2</strong> en Élite, ×1 en U23, ×2/3 en U19. Mondiaux : <strong>×3</strong> en Élite, ×2 en U23, ×1 en U19.</li>
         <li><strong>Bonus des Mondiaux</strong> : +200 si tes deux choix Élite gagnent, +130 en U23, +70 en U19, et +600 pour les six titres.</li>

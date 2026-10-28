@@ -1,6 +1,6 @@
 /* CX GAME – calendrier cyclo-cross 2026-2027
    Sources : calendrier sporza.be 2026-2027 (fourni par Alexandre) ; programme des Euros de Zeddam : bulletin d'information UEC (v13/04/2026) ;
-   Mondiaux d'Ostende 29-31 janvier 2027 : jours par catégorie NON publiés, répartition provisoire calquée sur les Euros.
+   Mondiaux d'Oostende 29-31 janvier 2027 : jours par catégorie NON publiés, répartition provisoire calquée sur les Euros.
    Heures de départ : PROVISOIRES partout (timeKnown = false) tant que l'admin ne les a pas confirmées.
    Les heures provisoires sont volontairement tôt : mieux vaut verrouiller un peu avant le vrai départ qu'après. */
 (function (root) {
@@ -38,7 +38,7 @@
 11|SP|Ruddervoorde|2026-12-06
 12|CM|Glasgow|2026-12-13
 13|EX|Mol|2026-12-17
-14|CM|Anvers|2026-12-19
+14|CM|Antwerpen|2026-12-19
 15|CM|Koksijde|2026-12-20
 16|XO|Hofstade|2026-12-22
 17|XO|Loenhout|2026-12-23
@@ -106,12 +106,12 @@
     EVENTS.push(e);
   });
 
-  // Mondiaux d'Ostende : Élite, U23, U19, H+F (6 courses), barème ×3. Jours par catégorie à confirmer.
+  // Mondiaux d'Oostende : Élite, U23, U19, H+F (6 courses), barème ×3. Jours par catégorie à confirmer.
   const WORLDS_RACES = [];
   Object.keys(BIG).forEach((k) => {
     const [cat, g] = k.split('-');
     const id = raceId('MO', cat, g);
-    addRace({ id, ev: 'MO', serie: 'MO', cat, gender: g, n: 0, place: 'Ostende', date: WORLDS_DAYS[BIG[k].day], time: BIG[k].time, dateKnown: false, mult: multOf(3, cat), kind: 'mondial' });
+    addRace({ id, ev: 'MO', serie: 'MO', cat, gender: g, n: 0, place: 'Oostende', date: WORLDS_DAYS[BIG[k].day], time: BIG[k].time, dateKnown: false, mult: multOf(3, cat), kind: 'mondial' });
     WORLDS_RACES.push(id);
   });
 
@@ -127,7 +127,7 @@
     id: e.n, desk: deskOfDate(e.date), name: e.name, races: e.races,
   }));
 
-  const WORLDS = { id: 'MO', desk: 3, name: 'Championnats du monde d’Ostende', races: WORLDS_RACES };
+  const WORLDS = { id: 'MO', desk: 3, name: 'Championnats du monde d’Oostende', races: WORLDS_RACES };
 
   // Barème identique au ski : 100, 80, 60, 50, 45, 40, 36, 32, 29, 26, 24, 22, 20, 18, 16, 15 … 1 (30 places).
   const POINTS = [100, 80, 60, 50, 45, 40, 36, 32, 29, 26, 24, 22, 20, 18, 16,
