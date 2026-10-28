@@ -56,7 +56,7 @@
 29|EX|Maldegem|2027-02-03
 30|XO|Lille|2027-02-07
 31|EX|Sint-Niklaas|2027-02-13
-32|XO|Bruxelles|2027-02-14
+32|XO|Brussel|2027-02-14
 `;
 
   // Mondiaux : Élite ×3, U23 ×2, U19 ×1 (base × k / 3). Euros : Élite ×2, U23 ×1, U19 ×2/3.

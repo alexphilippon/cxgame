@@ -49,7 +49,7 @@
   const ordinal = (n) => (n === 1 ? '1er' : `${n}e`);
   const norm = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   /* Drapeaux : images (les emoji de drapeaux ne s'affichent pas sous Windows). */
-  const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Antwerpen': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'be', 'Sint-Niklaas': 'be', 'Bruxelles': 'be', 'Oostende': 'be' };
+  const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Antwerpen': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'be', 'Sint-Niklaas': 'be', 'Brussel': 'be', 'Oostende': 'be' };
   const PLACE_RE = new RegExp(Object.keys(PLACE_CC).sort((a, b) => b.length - a.length).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g');
   const NAT_CC = { BEL: 'be', NED: 'nl', FRA: 'fr', GBR: 'gb', ITA: 'it', SUI: 'ch', CZE: 'cz', GER: 'de', USA: 'us', CAN: 'ca', ESP: 'es', LUX: 'lu', DEN: 'dk', POL: 'pl', SWE: 'se', AUT: 'at', HUN: 'hu', SVK: 'sk', IRL: 'ie', NOR: 'no', AUS: 'au', NZL: 'nz', JPN: 'jp', BRA: 'br', POR: 'pt', SLO: 'si', ISR: 'il', COL: 'co', ARG: 'ar', LAT: 'lv', EST: 'ee', FIN: 'fi', UKR: 'ua', ROU: 'ro', CRO: 'hr' };
   const flagOf = (nat) => { const cc = NAT_CC[String(nat || '').toUpperCase()]; return cc ? `<img class="fl dr__flag" src="https://flagcdn.com/w40/${cc}.png" srcset="https://flagcdn.com/w80/${cc}.png 2x" width="20" height="15" alt="${esc(nat)}" title="${esc(nat)}" loading="lazy" onerror="this.style.display='none'">` : ''; };
@@ -72,7 +72,8 @@
   const isAdmin = () => !!state.user && !state.demo && (store.mode === 'local' || (!!CONFIG.adminEmail && state.user.email.toLowerCase() === CONFIG.adminEmail.toLowerCase()));
 
   const allSessions = () => [...D.SESSIONS, D.WORLDS].sort((a, b) => G.sessionDeadline(a) - G.sessionDeadline(b));
-  const scopeSessions = (key) => D.SESSIONS.filter((s) => s.desk === key).concat(D.WORLDS.desk === key ? [D.WORLDS] : []);   // le Desk 3 inclut les Mondiaux
+  const scopeSessions = (key) => D.SESSIONS.filter((s) => s.desk === key).concat(D.WORLDS.desk === key ? [D.WORLDS] : [])   // le Desk 3 inclut les Mondiaux, rangés dans l'ordre chronologique
+    .sort((a, b) => G.sessionDeadline(a) - G.sessionDeadline(b));
   const locked = (session) => G.sessionState(session, now()) !== 'ouverte';
   const lockedRace = (race) => G.raceLocked(race, now());
   const visible = (playerId, race) => playerId === state.me || lockedRace(race);
@@ -519,7 +520,7 @@
     let body;
     if (sub === 'mine') {
       const hasF = (s) => sortedRaces(s).some(passF);
-      body = (sessions.some(hasF) ? sessions.map((s, i) => hasF(s) ? (s === D.WORLDS ? worldsBox() : '') + sessionCard(s, s === D.WORLDS ? 'Championnats du monde, Oostende' : `session ${i + 1} sur ${sessions.filter((x) => x !== D.WORLDS).length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
+      body = (sessions.some(hasF) ? sessions.map((s) => hasF(s) ? (s === D.WORLDS ? worldsBox() : '') + sessionCard(s, s === D.WORLDS ? 'Championnats du monde, Oostende' : `session ${sessions.filter((x) => x !== D.WORLDS).indexOf(s) + 1} sur ${sessions.filter((x) => x !== D.WORLDS).length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
         + '<p class="hint">Heures de départ provisoires tant qu’elles ne sont pas confirmées.</p>';
     } else if (sub === 'recap') body = (hasW ? worldsBox() : '') + recapView(key);
     else body = takenView(key);
