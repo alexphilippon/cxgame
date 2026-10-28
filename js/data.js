@@ -17,7 +17,7 @@
   const SERIES = {
     XO: { fr: 'X²O', short: 'X²O' },
     SP: { fr: 'Superprestige', short: 'SP' },
-    EX: { fr: 'Exact Cross', short: 'Exact' },
+    EX: { fr: 'HG Cross', short: 'HG' },
     CM: { fr: 'Coupe du monde UCI', short: 'CdM' },
     EU: { fr: 'Championnats d’Europe', short: 'Euros' },
     MO: { fr: 'Championnats du monde', short: 'Mondiaux' },
@@ -59,10 +59,11 @@
 32|XO|Bruxelles|2027-02-14
 `;
 
-  // Euros et Mondiaux : un U23 rapporte 2/3 des points d'un Élite, un U19 1/3. Multiplicateur = base × k / 3.
+  // Mondiaux : Élite ×3, U23 ×2, U19 ×1 (base × k / 3). Euros : Élite ×2, U23 ×1, U19 ×2/3.
   // (Un U23 peut aussi courir en Élite : le pool dépend de la catégorie de la COURSE, pas de l'âge du coureur.)
   const CAT_K = { ELI: 3, U23: 2, U19: 1 };
   const multOf = (base, cat) => (base * CAT_K[cat]) / 3;
+  const EURO_MULT = { ELI: 2, U23: 1, U19: 2 / 3 };
 
   const pad = (n) => String(n).padStart(2, '0');
   const raceId = (ev, cat, g) => `${ev}-${cat}-${g}`;
@@ -92,7 +93,7 @@
       Object.keys(BIG).forEach((k) => {
         const [cat, g] = k.split('-');
         const id = raceId(ev, cat, g);
-        addRace({ id, ev, serie, cat, gender: g, n: e.n, place, date: EURO_DAYS[BIG[k].day], time: BIG[k].time, mult: multOf(2, cat), kind: 'euro' });
+        addRace({ id, ev, serie, cat, gender: g, n: e.n, place, date: EURO_DAYS[BIG[k].day], time: BIG[k].time, mult: EURO_MULT[cat], kind: 'euro' });
         e.races.push(id);
       });
     } else {
@@ -126,7 +127,7 @@
     id: e.n, desk: deskOfDate(e.date), name: e.name, races: e.races,
   }));
 
-  const WORLDS = { id: 'MO', desk: 0, name: 'Championnats du monde d’Ostende', races: WORLDS_RACES };
+  const WORLDS = { id: 'MO', desk: 3, name: 'Championnats du monde d’Ostende', races: WORLDS_RACES };
 
   // Barème identique au ski : 100, 80, 60, 50, 45, 40, 36, 32, 29, 26, 24, 22, 20, 18, 16, 15 … 1 (30 places).
   const POINTS = [100, 80, 60, 50, 45, 40, 36, 32, 29, 26, 24, 22, 20, 18, 16,

@@ -49,7 +49,7 @@
   const ordinal = (n) => (n === 1 ? '1er' : `${n}e`);
   const norm = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   /* Drapeaux : images (les emoji de drapeaux ne s'affichent pas sous Windows). */
-  const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Anvers': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'fr', 'Sint-Niklaas': 'be', 'Bruxelles': 'be', 'Ostende': 'be' };
+  const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Anvers': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'be', 'Sint-Niklaas': 'be', 'Bruxelles': 'be', 'Ostende': 'be' };
   const PLACE_RE = new RegExp(Object.keys(PLACE_CC).sort((a, b) => b.length - a.length).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g');
   const NAT_CC = { BEL: 'be', NED: 'nl', FRA: 'fr', GBR: 'gb', ITA: 'it', SUI: 'ch', CZE: 'cz', GER: 'de', USA: 'us', CAN: 'ca', ESP: 'es', LUX: 'lu', DEN: 'dk', POL: 'pl', SWE: 'se', AUT: 'at', HUN: 'hu', SVK: 'sk', IRL: 'ie', NOR: 'no', AUS: 'au', NZL: 'nz', JPN: 'jp', BRA: 'br', POR: 'pt', SLO: 'si', ISR: 'il', COL: 'co', ARG: 'ar', LAT: 'lv', EST: 'ee', FIN: 'fi', UKR: 'ua', ROU: 'ro', CRO: 'hr' };
   const flagOf = (nat) => { const cc = NAT_CC[String(nat || '').toUpperCase()]; return cc ? `<img class="fl dr__flag" src="https://flagcdn.com/w40/${cc}.png" srcset="https://flagcdn.com/w80/${cc}.png 2x" width="20" height="15" alt="${esc(nat)}" title="${esc(nat)}" loading="lazy" onerror="this.style.display='none'">` : ''; };
@@ -72,7 +72,7 @@
   const isAdmin = () => !!state.user && !state.demo && (store.mode === 'local' || (!!CONFIG.adminEmail && state.user.email.toLowerCase() === CONFIG.adminEmail.toLowerCase()));
 
   const allSessions = () => [...D.SESSIONS, D.WORLDS].sort((a, b) => G.sessionDeadline(a) - G.sessionDeadline(b));
-  const scopeSessions = (key) => (key === 0 ? [D.WORLDS] : D.SESSIONS.filter((s) => s.desk === key));
+  const scopeSessions = (key) => D.SESSIONS.filter((s) => s.desk === key).concat(D.WORLDS.desk === key ? [D.WORLDS] : []);   // le Desk 3 inclut les Mondiaux
   const locked = (session) => G.sessionState(session, now()) !== 'ouverte';
   const lockedRace = (race) => G.raceLocked(race, now());
   const visible = (playerId, race) => playerId === state.me || lockedRace(race);
@@ -161,7 +161,7 @@
   const multTxt = (m) => (Number.isInteger(m) ? `×${m}` : `×${Math.round(m * 3)}/3`);
   function discBadge(r) {
     const mult = r.mult !== 1
-      ? `<span class="mult" title="${r.kind === 'mondial' ? 'Barème des Mondiaux : Élite ×3, U23 ×2, U19 ×1' : 'Barème des Euros : Élite ×2, U23 ×4/3, U19 ×2/3'}">${multTxt(r.mult)}</span>` : '';
+      ? `<span class="mult" title="${r.kind === 'mondial' ? 'Barème des Mondiaux : Élite ×3, U23 ×2, U19 ×1' : 'Barème des Euros : Élite ×2, U23 ×1, U19 ×2/3'}">${multTxt(r.mult)}</span>` : '';
     return `<span class="disc disc--${r.cat}">${esc(catLabel(r))}</span>${mult}`;
   }
   function stateBadge(session) {
@@ -487,7 +487,7 @@
     const R = state.results, ids = new Set(scopeSessions(key).flatMap((s) => active(G.sessionRaces(s))).map((r) => r.id));
     const played = Object.keys(R).some((id) => ids.has(id));
     const R0 = Object.assign({}, R); ids.forEach((id) => { delete R0[id]; });
-    const dRank = played ? (rankRows((pk) => ({ total: key === 0 ? G.worldsScore(pk, R).total : G.deskScore(key, pk, R) })).find((r) => r.p.id === state.me) || {}).rank : null;
+    const dRank = played ? (rankRows((pk) => ({ total: G.deskScore(key, pk, R) })).find((r) => r.p.id === state.me) || {}).rank : null;
     const g1 = (rankRows((pk) => ({ total: G.generalScore(pk, R).total })).find((r) => r.p.id === state.me) || {}).rank;
     const g0 = (rankRows((pk) => ({ total: G.generalScore(pk, R0).total })).find((r) => r.p.id === state.me) || {}).rank;
     const mv = played && g0 && g1 ? g0 - g1 : 0;
@@ -505,28 +505,28 @@
       ${any ? '<button type="button" class="ff__x" data-ff="clear">Tout afficher</button>' : ''}</div>`;
   }
   function deskPanel(key) {
-    const isW = key === 0;
+    const hasW = D.WORLDS.desk === key;
     const sessions = scopeSessions(key);
     const sub = state.sub[key];
-    const dk = isW ? null : D.DESKS[key - 1];
-    const score = isW ? G.worldsScore(myPicks(), state.results).total : G.deskScore(key, myPicks(), state.results);
+    const dk = D.DESKS[key - 1];
+    const score = G.deskScore(key, myPicks(), state.results);
     const total = sessions.reduce((n, s) => n + active(G.sessionRaces(s)).length, 0);
     const chosen = sessions.reduce((n, s) => n + confirmedN(active(G.sessionRaces(s))), 0), drafts = sessions.reduce((n, s) => n + draftN(active(G.sessionRaces(s))), 0);
-    const title = isW ? 'Championnats du monde' : dk.name;
-    const meta = isW ? `Ostende, 29 au 31 janvier 2027, ${total} courses` : `${dmOf(dk.from)} au ${dmOf(dk.to)}, ${total} courses`;
+    const title = dk.name;
+    const meta = `${dmOf(dk.from)} au ${dmOf(dk.to)}, ${total} courses${hasW ? ' dont les Mondiaux d’Ostende (29 au 31 janvier)' : ''}`;
     const tabs = [['mine', 'Mon desk'], ['recap', 'Récap des joueurs'], ['taken', 'Coureurs pris']].map(([id, label]) =>
       `<button type="button" role="tab" class="seg__btn" aria-selected="${sub === id}" data-sub="${id}" data-key="${key}">${label}</button>`).join('');
     let body;
     if (sub === 'mine') {
       const hasF = (s) => sortedRaces(s).some(passF);
-      body = (isW ? worldsBox() : '') + (sessions.some(hasF) ? sessions.map((s, i) => hasF(s) ? sessionCard(s, isW ? '' : `session ${i + 1} sur ${sessions.length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
+      body = (sessions.some(hasF) ? sessions.map((s, i) => hasF(s) ? (s === D.WORLDS ? worldsBox() : '') + sessionCard(s, s === D.WORLDS ? 'Championnats du monde, Ostende' : `session ${i + 1} sur ${sessions.filter((x) => x !== D.WORLDS).length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
         + '<p class="hint">Heures de départ provisoires tant qu’elles ne sont pas confirmées.</p>';
-    } else if (sub === 'recap') body = (isW ? worldsBox() : '') + recapView(key);
+    } else if (sub === 'recap') body = (hasW ? worldsBox() : '') + recapView(key);
     else body = takenView(key);
     return `<section>
       <header class="deskhead">
         <div><h2>${esc(title)}</h2><p class="deskhead__meta">${esc(meta)}</p>
-          <p class="rule">${isW ? 'Barème ×3 / ×2 / ×1. Un coureur ne peut être choisi qu’une fois par catégorie.' : 'Un coureur ne peut être choisi qu’une fois par catégorie dans un desk.'} ${info(isW ? 'Aux Mondiaux, les points sont multipliés par 3 (Élite), 2 (U23) ou 1 (U19). Un coureur ne peut servir qu’une fois dans sa catégorie. Hommes et femmes comptent à part.' : 'Dans un même desk, un coureur ne peut être choisi qu’une seule fois chez les hommes et une seule fois chez les femmes, par catégorie (Élite, U23, U19). Un coureur déjà pris apparaît grisé.')}</p></div>
+          <p class="rule">Un coureur ne peut être choisi qu’une fois par catégorie dans un desk${hasW ? ', Mondiaux compris' : ''}. ${info('Dans un même desk, un coureur ne peut être choisi qu’une seule fois chez les hommes et une seule fois chez les femmes, par catégorie (Élite, U23, U19)' + (hasW ? ', y compris aux Mondiaux (points ×3 en Élite, ×2 en U23, ×1 en U19)' : '') + '. Un coureur déjà pris apparaît grisé.')}</p></div>
         <dl class="deskhead__stats">${deskStats(key, chosen, total, drafts, score)}</dl>
       </header>
       <div class="deskbar"><div class="seg" role="tablist" aria-label="Vue du desk">${tabs}</div>${filterBar()}</div>
@@ -602,8 +602,8 @@
     const live = active(races);
     const open = live.some((r) => !lockedRace(r));
     const n = confirmedN(live);
-    const inDesk = D.SESSIONS.filter((s) => s.desk === up.desk);
-    const where = isW ? 'Hors desk, barème ×3 / ×2 / ×1' : `Desk ${up.desk}, session ${inDesk.indexOf(up) + 1} sur ${inDesk.length}`;
+    const inDesk = scopeSessions(up.desk).filter((x) => x !== D.WORLDS);
+    const where = isW ? 'Desk 3, Mondiaux (barème ×3 / ×2 / ×1)' : `Desk ${up.desk}, session ${inDesk.indexOf(up) + 1} sur ${inDesk.length}`;
     const list = races.map((r) => {
       const d = at(r.date);
       return `<li class="mini">
@@ -622,7 +622,7 @@
           <h2 class="forfait__name">${fl(up.name)}</h2>
           <p class="forfait__where">${esc(where)}</p>
           <ul class="minis">${list}</ul>
-          <button type="button" class="btn btn--brique" data-goto="${isW ? 0 : up.desk}">${open ? (n === live.length ? 'Modifier mes choix' : 'Faire mes choix') : 'Voir le desk'}</button>
+          <button type="button" class="btn btn--brique" data-goto="${up.desk}">${open ? (n === live.length ? 'Modifier mes choix' : 'Faire mes choix') : 'Voir le desk'}</button>
         </div>
         <div class="forfait__stub">${stub}</div>
       </article>
@@ -645,11 +645,11 @@
   }
   function pointsModal(pid, scope) {
     const p = state.players.find((x) => x.id === pid); if (!p) return;
-    const inScope = (r) => scope === 'tot' || (scope === 'w' ? r.kind === 'mondial' : scope.startsWith('g:') ? r.gender === scope.slice(2) : scope.startsWith('d') ? (r.kind !== 'mondial' && String((sessionOf(r) || {}).desk) === scope.slice(1)) : false);
+    const inScope = (r) => scope === 'tot' || (scope === 'w' ? r.kind === 'mondial' : scope.startsWith('g:') ? r.gender === scope.slice(2) : scope.startsWith('d') ? String((sessionOf(r) || {}).desk) === scope.slice(1) : false);
     const rows = playerRows(pid).filter((x) => inScope(x.r));
     const label = scope === 'tot' ? 'Classement général' : scope === 'w' ? 'Mondiaux' : scope.startsWith('g:') ? (scope === 'g:H' ? 'Classement hommes' : 'Classement femmes') : 'Desk ' + scope.slice(1);
     const li = rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.r))}</strong> <span class="sub">${esc(raceName(x.r))} · ${esc(dayOf(x.r.date))}</span></span><span class="dtl__a">${x.has ? skn(x.eff) : '<span class="none">Pas de choix</span>'}</span><span class="dtl__k ${x.pts > 0 ? '' : 'bad'}">${x.e ? esc(x.e.status || ordinal(x.e.rank)) : ''} <b>${x.pts > 0 ? '+' : ''}${x.pts}</b></span></li>`).join('');
-    const bonus = (scope === 'w' || scope === 'tot') ? G.worldsBonus(state.picks[pid] || {}, state.results).lines : [];
+    const bonus = (scope === 'd' + D.WORLDS.desk || scope === 'tot') ? G.worldsBonus(state.picks[pid] || {}, state.results).lines : [];
     const bl = bonus.map((b) => `<li class="dtl"><span class="dtl__r"><strong>Bonus Mondiaux</strong> <span class="sub">${esc(b.label)}</span></span><span class="dtl__a"></span><span class="dtl__k"><b>+${b.pts}</b></span></li>`).join('');
     const total = rows.reduce((a, x) => a + x.pts, 0) + bonus.reduce((a, b) => a + b.pts, 0);
     openModal(`<h2>${esc(p.name)} · ${esc(label)}</h2><ul class="dtls">${li}${bl}${!li && !bl ? '<li class="none">Aucun point.</li>' : ''}</ul><p class="dtl__tot">Total : <b>${total} pts</b></p>`);
@@ -658,16 +658,15 @@
     const R = state.results;
     const none = Object.keys(R).length === 0 ? '<p class="hint">Aucun résultat pour l’instant.</p>' : '';
     const rows = rankRows((pk) => G.generalScore(pk, R));
-    const main = `${SHARE.fsOpen()}<div class="tablewrap"><table class="grid grid--rank grid--general cap--gen"><caption>Classement général ${info('Somme des points des trois desks et des Mondiaux, bonus compris.')}</caption>
-      <thead><tr><th scope="col" class="num">Rang</th><th scope="col">Joueur</th><th scope="col" class="num th--tot">Total</th><th scope="col" class="num th--d1">Desk 1</th><th scope="col" class="num th--d2">Desk 2</th><th scope="col" class="num th--d3">Desk 3</th><th scope="col" class="num th--w">Mondiaux</th></tr></thead>
-      <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pname(r.p)}</th><td class="num total">${ptsBtn(r.v.total, 'tot', r.p.id)}</td>${r.v.desks.map((d, i) => `<td class="num">${ptsBtn(d, 'd' + D.DESKS[i].id, r.p.id)}</td>`).join('')}<td class="num">${ptsBtn(r.v.worlds, 'w', r.p.id)}</td></tr>`).join('')}</tbody></table></div></div>`;
+    const main = `${SHARE.fsOpen()}<div class="tablewrap"><table class="grid grid--rank grid--general cap--gen"><caption>Classement général ${info('Somme des points des trois desks. Les Mondiaux (bonus compris) comptent dans le Desk 3.')}</caption>
+      <thead><tr><th scope="col" class="num">Rang</th><th scope="col">Joueur</th><th scope="col" class="num th--tot">Total</th><th scope="col" class="num th--d1">Desk 1</th><th scope="col" class="num th--d2">Desk 2</th><th scope="col" class="num th--d3">Desk 3 <small>(avec Mondiaux)</small></th></tr></thead>
+      <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pname(r.p)}</th><td class="num total">${ptsBtn(r.v.total, 'tot', r.p.id)}</td>${r.v.desks.map((d, i) => `<td class="num">${ptsBtn(d, 'd' + D.DESKS[i].id, r.p.id)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
     const cats = [['H', 'hommes', 'ELI'], ['F', 'femmes', 'U19']].map(([g, n, k]) => smallRanking(`Classement ${n}`, (pk) => G.genderScore(g, pk, R), 'cap--' + k, 'g:' + g)).join('');
     const dk = (d) => smallRanking(`Classement du ${d.name}`, (pk) => G.deskScore(d.id, pk, R), 'cap--d' + d.id, 'd' + d.id);
-    const wk = smallRanking('Classement des Mondiaux', (pk) => G.worldsScore(pk, R).total, 'cap--w', 'w');
     return `<section class="genpanel"><header class="deskhead"><div><h2>Classements</h2>
-      <p class="deskhead__meta">Général : trois desks et les Mondiaux, bonus compris</p></div></header>${none}${main}
+      <p class="deskhead__meta">Général : trois desks (Mondiaux et bonus dans le Desk 3)</p></div></header>${none}${main}
       <h3 class="subtitle">Quête annexe : hommes et femmes</h3><div class="grid2">${cats}</div>
-      <h3 class="subtitle">Par desk</h3><div class="grid2">${dk(D.DESKS[0])}${dk(D.DESKS[1])}</div><div class="grid2">${wk}${dk(D.DESKS[2])}</div></section>`;
+      <h3 class="subtitle">Par desk</h3><div class="grid2">${dk(D.DESKS[0])}${dk(D.DESKS[1])}</div><div class="grid2">${dk(D.DESKS[2])}</div></section>`;
   }
 
   /* ---------- Onglets ---------- */
@@ -679,12 +678,11 @@
       { id: '1', label: 'Desk 1', note: `${dmOf(D.DESKS[0].from)} au ${dmOf(D.DESKS[0].to)}` },
       { id: '2', label: 'Desk 2', note: `${dmOf(D.DESKS[1].from)} au ${dmOf(D.DESKS[1].to)}` },
       { id: '3', label: 'Desk 3', note: `${dmOf(D.DESKS[2].from)} au ${dmOf(D.DESKS[2].to)}` },
-      { id: 'w', label: 'Mondiaux', note: '29 au 31/01' },
       { id: 'gen', label: 'Classements', note: '' },
       { id: 'data', label: 'Data room', note: '' },
     ];
   }
-  const TAB_IDS = ['next', '1', '2', '3', 'w', 'gen', 'data', 'adm'];
+  const TAB_IDS = ['next', '1', '2', '3', 'gen', 'data', 'adm'];
   const TAB_ICO = {
     home: '<path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/>',
     next: '<path d="M6 21V4"/><path d="M6 5h11l-2.5 3.5L17 12H6"/>',
@@ -695,7 +693,7 @@
     data: '<ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3V6"/><path d="M4.5 12v6c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-6"/>',
     gen: '<path d="M3 20.5h18"/><rect x="9" y="7.5" width="6" height="13"/><rect x="3" y="13" width="6" height="7.5"/><rect x="15" y="15.5" width="6" height="5"/>',
   };
-  const TAB_SHORT = { next: 'À venir', 1: 'Desk 1', 2: 'Desk 2', 3: 'Desk 3', w: 'Mondiaux', gen: 'Général', data: 'Data' };
+  const TAB_SHORT = { next: 'À venir', 1: 'Desk 1', 2: 'Desk 2', 3: 'Desk 3', gen: 'Général', data: 'Data' };
   function renderTabs() {
     $('#tabs').innerHTML = tabs().map((t) => {
       const cours = t.id === 'next' && t.label === 'En cours';
@@ -713,13 +711,13 @@
       <p>À chaque course, tu choisis <strong>un coureur ou une coureuse</strong> (et, si tu veux, un remplaçant). Il te rapporte des points : <strong>100 pour le 1er, 80, 60, 50, 45…</strong> jusqu’à 1 point pour le 30ᵉ.</p>
       <h3>L’organisation</h3>
       <ul>
-        <li><strong>3 desks</strong> (novembre, décembre, janvier-février) et les <strong>Mondiaux</strong> d’Ostende (29-31 janvier 2027). Chaque session regroupe les courses d’un même week-end.</li>
+        <li><strong>3 desks</strong> (novembre, décembre, janvier-février) dont les <strong>Mondiaux</strong> d’Ostende (29-31 janvier 2027), qui font partie du Desk 3. Chaque session regroupe les courses d’un même week-end.</li>
         <li>Hommes et femmes sont chacun à part : un choix par course.</li>
-        <li>Championnats d’Europe (Zeddam, 7-8 novembre) : <strong>×2</strong> en Élite, ×4/3 en U23, ×2/3 en U19. Mondiaux : <strong>×3</strong> en Élite, ×2 en U23, ×1 en U19.</li>
+        <li>Championnats d’Europe (Zeddam, 7-8 novembre) : <strong>×2</strong> en Élite, ×1 en U23, ×2/3 en U19. Mondiaux : <strong>×3</strong> en Élite, ×2 en U23, ×1 en U19.</li>
         <li><strong>Bonus des Mondiaux</strong> : +200 si tes deux choix Élite gagnent, +130 en U23, +70 en U19, et +600 pour les six titres.</li>
       </ul>
       <h3>La règle d’or</h3>
-      <p>Dans un desk, <strong>un coureur ne peut être choisi qu’une seule fois</strong> par genre et par catégorie. Aux Mondiaux aussi. Il faut donc gérer ses atouts sur la durée.</p>
+      <p>Dans un desk, <strong>un coureur ne peut être choisi qu’une seule fois</strong> par genre et par catégorie. Les Mondiaux comptent dans le Desk 3 : un coureur déjà pris au Desk 3 ne peut plus l’être aux Mondiaux, et inversement. Il faut donc gérer ses atouts sur la durée.</p>
       <h3>Les délais</h3>
       <ul>
         <li>Tu peux changer tes choix jusqu’au <strong>départ de la première course de la session</strong>.</li>
@@ -1036,7 +1034,7 @@
     const rcj = e.target.closest('[data-rc-jpg]'); if (rcj) { SHARE.jpg(rcj.dataset.rcJpg); return; }
     if (e.target.closest('.brand')) { setTab('next'); return; }
     const tab = e.target.closest('[data-tab]'); if (tab) { setTab(tab.dataset.tab); return; }
-    const go = e.target.closest('[data-goto]'); if (go) { setTab(go.dataset.goto === '0' ? 'w' : go.dataset.goto); return; }
+    const go = e.target.closest('[data-goto]'); if (go) { setTab(go.dataset.goto === '0' ? '3' : go.dataset.goto); return; }
     const skp = e.target.closest('[data-skip]'); if (skp) { LS.set('cxgame.skip.' + skp.dataset.skip, '1'); render(); window.scrollTo(0, 0); return; }
     const usk = e.target.closest('[data-unskip]'); if (usk) { LS.del('cxgame.skip.' + usk.dataset.unskip); render(); window.scrollTo(0, 0); return; }
     const ffb = e.target.closest('[data-ff]');

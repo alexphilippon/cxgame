@@ -20,7 +20,7 @@ const perDesk = [1, 2, 3].map((d) => D.SESSIONS.filter((s) => s.desk === d).redu
 assert.deepStrictEqual(perDesk, [24, 22, 22], 'desks 24 (20 Élites + 4 U23/U19) / 22 / 22');
 assert.deepStrictEqual([1, 2, 3].map((d) => D.SESSIONS.filter((s) => s.desk === d).length), [10, 11, 11]);
 assert.strictEqual(D.SESSIONS.filter((s) => s.desk === 0).length, 0, 'aucune session hors desk hors Mondiaux');
-assert.strictEqual(D.WORLDS.desk, 0, 'Mondiaux = bloc à part');
+assert.strictEqual(D.WORLDS.desk, 3, 'Mondiaux dans le Desk 3');
 // les sessions sont dans les bornes de leur desk et chronologiques
 D.SESSIONS.forEach((s) => {
   const dk = D.DESKS[s.desk - 1];
@@ -49,7 +49,7 @@ assert.strictEqual(sess(3).races.length, 6, 'Euros : 6 courses (Élite, U23, U19
 // multiplicateurs
 const mults = (kind, cat) => [...new Set(races.filter((r) => r.kind === kind && r.cat === cat).map((r) => r.mult))];
 assert.deepStrictEqual(mults('euro', 'ELI'), [2], 'Euros Élites ×2');
-assert.deepStrictEqual(mults('euro', 'U23'), [4 / 3], 'Euros U23 : 2/3 des points Élites');
+assert.deepStrictEqual(mults('euro', 'U23'), [1], 'Euros U23 : ×1');
 assert.deepStrictEqual(mults('euro', 'U19'), [2 / 3], 'Euros U19 : 1/3 des points Élites');
 assert.deepStrictEqual(mults('mondial', 'ELI'), [3], 'Mondiaux Élites ×3');
 assert.deepStrictEqual(mults('mondial', 'U23'), [2], 'Mondiaux U23 ×2');
@@ -99,8 +99,8 @@ const resU = {
   'MO-U23-H': [{ ath: 'a', rank: 1 }], 'MO-U19-H': [{ ath: 'a', rank: 1 }], 'MO-U23-F': [{ ath: 'a', rank: 3 }],
 };
 const scU = (id, a) => G.scoreRace(D.RACES[id], { a }, resU);
-assert.strictEqual(scU('E03-U23-H', 'a'), 133, 'Euros U23 victoire : 100 × 4/3 = 133');
-assert.strictEqual(scU('E03-U23-H', 'b'), 107, 'Euros U23 2e : 80 × 4/3 = 106,7 → 107');
+assert.strictEqual(scU('E03-U23-H', 'a'), 100, 'Euros U23 victoire : 100 × 1');
+assert.strictEqual(scU('E03-U23-H', 'b'), 80, 'Euros U23 2e : 80 × 1');
 assert.strictEqual(scU('E03-U19-H', 'a'), 67, 'Euros U19 victoire : 100 × 2/3 = 67');
 assert.strictEqual(scU('E03-U19-H', 'b'), 53, 'Euros U19 2e : 80 × 2/3 = 53,3 → 53');
 assert.strictEqual(scU('MO-U23-H', 'a'), 200, 'Mondiaux U23 victoire = 2/3 de 300');
@@ -158,11 +158,17 @@ assert.ok(!G.usedInDesk(2, 'H', 'ELI', picks, null).has('b'), 'b n’est pas gri
 assert.ok(G.usedInDesk(1, 'H', 'U23', picks, null).has('u'), 'U23 : u pris dans son pool');
 assert.ok(!G.usedInDesk(1, 'H', 'ELI', picks, null).has('u'), 'pool Élites distinct du pool U23');
 assert.ok(!G.usedInDesk(1, 'H', 'U19', picks, null).has('u'), 'pool U19 distinct du pool U23');
-// Mondiaux : bloc à part, pools par catégorie et genre
+// Mondiaux : dans le Desk 3, pools par catégorie et genre, partagés avec les courses du desk
 const wp = { 'MO-U23-H': { a: 'p' }, 'MO-ELI-F': { a: 'q' } };
-assert.ok(G.usedInDesk(0, 'H', 'U23', wp, null).has('p') && !G.usedInDesk(0, 'H', 'ELI', wp, null).has('p'), 'Mondiaux : pool par catégorie');
-assert.ok(G.usedInDesk(0, 'F', 'ELI', wp, null).has('q') && !G.usedInDesk(0, 'H', 'ELI', wp, null).has('q'), 'Mondiaux : pool par genre');
-assert.ok(!G.usedInDesk(3, 'H', 'U23', wp, null).has('p'), 'Mondiaux : hors desk 3');
+assert.ok(G.usedInDesk(3, 'H', 'U23', wp, null).has('p') && !G.usedInDesk(3, 'H', 'ELI', wp, null).has('p'), 'Mondiaux : pool par catégorie');
+assert.ok(G.usedInDesk(3, 'F', 'ELI', wp, null).has('q') && !G.usedInDesk(3, 'H', 'ELI', wp, null).has('q'), 'Mondiaux : pool par genre');
+assert.ok(!G.usedInDesk(1, 'H', 'U23', wp, null).has('p'), 'Mondiaux : hors desk 1');
+assert.ok(G.usedInDesk(3, 'H', 'ELI', { 'E22-ELI-H': { a: 'z' } }, 'MO-ELI-H').has('z'), 'un coureur pris au Desk 3 est grillé pour les Mondiaux');
+assert.ok(G.usedInDesk(3, 'H', 'ELI', { 'MO-ELI-H': { a: 'z' } }, 'E22-ELI-H').has('z'), 'un coureur pris aux Mondiaux est grillé pour le reste du Desk 3');
+// Les points des Mondiaux et leur bonus comptent dans le Desk 3, sans double comptage au général
+const gw = G.generalScore(picksAll, wres);
+assert.strictEqual(gw.desks[2], 1200 + 1000, 'Desk 3 = Mondiaux (courses + bonus)');
+assert.strictEqual(gw.total, 2200, 'général = somme des trois desks');
 // DNS : titulaire libéré (rejouable), remplaçant ou tiré au sort grillé. DNF / DSQ : titulaire grillé.
 const rd = { 'E01-ELI-H': [{ ath: 'a', status: 'DNS' }, { ath: 'b', rank: 2 }] };
 const ud = G.usedInDesk(1, 'H', 'ELI', { 'E01-ELI-H': { a: 'a', b: 'b' } }, null, rd);
@@ -191,7 +197,7 @@ assert.strictEqual(G.sessionState(s1, new Date('2026-11-02T02:00:00Z')), 'termin
 assert.strictEqual(G.sessionDeadline(sess(3)).toISOString(), '2026-11-07T09:30:00.000Z', 'Euros : deadline = 1re course du samedi');
 assert.ok(G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:30:00Z')), 'Euros : toute la session se verrouille à la 1re course');
 assert.ok(!G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:29:00Z')));
-assert.strictEqual(G.deskIdOf('MO-ELI-H'), 0);
+assert.strictEqual(G.deskIdOf('MO-ELI-H'), 3, 'les Mondiaux comptent dans le Desk 3');
 assert.strictEqual(G.deskIdOf('E22-ELI-F'), 3);
 
 // ---- Calendrier vivant : annulation, report, heure confirmée
@@ -272,7 +278,7 @@ assert.deepStrictEqual(G.drawRider('s', ['x', 'y', 'z']), G.drawRider('s', ['x',
   const R = { 'E01-ELI-H': [{ ath: 'a', rank: 1 }], 'E03-U23-H': [{ ath: 'b', rank: 1 }] };
   const pk = { 'E01-ELI-H': { a: 'a' }, 'E03-U23-H': { a: 'b' } };
   assert.strictEqual(G.categoryScore('ELI', pk, R), 100);
-  assert.strictEqual(G.categoryScore('U23', pk, R), 133, 'Euros U23 : 100 × 4/3 arrondi');
+  assert.strictEqual(G.categoryScore('U23', pk, R), 100, 'Euros U23 : ×1');
   assert.strictEqual(G.categoryScore('U19', pk, R), 0);
   assert.ok(G.genderScore('H', pk, R) + G.genderScore('F', pk, R) >= 100, 'quête annexe hommes/femmes');
 }

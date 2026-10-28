@@ -16,7 +16,7 @@ const srv = http.createServer((q, r) => { const u = decodeURIComponent(q.url.spl
   await pg.click('#pa-E01-ELI-H'); await pg.waitForSelector('#pa-E01-ELI-H ~ .combo__list .combo__opt', { state: 'visible' }); await pg.keyboard.type('vande'); await pg.keyboard.press('Enter'); await pg.waitForTimeout(200);
   console.log('choix H:', await pg.inputValue('#pa-E01-ELI-H'));
   await pg.screenshot({ path: out + '/desk1.png' });
-  for (const t of ['2', '3', 'w', 'gen']) { await pg.click(`[data-tab="${t}"]`); await pg.waitForTimeout(100); await pg.screenshot({ path: out + '/tab-' + t + '.png' }); }
+  for (const t of ['2', '3', 'gen']) { await pg.click(`[data-tab="${t}"]`); await pg.waitForTimeout(100); await pg.screenshot({ path: out + '/tab-' + t + '.png' }); }
   await pg.click('[data-tab="data"]'); await pg.waitForSelector('.dr__tab tbody tr', { timeout: 5000 });
   console.log('data room lignes:', await pg.locator('.dr__tab tbody tr').count());
   await pg.click('[data-dr="g:F"]'); await pg.click('[data-hist]'); await pg.waitForSelector('#modal .dtls'); console.log('fiche historique:', await pg.locator('#modal .dtl').count()); await pg.screenshot({ path: out + '/data-room.png' }); await pg.click('[data-close]');

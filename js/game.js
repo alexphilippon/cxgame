@@ -110,7 +110,8 @@
     return { ath: candidates[index], index, n: candidates.length };
   }
   const DRAW_TOP = 20;
-  const deskIdOf = (raceId) => { const s = sessionOfRace(raceId); return s === D.WORLDS ? 0 : s.desk; };
+  const deskIdOf = (raceId) => sessionOfRace(raceId).desk;   // les Mondiaux comptent dans le Desk 3
+  const deskScope = (deskId) => D.SESSIONS.filter((s) => s.desk === deskId).concat(D.WORLDS.desk === deskId ? [D.WORLDS] : []);
 
   /** PROPOSITIONS de tirage (rien n'est appliqué sans la confirmation d'Alexandre pour chaque DNS).
       Un tirage par joueur dont le titulaire ET le remplaçant sont DNS, parmi les 20 premiers dossards de la grille,
@@ -175,7 +176,8 @@
     return sessionRaces(session).reduce((s, r) => s + (scoreRace(r, picksOfPlayer && picksOfPlayer[r.id], results) || 0), 0);
   }
   function deskScore(deskId, picksOfPlayer, results) {
-    return D.SESSIONS.filter((s) => s.desk === deskId).reduce((s, x) => s + sessionScore(x, picksOfPlayer, results), 0);
+    return D.SESSIONS.filter((s) => s.desk === deskId).reduce((s, x) => s + sessionScore(x, picksOfPlayer, results), 0)
+      + (D.WORLDS.desk === deskId ? worldsScore(picksOfPlayer, results).total : 0);   // Mondiaux (courses + bonus) dans le Desk 3
   }
   function worldsScore(picksOfPlayer, results, opts) {
     const races = D.WORLDS.races.reduce((s, id) => s + (scoreRace(raceOf(id), picksOfPlayer && picksOfPlayer[id], results) || 0), 0);
@@ -194,16 +196,16 @@
   function generalScore(picksOfPlayer, results, opts) {
     const desks = D.DESKS.map((d) => deskScore(d.id, picksOfPlayer, results));
     const w = worldsScore(picksOfPlayer, results, opts);
-    return { desks, worlds: w.total, total: desks.reduce((a, b) => a + b, 0) + w.total };
+    return { desks, worlds: w.total, total: desks.reduce((a, b) => a + b, 0) };   // worlds : information (déjà inclus dans le Desk 3)
   }
 
   /* ---------- Contrainte « un coureur une seule fois par desk, par genre et par catégorie d'âge » ---------- */
-  /** Coureurs déjà « grillés » dans le desk (deskId 0 = bloc Mondiaux), pour un genre et une catégorie de COURSE, hors la course `exceptRaceId`.
+  /** Coureurs déjà « grillés » dans le desk (le Desk 3 inclut les Mondiaux), pour un genre et une catégorie de COURSE, hors la course `exceptRaceId`.
       Le titulaire reste grillé s'il est DNF ou DSQ. S'il est DNS (résultat connu), il est libéré et rejouable : seul compte celui qui a pris le départ
       (remplaçant, sinon tiré au sort). Une course annulée libère son coureur. */
   function usedInDesk(deskId, gender, cat, picksOfPlayer, exceptRaceId, results) {
     const used = new Set();
-    const scope = deskId === 0 ? [D.WORLDS] : D.SESSIONS.filter((s) => s.desk === deskId);
+    const scope = deskScope(deskId);
     scope.forEach((s) => {
       sessionRaces(s).forEach((r) => {
         if (r.gender !== gender || r.cat !== cat || r.id === exceptRaceId || r.cancelled) return;
@@ -234,7 +236,7 @@
     const others = (playerIds || []).filter((id) => id !== meId);
     const rPts = others.map((id) => picksByPlayer[id] && picksByPlayer[id][race.id]).filter((pk) => pk && pk.a).map((pk) => scoreRace(race, pk, results) || 0);
     const dk = deskIdOf(race.id);
-    const scope = dk === 0 ? [D.WORLDS] : D.SESSIONS.filter((x) => x.desk === dk);
+    const scope = deskScope(dk);
     const sPts = [];
     others.forEach((id) => {
       for (const s of scope) for (const r of sessionRaces(s)) {

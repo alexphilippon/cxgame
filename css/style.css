@@ -1508,3 +1508,4 @@ html[data-skin='tomorrowland'] .masthead__mud, html[data-skin='tomorrowland'] .m
 html[data-theme='neige'] .masthead__mud .mud__body { opacity: .94; }
 @media (max-width: 640px) { .masthead__mud { -webkit-mask-image: linear-gradient(180deg, #000 0, #000 34%, transparent 46%, transparent 90%, #000 97%); mask-image: linear-gradient(180deg, #000 0, #000 34%, transparent 46%, transparent 90%, #000 97%); } }
 .mast-actions { z-index: 3; }
+.disc--U19, .disc--SL { color: #fff; }
