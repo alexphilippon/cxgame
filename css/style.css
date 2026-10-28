@@ -1490,3 +1490,21 @@ html[data-skin='tomorrowland'] .plate[aria-selected='true'] .plate__short { colo
 .ffc--CdM { --c: #2c5aa6; } .ffc--SP { --c: #9a6b1f; }
 html[data-theme='nuit'] .ffc--CdM { --c: #8fb0e6; } html[data-theme='nuit'] .ffc--SP { --c: #e0b26a; }
 html[data-theme='nuit'] .ffc--CdM[aria-pressed='true'], html[data-theme='nuit'] .ffc--SP[aria-pressed='true'] { color: #111a26; }
+
+/* ---------- Bandeau cyclo-cross : scène de course + boue projetée sur la vitre (généré par tools/make-header.js) ---------- */
+:root { --mud-hi: #85603a; --mud-mid: #4f361f; --mud-lo: #281a0e; }
+.masthead__art .tr { stroke: var(--m-back); }
+.masthead__art .tape { stroke: #d94a35; opacity: .9; }
+.masthead__art .ruts { stroke: var(--m-front); opacity: .7; }
+.masthead__art .puddle { fill: var(--m-cap); opacity: .22; }
+.masthead__art .knob { stroke-opacity: .9; }
+.masthead__art .spray circle { fill: var(--mud-mid); }
+.masthead__mud { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: 1; pointer-events: none; }
+.masthead__mud .mud__shade { fill: #000; opacity: .38; }
+.masthead__mud .mud__hi { fill: var(--mud-hi); opacity: .5; }
+.masthead__mud .mud__glint { fill: #fff; opacity: .4; }
+.masthead__frame { z-index: 2; }
+html[data-skin='tomorrowland'] .masthead__mud, html[data-skin='tomorrowland'] .masthead__art .tape { display: none; }
+html[data-theme='neige'] .masthead__mud .mud__body { opacity: .94; }
+@media (max-width: 640px) { .masthead__mud { -webkit-mask-image: linear-gradient(180deg, #000 0, #000 34%, transparent 46%, transparent 90%, #000 97%); mask-image: linear-gradient(180deg, #000 0, #000 34%, transparent 46%, transparent 90%, #000 97%); } }
+.mast-actions { z-index: 3; }
