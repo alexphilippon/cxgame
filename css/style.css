@@ -1509,3 +1509,13 @@ html[data-theme='neige'] .masthead__mud .mud__body { opacity: .94; }
 @media (max-width: 640px) { .masthead__mud { -webkit-mask-image: linear-gradient(180deg, #000 0, #000 34%, transparent 46%, transparent 90%, #000 97%); mask-image: linear-gradient(180deg, #000 0, #000 34%, transparent 46%, transparent 90%, #000 97%); } }
 .mast-actions { z-index: 3; }
 .disc--U19, .disc--SL { color: #fff; }
+
+/* ---------- Onglets : pavés pleins de couleur (et plus seulement un liseré), l'onglet actif est surélevé avec une barre claire ---------- */
+html:root .plate { background: var(--c); color: var(--ct); border-top: 0; box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .2); transition: background-color .15s, transform .15s; }
+html:root .plate .plate__note { color: color-mix(in srgb, var(--ct) 85%, transparent); }
+html:root .plate:hover { background: color-mix(in srgb, var(--c) 84%, #fff); }
+html:root .plate[aria-selected='true'] { background: var(--c); color: var(--ct); box-shadow: inset 0 6px 0 rgba(255, 255, 255, .95), inset 0 -5px 0 rgba(0, 0, 0, .2); padding-top: calc(.55rem + 6px); }
+html:root .plate[aria-selected='true'] .plate__note { color: color-mix(in srgb, var(--ct) 90%, transparent); }
+html[data-theme='neige'] .plate--gen, html[data-theme='neige'] .plate--data { --c: #2d7aa3; --ct: #fff; }
+html[data-skin='tomorrowland'] .plate--1, html[data-skin='tomorrowland'] .plate--2, html[data-skin='tomorrowland'] .plate--3 { --ct: #0d0b2a; }
+html[data-skin='tomorrowland'] .plate--1 .plate__label, html[data-skin='tomorrowland'] .plate--2 .plate__label, html[data-skin='tomorrowland'] .plate--3 .plate__label, html[data-skin='tomorrowland'] .plate--1 .plate__note, html[data-skin='tomorrowland'] .plate--2 .plate__note, html[data-skin='tomorrowland'] .plate--3 .plate__note { color: #0d0b2a; }
