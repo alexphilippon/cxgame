@@ -20,7 +20,7 @@ function add(series, place, date, cat, g, rows, nowc) {
   races.push({ id: `${date}-${N.slug(place)}-${cat}-${g}`, series, place, date, cat, g, nowc: nowc || undefined, res });
 }
 // Coupe du monde (PDF officiels ChronoRace)
-const idx = JSON.parse(fs.readFileSync(path.join(dir, 'index.json'), 'utf8'));
+const idx = fs.existsSync(path.join(dir, 'index.json')) ? JSON.parse(fs.readFileSync(path.join(dir, 'index.json'), 'utf8')) : [];
 for (const it of idx) {
   const label = it.cat.toLowerCase().replace(/\s*\(.*\)/, '').trim(), c = CAT[label];
   if (!c || !it.pdf) { if (!c) warn.push('catégorie ignorée : ' + it.cat); continue; }

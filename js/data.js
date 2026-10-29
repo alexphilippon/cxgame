@@ -15,11 +15,11 @@
   const GENDERS = { H: 'Hommes', F: 'Femmes' };
 
   const SERIES = {
-    XO: { fr: 'X²O', short: 'X²O' },
-    SP: { fr: 'Superprestige', short: 'SP' },
-    EX: { fr: 'HG Cross', short: 'HG' },
-    CM: { fr: 'Coupe du monde UCI', short: 'CdM' },
-    EU: { fr: 'Championnats d’Europe', short: 'Euros' },
+    XO: { fr: 'X²O Trofee', short: 'X²O', label: 'X²O Trofee' },
+    SP: { fr: 'Superprestige', short: 'SP', label: 'Superprestige' },
+    EX: { fr: 'HG Cross', short: 'HG', label: 'HG Cross' },
+    CM: { fr: 'Coupe du monde UCI', short: 'CdM', label: 'Coupe du monde' },
+    EU: { fr: 'Championnats d’Europe', short: 'Euros', label: 'Euros' },
     MO: { fr: 'Championnats du monde', short: 'Mondiaux' },
   };
 
@@ -87,7 +87,7 @@
   EVENTS_RAW.trim().split('\n').forEach((line) => {
     const [n, serie, place, date] = line.split('|');
     const ev = 'E' + pad(n);
-    const e = { id: ev, n: Number(n), serie, place, date, name: `${SERIES[serie].short} ${place}`, races: [] };
+    const e = { id: ev, n: Number(n), serie, place, date, name: `${SERIES[serie].label} ${place}`, races: [] };
     if (serie === 'EU') {
       // Euros : Élites H et F ne courent pas le même jour, + U23 et U19 H+F. Barème ×2.
       Object.keys(BIG).forEach((k) => {

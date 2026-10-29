@@ -1519,3 +1519,7 @@ html:root .plate[aria-selected='true'] .plate__note { color: color-mix(in srgb, 
 html[data-theme='neige'] .plate--gen, html[data-theme='neige'] .plate--data { --c: #2d7aa3; --ct: #fff; }
 html[data-skin='tomorrowland'] .plate--1, html[data-skin='tomorrowland'] .plate--2, html[data-skin='tomorrowland'] .plate--3 { --ct: #0d0b2a; }
 html[data-skin='tomorrowland'] .plate--1 .plate__label, html[data-skin='tomorrowland'] .plate--2 .plate__label, html[data-skin='tomorrowland'] .plate--3 .plate__label, html[data-skin='tomorrowland'] .plate--1 .plate__note, html[data-skin='tomorrowland'] .plate--2 .plate__note, html[data-skin='tomorrowland'] .plate--3 .plate__note { color: #0d0b2a; }
+
+.ffc--XO { --c: #2f7d4f; } .ffc--HG { --c: #a8431f; }
+html[data-theme='nuit'] .ffc--XO { --c: #7cc79a; } html[data-theme='nuit'] .ffc--HG { --c: #f0a283; }
+html[data-theme='nuit'] .ffc--XO[aria-pressed='true'], html[data-theme='nuit'] .ffc--HG[aria-pressed='true'] { color: #111a26; }

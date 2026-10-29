@@ -31,7 +31,7 @@ for (let i = 1; i < D.SESSIONS.length; i++) {
   const b = D.SESSIONS[i].races.map((r) => D.RACES[r].date).sort()[0];
   assert.ok(a < b, 'sessions chronologiques : ' + D.SESSIONS[i].name);
 }
-assert.strictEqual(sess(22).name, 'SP Diegem');
+assert.strictEqual(sess(22).name, 'Superprestige Diegem');
 assert.strictEqual(sess(22).desk, 3, 'Diegem (30/12) tombe dans le desk 3');
 assert.strictEqual(sess(21).desk, 2, 'Besançon (29/12) dans le desk 2');
 // Élites H et F le même jour, sauf aux Euros
