@@ -24,6 +24,7 @@ function main() {
   try { r = R.buildStart(fs.readFileSync(file, 'utf8'), R.athletesOf(A, race.gender)); } catch (e) { console.error(e.message); process.exit(1); }
   const db = fs.existsSync(out) ? JSON.parse(fs.readFileSync(out, 'utf8')) : { races: {} };
   const replaced = !!db.races[id];
+  if (replaced && JSON.stringify(db.races[id].start) === JSON.stringify(r.start)) { console.log(`${id} : start list inchangée (${r.start.length} partants)`); return; }
   db.races[id] = { source: opt('--source') || '', fetched: new Date().toISOString(), start: r.start };
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, JSON.stringify(db, null, 1) + '\n');
