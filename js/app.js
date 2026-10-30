@@ -91,7 +91,7 @@
   const editing = () => { const el = document.activeElement; return !!el && el !== document.body && !!el.closest('#panel') && /^(INPUT|SELECT|TEXTAREA)$/.test(el.tagName); };
   function scheduleRender() {
     if (rafId) return;
-    rafId = requestAnimationFrame(() => { rafId = 0; if (editing()) { pendingRender = true; return; } render(); });
+    rafId = requestAnimationFrame(() => { rafId = 0; if (editing()) { pendingRender = true; return; } render(); setTimeout(dnsCheck, 400); });
   }
   document.addEventListener('focusout', () => { if (pendingRender) setTimeout(() => { if (!editing()) { pendingRender = false; render(); } }, 0); });
 
@@ -191,10 +191,26 @@
   /** Coureurs proposables pour une course : la start list si elle est publiée, sinon le classement UCI de la catégorie (vide en U23 et U19 : saisie libre). */
   function poolOf(race) {
     const sl = startListOf(race);
-    if (sl) return { start: true, rows: sl.rows.map((r) => ({ id: r.ath, name: r.name, nat: r.nat, bib: r.bib, src: r.name })) };
     const extras = state.extra.filter((x) => !x.pending && !state.aliases[x.id] && x.gender === race.gender && (x.cat || 'ELI') === race.cat && !(BASE.lists[`${race.cat}-${race.gender}`] || []).some((a) => a.id === x.id));
     const list = (BASE.lists[`${race.cat}-${race.gender}`] || []).concat(extras).slice().sort((a, b) => norm(listName(a)).localeCompare(norm(listName(b))));
-    return { start: false, rows: list.map((a) => ({ id: a.id, name: a.name, nat: a.nat, bib: null, src: listName(a) })) };
+    const full = list.map((a) => ({ id: a.id, name: a.name, nat: a.nat, bib: null, src: listName(a) }));
+    if (sl) {
+      const inSl = new Set(sl.rows.map((r) => r.ath));
+      return { start: true, rows: sl.rows.map((r) => ({ id: r.ath, name: r.name, nat: r.nat, bib: r.bib, src: r.name })), out: full.filter((a) => !inSl.has(a.id)) };
+    }
+    return { start: false, rows: full, out: [] };
+  }
+  /** Choix (titulaire ou remplaçant) qui ne figurent pas sur la start list publiée : [{race, slot, ath}] */
+  function dnsPicks() {
+    const out = [];
+    Object.keys(myPicks()).forEach((rid) => {
+      const race = G.raceOf(rid), pk = myPicks()[rid];
+      if (!race || race.cancelled || lockedRace(race) || !pk) return;
+      const sl = startListOf(race); if (!sl) return;
+      const inSl = new Set(sl.rows.map((r) => r.ath));
+      ['a', 'b'].forEach((slot) => { if (pk[slot] && !inSl.has(pk[slot])) out.push({ race, slot, ath: pk[slot] }); });
+    });
+    return out;
   }
   const resOf = (race) => state.results[race.id];
   function winnerOf(raceId) {
@@ -210,21 +226,22 @@
     const used = G.usedInDesk(G.deskIdOf(race.id), race.gender, race.cat, picks, race.id, state.results);
     const cur = picks[race.id] || {};
     const pool = poolOf(race);
-    const items = pool.rows.map((a) => {
+    const items = pool.rows.concat(pool.out || []).map((a, i) => {
+      const off = i >= pool.rows.length;
       const isCur = cur[slot] === a.id, taken = used.has(a.id);
       const dis = !isCur && (taken || (slot === 'b' && cur.a === a.id));
       const meta = [a.nat, taken && slot === 'a' ? 'déjà pris' : ''].filter(Boolean).join(', ');
-      return { a, isCur, dis, label: (a.bib ? a.bib + ' · ' : '') + a.src + (meta ? ` (${meta})` : '') };
+      return { a, isCur, dis, off, label: (a.bib ? a.bib + ' · ' : off ? 'DNS · ' : '') + a.src + (meta ? ` (${meta})` : '') };
     });
     const curItem = items.find((x) => x.isCur), curId = cur[slot];
-    const curLabel = curItem ? curItem.label : curId ? nameOf(curId) : '';
+    const curLabel = curItem ? curItem.label : curId ? (pool.start ? 'DNS · ' : '') + nameOf(curId) : '';
     const ph = slot === 'a' ? (race.gender === 'F' ? 'Choisir une coureuse (tape quelques lettres)' : 'Choisir un coureur (tape quelques lettres)') : 'Remplaçant (facultatif)';
     const id = `p${slot}-${race.id}`;
     const dis = slot === 'b' && !cur.a;
     return `<div class="combo${slot === 'b' ? ' combo--sub' : ''}" data-race="${race.id}" data-slot="${slot}">
       <input type="text" id="${id}" class="pick${slot === 'b' ? ' pick--sub' : ''} combo__in" role="combobox" aria-expanded="false" aria-autocomplete="list" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${esc(ph)}" value="${esc(curLabel)}" data-cur="${esc(curLabel)}"${dis ? ' disabled' : ''}>
       ${curId && !dis ? '<button type="button" class="combo__x" data-cx aria-label="Retirer ce choix" title="Retirer ce choix">×</button>' : ''}
-      <ul class="combo__list" role="listbox" hidden>${curId ? '<li role="option" class="combo__opt combo__opt--clear" data-v="">— Aucun —</li>' : ''}${pool.start ? '<li class="combo__hd" aria-hidden="true">Par ordre de dossard (start list)</li>' : ''}${items.map((x) => `<li role="option" class="combo__opt${x.dis ? ' is-off' : ''}${x.isCur ? ' is-cur' : ''}" data-v="${esc(x.a.id)}" data-n="${esc(x.a.name)}" data-l="${esc(norm(x.a.src))}" data-s="${esc(norm(x.a.name + ' ' + x.a.src + ' ' + (x.a.nat || '')))}"${x.dis ? ' aria-disabled="true"' : ''}>${esc(x.label)}</li>`).join('')}</ul>
+      <ul class="combo__list" role="listbox" hidden>${curId ? '<li role="option" class="combo__opt combo__opt--clear" data-v="">— Aucun —</li>' : ''}${pool.start ? '<li class="combo__hd" aria-hidden="true">Par ordre de dossard (start list)</li>' : ''}${items.map((x, k) => `${x.off && !items[k - 1].off ? '<li class="combo__hd combo__hd--out" aria-hidden="true">Hors start list (DNS)</li>' : ''}<li role="option" class="combo__opt${x.off ? ' combo__opt--out' : ''}${x.dis ? ' is-off' : ''}${x.isCur ? ' is-cur' : ''}" data-v="${esc(x.a.id)}" data-n="${esc(x.a.name)}" data-l="${esc(norm(x.a.src))}" data-s="${esc(norm(x.a.name + ' ' + x.a.src + ' ' + (x.a.nat || '')))}"${x.dis ? ' aria-disabled="true"' : ''}>${esc(x.label)}</li>`).join('')}</ul>
     </div>`;
   }
   const comboClose = () => document.querySelectorAll('.combo__list').forEach((l) => { l.hidden = true; const i = l.parentElement.querySelector('.combo__in'); if (i) { i.setAttribute('aria-expanded', 'false'); i.value = i.dataset.cur; } });
@@ -234,12 +251,16 @@
     let n = 0;
     const opts = [...list.querySelectorAll('.combo__opt:not(.combo__opt--clear)')];
     if (list.dataset.sorted !== '1') { opts.forEach((li, k) => { li.dataset.k = k; }); list.dataset.sorted = '1'; }
-    opts.sort((x, y) => ((q && y.dataset.l.startsWith(q) ? 1 : 0) - (q && x.dataset.l.startsWith(q) ? 1 : 0)) || x.dataset.k - y.dataset.k).forEach((li) => list.appendChild(li));
+    const outc = (li) => (li.classList.contains('combo__opt--out') ? 1 : 0);
+    opts.sort((x, y) => (outc(x) - outc(y)) || ((q && y.dataset.l.startsWith(q) ? 1 : 0) - (q && x.dataset.l.startsWith(q) ? 1 : 0)) || x.dataset.k - y.dataset.k).forEach((li) => list.appendChild(li));
+    const hdOut = list.querySelector('.combo__hd--out'), firstOut = list.querySelector('.combo__opt--out');
+    if (hdOut && firstOut) list.insertBefore(hdOut, firstOut);
     const none0 = list.querySelector('.combo__none'); if (none0) list.appendChild(none0);
     list.querySelectorAll('.combo__opt').forEach((li) => {
       const ok = li.classList.contains('combo__opt--clear') || !q || li.dataset.s.includes(q);
       li.hidden = !ok; li.classList.remove('is-hl'); if (ok && !li.classList.contains('combo__opt--clear')) n++;
     });
+    if (hdOut) hdOut.hidden = !list.querySelector('.combo__opt--out:not([hidden])');
     const first = [...list.querySelectorAll('.combo__opt:not([hidden]):not(.is-off):not(.combo__opt--clear)')][0];
     if (first && q) first.classList.add('is-hl');
     let none = list.querySelector('.combo__none');
@@ -1097,7 +1118,22 @@
   setTheme(LS.get('cxgame.theme') || 'flandre', false);
   startStore();
   loadResults(); setInterval(() => { if (document.visibilityState === 'visible') loadResults(); }, 60000);
-  fetch('data/startlists.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { if (j && j.races) { state.startlists = j; scheduleRender(); } }).catch(() => {});
+  /** Prévient (une fois par coureur et course) quand un choix n'est pas sur la start list publiée. */
+  function dnsCheck() {
+    if (!state.me || !state.startlists) return;
+    const seen = JSON.parse(LS.get('cxgame.dnsSeen') || '{}'), now_ = dnsPicks(), keys = new Set(now_.map((x) => x.race.id + '|' + x.ath));
+    Object.keys(seen).forEach((k) => { if (!keys.has(k)) delete seen[k]; });              // revenu sur la liste : on re-préviendra s'il en sort encore
+    const fresh = now_.filter((x) => !seen[x.race.id + '|' + x.ath]);
+    if (!fresh.length || !$('#modal').hidden) return;
+    LS.set('cxgame.dnsSeen', JSON.stringify(Object.assign(seen, ...fresh.map((x) => ({ [x.race.id + '|' + x.ath]: 1 })))));
+    openModal(`<h2>Attention : DNS probable</h2><p>${fresh.length > 1 ? 'Ces choix ne figurent' : 'Ce choix ne figure'} pas sur la start list publiée :</p>
+      <ul class="dtls">${fresh.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${esc(nameOf(x.ath))}</strong> <span class="sub">${x.slot === 'b' ? 'remplaçant' : 'titulaire'} · ${esc(placeLabel(x.race))}, ${esc(raceName(x.race))}</span></span><span class="dtl__k bad">DNS</span></li>`).join('')}</ul>
+      <p class="hint">Elle ne prendra pas le départ. Tu peux changer ton choix tant que la course n’est pas lancée.</p>`);
+  }
+  function loadStartlists() {
+    fetch('data/startlists.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { if (j && j.races) { const same = JSON.stringify(j) === JSON.stringify(state.startlists); state.startlists = j; if (!same) { scheduleRender(); setTimeout(dnsCheck, 600); } } }).catch(() => {});
+  }
+  loadStartlists(); setInterval(() => { if (document.visibilityState === 'visible') loadStartlists(); }, 300000);
   render();
   setTimeout(gateCheck, 1500);
   window.CX_APP = { state, render, store };

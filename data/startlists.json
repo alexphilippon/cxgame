@@ -1,0 +1,391 @@
+{
+ "races": {
+  "E01-ELI-H": {
+   "source": "https://koppenbergcross.be/wp-content/uploads/sites/138/2026/10/Koppenbergcross-Startlist-Men-Elite.pdf",
+   "fetched": "2026-10-30T12:30:40.112Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "thibau-nys",
+     "name": "NYS Thibau"
+    },
+    {
+     "bib": 2,
+     "ath": "michael-vanthourenhout",
+     "name": "VANTHOURENHOUT Michael"
+    },
+    {
+     "bib": 3,
+     "ath": "joris-nieuwenhuis",
+     "name": "NIEUWENHUIS Joris"
+    },
+    {
+     "bib": 4,
+     "ath": "joran-wyseure",
+     "name": "WYSEURE Joran"
+    },
+    {
+     "bib": 5,
+     "ath": "mees-hendrikx",
+     "name": "HENDRIKX Mees"
+    },
+    {
+     "bib": 6,
+     "ath": "gerben-kuypers",
+     "name": "KUYPERS Gerben"
+    },
+    {
+     "bib": 7,
+     "ath": "cameron-mason",
+     "name": "MASON Cameron"
+    },
+    {
+     "bib": 8,
+     "ath": "jente-michels",
+     "name": "MICHELS Jente"
+    },
+    {
+     "bib": 9,
+     "ath": "ryan-kamp",
+     "name": "KAMP Ryan"
+    },
+    {
+     "bib": 10,
+     "ath": "pim-ronhaar",
+     "name": "RONHAAR Pim"
+    },
+    {
+     "bib": 11,
+     "ath": "toon-vandebosch",
+     "name": "VANDEBOSCH Toon"
+    },
+    {
+     "bib": 12,
+     "ath": "witse-meeussen",
+     "name": "MEEUSSEN Witse"
+    },
+    {
+     "bib": 13,
+     "ath": "remi-lelandais",
+     "name": "LELANDAIS Rémi"
+    },
+    {
+     "bib": 14,
+     "ath": "thomas-mein",
+     "name": "MEIN Thomas"
+    },
+    {
+     "bib": 15,
+     "ath": "danny-van-lierop",
+     "name": "VAN LIEROP Danny"
+    },
+    {
+     "bib": 16,
+     "ath": "victor-van-de-putte",
+     "name": "VAN DE PUTTE Victor"
+    },
+    {
+     "bib": 17,
+     "ath": "romain-debord",
+     "name": "DEBORD Romain"
+    },
+    {
+     "bib": 18,
+     "ath": "kay-de-bruyckere",
+     "name": "DE BRUYCKERE Kay"
+    },
+    {
+     "bib": 19,
+     "ath": "hannes-degenkolb",
+     "name": "DEGENKOLB Hannes"
+    },
+    {
+     "bib": 20,
+     "ath": "dean-harvey",
+     "name": "HARVEY Dean"
+    },
+    {
+     "bib": 21,
+     "ath": "cyprien-gilles",
+     "name": "GILLES Cyprien"
+    },
+    {
+     "bib": 22,
+     "ath": "remon-delnoije",
+     "name": "DELNOIJE Remon"
+    },
+    {
+     "bib": 23,
+     "ath": "arne-baers",
+     "name": "BAERS Arne"
+    },
+    {
+     "bib": 24,
+     "ath": "miel-storms",
+     "name": "STORMS Miel"
+    },
+    {
+     "bib": 25,
+     "ath": "maxence-lemardele",
+     "name": "LEMARDELE Maxence"
+    },
+    {
+     "bib": 26,
+     "ath": "filippo-cecchi",
+     "name": "CECCHI Filippo"
+    },
+    {
+     "bib": 27,
+     "ath": "nicola-parenti",
+     "name": "PARENTI Nicola"
+    },
+    {
+     "bib": 28,
+     "ath": "milan-de-nys",
+     "name": "DE NYS Milan"
+    },
+    {
+     "bib": 29,
+     "ath": "artur-nichvolodov",
+     "name": "NICHVOLODOV Artur"
+    },
+    {
+     "bib": 30,
+     "ath": "kevin-blanpain",
+     "name": "BLANPAIN Kévin"
+    },
+    {
+     "bib": 31,
+     "ath": "jarno-bellens",
+     "name": "BELLENS Jarno"
+    },
+    {
+     "bib": 32,
+     "ath": "pete-matthews",
+     "name": "MATTHEWS Pete"
+    }
+   ]
+  },
+  "E01-ELI-F": {
+   "source": "https://koppenbergcross.be/wp-content/uploads/sites/138/2026/10/Koppenbergcross-Startlist-Women-Elite.pdf",
+   "fetched": "2026-10-30T12:30:40.164Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "lucinda-brand",
+     "name": "BRAND Lucinda"
+    },
+    {
+     "bib": 2,
+     "ath": "inge-van-der-heijden",
+     "name": "VAN DER HEIJDEN Inge"
+    },
+    {
+     "bib": 3,
+     "ath": "ceylin-del-carmen-alvarado",
+     "name": "ALVARADO Ceylin Del Carmen"
+    },
+    {
+     "bib": 4,
+     "ath": "amandine-fouquenet",
+     "name": "FOUQUENET Amandine"
+    },
+    {
+     "bib": 5,
+     "ath": "kristyna-zemanova",
+     "name": "ZEMANOVÁ Kristýna"
+    },
+    {
+     "bib": 6,
+     "ath": "denise-betsema",
+     "name": "BETSEMA Denise"
+    },
+    {
+     "bib": 7,
+     "ath": "marie-schreiber",
+     "name": "SCHREIBER Marie"
+    },
+    {
+     "bib": 8,
+     "ath": "julie-brouwers",
+     "name": "BROUWERS Julie"
+    },
+    {
+     "bib": 9,
+     "ath": "celia-gery",
+     "name": "GERY Célia"
+    },
+    {
+     "bib": 10,
+     "ath": "helene-clauzel",
+     "name": "CLAUZEL Hélène"
+    },
+    {
+     "bib": 11,
+     "ath": "sara-casasola",
+     "name": "CASASOLA Sara"
+    },
+    {
+     "bib": 12,
+     "ath": "amandine-muller",
+     "name": "MULLER Amandine"
+    },
+    {
+     "bib": 13,
+     "ath": "rebecca-gariboldi",
+     "name": "GARIBOLDI Rebecca"
+    },
+    {
+     "bib": 14,
+     "ath": "annemarie-worst",
+     "name": "WORST Annemarie"
+    },
+    {
+     "bib": 15,
+     "ath": "lison-desprez",
+     "name": "DESPREZ Lison"
+    },
+    {
+     "bib": 16,
+     "ath": "mia-aseltine",
+     "name": "ASELTINE Mia"
+    },
+    {
+     "bib": 17,
+     "ath": "kiona-crabbe",
+     "name": "CRABBÉ Kiona"
+    },
+    {
+     "bib": 18,
+     "ath": "kaya-musgrave",
+     "name": "MUSGRAVE Kaya"
+    },
+    {
+     "bib": 19,
+     "ath": "alicia-franck",
+     "name": "FRANCK Alicia"
+    },
+    {
+     "bib": 20,
+     "ath": "adele-hurteloup",
+     "name": "HURTELOUP Adèle"
+    },
+    {
+     "bib": 21,
+     "ath": "oda-laforce",
+     "name": "LAFORCE Oda"
+    },
+    {
+     "bib": 22,
+     "ath": "anna-kay",
+     "name": "KAY Anna"
+    },
+    {
+     "bib": 23,
+     "ath": "maite-barthels",
+     "name": "BARTHELS Maïté"
+    },
+    {
+     "bib": 24,
+     "ath": "mae-cabaca",
+     "name": "CABACA Mae"
+    },
+    {
+     "bib": 25,
+     "ath": "freya-whiteside",
+     "name": "WHITESIDE Freya"
+    },
+    {
+     "bib": 26,
+     "ath": "anniek-mos",
+     "name": "MOS Anniek"
+    },
+    {
+     "bib": 27,
+     "ath": "camille-devigne",
+     "name": "DEVIGNE Camille"
+    },
+    {
+     "bib": 28,
+     "ath": "lara-defour",
+     "name": "DEFOUR Lara"
+    },
+    {
+     "bib": 29,
+     "ath": "grace-inglis",
+     "name": "INGLIS Grace"
+    },
+    {
+     "bib": 30,
+     "ath": "xenna-de-bruyckere",
+     "name": "DE BRUYCKERE Xenna"
+    },
+    {
+     "bib": 31,
+     "ath": "kim-van-de-steene",
+     "name": "VAN DE STEENE Kim"
+    },
+    {
+     "bib": 32,
+     "ath": "giorgia-secchi",
+     "name": "SECCHI Giorgia"
+    },
+    {
+     "bib": 33,
+     "ath": "alderney-baker",
+     "name": "BAKER Alderney"
+    },
+    {
+     "bib": 34,
+     "ath": "lisa-maes",
+     "name": "MAES Lisa"
+    },
+    {
+     "bib": 35,
+     "ath": "juline-delcommune",
+     "name": "DELCOMMUNE Juline"
+    },
+    {
+     "bib": 36,
+     "ath": "alice-colling",
+     "name": "COLLING Alice"
+    },
+    {
+     "bib": 37,
+     "ath": "fem-van-empel",
+     "name": "VAN EMPEL Fem"
+    },
+    {
+     "bib": 38,
+     "ath": "roisin-lally",
+     "name": "LALLY Roisin"
+    },
+    {
+     "bib": 39,
+     "ath": "jana-dobbelaere",
+     "name": "DOBBELAERE Jana"
+    },
+    {
+     "bib": 40,
+     "ath": "alana-polfliet",
+     "name": "POLFLIET Alana"
+    },
+    {
+     "bib": 41,
+     "ath": "nele-de-vos",
+     "name": "DE VOS Nele"
+    },
+    {
+     "bib": 42,
+     "ath": "kirstine-rysbjerg",
+     "name": "RYSBJERG Kirstine"
+    },
+    {
+     "bib": 43,
+     "ath": "emily-de-cuyper",
+     "name": "DE CUYPER Emily"
+    }
+   ]
+  }
+ }
+}

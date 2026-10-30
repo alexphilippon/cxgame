@@ -1523,3 +1523,6 @@ html[data-skin='tomorrowland'] .plate--1 .plate__label, html[data-skin='tomorrow
 .ffc--XO { --c: #2f7d4f; } .ffc--HG { --c: #a8431f; }
 html[data-theme='nuit'] .ffc--XO { --c: #7cc79a; } html[data-theme='nuit'] .ffc--HG { --c: #f0a283; }
 html[data-theme='nuit'] .ffc--XO[aria-pressed='true'], html[data-theme='nuit'] .ffc--HG[aria-pressed='true'] { color: #111a26; }
+
+.combo__opt--out { color: var(--encre-douce); }
+.combo__opt--out.is-cur { color: var(--brique); }
