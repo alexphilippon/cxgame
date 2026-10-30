@@ -118,8 +118,8 @@
   // Une session = une réunion ; sa deadline est le départ de sa première course.
   const DESKS = [
     { id: 1, name: 'Desk 1', from: '2026-11-01', to: '2026-11-29' },
-    { id: 2, name: 'Desk 2', from: '2026-12-06', to: '2026-12-29' },
-    { id: 3, name: 'Desk 3', from: '2026-12-30', to: '2027-02-14' },
+    { id: 2, name: 'Desk 2', from: '2026-12-06', to: '2026-12-30' },
+    { id: 3, name: 'Desk 3', from: '2026-12-31', to: '2027-02-14' },
   ];
   const deskOfDate = (date) => { const d = DESKS.find((x) => date >= x.from && date <= x.to); return d ? d.id : 0; };
 

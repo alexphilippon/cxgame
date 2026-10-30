@@ -17,8 +17,8 @@ assert.strictEqual(inSessions.length, 74);
 assert.strictEqual(new Set(inSessions).size, 74, 'chaque course dans une seule session');
 inSessions.forEach((id) => assert.ok(D.RACES[id], 'course inconnue ' + id));
 const perDesk = [1, 2, 3].map((d) => D.SESSIONS.filter((s) => s.desk === d).reduce((n, s) => n + s.races.length, 0));
-assert.deepStrictEqual(perDesk, [24, 22, 22], 'desks 24 (20 Élites + 4 U23/U19) / 22 / 22');
-assert.deepStrictEqual([1, 2, 3].map((d) => D.SESSIONS.filter((s) => s.desk === d).length), [10, 11, 11]);
+assert.deepStrictEqual(perDesk, [24, 24, 20], 'desks 24 (20 Élites + 4 U23/U19) / 24 (Diegem inclus) / 20');
+assert.deepStrictEqual([1, 2, 3].map((d) => D.SESSIONS.filter((s) => s.desk === d).length), [10, 12, 10]);
 assert.strictEqual(D.SESSIONS.filter((s) => s.desk === 0).length, 0, 'aucune session hors desk hors Mondiaux');
 assert.strictEqual(D.WORLDS.desk, 3, 'Mondiaux dans le Desk 3');
 // les sessions sont dans les bornes de leur desk et chronologiques
@@ -32,7 +32,7 @@ for (let i = 1; i < D.SESSIONS.length; i++) {
   assert.ok(a < b, 'sessions chronologiques : ' + D.SESSIONS[i].name);
 }
 assert.strictEqual(sess(22).name, 'Superprestige Diegem');
-assert.strictEqual(sess(22).desk, 3, 'Diegem (30/12) tombe dans le desk 3');
+assert.strictEqual(sess(22).desk, 2, 'Diegem (30/12) tombe dans le desk 2');
 assert.strictEqual(sess(21).desk, 2, 'Besançon (29/12) dans le desk 2');
 // Élites H et F le même jour, sauf aux Euros
 D.EVENTS.filter((e) => e.serie !== 'EU').forEach((e) => {
@@ -163,8 +163,8 @@ const wp = { 'MO-U23-H': { a: 'p' }, 'MO-ELI-F': { a: 'q' } };
 assert.ok(G.usedInDesk(3, 'H', 'U23', wp, null).has('p') && !G.usedInDesk(3, 'H', 'ELI', wp, null).has('p'), 'Mondiaux : pool par catégorie');
 assert.ok(G.usedInDesk(3, 'F', 'ELI', wp, null).has('q') && !G.usedInDesk(3, 'H', 'ELI', wp, null).has('q'), 'Mondiaux : pool par genre');
 assert.ok(!G.usedInDesk(1, 'H', 'U23', wp, null).has('p'), 'Mondiaux : hors desk 1');
-assert.ok(G.usedInDesk(3, 'H', 'ELI', { 'E22-ELI-H': { a: 'z' } }, 'MO-ELI-H').has('z'), 'un coureur pris au Desk 3 est grillé pour les Mondiaux');
-assert.ok(G.usedInDesk(3, 'H', 'ELI', { 'MO-ELI-H': { a: 'z' } }, 'E22-ELI-H').has('z'), 'un coureur pris aux Mondiaux est grillé pour le reste du Desk 3');
+assert.ok(G.usedInDesk(3, 'H', 'ELI', { 'E23-ELI-H': { a: 'z' } }, 'MO-ELI-H').has('z'), 'un coureur pris au Desk 3 est grillé pour les Mondiaux');
+assert.ok(G.usedInDesk(3, 'H', 'ELI', { 'MO-ELI-H': { a: 'z' } }, 'E23-ELI-H').has('z'), 'un coureur pris aux Mondiaux est grillé pour le reste du Desk 3');
 // Les points des Mondiaux et leur bonus comptent dans le Desk 3, sans double comptage au général
 const gw = G.generalScore(picksAll, wres);
 assert.strictEqual(gw.desks[2], 1200 + 1000, 'Desk 3 = Mondiaux (courses + bonus)');
@@ -198,7 +198,8 @@ assert.strictEqual(G.sessionDeadline(sess(3)).toISOString(), '2026-11-07T09:30:0
 assert.ok(G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:30:00Z')), 'Euros : toute la session se verrouille à la 1re course');
 assert.ok(!G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:29:00Z')));
 assert.strictEqual(G.deskIdOf('MO-ELI-H'), 3, 'les Mondiaux comptent dans le Desk 3');
-assert.strictEqual(G.deskIdOf('E22-ELI-F'), 3);
+assert.strictEqual(G.deskIdOf('E22-ELI-F'), 2);
+assert.strictEqual(G.deskIdOf('E23-ELI-F'), 3);
 
 // ---- Calendrier vivant : annulation, report, heure confirmée
 G.setOverrides({ 'E01-ELI-F': { status: 'cancelled' } });
