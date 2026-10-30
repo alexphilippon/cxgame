@@ -18,4 +18,4 @@ jobs:
           git config user.name "cxgame-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/startlists.json data/raw/startlists
-          git diff --cached --quiet -- data/startlists.json || (git commit -m "Start lists mises à jour (relevé automatique)" && git pull --rebase -q && git push)
+          git diff --cached --quiet || (git commit -m "Start lists : relevé automatique" && git pull --rebase -q && git push)
