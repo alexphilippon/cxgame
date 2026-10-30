@@ -194,6 +194,10 @@
     const extras = state.extra.filter((x) => !x.pending && !state.aliases[x.id] && x.gender === race.gender && (x.cat || 'ELI') === race.cat && !(BASE.lists[`${race.cat}-${race.gender}`] || []).some((a) => a.id === x.id));
     const list = (BASE.lists[`${race.cat}-${race.gender}`] || []).concat(extras).slice().sort((a, b) => norm(listName(a)).localeCompare(norm(listName(b))));
     const full = list.map((a) => ({ id: a.id, name: a.name, nat: a.nat, bib: null, src: listName(a) }));
+    // Les partants des start lists déjà publiées (même genre, hors classement UCI) rejoignent la liste des courses sans start list
+    const known = new Set(full.map((a) => a.id)), seenSl = state.startlists && state.startlists.races || {};
+    Object.keys(seenSl).forEach((rid) => { const r = G.raceOf(rid); if (!r || r.gender !== race.gender || race.cat !== 'ELI' || r.cat !== 'ELI') return; (seenSl[rid].start || []).forEach((x) => { if (known.has(x.ath)) return; known.add(x.ath); const nm = x.name ? N.displayName(x.name) : nameOf(x.ath); full.push({ id: x.ath, name: nm, nat: (ATH[x.ath] || {}).nat || '', bib: null, src: x.name || nm }); }); });
+    full.sort((x, y) => norm(x.src).localeCompare(norm(y.src)));
     if (sl) {
       const inSl = new Set(sl.rows.map((r) => r.ath));
       return { start: true, rows: sl.rows.map((r) => ({ id: r.ath, name: r.name, nat: r.nat, bib: r.bib, src: r.name })), out: full.filter((a) => !inSl.has(a.id)) };
