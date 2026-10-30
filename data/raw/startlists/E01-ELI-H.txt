@@ -1,0 +1,42 @@
+                           KOPPENBERGCROSS-OUDENAARDE 1/11/2026
+                                    STARTLIST MEN ELITE
+
+Nr   Naam                        UCI ID      Nat   Club                                            UCI Rank
+1    NYS Thibau                10065004835   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS      3
+2    VANTHOURENHOUT Michael    10007155651   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            5
+3    NIEUWENHUIS Joris         10008705833   NED   HEIZOMAT - CUBE                                    6
+4    WYSEURE Joran             10064921777   BEL   CRELAN-CORENDON                                    9
+5    HENDRIKX Mees             10016519484   NED   TEAM BOMBA JOIN                                    12
+6    KUYPERS Gerben            10016322757   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            13
+7    MASON Cameron             10023574923   GBR   SEVEN RACING                                       14
+8    MICHELS Jente             10065014333   BEL   ALPECIN-PREMIER TECH DEVELOPMENT TEAM              15
+9    KAMP Ryan                 10023356166   NED   TEAM BOMBA JOIN                                    18
+10   RONHAAR Pim               10023108212   NED   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS      19
+11   VANDEBOSCH Toon           10010943604   BEL   CRELAN-CORENDON                                    20
+12   MEEUSSEN Witse            10064931679   BEL   CRELAN-CORENDON                                    26
+13   LELANDAIS Rémi            10067510566   FRA   BOURG-EN-BRESSE AIN CYCLISME                       28
+14   MEIN Thomas               10016225959   GBR   HOPE FACTORY RACING                                35
+15   VAN LIEROP Danny          10023320093   NED   HEIZOMAT - CUBE                                    38
+16   VAN DE PUTTE Victor       10064985940   BEL   CHARLES LIÉGEOIS CX TEAM                           41
+17   DEBORD Romain             10072513948   FRA   AS BIKE RACING / FRANCE LITERIE                    51
+18   DE BRUYCKERE Kay          10065053638   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            64
+19   DEGENKOLB Hannes          10048529282   GER   HEIZOMAT - CUBE                                    87
+20   HARVEY Dean               10016653264   IRL                                                     148
+21   GILLES Cyprien            10023514295   FRA                                                     162
+22   DELNOIJE Remon            10022684139   NED   TWC DE KEMPEN                                     189
+23   BAERS Arne                10064979472   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS     196
+24   STORMS Miel               10023391532   NED   TWC DE KEMPEN                                     249
+25   LEMARDELE Maxence         10070390456   FRA   TEAM SUPERIOR RAFAL CYCLING                       296
+26   CECCHI Filippo            10030196484   ITA   BIKE ACADEMY-MARCHINI COSTRUZIONI                 300
+27   PARENTI Nicola            10013694562   ITA   BIKE ACADEMY-MARCHINI COSTRUZIONI                 338
+28   DE NYS Milan              10065078795   BEL   TEAM CIBEL CEBON                                  349
+29   NICHVOLODOV Artur         10104149486   UKR                                                     447
+30   BLANPAIN Kévin            10004858367   FRA   CC CAMBRAI
+31   BELLENS Jarno             10016350241   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
+32   MATTHEWS Pete             10064771732   GBR   TEAM HUP
+
+
+
+
+                                              Page 1 of 1
+
