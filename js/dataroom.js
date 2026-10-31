@@ -38,17 +38,17 @@
     if (H.error) return '<p class="hint">Résultats indisponibles pour cette saison.</p>';
     const sers = Object.keys(SER).filter((k) => H.races.some((r) => r.series === k)), { races, rows } = table(H), shown = ui.more ? rows : rows.slice(0, 40);
     const head = races.map((r) => `<th scope="col" class="num dr__rc" title="${C.esc(SER[r.series] || r.series)} · ${C.esc(r.place)} · ${frDate(r)}"><span>${C.esc(r.place.slice(0, 3).toUpperCase())}</span><small>${frDate(r)}</small></th>`).join('');
-    const body = shown.map((r) => `<tr><td class="num"><span class="rnk rnk--${r.rank <= 3 ? r.rank : r.rank <= 10 ? 'c' : 'n'}">${r.rank}</span></td>
+    const body = shown.map((r) => `<tr>
       <th scope="row"><button type="button" class="dr__sk dr__lnk" data-hist="${C.esc(r.id)}">${C.flag(natOf(r.id))}<span class="dr__nm">${C.esc(nameOf(r.id))}</span></button></th>
-      <td class="num"><b>${r.pts}</b></td>${races.map((x) => { const e = r.cells[x.id]; return `<td class="num dr__c ${cellCls(e)}">${e == null ? '' : e}</td>`; }).join('')}</tr>`).join('');
-    return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Saison ${short(ui.y)} · ${sers.map((k) => SER[k]).join(', ')}, classements complets, points au barème du jeu</p></div></header>
+      <td class="num">${r.n}</td>${races.map((x) => { const e = r.cells[x.id]; return `<td class="num dr__c ${cellCls(e)}">${e == null ? '' : e}</td>`; }).join('')}</tr>`).join('');
+    return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Saison ${short(ui.y)} · ${sers.map((k) => SER[k]).join(', ')}, résultats complets par course</p></div></header>
       <div class="ff dr__filters" role="group" aria-label="Filtres"><span class="ff__g">${SEASONS.map((y) => chip('y', y, short(y), ui.y === y).replace('ffc--' + y, 'ffc--all')).join('')}</span><span class="ff__g">${chip('g', 'H', 'Hommes', ui.g === 'H')}${chip('g', 'F', 'Femmes', ui.g === 'F')}</span>
       <span class="ff__g">${chip('s', 'all', 'Toutes', ui.s === 'all')}${sers.map((k) => chip('s', k, SER[k], ui.s === k)).join('')}</span>
       <span class="ff__g">${['ELI', 'U23', 'U19'].map((c) => chip('cat', c, C.D.CATS[c].short, ui.cat === c)).join('')}</span></div>
       <div class="tablewrap tablewrap--scroll"><table class="grid grid--rank dr__tab"><caption>${ui.g === 'H' ? 'Hommes' : 'Femmes'} ${C.esc(C.D.CATS[ui.cat].fr.toLowerCase())}, ${races.length} courses</caption>
-      <thead><tr><th class="num" scope="col">Rang</th><th scope="col">Coureur</th><th class="num" scope="col">Pts</th>${head}</tr></thead><tbody>${body || `<tr><td colspan="${3 + races.length}"><span class="none">Aucun résultat.</span></td></tr>`}</tbody></table></div>
+      <thead><tr><th scope="col">Coureur</th><th class="num" scope="col" title="Courses disputées">Crs</th>${head}</tr></thead><tbody>${body || `<tr><td colspan="${2 + races.length}"><span class="none">Aucun résultat.</span></td></tr>`}</tbody></table></div>
       ${rows.length > 40 ? `<p class="dr__more"><button type="button" class="btn btn--ghost btn--sm" data-dr="more:1">${ui.more ? 'Réduire' : `Voir les ${rows.length} coureurs`}</button></p>` : ''}
-      <p class="hint">Cases : place d’arrivée (DNF : abandon). Points : 100, 80, 60… comme dans le jeu, sans multiplicateur. Clique sur un coureur pour voir sa saison. Sources : UCI, Superprestige, X²O Trofee, HG Cross.</p></section>`;
+      <p class="hint">Cases : place d’arrivée (DNF : abandon). Crs : courses disputées. Les coureurs sont classés selon leurs résultats dans le barème du jeu, mais les points ne sont pas affichés (barèmes différents selon les séries). Clique sur un coureur pour voir sa saison. Sources : UCI, Superprestige, X²O Trofee, HG Cross.</p></section>`;
   }
   /** Saison 2025-26 d'un coureur : [{race, e}] (toutes catégories). */
   function historyOf(id, y) {
@@ -62,8 +62,7 @@
   function seasonHtml(id, y) {
     const h = historyOf(id, y);
     if (!h.length) return '';
-    const total = h.reduce((a, x) => a + pts(x.e), 0);
-    return `<h3 class="fh">Saison ${short(y)}</h3><ul class="dtls">${h.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${C.esc(x.race.place)}</strong> <span class="sub">${frDate(x.race)} · ${C.esc(SER[x.race.series] || "")} · ${C.esc(C.D.CATS[x.race.cat].short)}</span></span><span class="dtl__a"></span><span class="dtl__k ${typeof x.e === 'number' ? '' : 'bad'}">${typeof x.e === 'number' ? C.ordinal(x.e) : x.e} <b>${pts(x.e) ? '+' + pts(x.e) : ''}</b></span></li>`).join('')}</ul><p class="dtl__tot">${h.length} courses · ${total} pts (barème du jeu)</p>`;
+    return `<h3 class="fh">Saison ${short(y)}</h3><ul class="dtls">${h.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${C.esc(x.race.place)}</strong> <span class="sub">${frDate(x.race)} · ${C.esc(SER[x.race.series] || "")} · ${C.esc(C.D.CATS[x.race.cat].short)}</span></span><span class="dtl__a"></span><span class="dtl__k ${typeof x.e === 'number' ? '' : 'bad'}">${typeof x.e === 'number' ? C.ordinal(x.e) : x.e}</span></li>`).join('')}</ul><p class="dtl__tot">${h.length} courses</p>`;
   }
   function histModal(id) {
     load();
