@@ -1,0 +1,44 @@
+## apiUrlBase
+iUrlBase:"https://results.chronorace.be/api/",resultsApiUrlBase:"https://localhost:7282/api/",registrationApiUrlBase:"https://registration.chronorace.be/api/",zapiUrlBase:"https://localhost:7282/api/",crApiUrlBase:"https://prod.chronorace.be/api/",apiUrlBase:"http://localhost:5000/api/",stripe:"REDACTED",pusherApiKey:"dc8b31e345e
+
+## apiUrlBase
+api/",registrationApiUrlBase:"https://registration.chronorace.be/api/",zapiUrlBase:"https://localhost:7282/api/",crApiUrlBase:"https://prod.chronorace.be/api/",apiUrlBase:"http://localhost:5000/api/",stripe:"REDACTED",pusherApiKey:"dc8b31e345ee82dbe1c9",stripeEnvironment:"Test",mapbox:"pk.REDACTED
+
+## apiUrlBase
+",authScope:"openid profile email offline_access"},lx={eventsApiUrlBase:"https://prod.chronorace.be/api/",xresultsApiUrlBase:"https://prod.chronorace.be/api/",xapiUrlBase:"/api/",pusherApiKey:"dc8b31e345ee82dbe1c9",mapbox:"pk.REDACTED.xP7ou2BrolNpoG4ZkAHVrA",registrationApiUrlBase:"https://registration.chronorace.be/api/",apiUrlBase:"https://www.acn-timing.com/api/",re
+
+## apiUrlBase
+pk.REDACTED.xP7ou2BrolNpoG4ZkAHVrA",registrationApiUrlBase:"https://registration.chronorace.be/api/",apiUrlBase:"https://www.acn-timing.com/api/",resultsApiUrlBase:"https://results.chronorace.be/api/",userApiUrlBase:"https://www.acn-timing.com/api/",confirmationApiUrlBase:"https://www.acn-timing.com/api/",crApiUrlBase:"https://prod.chronorace.be/api/",trackingManagemen
+
+## apiUrlBase
+"openid profile email offline_access"},cx={eventsApiUrlBase:"https://backoffice.chronorace.be/api/",xresultsApiUrlBase:"https://backoffice.chronorace.be/api/",xapiUrlBase:"/api/",pusherApiKey:"dc8b31e345ee82dbe1c9",mapbox:"pk.REDACTED.xP7ou2BrolNpoG4ZkAHVrA",apiUrlBase:"https://cr-results-cis.azurewebsites.net/api/",resultsApiUrlBase:"https://cr-results-cis.azurewebsit
+
+## apiUrlBase
+,xapiUrlBase:"/api/",pusherApiKey:"dc8b31e345ee82dbe1c9",mapbox:"pk.REDACTED.xP7ou2BrolNpoG4ZkAHVrA",apiUrlBase:"https://cr-results-cis.azurewebsites.net/api/",resultsApiUrlBase:"https://cr-results-cis.azurewebsites.net/api/",registrationApiUrlBase:"https://registration.chronorace.be/api/",userApiUrlBase:"https://www.acn-timing.com/api/",confirmationApiUrlBase:"https:/
+
+## apiUrlBase
+tValidToken();return n&&(e.headers={...e.headers,Authorization:"Bearer "+n}),e},function(e){return Promise.reject(e)});const UT=new class{get(){const e=$n.get("apiUrlBase")+"permission/get";return fi.get(e).then(t=>t.data)}},HT=new class{get(){const e=$n.get("userApiUrlBase")+"user/get";return fi.get(e).then(t=>t.data)}updateProfile(e){const t=$n.get("userApiUrlBase")+"user/profile";return new Promise((n,r)=>{fi.post(t,e).then
+
+## eventsApiUrlBase
+ent_id);if(!t){const n=await ot.generateDPoPKeys();t=new ap(n),await e.store.set(this.settings.client_id,t)}return await ot.generateDPoPJkt(t.keys)}};const ax={eventsApiUrlBase:"https://prod.chronorace.be/api/",xeventsApiUrlBase:"http://localhost:16151/api/",xresultsApiUrlBase:"https://results.chronorace.be/api/",resultsApiUrlBase:"https://localhost:7282/api/",registrationApiUrlBase:"https://registration.chronorace.be/api/",zapiUrlB
+
+## eventsApiUrlBase
+=new ap(n),await e.store.set(this.settings.client_id,t)}return await ot.generateDPoPJkt(t.keys)}};const ax={eventsApiUrlBase:"https://prod.chronorace.be/api/",xeventsApiUrlBase:"http://localhost:16151/api/",xresultsApiUrlBase:"https://results.chronorace.be/api/",resultsApiUrlBase:"https://localhost:7282/api/",registrationApiUrlBase:"https://registration.chronorace.be/api/",zapiUrlBase:"https://localhost:7282/api/",crApiUrlBase:"http
+
+## eventsApiUrlBase
+://auth.localhost.chronorace.be:8787",authAuthority:"https://auth.chronorace.be",authClientId:"acn-timing",authScope:"openid profile email offline_access"},lx={eventsApiUrlBase:"https://prod.chronorace.be/api/",xresultsApiUrlBase:"https://prod.chronorace.be/api/",xapiUrlBase:"/api/",pusherApiKey:"dc8b31e345ee82dbe1c9",mapbox:"pk.REDACTED.xP7ou2BrolNpoG4ZkAHVrA",registrationA
+
+## eventsApiUrlBase
+a6e8679712394eabe",gtm:"GTM-W6C6W996",authAuthority:"https://auth.chronorace.be",authClientId:"acn-timing",authScope:"openid profile email offline_access"},cx={eventsApiUrlBase:"https://backoffice.chronorace.be/api/",xresultsApiUrlBase:"https://backoffice.chronorace.be/api/",xapiUrlBase:"/api/",pusherApiKey:"dc8b31e345ee82dbe1c9",mapbox:"pk.REDACTED.xP7ou2BrolNpoG4ZkAHVrA",a
+
+## eventsApiUrlBase
+ c=()=>{n=!0;const u=s,f=i;r=null,s=null,i=null;const h=t;console.log("LOADING FOLLOWING CONTEXT ",h),t={};const p=[];for(const v in h){const y=Qs[v],_=$n.get("eventsApiUrlBase")+"translation/i18n/acn/inscriptions/"+y.lng;console.log("loading ctx ",h[v],_),p.push(fi.get(_).then(w=>{console.log("TRANSLATIONS LOADED ",y,w.data),y.labels=w.data,y.status.value="succes",y.promise=null},w=>{console.log("translation loading failed ",w),Do.
+
+## results/
+Deps([130,76,33,28,29,1,8,131]))},{path:"/misc/crac/:context",name:"crac",component:()=>se(()=>import("./crac-D6DnYAg0.js"),__vite__mapDeps([132,76]))},{path:"/results/:eventId",xname:"results",component:()=>se(()=>import("./results-hmOMkV25.js"),__vite__mapDeps([133,82,134])),children:[{name:"reportList",path:"reportlist",component:()=>se(()=>import("./ReportList-B80URqH9.js"),__vite__mapDeps([127,109,1,8,82])),children:[{n
+
+## /events/
+("./index-BaqPYfd5.js"),__vite__mapDeps([94,72,73,74,36,75,95,38,33,4,42,15,16,43,96])),meta:{layout:"generic"}}]}]}];console.log("ROUTES",Jv);const ZA=[{path:"/events/:eventId",name:"events",component:()=>se(()=>import("./template-BdzG2i5L.js"),__vite__mapDeps([97,82,62,63,98,83,99])),children:[{name:"eventtracking",path:"tracking/:key?",component:()=>se(()=>import("./tracking-BltNJI5R.js"),__vite__mapDeps([100,95,74,36,75,
+
+## genericresult
+rictemplate",path:"generic/:path",component:()=>se(()=>import("./generic-XD2QP_-A.js"),__vite__mapDeps([104,105,106,107,102,57,58,83])),children:[{name:"events.genericresult",path:"home/:key",component:()=>se(()=>import("./generichome-K9ktSydZ.js"),__vite__mapDeps([108,109,1,8,110,111,82,105,106,107,102,57,58,13,14,15,16,17,41,42,43,44,45,46,83,33,30,31,9,10,112,113,114]))},{name:"events.passingstats",path:"stats/:key",component:
