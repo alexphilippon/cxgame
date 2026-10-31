@@ -62,7 +62,18 @@
   function seasonHtml(id, y) {
     const h = historyOf(id, y);
     if (!h.length) return '';
-    return `<h3 class="fh">Saison ${short(y)}</h3><ul class="dtls">${h.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${C.esc(x.race.place)}</strong> <span class="sub">${frDate(x.race)} · ${C.esc(SER[x.race.series] || "")} · ${C.esc(C.D.CATS[x.race.cat].short)}</span></span><span class="dtl__a"></span><span class="dtl__k ${typeof x.e === 'number' ? '' : 'bad'}">${typeof x.e === 'number' ? C.ordinal(x.e) : x.e}</span></li>`).join('')}</ul><p class="dtl__tot">${h.length} courses</p>`;
+    const num = h.filter((x) => typeof x.e === 'number');
+    const st = { n: h.length, w: num.filter((x) => x.e === 1).length, p: num.filter((x) => x.e <= 3).length, t: num.filter((x) => x.e <= 10).length, d: h.length - num.length };
+    const tile = (v, l, c) => `<span class="hs hs--${c}${v ? '' : ' is-zero'}"><b>${v}</b><small>${l}</small></span>`;
+    const tier = (e) => (typeof e !== 'number' ? 'st' : e === 1 ? 'g' : e === 2 ? 's' : e === 3 ? 'b' : e <= 10 ? 't' : 'o');
+    const row = (x) => {
+      const n = x.race.res.length, num_ = typeof x.e === 'number', bar = num_ ? Math.max(6, Math.round(100 * (1 - (x.e - 1) / Math.max(n, x.e)))) : 0;
+      return `<li class="hr hr--${tier(x.e)}"><span class="hr__b">${num_ ? x.e : C.esc(x.e)}</span>
+        <span class="hr__m"><strong>${C.esc(x.race.place)}</strong><span class="hr__s"><i class="sc sc--${C.esc(x.race.series)}">${C.esc(SER[x.race.series] || '')}</i> ${frDate(x.race)} · ${C.esc(C.D.CATS[x.race.cat].short)}</span>
+        ${num_ ? `<span class="hr__bar" title="${x.e}e sur ${n}"><u style="width:${bar}%"></u></span>` : ''}</span>
+        <span class="hr__n">${num_ ? `${x.e}<sup>${x.e === 1 ? 'er' : 'e'}</sup><small>/ ${n}</small>` : ''}</span></li>`;
+    };
+    return `<h3 class="fh">Saison ${short(y)}</h3><div class="hss">${tile(st.n, 'courses', 'n')}${tile(st.w, st.w > 1 ? 'victoires' : 'victoire', 'g')}${tile(st.p, 'podiums', 's')}${tile(st.t, 'top 10', 't')}${st.d ? tile(st.d, 'abandons', 'd') : ''}</div><ol class="hrs">${h.map(row).join('')}</ol>`;
   }
   function histModal(id) {
     load();

@@ -1526,3 +1526,26 @@ html[data-theme='nuit'] .ffc--XO[aria-pressed='true'], html[data-theme='nuit'] .
 
 .combo__opt--out { color: var(--encre-douce); }
 .combo__opt--out.is-cur { color: var(--brique); }
+
+/* Fiche coureur : résultats de saison avec du relief */
+.hss { display: flex; gap: .4rem; flex-wrap: wrap; margin: .3rem 0 .7rem; }
+.hs { flex: 1 1 4.2rem; display: flex; flex-direction: column; align-items: center; padding: .35rem .3rem; border-radius: 10px; background: color-mix(in srgb, var(--hs, #5b8cc0) 16%, var(--neige)); border: 1.5px solid color-mix(in srgb, var(--hs, #5b8cc0) 55%, transparent); }
+.hs b { font: 800 1.35rem/1 var(--display); color: color-mix(in srgb, var(--hs, #5b8cc0) 30%, #1b2b44); }
+.hs small { font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; color: var(--encre); margin-top: .15rem; }
+.hs--g { --hs: #e0b13a; } .hs--s { --hs: #8d9db0; } .hs--t { --hs: #2fb36b; } .hs--d { --hs: #d4443a; } .hs--n { --hs: #5b8cc0; }
+.hs.is-zero { opacity: .75; }
+.hrs { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.hr { --hc: #5b8cc0; display: grid; grid-template-columns: 2.4rem 1fr auto; gap: .65rem; align-items: center; padding: .45rem .6rem .45rem .45rem; border-radius: 12px; border: 1.5px solid color-mix(in srgb, var(--hc) 45%, transparent); background: linear-gradient(90deg, color-mix(in srgb, var(--hc) 20%, var(--neige)), var(--neige) 70%); }
+.hr--g { --hc: #e0b13a; } .hr--s { --hc: #9aa8b8; } .hr--b { --hc: #c98a55; } .hr--t { --hc: #2fb36b; } .hr--o { --hc: #5b8cc0; } .hr--st { --hc: #d4443a; }
+.hr__b { display: inline-flex; align-items: center; justify-content: center; min-width: 2.2rem; height: 2.2rem; border-radius: 50%; font: 800 1.05rem var(--display); background: var(--hc); color: #1b2b44; box-shadow: 0 2px 0 color-mix(in srgb, var(--hc) 60%, #000); }
+.hr--b .hr__b, .hr--t .hr__b { color: #fff; }
+.hr--st .hr__b { border-radius: 99px; padding: 0 .4rem; font-size: .72rem; color: #fff; }
+.hr__m { display: flex; flex-direction: column; gap: .12rem; min-width: 0; }
+.hr__m strong { font-size: 1rem; }
+.hr__s { font-size: .8rem; color: var(--encre-douce); }
+.sc { font-style: normal; font-weight: 700; font-size: .68rem; text-transform: uppercase; letter-spacing: .03em; padding: .05rem .4rem; border-radius: 99px; color: #fff; background: #5b6b7c; }
+.sc--CdM { background: #2c5aa6; } .sc--SP { background: #9a6b1f; } .sc--XO { background: #2f7d4f; } .sc--HG { background: #a8431f; }
+.hr__bar { display: block; height: 5px; border-radius: 99px; background: color-mix(in srgb, var(--hc) 20%, transparent); overflow: hidden; margin-top: .15rem; }
+.hr__bar u { display: block; height: 100%; background: var(--hc); border-radius: 99px; text-decoration: none; }
+.hr__n { font: 800 1.15rem var(--display); text-align: right; white-space: nowrap; } .hr__n small { display: block; font: 600 .68rem var(--body, inherit); color: var(--encre-douce); } .hr__n sup { font-size: .6em; }
+html[data-theme='nuit'] .hs b { color: var(--encre); }
