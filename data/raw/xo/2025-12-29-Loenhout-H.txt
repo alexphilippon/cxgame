@@ -1,0 +1,51 @@
+1|Mathieu Van der Poel|NED
+2|Niels Vandeputte|BEL
+3|Joris Nieuwenhuis|NED
+4|Ryan Kamp|NED
+5|Toon Aerts|BEL
+6|Gioele Bertolini|ITA
+7|Anton Ferdinande|BEL
+8|Cameron Mason|GBR
+9|Yorben Lauryssen|BEL
+10|Wout Van Aert|BEL
+11|Wout Janssen|BEL
+12|Daan Soete|BEL
+13|Toon Vandebosch|BEL
+14|Thomas Mein|GBR
+15|Tom Meeusen|BEL
+16|Damien Beton|FRA
+17|Tommaso Ferri|ITA
+18|Filippo Agostinacchio|ITA
+19|Sander De Vet|BEL
+20|Hijiri Oda|JPN
+21|Jenno Berckmoes|BEL
+22|Daniel Barnes|GBR
+23|Paul François Jutel|FRA
+24|Maxence Lemardele|FRA
+25|Rune Smits|BEL
+26|Miel Storms|NED
+27|Clément Horny|BEL
+28|Salvador Alvarado|NED
+29|Rémon Delnoije|NED
+30|Karl-Erik Rosendahl|DEN
+31|Florian Gaillard|FRA
+32|Mike Bronswijk|NED
+33|Ruben Lembrechts|BEL
+34|Sjoerd Van de Mortel|NED
+35|Valentin Remondet|FRA
+36|Jorre Cardijn|BEL
+37|Simon Maillefer|SUI
+38|Mickaël Crispin|FRA
+39|Yuta Okayama|JPN
+40|Marcos Gomez Vega|ESP
+41|Dario Gargantini|ITA
+42|Tito Vicini|ITA
+43|Tetsuki Kaji|JPN
+44|Léo Garnier|SUI
+45|Dylan Vasnier|FRA
+46|Dries Bruynseels|SVK
+47|Maurits Oskam|NED
+48|William Lezard|GBR
+DNF|Gonzalo Inguanzo Macho|ESP
+DNF|Laurens Sweeck|BEL
+DNF|Steyn Van der Veen|NED

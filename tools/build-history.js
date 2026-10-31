@@ -10,10 +10,11 @@ const dir = path.join(__dirname, '..', 'data', 'raw', 'wc-' + season);
 const byKey = {};
 for (const g of Object.keys(A.lists)) for (const a of A.lists[g]) byKey[N.nameKey(a.src || a.name)] = a;
 const CAT = { 'men elite': ['ELI', 'H'], 'women elite': ['ELI', 'F'], 'men u23': ['U23', 'H'], 'women u23': ['U23', 'F'], 'men u19': ['U19', 'H'], 'women u19': ['U19', 'F'] };
-const races = [], ath = {}, warn = [];
+const races = [], ath = {}, warn = [], seenKey = {};
 function add(series, place, date, cat, g, rows, nowc) {
   const res = rows.map((r) => {
-    const known = byKey[N.nameKey(r.name)], id = known ? known.id : N.slug(N.displayName(r.name));
+    const nk = N.nameKey(r.name), known = byKey[nk], id = known ? known.id : (seenKey[nk] || N.slug(N.displayName(r.name)));
+    seenKey[nk] = id;
     if (!ath[id]) ath[id] = { name: known ? known.name : N.displayName(r.name), nat: r.nat, g, cat, listed: !!known };
     return [id, r.status || r.rank];
   });
@@ -50,8 +51,16 @@ if (fs.existsSync(hdir)) for (const f of fs.readdirSync(hdir).filter((x) => x.en
   const rows = j.rows.map((r) => (typeof r[0] === 'number' ? { rank: r[0], name: r[1], nat: r[2] } : { status: r[0], name: r[1], nat: r[2] }));
   if (rows.length) add('HG', j.place, j.date, c[0], c[1], rows, false);
 }
+// X²O Trofee : classements saisis depuis cyclocross24 (data/raw/xo/AAAA-MM-JJ-Lieu-H|F.txt, lignes « rang|Prénom Nom|PAYS »)
+const xdir = path.join(__dirname, '..', 'data', 'raw', 'xo');
+if (fs.existsSync(xdir)) for (const f of fs.readdirSync(xdir).filter((x) => /^\d{4}-\d\d-\d\d-.+-[HF]\.txt$/.test(x))) {
+  const [, date, place, g] = f.match(/^(\d{4}-\d\d-\d\d)-(.+)-([HF])\.txt$/);
+  if (date < `${y0}-08-01` || date > `${y0 + 1}-07-31`) continue;
+  const rows = fs.readFileSync(path.join(xdir, f), 'utf8').split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => { const [a, name, nat] = l.split('|'); return /^\d+$/.test(a) ? { rank: Number(a), name, nat } : { status: a, name, nat }; });
+  if (rows.length) add('XO', place, date, 'ELI', g, rows, false);
+}
 races.sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
-const out = { season, generated: new Date().toISOString().slice(0, 10), source: 'UCI Coupe du monde de cyclo-cross (ChronoRace) Superprestige et HG Cross (classements officiels)', races, ath };
+const out = { season, generated: new Date().toISOString().slice(0, 10), source: 'UCI Coupe du monde de cyclo-cross (ChronoRace) Superprestige, HG Cross et X²O Trofee (classements officiels / cyclocross24)', races, ath };
 fs.writeFileSync(path.join(__dirname, '..', 'data', `history-${season}.json`), JSON.stringify(out));
 console.log(races.length + ' courses, ' + Object.keys(ath).length + ' coureurs (' + Object.values(ath).filter((a) => a.listed).length + ' dans la liste UCI)');
 warn.forEach((w) => console.log(w));

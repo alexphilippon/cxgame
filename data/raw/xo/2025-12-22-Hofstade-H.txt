@@ -1,0 +1,40 @@
+1|Mathieu Van der Poel|NED
+2|Wout Van Aert|BEL
+3|Niels Vandeputte|BEL
+4|Thibau Nys|BEL
+5|Laurens Sweeck|BEL
+6|Joris Nieuwenhuis|NED
+7|Toon Aerts|BEL
+8|Cameron Mason|GBR
+9|Toon Vandebosch|BEL
+10|Ryan Kamp|NED
+11|Witse Meeussen|BEL
+12|Gerben Kuypers|BEL
+13|Lars van der Haar|NED
+14|Yorben Lauryssen|BEL
+15|Victor Van de Putte|BEL
+16|Wout Janssen|BEL
+17|Tom Meeusen|BEL
+18|Daan Soete|BEL
+19|Sander De Vet|BEL
+20|Gioele Bertolini|ITA
+21|Stef Janse|BEL
+22|Arne Baers|BEL
+23|Kevin Suarez Fernandez|ESP
+24|Elio Clarysse|BEL
+25|Martin Groslambert|FRA
+26|Maël Savignard|FRA
+27|Lorenzo Marasco|FRA
+28|Karl-Erik Rosendahl|DEN
+29|Miel Storms|NED
+30|Thomas Verheyen|BEL
+31|Florian Hamm|GER
+32|Michael Gassner|GER
+33|Jonas Mertens|BEL
+34|Frederick Junge|USA
+35|Artur Nichvolodov|UKR
+36|Marcos Gomez Vega|ESP
+37|Tetsuki Kaji|JPN
+38|Yuta Okayama|JPN
+39|William Lezard|GBR
+DNF|Clément Horny|BEL

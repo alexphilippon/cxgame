@@ -1,0 +1,32 @@
+1|Lucinda Brand|NED
+2|Inge van der Heijden|NED
+3|Aniek van Alphen|NED
+4|Marie Schreiber|LUX
+5|Julie Brouwers|BEL
+6|Manon Bakker|NED
+7|Denise Betsema|NED
+8|Annemarie Worst|NED
+9|Hélène Clauzel|FRA
+10|Shanyl De Schoesitter|BEL
+11|Katerina Hladiková|CZE
+12|Larissa Hartog|NED
+13|Lidia Cusack|USA
+14|Perrine Clauzel|FRA
+15|Kiona Crabbé|BEL
+16|Liv Wenzel|LUX
+17|Kim Van de Steene|BEL
+18|Ilken Seynave|BEL
+19|Sanne Laurijssen|BEL
+20|Sterre Vervloet|BEL
+21|Anna Kay|GBR
+22|Lotte Baele|BEL
+23|Xenna De Bruyckere|BEL
+24|Ellie Mitchinson|GBR
+25|Alexe De Raedemaeker|BEL
+26|Anne Knijnenburg|NED
+27|Meg De Bruyne|BEL
+28|Melanie Lemmens|BEL
+29|Giorgia Secchi|ITA
+30|Lisa Maes|BEL
+31|Shanaya Esther Schollaert|BEL
+32|Diana Steffenhagen|GER

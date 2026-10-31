@@ -1,0 +1,34 @@
+1|Mathieu van der Poel|NED
+2|Emiel Verstrynge|BEL
+3|Thibau Nys|BEL
+4|Toon Aerts|BEL
+5|Joris Nieuwenhuis|NED
+6|Jente Michels|BEL
+7|Filippo Fontana|ITA
+8|Ryan Kamp|NED
+9|David Menut|FRA
+10|Quinten Hermans|BEL
+11|Wout Janssen|BEL
+12|Damien Beton|FRA
+13|Cameron Mason|GBR
+14|Gianni Vermeersch|BEL
+15|Victor Van De Putte|BEL
+16|Aaron Dockx|BEL
+17|Toon Vandebosch|BEL
+18|Daan Soete|BEL
+19|Valentin Remondet|FRA
+20|Arne Baers|BEL
+21|Lars Sommer|SUI
+22|Paul François Jutel|FRA
+23|Arthur Soontjens|BEL
+24|Daniel Barnes|GBR
+25|Florian Gaillard|FRA
+26|Jules van Kempen|USA
+27|Dylan Vasnier|FRA
+28|Oscar Hutchings|GBR
+29|Tito Vicini|ITA
+30|Sam Errens|NED
+31|Yuta Okayama|JPN
+32|Dovydas Luksas|LTU
+DNF|William Lezard|GBR
+DNF|Tom Meeusen|BEL

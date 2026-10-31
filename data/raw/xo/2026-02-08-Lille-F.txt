@@ -1,0 +1,45 @@
+1|Ceylin Del Carmen Alvarado|NED
+2|Lucinda Brand|NED
+3|Inge van der Heijden|NED
+4|Leonie Bentveld|NED
+5|Marie Schreiber|LUX
+6|Julie Brouwers|BEL
+7|Aniek van Alphen|NED
+8|Manon Bakker|NED
+9|Amandine Fouquenet|FRA
+10|Marion Norbert Riberolle|BEL
+11|Rebecca Gariboldi|ITA
+12|Alicia Franck|BEL
+13|Lucia Bramati|ITA
+14|Perrine Clauzel|FRA
+15|Laura Verdonschot|BEL
+16|Hélène Clauzel|FRA
+17|Zita Peeters|BEL
+18|Katerina Hladiková|CZE
+19|Noï Moes|NED
+20|Anna Kay|GBR
+21|Annemarie Worst|NED
+22|Anniek Mos|NED
+23|Adèle Hurteloup|FRA
+24|Pem Hoefmans|NED
+25|Kaya Musgrave|USA
+26|Jinse Peeters|BEL
+27|Kiona Crabbé|BEL
+28|Sera Gademan|NED
+29|Nette Coppens|BEL
+30|Juline Delcommune|BEL
+31|Xenna De Bruyckere|BEL
+32|Phebe Blieck|BEL
+33|Ellie Mitchinson|GBR
+34|Meg De Bruyne|BEL
+35|Amy Perryman|GBR
+36|Tessa Zwaenepoel|BEL
+DNF|Rebecca Woodvine|GBR
+DNF|Kaija Budde|GER
+DNF|Tine Rombouts|BEL
+DNF|Melanie Van Campfort|BEL
+DNF|Emily De Cuyper|BEL
+DNF|Jana Van der Veken|BEL
+DNF|Mirte Klerkx|NED
+DNF|Elena Debaele|BEL
+DNF|Diana Steffenhagen|GER

@@ -1,0 +1,37 @@
+1|Niels Vandeputte|BEL
+2|Felipe Orts Lloret|ESP
+3|Michael Vanthourenhout|BEL
+4|Joris Nieuwenhuis|NED
+5|Toon Aerts|BEL
+6|Lars van der Haar|NED
+7|Ryan Kamp|NED
+8|Mees Hendrikx|NED
+9|Joran Wyseure|BEL
+10|Pim Ronhaar|NED
+11|Jente Michels|BEL
+12|Kevin Kuhn|SUI
+13|Wout Janssen|BEL
+14|Victor Van de Putte|BEL
+15|Toon Vandebosch|BEL
+16|Gerben Kuypers|BEL
+17|Witse Meeussen|BEL
+18|Danny van Lierop|NED
+19|Anton Ferdinande|BEL
+20|Bailey Groenendaal|DEN
+21|Arne Baers|BEL
+22|Arthur Soontjens|BEL
+23|Tom Meeusen|BEL
+24|Cameron Mason|GBR
+25|Rémon Delnoije|NED
+26|Federico Ceolin|ITA
+27|Elio Clarysse|BEL
+28|Thomas Verheyen|BEL
+29|Ruben Lembrechts|BEL
+30|Jonas Mertens|BEL
+31|Hugo Mulon|FRA
+32|Kieran Jarvis|GBR
+33|Yuta Okayama|JPN
+34|Kevin Blanpain|FRA
+35|Mickaël Crispin|FRA
+36|William Lezard|GBR
+DNF|Rune Smits|BEL

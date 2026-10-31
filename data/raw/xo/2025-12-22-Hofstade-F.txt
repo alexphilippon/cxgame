@@ -1,0 +1,60 @@
+1|Lucinda Brand|NED
+2|Shirin van Anrooij|NED
+3|Manon Bakker|NED
+4|Laura Verdonschot|BEL
+5|Julie Brouwers|BEL
+6|Rebecca Gariboldi|ITA
+7|Line Burquier|FRA
+8|Katerina Hladiková|CZE
+9|Lauriane Duraffourg|FRA
+10|Puck Langenbarg|NED
+11|Lison Desprez|FRA
+12|Loes Sels|BEL
+13|Perrine Clauzel|FRA
+14|Judith Krahl|GER
+15|Sterre Vervloet|BEL
+16|Sanne Laurijssen|BEL
+17|Noï Moes|NED
+18|Sara Sonnemans|NED
+19|Femke Lenferink|NED
+20|Alexe De Raedemaeker|BEL
+21|Adèle Hurteloup|FRA
+22|Grace Inglis|GBR
+23|Regina Bruchner|HUN
+24|Sera Gademan|NED
+25|Emeline Detilleux|BEL
+26|Meg De Bruyne|BEL
+27|Gaia Santin|ITA
+28|Juline Delcommune|BEL
+29|Stefanie Paul|GER
+30|Antonie Cermanová|CZE
+31|Tine Rombouts|BEL
+32|Floor Van Elsacker|BEL
+33|Hanka Viková|CZE
+34|Faustine Villar Thiery|FRA
+35|Lien Schampaert|BEL
+36|Veronika Sedláčková|CZE
+37|Emily Shields|USA
+38|Selena Bas|NED
+39|Ilaria Tambosco|ITA
+40|Tessa Zwaenepoel|BEL
+41|Lara Defour|BEL
+42|Alana Polfliet|BEL
+43|Meadow Willems|NED
+44|Yelena Dewaele|BEL
+45|Lies'l Schevenels|BEL
+46|Laure Huybrechts|BEL
+47|Bieke Croux|BEL
+48|Diana Steffenhagen|GER
+49|Nadia Casasola|ITA
+50|Shanaya Esther Schollaert|BEL
+51|Giorgia Secchi|ITA
+52|Carla Jiménez Vera y Frías|ESP
+53|Julia-Katharina Pfeil|GER
+54|Friederike Michels|GER
+55|Maja Jóźkowicz|POL
+56|Larissa Rossner|SUI
+57|Michelle Schätti|SUI
+58|Emma Dall'Antonia|ITA
+59|Elena Debaele|BEL
+DNF|Kiona Crabbé|BEL

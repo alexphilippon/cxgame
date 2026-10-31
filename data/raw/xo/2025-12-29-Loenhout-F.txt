@@ -1,0 +1,75 @@
+1|Lucinda Brand|NED
+2|Kristyna Zemanová|CZE
+3|Manon Bakker|NED
+4|Zoe Backstedt|GBR
+5|Marion Norbert Riberolle|BEL
+6|Annemarie Worst|NED
+7|Larissa Hartog|NED
+8|Julie Brouwers|BEL
+9|Marie Schreiber|LUX
+10|Rebecca Gariboldi|ITA
+11|Yara Kastelijn|NED
+12|Lauren Molengraaf|NED
+13|Laura Verdonschot|BEL
+14|Lucia Bramati|ITA
+15|Sara Sonnemans|NED
+16|Bloeme Kalis|NED
+17|Anniek Mos|NED
+18|Noï Moes|NED
+19|Viktória Chladonová|SVK
+20|Sanne Laurijssen|BEL
+21|Marlène Petitgirard|FRA
+22|Marthe Truyen|BEL
+23|Xaydee Van Sinaey|BEL
+24|Sophie von Berswordt|NED
+25|Alice Colling|GBR
+26|Xan Crees|GBR
+27|Grace Inglis|GBR
+28|Lotte Baele|BEL
+29|Freya Whiteside|IRL
+30|Regina Bruchner|HUN
+31|Pem Hoefmans|NED
+32|Camille Devigne|FRA
+33|Adèle Hurteloup|FRA
+34|Femke Lenferink|NED
+35|Sera Gademan|NED
+36|Nette Coppens|BEL
+37|Floor Van Elsacker|BEL
+38|Mille Foldager Nielsen|DEN
+39|Ann-Dorthe Lisbygd|DEN
+40|Julia van der Meulen|NED
+41|Hope Inglis|GBR
+42|Meadow Willems|NED
+43|Lara Defour|BEL
+44|Kacey Eyeington|GBR
+45|Jorja Bond|USA
+46|Selena Bas|NED
+47|Hanka Viková|CZE
+48|Mathilde Tritz|FRA
+49|Thea Persson|SWE
+50|Lea Coraboeuf|FRA
+51|Alexe De Raedemaeker|BEL
+52|Siobhan Kelly|CAN
+53|Johanna Lavens|FRA
+54|Meg De Bruyne|BEL
+55|Madeline Cooper|GBR
+56|Emily Shields|USA
+57|Ana Lopez Burgos|ESP
+58|Tomke Windelband|GER
+59|Rosalie Denk|AUT
+60|Tessa Zwaenepoel|BEL
+61|Diana Steffenhagen|GER
+62|Britt Kooremans|BEL
+63|Tifenn Yannic|FRA
+64|Anna Patterson|GBR
+65|Alana Polfliet|BEL
+66|Hilde Huijbregts|NED
+67|Julia-Katharina Pfeil|GER
+68|Lucie Adam|FRA
+69|Esme Wiley|GBR
+70|Florence Lissaman|GBR
+71|Carla Jimenez Vera y Frias|ESP
+72|Yulizh Menant|FRA
+DNF|Anne Knijnenburg|NED
+DNF|Loes Sels|BEL
+DNF|Elisa Ferri|ITA

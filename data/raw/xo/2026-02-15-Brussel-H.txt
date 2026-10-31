@@ -1,0 +1,24 @@
+1|Michael Vanthourenhout|BEL
+2|Niels Vandeputte|BEL
+3|Gerben Kuypers|BEL
+4|Felipe Orts Lloret|ESP
+5|Joris Nieuwenhuis|NED
+6|Cameron Mason|GBR
+7|Kevin Kuhn|SUI
+8|Toon Vandebosch|BEL
+9|Jente Michels|BEL
+10|Joran Wyseure|BEL
+11|Pim Ronhaar|NED
+12|Witse Meeussen|BEL
+13|Lars van der Haar|NED
+14|Victor van de Putte|BEL
+15|Arne Baers|BEL
+16|Ryan Kamp|NED
+17|Danny van Lierop|NED
+18|Ugo Ananie|FRA
+19|Sander De Vet|BEL
+20|Thomas Verheyen|BEL
+21|Mickaël Crispin|FRA
+22|Yuta Okayama|JPN
+23|William Lezard|GBR
+DNF|Elio Clarysse|BEL

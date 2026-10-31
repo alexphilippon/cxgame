@@ -1,0 +1,59 @@
+1|Lucinda Brand|NED
+2|Puck Pieterse|NED
+3|Zoe Backstedt|GBR
+4|Jolanda Neff|SUI
+5|Manon Bakker|NED
+6|Marion Norbert Riberolle|BEL
+7|Rafaelle Carrier|CAN
+8|Puck Langenbarg|NED
+9|Kiona Crabbé|BEL
+10|Vida Lopez de San Roman|USA
+11|Rebekka Estermann|SUI
+12|Giorgia Pellizotti|ITA
+13|Katherine Sarkisov|USA
+14|Anne Knijnenburg|NED
+15|Anniek Mos|NED
+16|Sophie Von Berswordt|NED
+17|Nico Knoll|CAN
+18|Xan Crees|GBR
+19|Carlotta Borello|ITA
+20|Anna Kay|GBR
+21|Elena Day|GBR
+22|Alexa Haviland|CAN
+23|Anna Panusová|CZE
+24|Femke Lenferink|NED
+25|Regina Bruchner|HUN
+26|Freya Whiteside|IRL
+27|Camille Devigne|FRA
+28|Alice Colling|GBR
+29|Lea Coraboeuf|FRA
+30|Mille Foldager Nielsen|DEN
+31|Clare Hauber|CAN
+32|Hanka Viková|CZE
+33|Xenna De Bruyckere|BEL
+34|Ellie Mitchinson|GBR
+35|Dorothee Perron|CAN
+36|Elly Moore|CAN
+37|Nette Coppens|BEL
+38|Anna Patterson|GBR
+39|Meadow Willems|NED
+40|Katja Verkerk|CAN
+41|Johanna Lavens|FRA
+42|Madeline Cooper|GBR
+43|Tessa Zwaenepoel|BEL
+44|Shanaya Esther Schollaert|BEL
+45|Rosalie Denk|AUT
+46|Emily De Cuyper|BEL
+47|Faustine Villar Thiery|FRA
+48|Emeline Detilleux|BEL
+49|Iris Gray|GBR
+50|Tifenn Yannic|FRA
+51|Bieke Croux|BEL
+52|Claire MacKinnon|CAN
+53|Jade Auvray|FRA
+54|Amaranta Concari|ITA
+55|Elisa Duchemin|FRA
+56|Isabelle Dalgleish|GBR
+DNF|Letizia Borghesi|ITA
+DNF|Yulizh Menant|FRA
+DNF|Amy Perryman|GBR
