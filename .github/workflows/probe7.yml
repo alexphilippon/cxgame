@@ -1,0 +1,18 @@
+name: Sonde 7
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install playwright && playwright install --with-deps chromium
+      - run: python3 tools/probe7.py
+      - name: Enregistrer
+        if: always()
+        run: |
+          git config user.name "cxgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/raw/probe7
+          git diff --cached --quiet || (git commit -m "Sonde 7 (clics sur les résultats)" && git pull --rebase -q && git push)
