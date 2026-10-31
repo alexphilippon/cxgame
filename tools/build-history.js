@@ -41,8 +41,17 @@ if (fs.existsSync(sdir)) for (const f of fs.readdirSync(sdir).filter((x) => /^sp
     if (rr.length) add('SP', h.place, h.date, c.cat, g, rr, false);
   }
 }
+// HG Cross (ex-Exact Cross) : classements Chronorace/ACN Timing (data/raw/hg/*.json) ; juniors = U19
+const hdir = path.join(__dirname, '..', 'data', 'raw', 'hg');
+const HGC = { 31: ['ELI', 'H'], 32: ['ELI', 'F'], 34: ['U19', 'H'], 35: ['U19', 'F'] };
+if (fs.existsSync(hdir)) for (const f of fs.readdirSync(hdir).filter((x) => x.endsWith('.json'))) {
+  const j = JSON.parse(fs.readFileSync(path.join(hdir, f), 'utf8')), c = HGC[j.group];
+  if (!c || j.date < `${y0}-08-01` || j.date > `${y0 + 1}-07-31`) continue;
+  const rows = j.rows.map((r) => (typeof r[0] === 'number' ? { rank: r[0], name: r[1], nat: r[2] } : { status: r[0], name: r[1], nat: r[2] }));
+  if (rows.length) add('HG', j.place, j.date, c[0], c[1], rows, false);
+}
 races.sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
-const out = { season, generated: new Date().toISOString().slice(0, 10), source: 'UCI Coupe du monde de cyclo-cross (ChronoRace) et Superprestige (classements officiels)', races, ath };
+const out = { season, generated: new Date().toISOString().slice(0, 10), source: 'UCI Coupe du monde de cyclo-cross (ChronoRace) Superprestige et HG Cross (classements officiels)', races, ath };
 fs.writeFileSync(path.join(__dirname, '..', 'data', `history-${season}.json`), JSON.stringify(out));
 console.log(races.length + ' courses, ' + Object.keys(ath).length + ' coureurs (' + Object.values(ath).filter((a) => a.listed).length + ' dans la liste UCI)');
 warn.forEach((w) => console.log(w));
