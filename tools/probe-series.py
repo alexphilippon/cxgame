@@ -12,7 +12,17 @@ def main():
         return r.read(), r.headers.get('Content-Type', '')
     def save(name, u):
         try:
-            b, ct = get(u); open(f'{d}/{name}', 'wb').write(b); log.append((name, u, 200, ct, len(b))); return b
+            b, ct = get(u)
+            out = b
+            if b[:4] != b'%PDF':   # texte : on masque les clés et jetons (GitHub bloque les pushs qui en contiennent)
+                t = b.decode('utf-8', 'ignore')
+                t = re.sub(r'(?<![A-Za-z0-9_/-])(?=[A-Za-z0-9_-]*\d)(?=[A-Za-z0-9_-]*[A-Za-z])[A-Za-z0-9_-]{32,}(?![A-Za-z0-9_/-])', 'REDACTED', t)
+                out = t.encode()
+            if name.endswith('.js'):   # scripts : on ne garde que les adresses et chemins d'API
+                t = b.decode('utf-8', 'ignore')
+                found = set(re.findall(r'https?://[^\s"\'`)<>\\]{6,120}', t)) | set(re.findall(r'["\'`](/?(?:api|rest|data|events|results|ctx|cms|rankings?)[A-Za-z0-9_/\-.{}$:]{0,80})["\'`]', t))
+                out = '\n'.join(sorted(found)[:400]).encode(); name = name[:-3] + '.urls.txt'
+            open(f'{d}/{name}', 'wb').write(out); log.append((name, u, 200, ct, len(b))); return b
         except Exception as e:
             log.append((name, u, str(e), '', 0)); return b''
     # Chronorace (HG Cross 26-27)
