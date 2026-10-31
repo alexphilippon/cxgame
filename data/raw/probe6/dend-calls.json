@@ -1,0 +1,20 @@
+[
+ {
+  "url": "https://auth.chronorace.be/.well-known/openid-configuration",
+  "status": 200,
+  "len": 1014,
+  "head": "{\"issuer\":\"https://auth.chronorace.be\",\"authorization_endpoint\":\"https://auth.chronorace.be/connect/authorize\",\"token_endpoint\":\"https://auth.chronorace.be/connect/token\",\"userinfo_endpoint\":\"https://auth.chronorace.be/connect/userinfo\",\"end_session_endpoint\":\"https://auth.chronorace.be/connect/endsession\",\"jwks_uri\":\"https://auth.chronorace.be/.well-known/jwks\",\"grant_types_supported\":[\"authorization_code\",\"refresh_token\",\"client_credentials\"],\"response_types_supported\":[\"code\"],\"response_modes_supported\":[\"query\"],\"code_challenge_methods_supported\":[\"S256\"],\"token_endpoint_auth_methods_suppo"
+ },
+ {
+  "url": "https://prod.chronorace.be/api/Event/view/2156533144205845",
+  "status": 200,
+  "len": 698,
+  "head": "{\"SecurityContextId\":0,\"ManufacturerSecurityContextId\":0,\"Flags\":2,\"TranslationContext\":\"\",\"Tags\":[],\"Parameters\":{\"ResultEventLogo\":\"https://chronorace.blob.core.windows.net/webresources/assets/20261011_hgcross/logo.jpg\",\"ResultHeaderLogo\":\"https://chronorace.blob.core.windows.net/webresources/assets/20261011_hgcross/header.jpg\",\"Redirect\":\"https://www.acn-timing.com/?lng=EN#/events/2156533144205845/ctx/20261011_hg/cms\"},\"EventId\":2156533144205845,\"StartDate\":\"2026-10-11T00:00:00\",\"EndDate\":\"2026-10-11T00:00:00\",\"Date\":\"11/10/2026\",\"Country\":\"BEL\",\"Location\":\"Dendermonde\",\"Title\":\"HG Cross - "
+ },
+ {
+  "url": "https://results.chronorace.be/api/results/generic/uci/20261011_hg/dh?key=cms",
+  "status": 200,
+  "len": 2231,
+  "head": "{\"Name\":\"20261011_hg\",\"DisplayName\":\"HG Cross Dendermonde - Dendermonde, 11 Oct 2026, BEL\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"CLAS\",\"Name\":\"CLAS\",\"DisplayName\":\"#RESULTS\",\"Description\":\"\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"CRO\",\"ParentId\":\"CLAS\",\"Name\":\"CRO\",\"DisplayName\":\"Cyclocross\",\"Description\":\"\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"CG_31\",\"ParentId\":\"CRO\",\"Name\":\"CROME\",\"DisplayName\":\"Men Elite\",\"Description\":\"\",\"Type\":\"Folder\",\"Childs\":[{\"Permission\":\"admin\",\"Id\":\"197998_31\",\"ParentId\":\"CG_31\",\"Name\":\"197998_31\",\"DisplayName\":\"Results\",\"Description\":\"\",\"Route\":\"{\\\"Route\\\": \\\"events.genericresul"
+ }
+]

@@ -1,0 +1,20 @@
+[
+ {
+  "url": "https://auth.chronorace.be/.well-known/openid-configuration",
+  "status": 200,
+  "len": 1014,
+  "head": "{\"issuer\":\"https://auth.chronorace.be\",\"authorization_endpoint\":\"https://auth.chronorace.be/connect/authorize\",\"token_endpoint\":\"https://auth.chronorace.be/connect/token\",\"userinfo_endpoint\":\"https://auth.chronorace.be/connect/userinfo\",\"end_session_endpoint\":\"https://auth.chronorace.be/connect/endsession\",\"jwks_uri\":\"https://auth.chronorace.be/.well-known/jwks\",\"grant_types_supported\":[\"authorization_code\",\"refresh_token\",\"client_credentials\"],\"response_types_supported\":[\"code\"],\"response_modes_supported\":[\"query\"],\"code_challenge_methods_supported\":[\"S256\"],\"token_endpoint_auth_methods_suppo"
+ },
+ {
+  "url": "https://prod.chronorace.be/api/Event/view/2152959731400316",
+  "status": 200,
+  "len": 738,
+  "head": "{\"SecurityContextId\":0,\"ManufacturerSecurityContextId\":0,\"Flags\":2,\"TranslationContext\":\"\",\"Tags\":[],\"Parameters\":{\"ResultEventLogo\":\"http://chronorace.blob.core.windows.net/webresources/img/headers/G2024_1573_Chronorace_Results_Pages.jpg\",\"ResultHeaderLogo\":\"http://chronorace.blob.core.windows.net/webresources/img/headers/G2025_1192_Chronorace_Results_Pages2.jpg\",\"Redirect\":\"https://www.acn-timing.com/?lng=EN#/events/2152959731400316/ctx/20251004_exact/cms\"},\"EventId\":2152959731400316,\"StartDate\":\"2025-10-04T00:00:00\",\"EndDate\":\"2025-10-04T00:00:00\",\"Date\":\"04/10/2025\",\"Country\":\"BEL\",\"Locati"
+ },
+ {
+  "url": "https://results.chronorace.be/api/results/generic/uci/20251004_exact/dh?key=cms",
+  "status": 200,
+  "len": 2148,
+  "head": "{\"Name\":\"20251004_exact\",\"DisplayName\":\"Exact Cross Meulebeke - 04/10/2025 Meulebeke (BEL)\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"CLAS\",\"Name\":\"CLAS\",\"DisplayName\":\"#RESULTS\",\"Description\":\"\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"CRO\",\"ParentId\":\"CLAS\",\"Name\":\"CRO\",\"DisplayName\":\"Cyclocross\",\"Description\":\"\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"CG_31\",\"ParentId\":\"CRO\",\"Name\":\"CROME\",\"DisplayName\":\"Men Elite\",\"Description\":\"\",\"Type\":\"Folder\",\"Childs\":[{\"Id\":\"197998_31\",\"ParentId\":\"CG_31\",\"Name\":\"197998_31\",\"DisplayName\":\"Results\",\"Description\":\"\",\"Route\":\"{\\\"Route\\\": \\\"events.genericresult\\\", \\\"Params\\\":{\\\"k"
+ }
+]
