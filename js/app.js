@@ -458,12 +458,40 @@
       <span class="rcard__time">Départ ${esc(hourText(start))}${race.timeKnown ? '' : ' <em class="sub">(provisoire)</em>'}</span>${wait}${opts.extra ? `<span class="rcard__x">${opts.extra}</span>` : ''}
       ${race.cancelled || !lockedRace(race) ? '' : `<button type="button" class="morebtn" data-racecard="${race.id}">${done ? 'Résultat détaillé' : 'Stats'}</button>`}${!done && !race.cancelled && startListOf(race) ? `<button type="button" class="morebtn morebtn--sl" data-startlist="${race.id}">Start list</button>` : ''}</div>`;
   }
+  /* ---------- Rentabilité de mon choix : coureur et course comparés aux autres joueurs, note en étoiles ---------- */
+  const f1 = (x) => (Math.round(x * 10) / 10).toString().replace('.', ',');
+  function starRow(v) {
+    return `<span class="flk" role="img" aria-label="${f1(v)} étoiles sur 5">${[0, 1, 2, 3, 4].map((i) => `<span class="flk__i"><i style="width:${Math.round(100 * Math.max(0, Math.min(1, v - i)))}%">★</i>★</span>`).join('')}</span>`;
+  }
+  function anaCmp(title, who, mine, avg, n, max, min) {
+    const head = `<h4 class="anab__t">${esc(title)}</h4>`;
+    if (avg == null || n < min) return `<section class="anab anab--wait">${head}<p class="anab__q">${who}</p><p class="anab__w">Calcul en attente : pas encore assez de données (${n} autre${n > 1 ? 's' : ''} joueur${n > 1 ? 's' : ''}, ${min} nécessaires).</p></section>`;
+    const d = Math.round(mine - avg), top = Math.max(mine, avg, 1);
+    return `<section class="anab">${head}<p class="anab__q">${who}</p>
+      <div class="anab__bars"><span class="anab__l">Toi</span><span class="anab__bar"><i class="is-me" style="width:${Math.round(100 * mine / top)}%"></i></span><b>${mine} pt${mine > 1 ? 's' : ''}</b>
+      <span class="anab__l">Moyenne</span><span class="anab__bar"><i style="width:${Math.round(100 * avg / top)}%"></i></span><b>${f1(avg)} pt${avg >= 2 ? 's' : ''}</b></div>
+      <p class="anab__d ${d > 0 ? 'is-up' : d < 0 ? 'is-dn' : ''}">${d > 0 ? '+' + d + ' pts au-dessus' : d < 0 ? Math.abs(d) + ' pts en dessous' : 'Dans la moyenne'}<span> · ${n} autre${n > 1 ? 's' : ''} joueur${n > 1 ? 's' : ''}</span></p></section>`;
+  }
+  function analysisBlock(race) {
+    if (race.cancelled || !resOf(race)) return '';
+    const an = G.pickAnalysis(race, state.me, state.picks, state.results, state.players.map((p) => p.id));
+    if (!an) return '';
+    const nm = esc(nameOf(an.ath));
+    const lab = ['Raté', 'Décevant', 'Correct', 'Bon pick', 'Très bon pick', 'Coup de maître'];
+    const concl = an.rating == null
+      ? '<p class="anab__w">Note du choix : calcul en attente, pas encore assez de données.</p>'
+      : `<div class="ana__note" title="Note = 5 × (0,5 × √(points ÷ max) + 0,25 × écart à la moyenne de la course + 0,25 × écart à la moyenne du coureur).">${starRow(an.rating)}<b>${f1(an.rating)} / 5</b><span>${lab[Math.min(5, Math.max(0, Math.ceil(an.rating - 0.5)))] }</span>${an.provisional ? '<em>provisoire : s’affinera quand d’autres joueurs auront pris ce coureur dans le desk</em>' : '<em>évolue si d’autres joueurs prennent ce coureur dans le desk</em>'}</div>`;
+    return `<div class="ana"><div class="ana__grid">
+      ${anaCmp('Rentabilité du coureur', `Ce que ${nm} t’a rapporté, face aux autres joueurs qui l’ont pris dans ce desk`, an.mine, an.rider.avg, an.rider.n, an.max, an.min)}
+      ${anaCmp('Rentabilité de la course', `Ce que cette course t’a rapporté, face aux autres joueurs, quel que soit leur coureur`, an.mine, an.race.avg, an.race.n, an.max, an.min)}
+      </div>${concl}</div>`;
+  }
   function raceRow(race, session) {
     const pick = race.cancelled ? '<span class="none">Course annulée : aucun choix</span>' : lockedRace(race) ? pickSummary(state.me, race) : pickEditor(race, session);
     return `<li class="race race--card race--${race.gender}${race.cancelled ? ' race--off' : ''}${doneCls(race)}">
       ${raceCard(race, { noWait: true, extra: race.cancelled ? '<span class="flag flag--off">Annulée</span>' : slLink(race) })}
       <div class="race__main"><div class="race__pick">${pick}</div>
-      <div class="race__out">${outcome(race, state.me)}</div></div>
+      <div class="race__out">${outcome(race, state.me)}</div>${analysisBlock(race)}</div>
     </li>`;
   }
   function sessionCard(session, indexLabel) {
@@ -487,7 +515,7 @@
           <p class="session__meta">${indexLabel ? indexLabel + ', ' : ''}deadline ${dlShort(dl)}${avgTxt}</p>
         </div>
         <div class="session__side">${stateBadge(session)}${open
-    ? `<span class="count${n === live.length ? ' count--ok' : ''}">${n}/${live.length} choisis</span>${nd ? `<span class="count count--draft">${nd} brouillon${nd > 1 ? 's' : ''}</span>` : ''}`
+    ? `<span class="count${n === live.length ? ' count--ok' : ''}">${n}/${live.length} choisis</span>${nd ? `<span class="count count--draft">${nd} brouillon${nd > 1 ? 's' : ''}</span>` : ''}${remindBtn(session)}`
     : `<span class="count count--pts">${mine} pts</span>`}</div>
       </header>
       ${open && live.some((r) => (myPicks()[r.id] || {}).a) ? `<p class="session__draft">${nd === live.filter((r) => (myPicks()[r.id] || {}).a).length ? '📝 Cette session est en brouillon : ses choix ne comptent pas comme faits (ils seront confirmés automatiquement à la deadline).' : ''} <button type="button" class="linkbtn" data-draft-session="${session.id}|${sessionDraftMode(session) ? 0 : 1}">${sessionDraftMode(session) ? 'Tout confirmer' : 'Tout passer en brouillon'}</button></p>` : ''}
@@ -530,6 +558,44 @@
       <span class="ff__g">${chip('gender', 'F', 'F', 'ffc--F')}${chip('gender', 'H', 'H', 'ffc--H')}</span>
       ${any ? '<button type="button" class="ff__x" data-ff="clear">Tout afficher</button>' : ''}</div>`;
   }
+  /* ---------- Tendances : jauges indicatives, une fois la deadline passée ---------- */
+  const trendsAny = (key) => scopeSessions(key).some((s) => sortedRaces(s).some((r) => !r.cancelled && lockedRace(r)));
+  function shareOf(races) {
+    const hit = {}, who = new Set();
+    state.players.forEach((p) => {
+      const seen = new Set();
+      races.forEach((r) => { const pk = (state.picks[p.id] || {})[r.id]; if (pk && pk.a) { seen.add(pk.a); who.add(p.id); } });
+      seen.forEach((id) => { hit[id] = (hit[id] || 0) + 1; });
+    });
+    const n = who.size;
+    return { n, list: Object.keys(hit).map((id) => ({ id, pct: Math.round(100 * hit[id] / n), k: hit[id] })).sort((x, y) => y.k - x.k || nameOf(x.id).localeCompare(nameOf(y.id), 'fr')) };
+  }
+  function trendsView(key, topCum) {
+    const live = scopeSessions(key).flatMap((s) => sortedRaces(s)).filter((r) => !r.cancelled && lockedRace(r) && passF(r));
+    if (!live.length) return '<p class="empty">Les tendances apparaissent à la deadline de la première session.</p>';
+    const cum = shareOf(live).list.slice(0, topCum || 8);
+    const g = (id) => (ATH[id] ? ` <span class="gender gender--${ATH[id].gender}">${ATH[id].gender === 'M' ? 'H' : 'F'}</span>` : '');
+    return `<p class="hint">Indicatif et partiel : on ne montre que les coureurs les plus pris.</p>
+      <div class="trend"><h3 class="subtitle">Les coureurs les plus pris depuis le début ${info('Part des joueurs qui ont déjà choisi ce coureur au moins une fois dans ce desk, sur les courses dont la deadline est passée. Mise à jour à chaque deadline.')}</h3>
+      <ul class="gauges">${cum.map((x) => gauge(x.id, x.pct, g(x.id))).join('')}</ul></div>`;
+  }
+  /** Coup à contre-courant : un coureur choisi par une minorité de joueurs (pas le plus choisi) et qui a pourtant marqué gros. */
+  function bestContrarian(s) {
+    let best = null;
+    active(sortedRaces(s)).forEach((r) => {
+      if (!resOf(r)) return;
+      const { picks, cnt } = racePeople(r), N = picks.length, max = Math.max(0, ...Object.values(cnt));
+      Object.keys(cnt).forEach((a) => {
+        if (cnt[a] >= max || cnt[a] / N > 0.5) return;
+        const who = picks.filter((x) => x.ath === a).map((x) => x.p);
+        const pts = G.scoreRace(r, (state.picks[who[0].id] || {})[r.id], state.results) || 0;
+        if (pts <= 0) return;
+        const score = pts * (1 - cnt[a] / N);
+        if (!best || score > best.score || (score === best.score && cnt[a] < best.n)) best = { score, race: r, ath: a, who, n: cnt[a], N, pts, top: max };
+      });
+    });
+    return best;
+  }
   function deskPanel(key) {
     const hasW = D.WORLDS.desk === key;
     const sessions = scopeSessions(key);
@@ -540,7 +606,7 @@
     const chosen = sessions.reduce((n, s) => n + confirmedN(active(G.sessionRaces(s))), 0), drafts = sessions.reduce((n, s) => n + draftN(active(G.sessionRaces(s))), 0);
     const title = dk.name;
     const meta = `${dmOf(dk.from)} au ${dmOf(dk.to)}, ${total} courses${hasW ? ' dont les Mondiaux d’Oostende (29 au 31 janvier)' : ''}`;
-    const tabs = [['mine', 'Mon desk'], ['recap', 'Récap des joueurs'], ['taken', 'Coureurs pris']].map(([id, label]) =>
+    const tabs = [['mine', 'Mon desk'], ['recap', 'Récap des joueurs'], ['taken', 'Coureurs pris']].concat(trendsAny(key) ? [['trend', 'Tendances']] : []).map(([id, label]) =>
       `<button type="button" role="tab" class="seg__btn" aria-selected="${sub === id}" data-sub="${id}" data-key="${key}">${label}</button>`).join('');
     let body;
     if (sub === 'mine') {
@@ -548,6 +614,7 @@
       body = (sessions.some(hasF) ? sessions.map((s) => hasF(s) ? (s === D.WORLDS ? worldsBox() : '') + sessionCard(s, s === D.WORLDS ? 'Championnats du monde, Oostende' : `session ${sessions.filter((x) => x !== D.WORLDS).indexOf(s) + 1} sur ${sessions.filter((x) => x !== D.WORLDS).length}`) : '').join('') : '<p class="empty">Aucune course avec ces filtres.</p>')
         + '<p class="hint">Heures de départ provisoires tant qu’elles ne sont pas confirmées.</p>';
     } else if (sub === 'recap') body = (hasW ? worldsBox() : '') + recapView(key);
+    else if (sub === 'trend' && trendsAny(key)) body = trendsView(key);
     else body = takenView(key);
     return `<section>
       <header class="deskhead">
@@ -674,6 +741,7 @@
     return `<section>
       <p class="backlink">${hm.next ? `<button type="button" class="linkbtn" data-skip="${s.id}">Passer à la session suivante →</button>` : ''}</p>
       <article class="forfait forfait--done"><div class="forfait__main">${stateBadge(s)}<h2 class="forfait__name">${fl(s.name)}</h2><p class="forfait__where">Tu as marqué <strong>${mine} pts</strong> sur cette session.</p></div></article>
+      ${(() => { const bc = bestContrarian(s); return bc ? `<div class="bilan__card"><h4>Le coup à contre-courant</h4><p><span class="wp__sk">${avatarOf(bc.ath, 'sm')}<b>${skn(bc.ath)}</b></span> à ${fl(placeLabel(bc.race))} ${discBadge(bc.race)}<span class="gender gender--${bc.race.gender}">${genderLabel(bc.race)}</span></p><p class="sub">Choisi par ${esc(bc.who.map((p) => p.name).join(', '))} seulement (${bc.n} sur ${bc.N}), alors que ${bc.top} joueurs en avaient pris un autre. Résultat : +${bc.pts} points.</p></div>` : ''; })()}
       <h3 class="subtitle">Choix de tous les joueurs</h3>${recapTable(s)}
     </section>`;
   }
@@ -941,7 +1009,8 @@
   };
   function accountBar() {
     const name = state.user.name || '', rk = myRanks(), me = playerOf(state.me);
-    return `<div class="acct"><div class="acct__who"><span class="acct__avw">${pav(Object.assign({}, me, { name }), 'lg')}</span>
+    const cam = `<button type="button" class="acct__cam" data-photo title="${me.blocked ? 'Photo retirée par l’organisateur' : me.photo ? 'Changer ma photo' : 'Ajouter ma photo'}" aria-label="${me.photo ? 'Changer ma photo' : 'Ajouter ma photo'}"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 8h3l1.6-2h6.8L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13.5" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>`;
+    return `<div class="acct"><div class="acct__who"><span class="acct__avw"><button type="button" class="acct__avb" data-photo aria-label="${me.photo ? 'Changer ma photo' : 'Ajouter ma photo'}">${pav(Object.assign({}, me, { name }), 'lg')}</button>${cam}</span>
       <div class="acct__id"><span class="acct__hi">Mon compte</span><strong class="acct__name">${esc(name)}</strong></div></div>
       ${globeBoard(rk)}
       <div class="acct__btns"><button type="button" class="btn btn--sm btn--ghost acct__ib" data-settings aria-label="Mes réglages" title="Mes réglages"><span class="lbl-lg">Mes réglages</span><svg class="ico-sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></button></div></div>`;
@@ -961,6 +1030,7 @@
     const dot = (k, l) => `<button type="button" class="th--${k}" data-theme-set="${k}" aria-pressed="${curTheme === k}" aria-label="Ambiance ${l}"></button>`;
     openModal(`<h2>Mes réglages</h2>
       <section class="set"><h3>Mon profil</h3>
+        <div class="set__row"><span>Photo de profil</span><button type="button" class="btn btn--ghost btn--sm" data-photo>${playerOf(state.me).photo ? 'Changer' : 'Ajouter'}</button></div>
         <div class="set__row"><span>Nom affiché<strong>${esc(state.user.name || '')}</strong></span><button type="button" class="btn btn--ghost btn--sm" data-auth="rename">Changer</button></div>
         ${state.user.email ? `<div class="set__row"><span>Adresse e-mail<strong>${esc(state.user.email)}</strong></span></div>` : ''}
       </section>
@@ -1047,6 +1117,148 @@
       render();
     }
   }
+  /* ---------- Rappel agenda (fichier .ics ou lien Google Agenda) ---------- */
+  const REMIND = [['1h', '1 h avant la deadline'], ['2h', '2 h avant la deadline'], ['24h', '24 h avant la deadline'], ['eve22', 'La veille à 22 h'], ['eve20', 'La veille à 20 h']];
+  const FMT_YMD = new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' });
+  function remindAt(dl, key) {
+    if (key === '1h') return new Date(dl - 3600e3);
+    if (key === '2h') return new Date(dl - 7200e3);
+    if (key === '24h') return new Date(dl - 86400e3);
+    const [y, m, d] = FMT_YMD.format(dl).split('-').map(Number);
+    const prev = new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
+    return G.parisInstant(prev, key === 'eve22' ? '22:00' : '20:00');
+  }
+  const remindKey = (sid) => { try { return localStorage.getItem('cxgame.remind.' + sid) || ''; } catch (e) { return ''; } };
+  const remindSave = (sid, k) => { try { if (k) localStorage.setItem('cxgame.remind.' + sid, k); else localStorage.removeItem('cxgame.remind.' + sid); } catch (e) { /* ignoré */ } };
+  const remindBtn = (session) => {
+    const k = remindKey(session.id);
+    const lab = k ? 'Rappel : ' + REMIND.find((r) => r[0] === k)[1].toLowerCase() : 'Me rappeler';
+    return `<button type="button" class="remindbtn${k ? ' is-on' : ''}" data-remind="${session.id}">🔔 ${lab}</button>`;
+  };
+  const icsUtc = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+  const icsEsc = (t) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  function remindEvent(session, key) {
+    const dl = G.sessionDeadline(session), start = remindAt(dl, key);
+    const title = `CX GAME : valide tes choix avant ${hourText(dl)} (${session.name})`;
+    const desc = `Deadline : ${dlShort(dl)} (heure de Paris). Tes choix se modifient jusqu’au départ de la première course.\n${location.origin}${location.pathname}`;
+    return { start, end: new Date(start.getTime() + 15 * 60e3), title, desc };
+  }
+  function remindOpen(session) {
+    const cur = remindKey(session.id) || '1h';
+    const dl = G.sessionDeadline(session);
+    openModal(`<h2>Rappel pour cette session</h2>
+      <p class="hint">${esc(session.name)} : deadline ${esc(dlShort(dl))}. Choisis quand tu veux être prévenu, puis l’agenda à relier.</p>
+      <form id="remind-form" data-sid="${session.id}"><div class="remindopts">${REMIND.slice().sort((a, b) => remindAt(dl, a[0]) - remindAt(dl, b[0])).map(([k, l]) => `<label><input type="radio" name="rk" value="${k}"${k === cur ? ' checked' : ''}> ${l} <span class="sub">${esc(dlShort(remindAt(dl, k)))}</span></label>`).join('')}</div>
+      <div class="remindbtns"><button type="submit" class="btn btn--brique" data-kind="ics">Ajouter à mon agenda</button><button type="submit" class="btn" data-kind="google">Google Agenda</button>${remindKey(session.id) ? '<button type="submit" class="btn btn--ghost" data-kind="off">Retirer le rappel</button>' : ''}</div>
+      <p class="hint">« Ajouter à mon agenda » télécharge un fichier : ouvre-le et choisis l’agenda (Apple, Google, Outlook…). Le rappel est un événement placé à l’heure choisie.</p></form>`);
+  }
+  document.addEventListener('submit', (e) => {
+    if (e.target.id !== 'remind-form') return;
+    e.preventDefault();
+    const kind = e.submitter && e.submitter.dataset.kind;
+    const sid = e.target.dataset.sid;
+    const session = allSessions().find((x) => String(x.id) === sid);
+    if (!session) return;
+    if (kind === 'off') { remindSave(sid, ''); closeModal(); render(); return; }
+    const key = new FormData(e.target).get('rk');
+    remindSave(sid, key);
+    const ev = remindEvent(session, key);
+    if (kind === 'google') {
+      window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(ev.title) + '&dates=' + icsUtc(ev.start) + '/' + icsUtc(ev.end) + '&details=' + encodeURIComponent(ev.desc), '_blank', 'noopener');
+    } else {
+      const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//CX GAME//FR', 'CALSCALE:GREGORIAN', 'BEGIN:VEVENT', `UID:cxgame-${sid}-${key}@cxgame`, `DTSTAMP:${icsUtc(new Date())}`, `DTSTART:${icsUtc(ev.start)}`, `DTEND:${icsUtc(ev.end)}`, `SUMMARY:${icsEsc(ev.title)}`, `DESCRIPTION:${icsEsc(ev.desc)}`, 'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:CX GAME', 'TRIGGER:PT0S', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+      a.download = `cx-game-rappel-${sid}.ics`;
+      document.body.appendChild(a); a.click(); a.remove();
+    }
+    closeModal(); render();
+  });
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-remind]');
+    if (!b) return;
+    const session = allSessions().find((x) => String(x.id) === b.dataset.remind);
+    if (session) remindOpen(session);
+  });
+
+  const PH = { img: null, zoom: 1, x: 0, y: 0 };
+  function photoModal() {
+    const me = playerOf(state.me);
+    if (me.blocked) { openModal('<h3>Photo de profil</h3><p>L’organisateur a retiré ta photo : tu ne peux pas en envoyer une nouvelle pour l’instant. Si c’est une erreur, écris-lui.</p>'); return; }
+    PH.img = null; PH.zoom = 1; PH.x = 0; PH.y = 0;
+    openModal(`<h3>Photo de profil</h3><p class="hint">Visible par tous les joueurs. Une image carrée de 160 px est enregistrée : choisis une photo, cadre-la, valide.</p>
+      <div class="phs"><canvas id="ph-cv" class="phs__cv" width="240" height="240" aria-label="Aperçu de la photo"></canvas>
+      <div class="phs__ctl"><input type="file" id="ph-file" accept="image/*"><label class="phs__z">Zoom <input type="range" id="ph-zoom" min="1" max="3" step="0.02" value="1" disabled></label><p class="hint">Fais glisser l’image pour la recentrer.</p></div></div>
+      <div class="rc__act"><button type="button" class="btn" id="ph-save" disabled>Enregistrer</button>${me.photo ? '<button type="button" class="btn btn--ghost" id="ph-del">Retirer ma photo</button>' : ''}</div><p class="auth__err" id="ph-msg" role="status"></p>`);
+    phDraw();
+  }
+  function phDraw() {
+    const cv = $('#ph-cv'); if (!cv) return; const g = cv.getContext('2d'), S = cv.width;
+    g.fillStyle = '#e4e1d3'; g.fillRect(0, 0, S, S);
+    if (PH.img) {
+      const im = PH.img, base = S / Math.min(im.width, im.height), k = base * PH.zoom, w = im.width * k, h = im.height * k;
+      PH.x = Math.max(-(w - S) / 2, Math.min((w - S) / 2, PH.x)); PH.y = Math.max(-(h - S) / 2, Math.min((h - S) / 2, PH.y));
+      g.drawImage(im, (S - w) / 2 + PH.x, (S - h) / 2 + PH.y, w, h);
+    } else { g.fillStyle = '#675e51'; g.font = '600 18px sans-serif'; g.textAlign = 'center'; g.fillText('Aucune image', S / 2, S / 2); }
+  }
+  function phExport() {
+    const src = $('#ph-cv'), out = document.createElement('canvas'); out.width = out.height = 160;
+    out.getContext('2d').drawImage(src, 0, 0, 160, 160);
+    let q = 0.85, d = out.toDataURL('image/jpeg', q);
+    while (d.length > 26000 && q > 0.4) { q -= 0.1; d = out.toDataURL('image/jpeg', q); }
+    return d;
+  }
+  document.addEventListener('change', (e) => {
+    if (e.target.id === 'ph-file') {
+      const f = e.target.files && e.target.files[0]; if (!f) return;
+      if (!/^image\//.test(f.type)) { $('#ph-msg').textContent = 'Ce fichier n’est pas une image.'; return; }
+      const im = new Image(), url = URL.createObjectURL(f);
+      im.onload = () => { PH.img = im; PH.zoom = 1; PH.x = PH.y = 0; $('#ph-zoom').disabled = false; $('#ph-zoom').value = 1; $('#ph-save').disabled = false; $('#ph-msg').textContent = ''; phDraw(); URL.revokeObjectURL(url); };
+      im.onerror = () => { $('#ph-msg').textContent = 'Image illisible : essaie un JPEG ou un PNG.'; };
+      im.src = url;
+    }
+  });
+  document.addEventListener('input', (e) => { if (e.target.id === 'ph-zoom') { PH.zoom = +e.target.value; phDraw(); } });
+  (function () {
+    let drag = null;
+    document.addEventListener('pointerdown', (e) => { if (e.target.id === 'ph-cv' && PH.img) { drag = { x: e.clientX, y: e.clientY, px: PH.x, py: PH.y, k: 240 / e.target.getBoundingClientRect().width }; e.target.setPointerCapture(e.pointerId); } });
+    document.addEventListener('pointermove', (e) => { if (drag) { PH.x = drag.px + (e.clientX - drag.x) * drag.k; PH.y = drag.py + (e.clientY - drag.y) * drag.k; phDraw(); } });
+    document.addEventListener('pointerup', () => { drag = null; });
+  })();
+  document.addEventListener('click', async (e) => {
+    if (e.target.closest('[data-photo]')) { photoModal(); return; }
+    if (e.target.id === 'ph-save' && PH.img) {
+      e.target.disabled = true; $('#ph-msg').textContent = 'Enregistrement…';
+      try { await store.setPlayerPhoto(state.me, phExport()); closeModal(); } catch (err) { $('#ph-msg').textContent = 'Échec de l’enregistrement : ' + (err.message || err); e.target.disabled = false; }
+    }
+    if (e.target.id === 'ph-del') { try { await store.setPlayerPhoto(state.me, ''); closeModal(); } catch (err) { $('#ph-msg').textContent = 'Échec : ' + (err.message || err); } }
+  });
+
+  /* ---------- Course décalée : on prévient le joueur si l'heure d'une course d'une session ouverte a reculé ---------- */
+  const MV_KEY = 'cxgame.times';
+  function movedCheck() {
+    if (!state.user) return;
+    const m = $('#modal'); if (!m || !m.hidden) return;
+    let seen = {}; try { seen = JSON.parse(localStorage.getItem(MV_KEY) || 'null') || {}; } catch (e) { seen = {}; }
+    const first = !Object.keys(seen).length, t = now(), next = {};
+    Object.values(D.RACES).forEach((r) => { next[r.id] = `${r.date}T${r.time}`; });
+    try { localStorage.setItem(MV_KEY, JSON.stringify(next)); } catch (e) { /* ignoré */ }
+    if (first) return;
+    const moved = Object.values(D.RACES).filter((r) => !r.cancelled && seen[r.id] && seen[r.id] < next[r.id] && !lockedRace(r));
+    for (const r of moved) {
+      const sess = sessionOf(r); if (!sess || G.sessionState(sess, t) !== 'ouverte') continue;
+      const group = moved.filter((x) => sessionOf(x) === sess), dl = G.sessionDeadline(sess);
+      const todo = active(sortedRaces(sess)).filter((x) => !lockedRace(x) && !isConfirmed(myPicks()[x.id], x));
+      openModal(`<div class="gate"><p class="gate__kicker">Départ reporté</p>
+        <h2 class="gate__title">Tu as plus de temps pour choisir</h2>
+        ${group.map((x) => `<p class="gate__lead"><strong>${fl(placeLabel(x))}</strong> ${discBadge(x)} <span class="gender gender--${x.gender}">${genderLabel(x)}</span> : départ reporté de ${esc(seen[x.id].split('T')[1].replace(':', ' h '))} à <strong>${esc(hourText(G.raceStart(x)))}</strong>.</p>`).join('')}
+        <p class="gate__lead">Les choix de <strong>${fl(sess.name)}</strong> restent ouverts jusqu’au <strong>${esc(dlShort(dl))}</strong>.${todo.length ? ` Il te reste <strong>${todo.length}</strong> choix à faire.` : ' Tous tes choix sont déjà faits : tu peux encore les modifier.'}</p>
+        <button type="button" class="btn btn--brique gate__go" data-goto="${sess.id === 'MO' ? D.WORLDS.desk : sess.desk}" data-close>Voir mes choix</button></div>`);
+      return;
+    }
+  }
+  setInterval(() => { if (!document.hidden) movedCheck(); }, 30000); setTimeout(movedCheck, 800);
+
   document.addEventListener('submit', async (e) => {
     if (e.target.id !== 'auth-form') return;
     e.preventDefault();

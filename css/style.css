@@ -1566,3 +1566,40 @@ html[data-theme='minimal'] .rs--mine { background: #f0f0f0; }
 @media (max-width: 560px) { .rs { grid-template-columns: minmax(0, 1fr); } .rs__d { align-items: flex-start; text-align: left; padding-left: 2.6rem; } }
 .race__left { min-width: 0; } .race__pts { margin: .6rem 0 0; display: flex; align-items: center; gap: .5rem; font-size: .85rem; font-weight: 600; }
 .race__wait { margin-top: .5rem; }
+.trend { background: var(--neige); border: 2px solid var(--nuit); border-radius: 10px; padding: .9rem 1rem 1rem; margin: 0 0 1.1rem; box-shadow: 4px 5px 0 rgba(27, 43, 68, .12); }
+.trend .subtitle { margin-top: 0; }
+
+.remindbtn { cursor: pointer; border: 1.5px solid currentColor; background: transparent; color: inherit; border-radius: 999px; padding: .15rem .65rem; font-size: .8rem; font-weight: 600; }
+.remindbtn:hover { background: var(--neige); color: var(--nuit); }
+.remindbtn.is-on { background: var(--neige); color: var(--nuit); }
+.forfait__stub .remindbtn { margin-top: .7rem; }
+.remindopts { display: grid; gap: .35rem; margin: .8rem 0; }
+.remindopts label { display: flex; gap: .6rem; align-items: center; padding: .5rem .7rem; border: 1.5px solid var(--filet); border-radius: 8px; cursor: pointer; background: var(--surface-in); }
+.remindopts label:has(input:checked) { border-color: var(--nuit); background: var(--chip); font-weight: 600; }
+.remindbtns { display: flex; flex-wrap: wrap; gap: .5rem; }
+.remindbtns .btn { margin-top: .3rem; }
+html[data-theme='nuit'] .remindbtn { color: #eef4fb; }
+
+/* Rentabilité du choix */
+.ana { margin-top: .4rem; padding-top: .8rem; border-top: 1px dashed var(--filet); display: flex; flex-direction: column; gap: .8rem; }
+.ana__grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+.anab { background: var(--chip); border-radius: 10px; padding: .75rem .9rem; display: flex; flex-direction: column; gap: .4rem; min-width: 0; }
+.anab__t { margin: 0; font-size: .95rem; font-weight: 700; }
+.anab__q, .anab__w { margin: 0; font-size: .82rem; color: var(--encre-douce); }
+.anab--wait .anab__w, .ana > .anab__w { font-style: italic; }
+.anab__bars { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .3rem .6rem; font-size: .85rem; }
+.anab__bar { height: .6rem; background: var(--track); border-radius: 999px; overflow: hidden; }
+.anab__bar i { display: block; height: 100%; background: var(--encre-douce); border-radius: 999px; }
+.anab__bar i.is-me { background: var(--sapin); }
+.anab__d { margin: 0; font-size: .85rem; font-weight: 700; }
+.anab__d span { font-weight: 400; color: var(--encre-douce); }
+.anab__d.is-up { color: var(--sapin); } .anab__d.is-dn { color: var(--brique); }
+.ana__note { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .8rem; }
+.ana__note b { font-size: 1.05rem; } .ana__note span:not(.flk) { font-weight: 600; }
+.ana__note em { font-size: .8rem; color: var(--encre-douce); }
+.flk { display: inline-flex; gap: .1rem; font-size: 1.5rem; line-height: 1; --flk: #2a86c0; }
+.flk__i { position: relative; display: inline-block; color: var(--filet); }
+.flk__i i { position: absolute; left: 0; top: 0; overflow: hidden; white-space: nowrap; color: var(--flk); font-style: normal; }
+html[data-theme='nuit'] .flk { --flk: #8fd3ff; } html[data-skin='halloween'] .flk { --flk: #ff9a2e; } html[data-skin='arcade'] .flk { --flk: #29e6ff; }
+html[data-theme='nuit'] .flk__i { color: rgba(255,255,255,.2); }
+@media (min-width: 900px) { .ana__grid { grid-template-columns: 1fr 1fr; } }
