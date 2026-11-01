@@ -1608,3 +1608,11 @@ html[data-theme='nuit'] .flk__i { color: rgba(255,255,255,.2); }
 .gauge:has(.gauge__ps) { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) minmax(7rem, 11rem); }
 @media (max-width: 560px) { .gauge:has(.gauge__ps) { grid-template-columns: minmax(0, 1fr) minmax(5rem, 9rem); } }
 .sc--EU { background: #6a3fa0; } .sc--MO { background: #b8860b; }
+/* Classement général sur mobile : les 3 desks gardent leur largeur (plus d'écrasement) */
+@media (max-width: 640px) {
+  .grid--general th:nth-child(1) { width: 2.3rem; } .grid--general th:nth-child(2) { width: 5.6rem; } .grid--general th:nth-child(3) { width: 3.9rem; }
+  .grid--general th:nth-child(n+4) { width: 3.2rem; }
+  .grid--general thead th small { display: none; }
+  .grid--general .numbtn { padding-left: .3rem; padding-right: .3rem; min-width: 0; }
+  .grid--general td.total { font-size: 1.05rem; }
+}
