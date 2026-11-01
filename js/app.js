@@ -590,20 +590,81 @@
     const m = Math.floor(s / 60);
     return `<span><b>${d}</b> j</span> <span><b>${h}</b> h</span> <span><b>${m}</b> min</span>`;
   }
+  function ptsChip(pid, race) {
+    if (race.cancelled || !resOf(race)) return '';
+    const sc = G.scoreRace(race, (state.picks[pid] || {})[race.id], state.results) || 0;
+    return `<span class="pill ${sc > 0 ? 'pill--on' : 'pill--off'}">${sc > 0 ? '+' : ''}${sc}</span>`;
+  }
+  /** Coureurs effectivement alignés par les joueurs sur une course. */
+  function racePeople(race) {
+    const picks = state.players.map((p) => { const pk = (state.picks[p.id] || {})[race.id]; return pk && pk.a ? { p, ath: G.effectiveAthlete(pk, state.results, race.id) } : null; }).filter(Boolean);
+    const cnt = {};
+    picks.forEach((x) => { cnt[x.ath] = (cnt[x.ath] || 0) + 1; });
+    return { picks, cnt };
+  }
+  function gauge(ath, pct, extra, cls, valTxt) {
+    return `<li class="gauge${cls ? ' ' + cls : ''}"><span class="gauge__who">${avatarOf(ath, 'sm')}<span class="gauge__t"><span class="gauge__n">${skn(ath)}</span>${extra ? `<span class="gauge__x">${extra}</span>` : ''}</span></span><span class="gauge__bar" role="img" aria-label="${esc(String(valTxt || pct + ' %').replace(/<[^>]*>/g, ''))}"><i style="width:${Math.max(pct, 3)}%"></i></span><b class="gauge__v${valTxt ? ' gauge__v--n' : ''}">${valTxt || pct + ' %'}</b></li>`;
+  }
+  function skierResult(race, a, res) {
+    const e = res.find((x) => x.ath === a);
+    if (!e) return ` <span class="rk rk--dns">Non classé</span><span class="rkpts rkpts--0">0 pt</span>`;
+    if (e.status === 'DNS') return ` <span class="rk rk--dns">Non partant</span>`;
+    if (e.status) return ` <span class="rk rk--bad">${esc(e.status)}</span><span class="rkpts rkpts--0">0 pt</span>`;
+    const pts = Math.round(G.pointsForRank(e.rank) * race.mult);
+    return ` <span class="rk ${e.rank <= 3 ? 'rk--top' : e.rank <= 10 ? 'rk--good' : ''}">${esc(ordinal(e.rank))}</span><span class="rkpts ${pts > 0 ? 'rkpts--on' : 'rkpts--0'}">${pts > 0 ? '+' : ''}${pts} pt${Math.abs(pts) > 1 ? 's' : ''}</span>`;
+  }
+  function shareTable(race) {
+    const { picks, cnt } = racePeople(race), N = picks.length;
+    if (!N) return '<span class="none">Aucun choix</span>';
+    const mine = picks.find((x) => x.p.id === state.me);
+    const rows = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a] || nameOf(a).localeCompare(nameOf(b), 'fr'));
+    const max = Math.max(...Object.values(cnt));
+    return `<ul class="gauges sh">${rows.map((a) => gauge(a, Math.round(100 * cnt[a] / max), mine && mine.ath === a ? '<em class="sh__me">ton choix</em>' : '', mine && mine.ath === a ? 'gauge--mine' : '', `${cnt[a]} joueur${cnt[a] > 1 ? 's' : ''}`)).join('')}</ul>
+      <p class="sub sh__foot">${N} joueur${N > 1 ? 's ont validé leur choix' : ' a validé son choix'}${mine ? '' : ' (pas toi : aucun choix)'}</p>`;
+  }
+  /** Course terminée : podium + tous les coureurs choisis, avec les joueurs qui les ont pris. */
+  function resultTable(race) {
+    const { picks, cnt } = racePeople(race), N = picks.length, res = resOf(race);
+    if (!N || !res) return shareTable(race);
+    const mine = picks.find((x) => x.p.id === state.me);
+    const rk = (a) => { const e = res.find((x) => x.ath === a); return e && !e.status ? e.rank : e ? 1e4 : 2e4; };
+    const ids = Array.from(new Set(res.filter((e) => !e.status && e.rank <= 3).map((e) => e.ath).concat(Object.keys(cnt))));
+    ids.sort((a, b) => rk(a) - rk(b) || (cnt[b] || 0) - (cnt[a] || 0) || nameOf(a).localeCompare(nameOf(b), 'fr'));
+    const row = (a) => {
+      const ps = picks.filter((x) => x.ath === a).map((x) => x.p), n = ps.length, isMine = !!mine && mine.ath === a;
+      const det = n ? `<span class="rs__n">${n} joueur${n > 1 ? 's' : ''}</span><span class="rs__ps">${ps.map(pln).join(', ')}</span>` : '<span class="rs__none">personne</span>';
+      return `<li class="rs${isMine ? ' rs--mine' : ''}${n ? '' : ' rs--nop'}"><span class="rs__who">${avatarOf(a, 'sm')}<span class="gauge__t"><span class="gauge__n">${skn(a)}</span><span class="gauge__x">${isMine ? '<em class="sh__me">ton choix</em>' : ''}${skierResult(race, a, res)}</span></span></span><span class="rs__d">${det}</span></li>`;
+    };
+    return `<ul class="gauges sh rs__l">${ids.map(row).join('')}</ul>
+      <p class="sub sh__foot">${N} joueur${N > 1 ? 's ont validé leur choix' : ' a validé son choix'}${mine ? '' : ' (pas toi : aucun choix)'}</p>`;
+  }
+  const LOCK_SVG = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2" fill="currentColor" fill-opacity=".18"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/></svg>';
+  const FLAG_SVG = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h13l-2.5 4 2.5 4H5" fill="currentColor" fill-opacity=".2"/></svg>';
   function liveRaceRow(race) {
-    const lines = state.players.filter((p) => visible(p.id, race) && ((state.picks[p.id] || {})[race.id] || {}).a).map((p) => `<li>${pname(p)} ${pickSummary(p.id, race)}</li>`).join('');
     return `<li class="race race--live race--${race.gender}${race.cancelled ? ' race--off' : ''}${doneCls(race)}">
-      ${raceCard(race)}
-      <div class="race__pick">${race.cancelled ? '<span class="none">Course annulée</span>' : lockedRace(race) ? `<ul class="who-picked">${lines || '<li class="none">Aucun choix</li>'}</ul>${outcome(race, state.me)}` : ''}</div></li>`;
+      <div class="race__left">${raceCard(race)}${resOf(race) && !race.cancelled && ptsChip(state.me, race) ? `<p class="race__pts">Tes points ${ptsChip(state.me, race)}</p>` : ''}</div>
+      <div class="race__pick">${race.cancelled ? '<span class="none">Course annulée</span>' : lockedRace(race) ? (resOf(race) ? resultTable(race) : shareTable(race) + `<div class="race__wait">${outcome(race, state.me)}</div>`) : ''}</div></li>`;
   }
   function coursPanel(s) {
     const races = sortedRaces(s);
+    const mine = active(races).map((r) => {
+      const pk = (state.picks[state.me] || {})[r.id];
+      const eff = pk && pk.a ? G.effectiveAthlete(pk, state.results, r.id) : null;
+      let tail = '';
+      if (eff && resOf(r)) {
+        const e = resOf(r).find((x) => x.ath === eff), sc = G.scoreRace(r, pk, state.results) || 0;
+        const how = e ? (e.status || ordinal(e.rank)) : 'non classé', bad = !e || !!e.status;
+        tail = `${eff !== pk.a ? `<span class="sub">remp. de ${skn(pk.a)}</span>` : ''}<span class="lb__rk${bad ? ' lb__rk--bad' : ''}" data-racecard="${r.id}">${FLAG_SVG}<span>Classement</span> <b>${esc(how)}</b></span><button type="button" class="lb__pts ${sc > 0 ? 'lb__pts--pos' : 'lb__pts--neg'}" data-racecard="${r.id}" title="Voir le résultat complet">${sc > 0 ? '+' : ''}${sc} pt${Math.abs(sc) > 1 ? 's' : ''}</button>`;
+      }
+      return `<li class="lb lb--${r.gender}"><span class="lb__tag">${discBadge(r)} <span class="gender gender--${r.gender}">${genderLabel(r)}</span></span>${eff ? `<strong>${skn(eff)}</strong>${tail}` : '<span class="none">aucun choix</span>'}</li>`;
+    }).join('');
     const todo = races.filter((r) => !resOf(r)), done = races.filter((r) => resOf(r)).sort((a, b) => G.raceStart(b) - G.raceStart(a));
     return `<section>
-      <div class="lockbar"><div class="lockbar__t"><strong>${fl(s.name)}</strong><span class="lock" role="img" aria-label="Choix verrouillés" title="Choix verrouillés">🔒</span></div></div>
+      <div class="lockbar"><div class="lockbar__t"><strong>${fl(s.name)}</strong><span class="lock" role="img" aria-label="Choix verrouillés" title="Choix verrouillés">${LOCK_SVG}</span></div>
+        <ul class="lockbar__mine" aria-label="Mes choix">${mine}</ul></div>
       <h3 class="subtitle">${done.length ? 'Courses à venir' : 'Qui a pris qui'}</h3>
-      ${todo.length ? `<div class="session"><ul class="races">${todo.map(liveRaceRow).join('')}</ul></div>` : '<p class="hint">Toutes les courses sont terminées.</p>'}
-      ${done.length ? `<h3 class="subtitle">Courses passées</h3><div class="session"><ul class="races">${done.map(liveRaceRow).join('')}</ul></div>` : ''}
+      ${todo.length ? `<div class="session"><ul class="races">${todo.map((r) => liveRaceRow(r)).join('')}</ul></div>` : '<p class="hint">Toutes les courses sont terminées.</p>'}
+      ${done.length ? `<h3 class="subtitle">Courses passées</h3><div class="session"><ul class="races">${done.map((r) => liveRaceRow(r)).join('')}</ul></div>` : ''}
     </section>`;
   }
   function termineePanel(hm) {
