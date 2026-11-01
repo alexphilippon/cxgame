@@ -179,7 +179,13 @@
     const initials = (caps.length > 1 ? caps[0][0] + caps[caps.length - 1][0] : (caps[0] || a.name).slice(0, 2)).toUpperCase();
     return `<span class="avatar avatar--${a.gender}${size ? ' avatar--' + size : ''}${on === false ? ' is-off' : ''}" aria-hidden="true"><span class="avatar__in">${esc(initials)}</span><img class="avatar__img" src="${PHOTO_DIR}${a.id}.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></span>`;
   }
-  const avatarOf = (id, size) => (ATH[id] ? avatar(ATH[id], true, size) : '');
+  /** Genre d'un coureur hors liste UCI : celui des courses où il figure (résultats, puis start lists). */
+  function genderGuess(id) {
+    for (const rid of Object.keys(state.results || {})) { if ((state.results[rid] || []).some((e) => e.ath === id)) { const r = G.raceOf(rid); if (r) return r.gender; } }
+    for (const rid of Object.keys((state.startlists && state.startlists.races) || {})) { const sl = state.startlists.races[rid]; if (sl && (sl.start || []).some((e) => e.ath === id)) { const r = G.raceOf(rid); if (r) return r.gender; } }
+    return 'M';
+  }
+  const avatarOf = (id, size) => (ATH[id] ? avatar(ATH[id], true, size) : id && NAMES[id] ? avatar({ id, name: NAMES[id], gender: genderGuess(id) }, true, size) : '');
   /** Nom de coureur cliquable (ouvre « qui l'a pris ») et nom de joueur. */
   const skn = (id, label) => `<button type="button" class="lnk" data-rider="${esc(id)}" title="Voir qui l’a pris">${esc(label != null ? label : nameOf(id))}</button>`;
   const pln = (p) => `<button type="button" class="lnk" data-player="${esc(p.id)}" title="${FICHE_ON ? 'Voir la fiche' : ''}">${esc(p.name)}</button>`;
