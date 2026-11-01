@@ -1604,6 +1604,6 @@ html[data-theme='nuit'] .flk { --flk: #8fd3ff; } html[data-skin='halloween'] .fl
 html[data-theme='nuit'] .flk__i { color: rgba(255,255,255,.2); }
 @media (min-width: 900px) { .ana__grid { grid-template-columns: 1fr 1fr; } }
 .gauge__v--n { display: flex; flex-direction: column; align-items: flex-end; text-align: right; gap: .05rem; white-space: normal; line-height: 1.25; }
-.gauge__ps { font: 600 .82rem var(--body, inherit); color: var(--encre); } .gauge__ps .lnk { font-weight: 700; }
+.gauge__ps { font: 600 .82rem/1.25 var(--texte); letter-spacing: 0; color: var(--encre); } .gauge__ps .lnk { font-weight: 700; }
 .gauge:has(.gauge__ps) { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) minmax(7rem, 11rem); }
 @media (max-width: 560px) { .gauge:has(.gauge__ps) { grid-template-columns: minmax(0, 1fr) minmax(5rem, 9rem); } }

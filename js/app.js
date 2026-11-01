@@ -378,7 +378,7 @@
   }
 
   /* ---------- Classements & récap ---------- */
-  const FICHE_ON = false;
+  const FICHE_ON = true;
   const rnkCell = (rk) => `<span class="rnk rnk--${rk <= 3 ? rk : rk <= 10 ? 'c' : 'n'}">${rk}</span>`;
   function rankRows(scoreFn) {
     const rows = state.players.map((p) => ({ p, v: scoreFn(state.picks[p.id] || {}) })).sort((a, b) => b.v.total - a.v.total);
@@ -797,6 +797,24 @@
     return Object.keys(state.results).map((rid) => G.raceOf(rid)).filter((r) => r && !r.cancelled)
       .sort((a, b) => G.raceStart(a) - G.raceStart(b))
       .map((r) => { const pk = picks[r.id], eff = pk && pk.a ? G.effectiveAthlete(pk, state.results, r.id) : null; return { r, pk, has: !!eff, eff, e: eff && (state.results[r.id] || []).find((x) => x.ath === eff), pts: G.scoreRace(r, pk, state.results) || 0 }; });
+  }
+  /** Fiche joueur : classement, points par desk, statistiques et détail course par course. */
+  function ficheModal(pid) {
+    const p = state.players.find((x) => x.id === pid) || (pid === state.me && state.user ? { id: pid, name: state.user.name || '', photo: '' } : null);
+    if (!p) return;
+    const R = state.results, picks = state.picks[pid] || {}, rows = playerRows(pid), played = rows.filter((x) => x.has);
+    const gen = rankRows((pk) => ({ total: G.generalScore(pk, R).total })).find((r) => r.p.id === pid);
+    const gs = G.generalScore(picks, R);
+    const wins = played.filter((x) => x.e && !x.e.status && x.e.rank === 1).length, pod = played.filter((x) => x.e && !x.e.status && x.e.rank <= 3).length;
+    const avg = played.length ? Math.round(played.reduce((a, x) => a + x.pts, 0) / played.length * 10) / 10 : 0;
+    const tile = (v, l) => `<div class="ftile"><b>${v}</b><span>${l}</span></div>`;
+    const desks = D.DESKS.map((d, i) => [d.name, gs.desks[i]]), mx = Math.max(1, ...desks.map((d) => d[1]));
+    const bars = `<ul class="fbars">${desks.map(([l, v]) => `<li><span class="fbars__l">${esc(l)}</span><span class="fbars__b"><i style="width:${Math.round(v / mx * 100)}%"></i></span><b>${v}</b></li>`).join('')}</ul>`;
+    const li = rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.r))}</strong> <span class="sub">${esc(raceName(x.r))} · ${esc(dayOf(x.r.date))}</span></span><span class="dtl__a">${x.has ? skn(x.eff) : '<span class="none">Pas de choix</span>'}${x.e ? ' ' + skierResult(x.r, x.eff, R[x.r.id]) : ''}</span><span class="dtl__k"><b>${x.pts > 0 ? '+' : ''}${x.pts}</b></span></li>`).join('');
+    const body = rows.length ? `<div class="ftiles">${tile(wins, wins > 1 ? 'victoires' : 'victoire')}${tile(pod, pod > 1 ? 'podiums' : 'podium')}${tile(avg, 'pts par course')}</div>
+      <h3 class="fh">Par desk</h3>${bars}<h3 class="fh">Course par course</h3><ul class="dtls">${li}</ul>` : '<p class="hint">Aucune course terminée pour l’instant : les statistiques apparaîtront après la première.</p>';
+    openModal(`<div class="fiche"><header class="fiche__head">${pav(Object.assign({}, p), 'lg')}<div><h2 class="fiche__name">${esc(p.name)}${pid === state.me ? ' <em>(toi)</em>' : ''}</h2>
+      <p class="fiche__sum">${gen && Object.keys(R).length ? `${esc(ordinal(gen.rank))} au général · ${gen.v.total} pts` : 'Pas encore de classement'}</p></div></header>${body}</div>`, 'modal__card--wide');
   }
   function pointsModal(pid, scope) {
     const p = state.players.find((x) => x.id === pid); if (!p) return;
@@ -1314,6 +1332,7 @@
     if (sendIdea) { const t = ($('#idea-t') || {}).value; if (t && t.trim() && store.addIdea) store.addIdea({ uid: state.me, name: state.user.name, text: t.trim() }).then(closeModal).catch(fail); return; }
     const th = e.target.closest('[data-theme-set]'); if (th) { setTheme(th.dataset.themeSet, true); return; }
     if (window.CX_DATAROOM.click(e.target)) return;
+    const pl = e.target.closest('[data-player]'); if (pl) { ficheModal(pl.dataset.player); return; }
     const rid = e.target.closest('[data-rider]'); if (rid) { riderModal(rid.dataset.rider); return; }
     const rc = e.target.closest('[data-racecard]'); if (rc) { SHARE.open(rc.dataset.racecard); return; }
     if (e.target.closest('[data-settings]')) { settingsModal(); return; }
