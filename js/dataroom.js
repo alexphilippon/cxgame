@@ -14,6 +14,9 @@
     if (st.H || st.loading) return; st.loading = true;
     fetch('data/history-' + y + '.json').then((r) => r.json()).then((d) => { st.H = d; C.rerender(); }).catch(() => { st.H = { races: [], ath: {}, error: true }; C.rerender(); });
   };
+  /** Charge les deux saisons ; la promesse se résout quand tout est là. */
+  const preload = () => Promise.all(SEASONS.map((y) => { const st = (store[y] = store[y] || {}); if (st.H) return Promise.resolve(); if (!st.p) st.p = fetch('data/history-' + y + '.json').then((r) => r.json()).then((d) => { st.H = d; }).catch(() => { st.H = { races: [], ath: {}, error: true }; }); return st.p; }));
+  const ready = () => SEASONS.every((y) => store[y] && store[y].H);
   const allH = () => SEASONS.map((y) => store[y] && store[y].H).filter(Boolean);
   const mo = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'numeric', timeZone: 'UTC' });
   const frDate = (r) => mo.format(new Date(r.date + 'T12:00:00Z'));
@@ -89,6 +92,6 @@
   }
   /** Un onglet par saison (2026-27, 2025-26) : { id, label, html }. */
   const seasonTabs = (id) => SEASONS.map((y) => { load(y); return { id: 's' + y, label: short(y).replace('-', '-'), html: seasonHtml(id, y) }; });
-  const api = { init, render, click, histHtml, historyOf, seasonTabs };
+  const api = { init, render, click, histHtml, historyOf, seasonTabs, preload, ready };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.CX_DATAROOM = api;
 })(typeof self !== 'undefined' ? self : this);

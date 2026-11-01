@@ -956,6 +956,11 @@
   }
   /** Fiche coureur : 3 onglets (saison 26-27, saison 25-26, choix des joueurs), comme au ski. */
   function riderModal(id) {
+    if (!window.CX_DATAROOM.ready()) {
+      openModal(`<h2>${esc(nameOf(id))}</h2><p class="hint">Chargement de la fiche…</p>`);
+      window.CX_DATAROOM.preload().then(() => { const m = $('#modal'); if (m && !m.hidden) riderModal(id); });
+      return;
+    }
     const rows = [];
     state.players.forEach((p) => Object.keys(state.picks[p.id] || {}).forEach((rid) => {
       const race = G.raceOf(rid), pk = state.picks[p.id][rid];
@@ -1430,6 +1435,7 @@
     }).catch(() => { btns.forEach((b) => { b.disabled = false; b.textContent = '↻ Vérifier le résultat officiel'; }); });
   }
   SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf(natOf(id)), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
+  setTimeout(() => window.CX_DATAROOM.preload(), 1500);
   window.CX_DATAROOM.init({ rider: (id) => riderModal(id), esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
   const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
