@@ -52,6 +52,10 @@
   const PLACE_CC = { 'Oudenaarde': 'be', 'Middelkerke': 'be', 'Zeddam': 'nl', 'Niel': 'be', 'Merksplas': 'be', 'Hamme-Zogge': 'be', 'Lokeren': 'be', 'Beringen': 'be', 'Ostrava': 'cz', 'Tábor': 'cz', 'Ruddervoorde': 'be', 'Glasgow': 'gb', 'Mol': 'be', 'Antwerpen': 'be', 'Koksijde': 'be', 'Hofstade': 'be', 'Loenhout': 'be', 'Heusden-Zolder': 'be', 'Gavere': 'be', 'Namur': 'be', 'Besançon': 'fr', 'Diegem': 'be', 'Baal': 'be', 'Gullegem': 'be', 'Zonhoven': 'be', 'Benidorm': 'es', 'Hamme': 'be', 'Hoogerheide': 'nl', 'Maldegem': 'be', 'Lille': 'be', 'Sint-Niklaas': 'be', 'Brussel': 'be', 'Oostende': 'be' };
   const PLACE_RE = new RegExp(Object.keys(PLACE_CC).sort((a, b) => b.length - a.length).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|'), 'g');
   const NAT_CC = { BEL: 'be', NED: 'nl', FRA: 'fr', GBR: 'gb', ITA: 'it', SUI: 'ch', CZE: 'cz', GER: 'de', USA: 'us', CAN: 'ca', ESP: 'es', LUX: 'lu', DEN: 'dk', POL: 'pl', SWE: 'se', AUT: 'at', HUN: 'hu', SVK: 'sk', IRL: 'ie', NOR: 'no', AUS: 'au', NZL: 'nz', JPN: 'jp', BRA: 'br', POR: 'pt', SLO: 'si', ISR: 'il', COL: 'co', ARG: 'ar', LAT: 'lv', EST: 'ee', FIN: 'fi', UKR: 'ua', ROU: 'ro', CRO: 'hr' };
+  /** Nationalités des coureurs hors liste UCI (data/nat.json : historiques + résultats), rechargées au démarrage. */
+  const NATX = {};
+  const natOf = (id) => (ATH[id] && ATH[id].nat) || NATX[id] || '';
+  fetch('data/nat.json').then((r) => (r.ok ? r.json() : null)).then((j) => { if (j) { Object.assign(NATX, j); scheduleRender(); } }).catch(() => {});
   const flagOf = (nat) => { const cc = NAT_CC[String(nat || '').toUpperCase()]; return cc ? `<img class="fl dr__flag" src="https://flagcdn.com/w40/${cc}.png" srcset="https://flagcdn.com/w80/${cc}.png 2x" width="20" height="15" alt="${esc(nat)}" title="${esc(nat)}" loading="lazy" onerror="this.style.display='none'">` : ''; };
   /** Texte HTML échappé avec un drapeau devant chaque lieu de course connu. */
   function fl(text) {
@@ -952,7 +956,7 @@
       if (G.effectiveAthlete(pk, state.results, rid) === id) rows.push({ p, race, sc: G.scoreRace(race, pk, state.results) });
     }));
     rows.sort((a, b) => G.raceStart(a.race) - G.raceStart(b.race));
-    openModal(`<h2>${esc(nameOf(id))}</h2>${ATH[id] ? `<p class="hint">${flagOf(ATH[id].nat)} ${esc(ATH[id].nat)} · rang UCI ${esc(ATH[id].rank || '–')}${ATH[id].team ? ' · ' + esc(ATH[id].team) : ''}</p>` : ''}
+    openModal(`<h2>${esc(nameOf(id))}</h2>${ATH[id] ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))} · rang UCI ${esc(ATH[id].rank || '–')}${ATH[id].team ? ' · ' + esc(ATH[id].team) : ''}</p>` : natOf(id) ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))}</p>` : ''}
       <ul class="dtls">${rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.race))}</strong> <span class="sub">${esc(raceName(x.race))}</span></span><span class="dtl__a">${esc(x.p.name)}</span><span class="dtl__k">${x.sc === null || x.sc === undefined ? '' : `<b>${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span></li>`).join('') || '<li class="none">Pas encore choisi (les choix se révèlent au départ).</li>'}</ul>${window.CX_DATAROOM.histHtml(id)}`);
   }
   function showTip(btn) {
@@ -1406,7 +1410,7 @@
       if (manual) setTimeout(() => { btns.forEach((b) => { if (b.isConnected) { b.disabled = false; b.textContent = changed ? 'Résultat officiel chargé ✓' : 'Pas encore officiel : réessaie dans quelques minutes'; } }); }, 50);
     }).catch(() => { btns.forEach((b) => { b.disabled = false; b.textContent = '↻ Vérifier le résultat officiel'; }); });
   }
-  SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf((ATH[id] || {}).nat), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
+  SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf(natOf(id)), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
   window.CX_DATAROOM.init({ esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
   const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
