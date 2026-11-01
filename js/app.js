@@ -954,6 +954,7 @@
       <ol class="sl">${rows}</ol>`);
     if (keep) mo.scrollTop = prevM;
   }
+  /** Fiche coureur : 3 onglets (saison 26-27, saison 25-26, choix des joueurs), comme au ski. */
   function riderModal(id) {
     const rows = [];
     state.players.forEach((p) => Object.keys(state.picks[p.id] || {}).forEach((rid) => {
@@ -962,9 +963,21 @@
       if (G.effectiveAthlete(pk, state.results, rid) === id) rows.push({ p, race, sc: G.scoreRace(race, pk, state.results) });
     }));
     rows.sort((a, b) => G.raceStart(a.race) - G.raceStart(b.race));
-    openModal(`<h2>${esc(nameOf(id))}</h2>${ATH[id] ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))} · rang UCI ${esc(ATH[id].rank || '–')}${ATH[id].team ? ' · ' + esc(ATH[id].team) : ''}</p>` : natOf(id) ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))}</p>` : ''}
-      <ul class="dtls">${rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.race))}</strong> <span class="sub">${esc(raceName(x.race))}</span></span><span class="dtl__a">${esc(x.p.name)}</span><span class="dtl__k">${x.sc === null || x.sc === undefined ? '' : `<b>${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span></li>`).join('') || '<li class="none">Pas encore choisi (les choix se révèlent au départ).</li>'}</ul>${window.CX_DATAROOM.histHtml(id)}`);
+    const picks = rows.length ? `<ul class="dtls">${rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.race))}</strong> <span class="sub">${esc(raceName(x.race))}</span></span><span class="dtl__a">${pln(x.p)}</span><span class="dtl__k">${x.sc === null || x.sc === undefined ? '' : `<b>${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span></li>`).join('')}</ul>` : '<p class="hint">Personne ne l’a encore choisi (les choix se dévoilent à la deadline).</p>';
+    const tabs = window.CX_DATAROOM.seasonTabs(id).map((t) => ({ id: t.id, label: t.label, html: t.html || '<p class="hint">Aucun résultat enregistré sur cette saison.</p>', has: !!t.html }));
+    tabs.push({ id: 'picks', label: 'Choix des joueurs', html: picks, has: rows.length > 0 });
+    const first = (tabs.find((t) => t.has) || tabs[0]).id;
+    const a = ATH[id];
+    openModal(`<div class="rfiche"><h2>${esc(nameOf(id))}</h2>${natOf(id) || a ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))}${a ? ` · rang UCI ${esc(a.rank || '–')}${a.team ? ' · ' + esc(a.team) : ''}` : ''}</p>` : ''}
+      <div class="seg" role="tablist" aria-label="Fiche coureur">${tabs.map((t) => `<button type="button" role="tab" class="seg__btn" data-rtab="${t.id}" aria-selected="${t.id === first}">${esc(t.label)}</button>`).join('')}</div>
+      ${tabs.map((t) => `<div class="rfiche__p" data-rpanel="${t.id}"${t.id === first ? '' : ' hidden'}>${t.html}</div>`).join('')}</div>`);
   }
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest('[data-rtab]'); if (!t) return;
+    const box = t.closest('.rfiche'); if (!box) return;
+    box.querySelectorAll('[data-rtab]').forEach((b) => b.setAttribute('aria-selected', String(b === t)));
+    box.querySelectorAll('[data-rpanel]').forEach((p) => { p.hidden = p.dataset.rpanel !== t.dataset.rtab; });
+  });
   function showTip(btn) {
     const tip = $('#tip');
     if (!tip.hidden && tip._for === btn) { hideTip(); return; }
@@ -1417,7 +1430,7 @@
     }).catch(() => { btns.forEach((b) => { b.disabled = false; b.textContent = '↻ Vérifier le résultat officiel'; }); });
   }
   SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf(natOf(id)), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
-  window.CX_DATAROOM.init({ esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
+  window.CX_DATAROOM.init({ rider: (id) => riderModal(id), esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
   const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
   if (TAB_IDS.includes(hash)) state.tab = hash;

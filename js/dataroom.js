@@ -84,9 +84,11 @@
   function click(t) {
     const d = t.closest('[data-dr]');
     if (d) { const [k, v] = d.dataset.dr.split(':'); if (k === 'g') ui.g = v; else if (k === 'y') { ui.y = v; ui.s = 'all'; } else if (k === 'cat') ui.cat = v; else if (k === 's') ui.s = v; else if (k === 'more') ui.more = !ui.more; ui.more = k === 'more' ? ui.more : false; C.rerender(); return true; }
-    const h = t.closest('[data-hist]'); if (h) { histModal(h.dataset.hist); return true; }
+    const h = t.closest('[data-hist]'); if (h) { if (C.rider) C.rider(h.dataset.hist); else histModal(h.dataset.hist); return true; }
     return false;
   }
-  const api = { init, render, click, histHtml, historyOf };
+  /** Un onglet par saison (2026-27, 2025-26) : { id, label, html }. */
+  const seasonTabs = (id) => SEASONS.map((y) => { load(y); return { id: 's' + y, label: short(y).replace('-', '-'), html: seasonHtml(id, y) }; });
+  const api = { init, render, click, histHtml, historyOf, seasonTabs };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.CX_DATAROOM = api;
 })(typeof self !== 'undefined' ? self : this);
