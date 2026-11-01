@@ -6,8 +6,16 @@
   const SEASONS = ['2026-2027', '2025-2026'], short = (y) => y.slice(2, 4) + '-' + y.slice(7);
   const store = {};                                   // saison -> { H, loading }
   const ui = { y: SEASONS[0], g: 'H', cat: 'ELI', s: 'all', more: false };
-  const SER = { CdM: 'Coupe du monde', SP: 'Superprestige', XO: 'X²O Trofee', HG: 'HG Cross' };
-  const cur = () => store[ui.y] && store[ui.y].H;
+  const SER = { CdM: 'Coupe du monde', SP: 'Superprestige', XO: 'X²O Trofee', HG: 'HG Cross', EU: 'Euros', MO: 'Mondiaux' };
+  /** Historique d'une saison + courses du jeu saisies au jour le jour (C.extra(y) → { races, ath }), sans doublon (même date, catégorie, genre). */
+  const H_ = (y) => {
+    const base = store[y] && store[y].H; if (!base) return base;
+    const x = C.extra ? C.extra(y) : null; if (!x || !x.races.length) return base;
+    const has = new Set(base.races.map((r) => `${r.date}|${r.cat}|${r.g}`));
+    const add = x.races.filter((r) => !has.has(`${r.date}|${r.cat}|${r.g}`));
+    return add.length ? Object.assign({}, base, { races: base.races.concat(add), ath: Object.assign({}, x.ath, base.ath) }) : base;
+  };
+  const cur = () => H_(ui.y);
   const init = (ctx) => { C = ctx; };
   const load = (y) => {
     y = y || ui.y; const st = (store[y] = store[y] || {});
@@ -17,7 +25,7 @@
   /** Charge les deux saisons ; la promesse se résout quand tout est là. */
   const preload = () => Promise.all(SEASONS.map((y) => { const st = (store[y] = store[y] || {}); if (st.H) return Promise.resolve(); if (!st.p) st.p = fetch('data/history-' + y + '.json').then((r) => r.json()).then((d) => { st.H = d; }).catch(() => { st.H = { races: [], ath: {}, error: true }; }); return st.p; }));
   const ready = () => SEASONS.every((y) => store[y] && store[y].H);
-  const allH = () => SEASONS.map((y) => store[y] && store[y].H).filter(Boolean);
+  const allH = () => SEASONS.map((y) => H_(y)).filter(Boolean);
   const mo = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'numeric', timeZone: 'UTC' });
   const frDate = (r) => mo.format(new Date(r.date + 'T12:00:00Z'));
   const nameOf = (id) => (C.ATH()[id] && C.ATH()[id].name) || (allH().map((h) => h.ath[id]).find(Boolean) || {}).name || id;
@@ -55,7 +63,7 @@
   }
   /** Saison 2025-26 d'un coureur : [{race, e}] (toutes catégories). */
   function historyOf(id, y) {
-    const H = store[y] && store[y].H;
+    const H = H_(y);
     if (!H) return [];
     return H.races.filter((r) => !r.nowc).map((r) => { const x = r.res.find((y) => y[0] === id); return x ? { race: r, e: x[1] } : null; }).filter(Boolean);
   }

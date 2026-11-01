@@ -1436,7 +1436,20 @@
   }
   SHARE.init({ state, G, D, esc, nameOf, surname, skn, pln, pname, flagOf: (id) => flagOf(natOf(id)), avatarOf, placeLabel, genderLabel, discLabel, dayOf, lockedRace, ordinal, openModal });
   setTimeout(() => window.CX_DATAROOM.preload(), 1500);
-  window.CX_DATAROOM.init({ rider: (id) => riderModal(id), esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
+  /** Courses du jeu déjà classées (data/results.json) au format de l'historique : alimente fiches et Data room 26-27 au jour le jour. */
+  function extraHistory(y) {
+    if (y !== '2026-2027') return { races: [], ath: {} };
+    const SM = { XO: 'XO', SP: 'SP', EX: 'HG', CM: 'CdM', EU: 'EU', MO: 'MO' }, races = [], ath = {};
+    Object.keys(state.results || {}).forEach((rid) => {
+      const r = G.raceOf(rid); if (!r || r.cancelled) return;
+      const res = (state.results[rid] || []).filter((e) => e.status !== 'DNS').map((e) => [e.ath, e.status ? e.status : e.rank]);
+      if (!res.length) return;
+      res.forEach(([a]) => { if (!ath[a]) ath[a] = { name: nameOf(a), nat: natOf(a), g: r.gender === 'F' ? 'F' : 'H', cat: r.cat, listed: !!ATH[a] }; });
+      races.push({ id: rid, series: SM[r.serie] || 'XO', place: r.place, date: r.date, cat: r.cat, g: r.gender === 'F' ? 'F' : 'H', res });
+    });
+    return { races, ath };
+  }
+  window.CX_DATAROOM.init({ extra: extraHistory, rider: (id) => riderModal(id), esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
   const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
   if (TAB_IDS.includes(hash)) state.tab = hash;
