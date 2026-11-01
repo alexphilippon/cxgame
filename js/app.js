@@ -686,7 +686,7 @@
     const mine = picks.find((x) => x.p.id === state.me);
     const rows = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a] || nameOf(a).localeCompare(nameOf(b), 'fr'));
     const max = Math.max(...Object.values(cnt));
-    return `<ul class="gauges sh">${rows.map((a) => gauge(a, Math.round(100 * cnt[a] / max), mine && mine.ath === a ? '<em class="sh__me">ton choix</em>' : '', mine && mine.ath === a ? 'gauge--mine' : '', `${cnt[a]} joueur${cnt[a] > 1 ? 's' : ''}`)).join('')}</ul>
+    return `<ul class="gauges sh">${rows.map((a) => gauge(a, Math.round(100 * cnt[a] / max), mine && mine.ath === a ? '<em class="sh__me">ton choix</em>' : '', mine && mine.ath === a ? 'gauge--mine' : '', `<span class="gauge__c">${cnt[a]} joueur${cnt[a] > 1 ? 's' : ''}</span><span class="gauge__ps">${picks.filter((x) => x.ath === a).map((x) => pln(x.p)).join(', ')}</span>`)).join('')}</ul>
       <p class="sub sh__foot">${N} joueur${N > 1 ? 's ont validé leur choix' : ' a validé son choix'}${mine ? '' : ' (pas toi : aucun choix)'}</p>`;
   }
   /** Course terminée : podium + tous les coureurs choisis, avec les joueurs qui les ont pris. */
