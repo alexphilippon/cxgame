@@ -138,6 +138,32 @@
     return out;
   }
 
+  /** Joueurs SANS choix sur une course verrouillée : tirage au sort parmi les NOPICK_TOP premiers dossards de la start list,
+      un tirage différent par joueur (graine = course|joueur|dossards), hors coureurs déjà grillés par ce joueur (desk, genre, catégorie) et hors DNS connus.
+      meta : { raceId: { start:[{bib,ath}] } } ; isLocked(race) → bool. Courses traitées dans l'ordre chronologique : un tirage grille son coureur pour les suivantes.
+      Retourne { raceId: { playerId: { ath, index, n, seed, candidates } } }. Fonction pure des données publiques : vérifiable par tous. */
+  const NOPICK_TOP = 15;
+  function noPickDraws(meta, picksByPlayer, playerIds, isLocked, results) {
+    const out = {}, work = {};
+    (playerIds || []).forEach((pid) => { work[pid] = Object.assign({}, picksByPlayer[pid] || {}); });
+    Object.keys(meta || {}).map((rid) => raceOf(rid)).filter((r) => r && !r.cancelled && meta[r.id] && meta[r.id].start && isLocked(r))
+      .sort((a, b) => raceStart(a) - raceStart(b)).forEach((race) => {
+        const top = meta[race.id].start.slice().sort((x, y) => x.bib - y.bib).slice(0, NOPICK_TOP);
+        (playerIds || []).forEach((pid) => {
+          const pk = work[pid][race.id];
+          if (pk && pk.a) return;
+          const burnt = usedInDesk(deskIdOf(race.id), race.gender, race.cat, work[pid], race.id, results);
+          const cands = top.map((x) => x.ath).filter((id) => id && !burnt.has(id) && !(results && results[race.id] && isDNS(results, race.id, id)));
+          const seed = `${race.id}|${pid}|nopick|${top.map((x) => x.ath || '?').join(',')}`;
+          const d = drawRider(seed, cands);
+          if (!d) return;
+          work[pid][race.id] = { a: d.ath, drawn: true, nopick: true, auto: true };
+          (out[race.id] = out[race.id] || {})[pid] = Object.assign({ seed, candidates: cands }, d);
+        });
+      });
+    return out;
+  }
+
   function scoreRace(race, pick, results) {
     if (race.cancelled) return null; // course annulée : personne ne marque
     if (!results || !results[race.id]) return null; // pas encore de résultat
@@ -259,7 +285,7 @@
   const api = {
     parisInstant, setOverrides, raceOf, raceStart, activeRaces, sessionOfRace, raceLockTime, raceLocked, sessionRaces, sessionDeadline, sessionEnd, sessionState,
     pointsForRank, effectiveAthlete, substitute, dnsPending, hash53, drawRider, DRAW_TOP, autoDraws, scoreRace, worldsWinner, worldsBonus,
-    pickAnalysis, sessionScore, deskScore, worldsScore, generalScore, categoryScore, genderScore, usedInDesk, deskIdOf,
+    pickAnalysis, noPickDraws, NOPICK_TOP, sessionScore, deskScore, worldsScore, generalScore, categoryScore, genderScore, usedInDesk, deskIdOf,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CX_GAME = api;

@@ -136,16 +136,27 @@
     state.results = res;
     state.draws = G.autoDraws(res, meta, picks); // tirages au sort : fonction pure des données publiques, donc vérifiables
     Object.entries(state.draws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { picks[pid][rid] = Object.assign({}, picks[pid][rid], { d: d.ath, auto: true }); }));
+    // Joueurs sans choix sur une course verrouillée : tirage au sort parmi les 15 premiers dossards (start list publiée)
+    const slMeta = {};
+    Object.entries((state.startlists && state.startlists.races) || {}).forEach(([rid, r]) => { if (r && r.start && !res[rid]) slMeta[rid] = { start: r.start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
+    state.npDraws = G.noPickDraws(slMeta, picks, state.players.map((p) => p.id), (r) => lockedRace(r), res);
+    Object.entries(state.npDraws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { (picks[pid] = picks[pid] || {})[rid] = { a: d.ath, drawn: true, nopick: true, auto: true }; }));
     state.picks = picks;
     scheduleRender();
   }
+  /** Un tirage « sans choix » se déclenche au verrouillage de la course : on recalcule quand l'ensemble des courses verrouillées change. */
+  let lockSig = '';
+  setInterval(() => {
+    const sig = Object.keys((state.startlists && state.startlists.races) || {}).filter((rid) => { const r = G.raceOf(rid); return r && lockedRace(r); }).join(',');
+    if (sig !== lockSig) { lockSig = sig; recompute(); }
+  }, 20000);
   function startStore() {
     store.onAuth((u) => { state.authReady = true; state.user = u; state.me = u ? u.uid : null; if (u && !state.picks[u.uid]) state.picks[u.uid] = {}; introRules(); if (u && isAdmin() && store.listenContacts && !state.contactsOn) { state.contactsOn = true; store.listenContacts((o) => { state.contacts = o || {}; scheduleRender(); }); } if (!state.demo) { state.authError = ''; scheduleRender(); } });
     setTimeout(() => { if (!state.picksReady) { state.picksLate = true; scheduleRender(); } }, 12000);
     store.listen({
       players: (list) => { state.players = list.map((x) => ({ id: x.id, name: x.name || x.email || x.id, photo: x.photo || '', blocked: !!x.photoBlocked, lastSeen: Number(x.lastSeen) || 0, theme: x.theme || '' })).sort((a, b) => a.name.localeCompare(b.name, 'fr'));
         const sig = JSON.stringify(state.players.map((p) => [p.id, p.name, p.photo, p.blocked])), same = sig === state.playersSig; state.playersSig = sig;
-        if (!same || state.tab === 'adm') scheduleRender(); },
+        if (!same || state.tab === 'adm') { recompute(); scheduleRender(); } },
       picks: (m) => { state.raw.picks = m; state.picksReady = true; state.syncErr = false; recompute(); },
       error: () => { state.syncErr = true; scheduleRender(); },
       results: (m) => { state.raw.results = m; recompute(); },
@@ -358,6 +369,8 @@
       ? `<span class="who"><s class="who--out">${skn(p.a)}</s>${p.b ? ` <s class="who--out">${skn(p.b)}</s>` : ''} ${skn(p.d)}</span><span class="sub">Tiré au sort</span>`
       : swapped
       ? `<span class="who"><s class="who--out">${skn(p.a)}</s> ${skn(p.b)}</span><span class="sub">Remplaçant en piste</span>`
+      : p.nopick
+      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix) · parmi les ${G.NOPICK_TOP} premiers dossards</span>`
       : `<span class="who">${skn(p.a)}</span>${p.b && !fin ? `<span class="sub">Remplaçant : ${skn(p.b)}</span>` : ''}`;
     return `<div class="pickline">${avatarOf(eff)}<div class="pickline__txt">${text}</div></div>`;
   }
@@ -1469,7 +1482,7 @@
       <p class="hint">Elle ne prendra pas le départ. Tu peux changer ton choix tant que la course n’est pas lancée.</p>`);
   }
   function loadStartlists() {
-    fetch('data/startlists.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { if (j && j.races) { const same = JSON.stringify(j) === JSON.stringify(state.startlists); state.startlists = j; if (!same) { scheduleRender(); setTimeout(dnsCheck, 600); } } }).catch(() => {});
+    fetch('data/startlists.json', { cache: 'no-cache' }).then((r) => (r.ok ? r.json() : null)).then((j) => { if (j && j.races) { const same = JSON.stringify(j) === JSON.stringify(state.startlists); state.startlists = j; if (!same) { recompute(); scheduleRender(); setTimeout(dnsCheck, 600); } } }).catch(() => {});
   }
   loadStartlists(); setInterval(() => { if (document.visibilityState === 'visible') loadStartlists(); }, 300000);
   render();

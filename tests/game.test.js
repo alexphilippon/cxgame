@@ -283,4 +283,18 @@ assert.deepStrictEqual(G.drawRider('s', ['x', 'y', 'z']), G.drawRider('s', ['x',
   assert.strictEqual(G.categoryScore('U19', pk, R), 0);
   assert.ok(G.genderScore('H', pk, R) + G.genderScore('F', pk, R) >= 100, 'quête annexe hommes/femmes');
 }
+{ // joueurs sans choix : tirage au sort parmi les 15 premiers dossards, différent par joueur, hors coureurs déjà grillés dans le desk
+  const start = Array.from({ length: 30 }, (_, i) => ({ bib: i + 1, ath: 'r' + (i + 1) }));
+  const meta = { 'E02-ELI-H': { start } };
+  const ids = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6'];
+  const picks = { p1: { 'E01-ELI-H': { a: 'r1' } }, p2: { 'E02-ELI-H': { a: 'r3' } } };
+  const d = G.noPickDraws(meta, picks, ids, () => true, {});
+  const byP = d['E02-ELI-H'];
+  assert.ok(!byP.p2, 'un joueur qui a choisi n\'est pas tiré au sort');
+  Object.values(byP).forEach((x) => assert.ok(Number(x.ath.slice(1)) <= 15, 'parmi les 15 premiers dossards'));
+  assert.notStrictEqual(byP.p1.ath, 'r1', 'r1 déjà grillé par p1 dans le desk 1');
+  assert.strictEqual(new Set(Object.values(byP).map((x) => x.ath)).size > 1, true, 'tirages différents selon le joueur');
+  assert.deepStrictEqual(G.noPickDraws(meta, picks, ids.slice().reverse(), () => true, {}), d, 'reproductible');
+  assert.deepStrictEqual(G.noPickDraws(meta, picks, ids, () => false, {}), {}, 'rien avant le verrouillage');
+}
 console.log('Tous les tests passent.');

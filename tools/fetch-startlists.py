@@ -14,6 +14,9 @@ def parse(text):
         f = [x.strip() for x in re.split(r'\s{2,}', l.strip()) if x.strip()]
         if not f or not re.fullmatch(r'\d{1,3}', f[0]): continue
         nat = next((x for x in f[1:] if re.fullmatch(r'[A-Z]{3}', x) and x in NAT), None)
+        if not nat:   # « NED CLUB » collés quand la colonne Nat n'est séparée du club que par une espace
+            m = re.search(r'\b\d{9,11}\s+([A-Z]{3})\b', l)
+            if m and m.group(1) in NAT: nat = m.group(1)
         name = next((x for x in f[1:] if re.search(r'[a-zà-ÿ]', x) and re.search(r'[A-ZÀ-Ý]{2}', x) and not re.fullmatch(r'[A-Z]{3}', x)), None)
         if name and nat: rows.append((int(f[0]), name, nat))
     return rows
