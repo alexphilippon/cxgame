@@ -386,6 +386,343 @@
      "name": "DE CUYPER Emily"
     }
    ]
+  },
+  "E02-ELI-H": {
+   "source": "https://www.superprestigecyclocross.be/storage/programs/file_participants/410/410.pdf?t=1793697617",
+   "fetched": "2026-11-05T13:39:09.504Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "niels-vandeputte",
+     "name": "VANDEPUTTE Niels"
+    },
+    {
+     "bib": 2,
+     "ath": "michael-vanthourenhout",
+     "name": "VANTHOURENHOUT Michael"
+    },
+    {
+     "bib": 3,
+     "ath": "felipe-orts-lloret",
+     "name": "ORTS LLORET Felipe"
+    },
+    {
+     "bib": 4,
+     "ath": "joran-wyseure",
+     "name": "WYSEURE Joran"
+    },
+    {
+     "bib": 5,
+     "ath": "laurens-sweeck",
+     "name": "SWEECK Laurens"
+    },
+    {
+     "bib": 6,
+     "ath": "mees-hendrikx",
+     "name": "HENDRIKX Mees"
+    },
+    {
+     "bib": 7,
+     "ath": "gerben-kuypers",
+     "name": "KUYPERS Gerben"
+    },
+    {
+     "bib": 8,
+     "ath": "cameron-mason",
+     "name": "MASON Cameron"
+    },
+    {
+     "bib": 9,
+     "ath": "jente-michels",
+     "name": "MICHELS Jente"
+    },
+    {
+     "bib": 10,
+     "ath": "kevin-kuhn",
+     "name": "KUHN Kevin"
+    },
+    {
+     "bib": 11,
+     "ath": "toon-vandebosch",
+     "name": "VANDEBOSCH Toon"
+    },
+    {
+     "bib": 12,
+     "ath": "witse-meeussen",
+     "name": "MEEUSSEN Witse"
+    },
+    {
+     "bib": 13,
+     "ath": "victor-van-de-putte",
+     "name": "VAN DE PUTTE Victor"
+    },
+    {
+     "bib": 14,
+     "ath": "wout-janssen",
+     "name": "JANSSEN Wout"
+    },
+    {
+     "bib": 15,
+     "ath": "viktor-vandenberghe",
+     "name": "VANDENBERGHE Viktor"
+    },
+    {
+     "bib": 16,
+     "ath": "clement-horny",
+     "name": "HORNY Clement"
+    },
+    {
+     "bib": 17,
+     "ath": "kay-de-bruyckere",
+     "name": "DE BRUYCKERE Kay"
+    },
+    {
+     "bib": 18,
+     "ath": "kenay-de-moyer",
+     "name": "DE MOYER Kenay"
+    },
+    {
+     "bib": 19,
+     "ath": "anton-ferdinande",
+     "name": "FERDINANDE Anton"
+    },
+    {
+     "bib": 20,
+     "ath": "antoine-jamin",
+     "name": "JAMIN Antoine"
+    },
+    {
+     "bib": 21,
+     "ath": "ward-huybs",
+     "name": "HUYBS Ward"
+    },
+    {
+     "bib": 22,
+     "ath": "carden-king",
+     "name": "KING Carden"
+    },
+    {
+     "bib": 23,
+     "ath": "dovydas-luksas",
+     "name": "LUKŠAS Dovydas"
+    },
+    {
+     "bib": 24,
+     "ath": "lukas-herrmann",
+     "name": "HERRMANN Lukas"
+    },
+    {
+     "bib": 25,
+     "ath": "arne-baers",
+     "name": "BAERS Arne"
+    },
+    {
+     "bib": 26,
+     "ath": "stan-van-grieken",
+     "name": "VAN GRIEKEN Stan"
+    },
+    {
+     "bib": 27,
+     "ath": "ugo-ananie",
+     "name": "ANANIE Ugo"
+    },
+    {
+     "bib": 28,
+     "ath": "lorenzo-marasco",
+     "name": "MARASCO Lorenzo"
+    },
+    {
+     "bib": 29,
+     "ath": "senn-bossaerts",
+     "name": "BOSSAERTS Senn"
+    },
+    {
+     "bib": 30,
+     "ath": "filippo-cecchi",
+     "name": "CECCHI Filippo"
+    },
+    {
+     "bib": 31,
+     "ath": "nicola-parenti",
+     "name": "PARENTI Nicola"
+    },
+    {
+     "bib": 32,
+     "ath": "gust-depraetere",
+     "name": "DEPRAETERE Gust"
+    },
+    {
+     "bib": 33,
+     "ath": "declan-oldham",
+     "name": "OLDHAM Declan"
+    },
+    {
+     "bib": 34,
+     "ath": "wies-nuyens",
+     "name": "NUYENS Wies"
+    },
+    {
+     "bib": 35,
+     "ath": "yoren-vanhoudt",
+     "name": "VANHOUDT Yoren"
+    },
+    {
+     "bib": 36,
+     "ath": "keano-geens",
+     "name": "GEENS Keano"
+    },
+    {
+     "bib": 37,
+     "ath": "tibo-vancompernolle",
+     "name": "VANCOMPERNOLLE Tibo"
+    },
+    {
+     "bib": 38,
+     "ath": "jari-van-lee",
+     "name": "VAN LEE Jari"
+    },
+    {
+     "bib": 39,
+     "ath": "loic-vanlaere",
+     "name": "VANLAERE Loïc"
+    },
+    {
+     "bib": 40,
+     "ath": "jacob-steed",
+     "name": "STEED Jacob"
+    },
+    {
+     "bib": 41,
+     "ath": "yelle-leaerts",
+     "name": "LEAERTS Yelle"
+    },
+    {
+     "bib": 42,
+     "ath": "william-lezard",
+     "name": "LEZARD William"
+    },
+    {
+     "bib": 43,
+     "ath": "jarno-bellens",
+     "name": "BELLENS Jarno"
+    },
+    {
+     "bib": 44,
+     "ath": "dima-roels",
+     "name": "ROELS Dima"
+    },
+    {
+     "bib": 45,
+     "ath": "martynas-medelinskas",
+     "name": "MEDELINSKAS Martynas"
+    },
+    {
+     "bib": 46,
+     "ath": "brent-maes",
+     "name": "MAES Brent"
+    }
+   ]
+  },
+  "E02-ELI-F": {
+   "source": "https://www.superprestigecyclocross.be/storage/programs/file_participants/409/409.pdf?t=1793697617",
+   "fetched": "2026-11-05T13:39:10.665Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "amandine-fouquenet",
+     "name": "FOUQUENET Amandine"
+    },
+    {
+     "bib": 6,
+     "ath": "julie-brouwers",
+     "name": "BROUWERS Julie"
+    },
+    {
+     "bib": 7,
+     "ath": "helene-clauzel",
+     "name": "CLAUZEL Hélène"
+    },
+    {
+     "bib": 8,
+     "ath": "rebecca-gariboldi",
+     "name": "GARIBOLDI Rebecca"
+    },
+    {
+     "bib": 10,
+     "ath": "xan-crees",
+     "name": "CREES Xan"
+    },
+    {
+     "bib": 11,
+     "ath": "kiona-crabbe",
+     "name": "CRABBÉ Kiona"
+    },
+    {
+     "bib": 13,
+     "ath": "adele-hurteloup",
+     "name": "HURTELOUP Adèle"
+    },
+    {
+     "bib": 16,
+     "ath": "anna-kay",
+     "name": "KAY Anna"
+    },
+    {
+     "bib": 17,
+     "ath": "maite-barthels",
+     "name": "BARTHELS Maïté"
+    },
+    {
+     "bib": 19,
+     "ath": "camille-devigne",
+     "name": "DEVIGNE Camille"
+    },
+    {
+     "bib": 20,
+     "ath": "lara-defour",
+     "name": "DEFOUR Lara"
+    },
+    {
+     "bib": 21,
+     "ath": "kim-van-de-steene",
+     "name": "VAN DE STEENE Kim"
+    },
+    {
+     "bib": 22,
+     "ath": "lisa-maes",
+     "name": "MAES Lisa"
+    },
+    {
+     "bib": 23,
+     "ath": "juline-delcommune",
+     "name": "DELCOMMUNE Juline"
+    },
+    {
+     "bib": 24,
+     "ath": "alice-colling",
+     "name": "COLLING Alice"
+    },
+    {
+     "bib": 26,
+     "ath": "larissa-rossner",
+     "name": "ROSSNER Larissa"
+    },
+    {
+     "bib": 27,
+     "ath": "meg-de-bruyne",
+     "name": "DE BRUYNE Meg"
+    },
+    {
+     "bib": 28,
+     "ath": "alana-polfliet",
+     "name": "POLFLIET Alana"
+    },
+    {
+     "bib": 29,
+     "ath": "tessa-zwaenepoel",
+     "name": "ZWAENEPOEL Tessa"
+    }
+   ]
   }
  }
 }

@@ -1,0 +1,50 @@
+                       SUPERPRESTIGE NOORDZEECROSS MIDDELKERKE
+                             STARTLIST MEN ELITE 05/11/2026
+Nr   Naam                        UCI ID     Nat   Club                                         UCI Rank
+ 1   VANDEPUTTE Niels         10016327609   BEL   ALPECIN-PREMIER TECH                             1
+ 2   VANTHOURENHOUT Michael   10007155651   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT          5
+ 3   ORTS LLORET Felipe       10009004715   ESP   EUSKALTEL - EUSKADI                              7
+ 4   WYSEURE Joran            10064921777   BEL   CRELAN-CORENDON                                  9
+ 5   SWEECK Laurens           10006912646   BEL   CRELAN-CORENDON                                 10
+ 6   HENDRIKX Mees            10016519484   NED   TEAM BOMBA JOIN                                 12
+ 7   KUYPERS Gerben           10016322757   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         13
+ 8   MASON Cameron            10023574923   GBR   SEVEN RACING                                    14
+ 9   MICHELS Jente            10065014333   BEL   ALPECIN-PREMIER TECH DEVELOPMENT TEAM           15
+10   KUHN Kevin               10009746763   SUI   HEIZOMAT - CUBE                                 16
+11   VANDEBOSCH Toon          10010943604   BEL   CRELAN-CORENDON                                 20
+12   MEEUSSEN Witse           10064931679   BEL   CRELAN-CORENDON                                 26
+13   VAN DE PUTTE Victor      10064985940   BEL   CHARLES LIÉGEOIS CX TEAM                        41
+14   JANSSEN Wout             10064972095   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT     46
+15   VANDENBERGHE Viktor      10087960489   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         58
+16   HORNY Clement            10016419858   BEL   BH-WALLONIE MTB TEAM                            62
+17   DE BRUYCKERE Kay         10065053638   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         64
+18   DE MOYER Kenay           10065066065   BEL   ATOM6-CYCLEUR DE LUXE-AUTOSTROO CONT. TEAM      65
+19   FERDINANDE Anton         10016322656   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         91
+20   JAMIN Antoine            10064271877   BEL   AARCO                                          126
+21   HUYBS Ward               10065005542   BEL   RONDE VAN VLAAMS-BRABANT VZW                   163
+22   KING Carden              10065999083   USA   TRIPLE CROWN WORKSHOP                          172
+23   LUKŠAS Dovydas           10036592525   LTU   COLIBRI CYCLING                                178
+24   HERRMANN Lukas           10046134190   GER   HEIZOMAT - CUBE                                183
+25   BAERS Arne               10064979472   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS 196
+26   VAN GRIEKEN Stan         10065097488   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT    198
+27   ANANIE Ugo               10069167953   FRA   VCU SCHWENHEIM                                 241
+28   MARASCO Lorenzo          10023530059   FRA   SEBMOTOBIKES CX TEAM                           259
+29   BOSSAERTS Senn           10065148719   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT    291
+30   CECCHI Filippo           10030196484   ITA   BIKE ACADEMY-MARCHINI COSTRUZIONI              300
+31   PARENTI Nicola           10013694562   ITA   BIKE ACADEMY-MARCHINI COSTRUZIONI              338
+32   DEPRAETERE Gust          10084695330   BEL   THE LEAD OUT CYCLING ACADEMY                   382
+33   OLDHAM Declan            10121126510   GBR   HOPE FACTORY RACING                            387
+34   NUYENS Wies              10065092640   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT        421
+35   VANHOUDT Yoren           10065141039   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT    539
+36   GEENS Keano              10065201057   BEL   WOUTIM CYCLING TEAM                            553
+37   VANCOMPERNOLLE Tibo      10065134470   BEL   DL CHEMICALS - EXPERZA CYCLING TEAM            559
+38   VAN LEE Jari             10065219649   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT        571
+39   VANLAERE Loïc            10065197421   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT        578
+40   STEED Jacob              10127988147   GBR   CLUB CYCLISTE VILLENEUVE ST GERMAIN AISNE      655
+41   LEAERTS Yelle            10009347346   BEL   VAN MOSSEL HEIST CYCLING TEAM
+42   LEZARD William           10127163445   GBR   MAGSPEED RACING
+43   BELLENS Jarno            10016350241   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
+44   ROELS Dima               10105306921   BEL   WIELERCLUB "ONDER - ONS PARIKE" VZW
+45   MEDELINSKAS Martynas     10141319381   LTU   VZW WP DE MOLENSPURTERS MEULEBEKE
+46   MAES Brent               10125216573   BEL   CYCLOCROSS TEAM MJ WOOD
+
