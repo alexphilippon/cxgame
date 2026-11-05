@@ -133,6 +133,11 @@
       if (r.start) meta[rid] = { start: r.start };
     });
     Object.entries(state.raw.results).forEach(([rid, entries]) => { res[rid] = (entries || []).map((e) => Object.assign({}, e, { ath: canon(e.ath) })); delete meta[rid]; });
+    // Un coureur choisi mais absent de la start list ET du classement n'a pas pris le départ : DNS automatique (libère le choix, déclenche remplaçant puis tirage)
+    Object.keys(meta).forEach((rid) => {
+      const inStart = new Set((meta[rid].start || []).map((x) => canon(x.ath))), inRes = new Set((res[rid] || []).map((e) => e.ath));
+      Object.keys(picks).forEach((uid) => { const pk = picks[uid][rid]; if (!pk) return; ['a', 'b'].forEach((k) => { const a = pk[k]; if (a && !inStart.has(a) && !inRes.has(a)) { res[rid].push({ ath: a, status: 'DNS', auto: true }); inRes.add(a); } }); });
+    });
     state.results = res;
     state.draws = G.autoDraws(res, meta, picks); // tirages au sort : fonction pure des données publiques, donc vérifiables
     Object.entries(state.draws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { picks[pid][rid] = Object.assign({}, picks[pid][rid], { d: d.ath, auto: true }); }));
