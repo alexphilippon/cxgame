@@ -296,5 +296,10 @@ assert.deepStrictEqual(G.drawRider('s', ['x', 'y', 'z']), G.drawRider('s', ['x',
   assert.strictEqual(new Set(Object.values(byP).map((x) => x.ath)).size > 1, true, 'tirages différents selon le joueur');
   assert.deepStrictEqual(G.noPickDraws(meta, picks, ids.slice().reverse(), () => true, {}), d, 'reproductible');
   assert.deepStrictEqual(G.noPickDraws(meta, picks, ids, () => false, {}), {}, 'rien avant le verrouillage');
+  const dns = { 'E02-ELI-H': [{ ath: byP.p1.ath, status: 'DNS' }] };
+  const d2 = G.noPickDraws(meta, picks, ids, () => true, dns)['E02-ELI-H'];
+  assert.notStrictEqual(d2.p1.ath, byP.p1.ath, 'coureur tiré DNS : 2e tirage');
+  assert.strictEqual(d2.p1.redraw, byP.p1.ath);
+  assert.ok(Number(d2.p1.ath.slice(1)) <= 15, '2e tirage toujours parmi les 15 premiers');
 }
 console.log('Tous les tests passent.');

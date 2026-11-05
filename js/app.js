@@ -141,7 +141,7 @@
     Object.entries((state.startlists && state.startlists.races) || {}).forEach(([rid, r]) => { if (r && r.start) slMeta[rid] = { start: r.start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
     Object.keys(meta).forEach((rid) => { if (!slMeta[rid]) slMeta[rid] = { start: meta[rid].start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
     state.npDraws = G.noPickDraws(slMeta, picks, state.players.map((p) => p.id), (r) => lockedRace(r), res);
-    Object.entries(state.npDraws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { (picks[pid] = picks[pid] || {})[rid] = { a: d.ath, drawn: true, nopick: true, auto: true }; }));
+    Object.entries(state.npDraws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { (picks[pid] = picks[pid] || {})[rid] = { a: d.ath, drawn: true, nopick: true, auto: true, redraw: d.redraw || undefined }; }));
     state.picks = picks;
     scheduleRender();
   }
@@ -371,7 +371,7 @@
       : swapped
       ? `<span class="who"><s class="who--out">${skn(p.a)}</s> ${skn(p.b)}</span><span class="sub">Remplaçant en piste</span>`
       : p.nopick
-      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix) · parmi les ${G.NOPICK_TOP} premiers dossards</span>`
+      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix)${p.redraw ? ` · 2ᵉ tirage, ${esc(nameOf(p.redraw))} ne partait pas` : ` · parmi les ${G.NOPICK_TOP} premiers dossards`}</span>`
       : `<span class="who">${skn(p.a)}</span>${p.b && !fin ? `<span class="sub">Remplaçant : ${skn(p.b)}</span>` : ''}`;
     return `<div class="pickline">${avatarOf(eff)}<div class="pickline__txt">${text}</div></div>`;
   }

@@ -139,7 +139,7 @@
   }
 
   /** Joueurs SANS choix sur une course verrouillée : tirage au sort parmi les NOPICK_TOP premiers dossards de la start list,
-      un tirage différent par joueur (graine = course|joueur|dossards), hors coureurs déjà grillés par ce joueur (desk, genre, catégorie). Le tirage a lieu avant la course : les DNS de cette course ne le modifient pas.
+      un tirage différent par joueur (graine = course|joueur|dossards), hors coureurs déjà grillés par ce joueur (desk, genre, catégorie). Si le coureur tiré est DNS, 2e tirage parmi les partants restants des 15 premiers dossards.
       meta : { raceId: { start:[{bib,ath}] } } ; isLocked(race) → bool. Courses traitées dans l'ordre chronologique : un tirage grille son coureur pour les suivantes.
       Retourne { raceId: { playerId: { ath, index, n, seed, candidates } } }. Fonction pure des données publiques : vérifiable par tous. */
   const NOPICK_TOP = 15;
@@ -155,10 +155,14 @@
           const burnt = usedInDesk(deskIdOf(race.id), race.gender, race.cat, work[pid], race.id, results);
           const cands = top.map((x) => x.ath).filter((id) => id && !burnt.has(id));
           const seed = `${race.id}|${pid}|nopick|${top.map((x) => x.ath || '?').join(',')}`;
-          const d = drawRider(seed, cands);
+          let d = drawRider(seed, cands), redraw = null;
           if (!d) return;
-          work[pid][race.id] = { a: d.ath, drawn: true, nopick: true, auto: true };
-          (out[race.id] = out[race.id] || {})[pid] = Object.assign({ seed, candidates: cands }, d);
+          if (results && results[race.id] && isDNS(results, race.id, d.ath)) {   // le coureur tiré ne prend pas le départ : 2e tirage parmi les partants restants
+            const left = cands.filter((id) => !isDNS(results, race.id, id)), d2 = drawRider(seed + '|2', left);
+            if (d2) { redraw = d.ath; d = d2; }
+          }
+          work[pid][race.id] = { a: d.ath, drawn: true, nopick: true, auto: true, redraw: redraw || undefined };
+          (out[race.id] = out[race.id] || {})[pid] = Object.assign({ seed, candidates: cands, redraw }, d);
         });
       });
     return out;
