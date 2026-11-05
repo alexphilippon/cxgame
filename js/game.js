@@ -3,7 +3,7 @@
    - un coureur ne peut être pris qu'une fois par desk, par genre ET par catégorie d'âge ;
    - DNF / DSQ : 0 point et le coureur reste grillé jusqu'au desk suivant ; DNS : 0 point mais le titulaire est LIBÉRÉ (rejouable), le remplaçant joué est grillé ;
    - « pulled » (retiré par les commissaires) : garde son rang officiel ;
-   - tirage au sort parmi les 20 premiers dossards ; plus de finales ×2 ;
+   - tirage au sort parmi les 15 premiers dossards ; plus de finales ×2 ;
    - Euros ×2 et Mondiaux ×3 pour les Élites, U23 aux 2/3 et U19 au 1/3 de ces points (points arrondis à l'entier par course) ; bonus des Mondiaux par catégorie d'âge. */
 (function (root) {
   'use strict';
@@ -109,14 +109,14 @@
     const index = hash53(seed) % candidates.length;
     return { ath: candidates[index], index, n: candidates.length };
   }
-  const DRAW_TOP = 20;
+  const DRAW_TOP = 15;
   const deskIdOf = (raceId) => sessionOfRace(raceId).desk;   // les Mondiaux comptent dans le Desk 3
   const deskScope = (deskId) => D.SESSIONS.filter((s) => s.desk === deskId).concat(D.WORLDS.desk === deskId ? [D.WORLDS] : []);
 
   /** PROPOSITIONS de tirage (rien n'est appliqué sans la confirmation d'Alexandre pour chaque DNS).
-      Un tirage par joueur dont le titulaire ET le remplaçant sont DNS, parmi les 20 premiers dossards de la grille,
+      Un tirage par joueur dont le titulaire ET le remplaçant sont DNS, parmi les 15 premiers dossards de la grille,
       hors coureurs déjà grillés par ce joueur (desk, genre, catégorie) et hors non-partants.
-      meta : { raceId: { start:[{bib,ath}] } }. Graine = course|joueur|20 premiers de la grille (par dossard).
+      meta : { raceId: { start:[{bib,ath}] } }. Graine = course|joueur|15 premiers de la grille (par dossard).
       Retourne { raceId: { playerId: { ath, index, n, seed, candidates } } }. */
   function autoDraws(results, meta, picksByPlayer) {
     const out = {};
