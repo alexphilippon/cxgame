@@ -1,38 +1,65 @@
-                            SUPERPRESTIGE NOORDZEECROSS MIDDELKERKE
-                                STARTLIST WOMEN ELITE 05/11/2026
-Nr   Naam                           UCI ID       Nat    Club                                      UCI Rank
-1    FOUQUENET Amandine           10066772861    FRA    PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT      3
-2    VAN ALPHEN Aniek             10015541303    NED 777TV CX TEAM                                   4
-3    VAN DER HEIJDEN Inge         10010592885    NED CRELAN-CORENDON                                 7
-4    BENTVELD Leonie              10023336564    NED PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         9
-5    BETSEMA Denise               10007654694    NED DE CEUSTER BOUWKRANEN                           12
-6    BROUWERS Julie               10065009885     BEL   CHARLES LIÉGEOIS CX TEAM                     14
-7    CLAUZEL Hélène               10009876806    FRA    SEVEN RACING                                 17
-8    GARIBOLDI Rebecca            10009420704     ITA   DE CEUSTER BOUWKRANEN                        23
-9    WORST Annemarie              10008082912    NED BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS   32
-10   CREES Xan                    10023505811    GBR    XC RACING                                    34
-11   CRABBÉ Kiona                 10064929760     BEL   OP KOP CYCLING TEAM                          47
-12   MOLENGRAAF Lauren            10023352126    NED D.O.S. VZW                                      54
-13   HURTELOUP Adèle              10068756412    FRA    OP KOP CYCLING TEAM                          78
-14   LAFORCE Oda                  10019552756    NOR IF FRØY                                         86
-15   LANGENBARG Puck              10023180455    NED FENIX-PREMIER TECH DEVELOPMENT TEAM             107
-16   KAY Anna                     10015470672    GBR    ESSEC CYCLING TEAM                           109
-17   BARTHELS Maïté               10084449901    LUX    CYCLING TEAM ATERTDAUL                       112
-18   PERSSON Thea                 10116040070    SWE BAUHAUS CYCLING TEAM                            137
-19   DEVIGNE Camille              10067517438    FRA    ESPOIR CYCLISTE WAMBRECHIES MARQUETTE        191
-20   DEFOUR Lara                  10015518364     BEL   CYCLING TEAM JADE - LDL                      195
-21   VAN DE STEENE Kim            10007952566     BEL   Individueel                                  206
-22   MAES Lisa                    10125216674     BEL   DE CEUSTER-ACROG                             232
-23   DELCOMMUNE Juline            10078333140     BEL   TEAM WILINK BRUSSELS CYCLING                 304
-24   COLLING Alice                10121237452    GBR    SMURFIT WESTROCK CYCLING TEAM                331
-25   HOEFMANS Pem                 10023153375    NED WV BREDA                                        380
-26   ROSSNER Larissa              10109635848     SUI   VC ESCHENBACH                                704
-27   DE BRUYNE Meg                10009112526     BEL   SUPER HELP - EVIL EYE                        759
-28   POLFLIET Alana               10115279834     BEL   NEVER GIVE UP BY JOLIEN VERSCHUEREN          774
-29   ZWAENEPOEL Tessa             10064952594     BEL   KASSEIEN FIETS HUIS CT
+                                                             DEELNEMERSLIJST
+
+                                                       Middelkerke - Veldrijden U17
+            05/11/2026
+
+Reeks 1                                                                   U17                                   Sleut 14981
+Organisator: CYCLOCROSSCOMITE MIDDELKERKE VZW - Rondes of afstand niet ingegeven                                #Dln: 73
+
+RUG Naam                     Nat Cat            Club                               RUG Naam                Nat Cat              Club
+1    HENDRICKX Gabriël BEL MU17             ACROG-TORMANS                  62         BONAMIE Hannes    BEL MU15              KON. VC ´T MEETJESLAND - KNESS
+2    STEVENS Pippe      BEL MU17            HOTOND SPORTHOTEL - LITUBRA PA 63         COMMEYNE Leyto    BEL MU15              TOMABEL-INOFEC CYCLINGTEAM
+3    MARTENS Kobe       BEL MU17            AVIA-RUDYCO CYCLING TEAM       64         MOLMY Axel        FRA YOUTH MEN - U15   VC ROUBAIX LILLE MÉTROPOLE
+4    DEN BAES Yorben    BEL MU17            TOMABEL-INOFEC CYCLINGTEAM     65         TROOSTERS Arne    BEL MU15              BIQS-BRAINSQUARE OLYMPIA TIENE
+5    DEN BAES Xibe      BEL MU17            TOMABEL-INOFEC CYCLINGTEAM     66         SWERTS Bo         BEL MU15              GOLAZO YOUNG LIONS
+6    RONDELEZ Léon      BEL MU17            CYCLING TEAM HOUTLAND-WESTKUST 67         VANHEES Jasper    BEL MU15              CRABBÉ-DSTNY
+7    BECQUÉ Mats        BEL MU17            ACROG-TORMANS                  68         CRUL Iljo         BEL MU15              ISOREX CYCLING TEAM
+8    BORREMANS Thieme BEL MU17              GOLAZO YOUNG LIONS             69         GOKEL Wout        BEL PROMO             Individueel
+9    LEENAERTS Lerten   BEL MU17            GOLAZO YOUNG LIONS             70         LEY Seppe         BEL MU15              STARBIKES - RIDLEY CT
+10   COP Arto           BEL MU17            ACROG-TORMANS                  71         LUST Leon         BEL MU15              HOTOND SPORTHOTEL - LITUBRA PA
+11   VAN GENECHTEN Lars BEL MU17            ACROG-TORMANS                  72         OOM Emil          SWE YOUTH MEN - U17   MALMÖ CYKELCROSS KLUBB
+12   VERSTRAETE Zico    BEL MU17            C.T. KEUKENS BUYSSE KNESSELARE 73         VERFAILLIE Briek  BEL MU15              TOMABEL-INOFEC CYCLINGTEAM
+13   BRESSELEERS Lukas BEL MU17             TEAM KEMPEN CYCLING VZW        74         BEVERS Leon       BEL MU15              WAC - PART OF MERCI POUPOU ACA
+14   KRAMER Alexander   BEL MU17            S&S CYCLING TEAM               75         DE SCHUTTER Seppe BEL MU15              NOW CYCLING TEAM
+15   KOVÁCS JR. Béla    HUN YOUTH MEN - U17 DSI CYCLING TEAM               76         DEREZE Wout       BEL MU15              CRABBÉ-DSTNY
+16   DE CREMER Maico    BEL MU17            BIKE-ADVICE CYCLING TEAM       77         DECLERCQ Jorre    BEL MU15              WIELERCLUB "ONDER - ONS PARIKE
+17   VAN MOEN Simon     BEL MU17            CYCLING TEAM HOUTLAND-WESTKUST 78         QUIRIJNEN Vic     BEL MU15              TEAM KEMPEN CYCLING VZW
+18   MATHIEUX Jules     BEL MU17            TRUSTUP-CC CHEVIGNY            81         WHALL Elizabeth   GBR YOUTH WOMEN - U15 COLCHESTER ROVERS CC
+19   IVAKHOV Grigori    GBR YOUTH MEN - U17 WV DE AMSTEL                   82         DINNEWETH Elisa   BEL WU15              KON. VC ´T MEETJESLAND - KNESS
+21   WYNANTS Loic       BEL MU17            ACROG-TORMANS                  83         HERMAN Julia      NED YOUTH WOMEN - U17 WESTLAND WIL VOORUIT
+22   BOUCKAERT Aäron    BEL MU17            CYCLING TEAM LUC WALLAYS - JON 84         GIBSON Eva        GBR YOUTH WOMEN - U17 4T+ CYCLOPARK
+23   LEIRS Mats         BEL MU17            UCT CYCLING TEAM               85         GRAS Eva          FRA YOUTH WOMEN - U17 EC MONTGERON VIGNEUX
+24   ROSSELLE Idse      BEL MU17            JEUGD CYCLINGTEAM VEURNE       86         SOETAERT Margaux BEL WU17               HOTOND SPORTHOTEL - LITUBRA PA
+25   ILSBROUX Thomas    BEL MU17            CRABBÉ-DSTNY
+26   VAN HOUTTE Gabriël BEL MU17            KVC NOORDZEEMEEUW
+27   VERMEIRE Kobe      BEL MU17            ACROG-TORMANS
+28   MESTDAGH Tibo      BEL MU17            CYCLING TEAM HOUTLAND-WESTKUST
+29   VRIENDS Cis        BEL MU17            WAC - PART OF MERCI POUPOU ACA
+30   ABS Loïc           BEL MU17            UCT CYCLING TEAM
+31   OP DE BEECK Lars   BEL MU17            GOLAZO YOUNG LIONS
+33   MEERSMAN Miel      BEL MU17            ACLAGRO MTB TEAM
+34   BRESSELEERS Daan BEL MU17              DLS INVIGO
+35   VANDERBEKE Matteo BEL MU17             KON. VC ´T MEETJESLAND - KNESS
+36   DUTTON Laurie      GBR YOUTH MEN - U17 VELO CLUB LONDRES (VCL)
+37   BELMANS Sep        BEL MU17            WOUTIM CYCLING TEAM
+38   DEPRÉE Sébastien   BEL MU17            CRABBÉ-DSTNY
+39   JANSSENS Matz      BEL MU17            GOLAZO YOUNG LIONS
+40   DE GROOF Toon      BEL MU17            WAC - PART OF MERCI POUPOU ACA
+41   VOLCKAERT Vic      BEL MU17            WIELERTEAM IEPER
+51   BAETS Jens         BEL MU15            WAC - PART OF MERCI POUPOU ACA
+52   DEVROYE Imko       BEL MU15            BIQS-BRAINSQUARE OLYMPIA TIENE
+53   WUYTS Sid          BEL MU15            GOLAZO YOUNG LIONS
+54   ROKEGEM Lewis      BEL MU15            WIELERCLUB "ONDER - ONS PARIKE
+55   PEETERS Nils       BEL MU15            FIETSSERVICE-MONDRAKER TEAM
+56   BIESBROUCK Briek   BEL MU15            KVC NOORDZEEMEEUW
+57   DE CONINCK Fabio   BEL MU15            GOLAZO YOUNG LIONS
+58   GOVARTS Rune       BEL MU15            GOLAZO YOUNG LIONS
+59   CASIER Lars        BEL MU15            TOMABEL-INOFEC CYCLINGTEAM
+60   VANDAMME Matéo     BEL MU15            ACROG-TORMANS
+61   HENDRIKX Wessel    NED YOUTH MEN - U15 CYCLING TEAM LIMBURG
 
 
 
 
-                                                Pagina 1 van 1
+                                                                                                                           05/11/2026 - 14:44:29 - 1 / 1
 

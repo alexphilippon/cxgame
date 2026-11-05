@@ -1,50 +1,64 @@
-                       SUPERPRESTIGE NOORDZEECROSS MIDDELKERKE
-                             STARTLIST MEN ELITE 05/11/2026
-Nr   Naam                        UCI ID     Nat   Club                                         UCI Rank
- 1   VANDEPUTTE Niels         10016327609   BEL   ALPECIN-PREMIER TECH                             1
- 2   VANTHOURENHOUT Michael   10007155651   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT          5
- 3   ORTS LLORET Felipe       10009004715   ESP   EUSKALTEL - EUSKADI                              7
- 4   WYSEURE Joran            10064921777   BEL   CRELAN-CORENDON                                  9
- 5   SWEECK Laurens           10006912646   BEL   CRELAN-CORENDON                                 10
- 6   HENDRIKX Mees            10016519484   NED   TEAM BOMBA JOIN                                 12
- 7   KUYPERS Gerben           10016322757   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         13
- 8   MASON Cameron            10023574923   GBR   SEVEN RACING                                    14
- 9   MICHELS Jente            10065014333   BEL   ALPECIN-PREMIER TECH DEVELOPMENT TEAM           15
-10   KUHN Kevin               10009746763   SUI   HEIZOMAT - CUBE                                 16
-11   VANDEBOSCH Toon          10010943604   BEL   CRELAN-CORENDON                                 20
-12   MEEUSSEN Witse           10064931679   BEL   CRELAN-CORENDON                                 26
-13   VAN DE PUTTE Victor      10064985940   BEL   CHARLES LIÉGEOIS CX TEAM                        41
-14   JANSSEN Wout             10064972095   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT     46
-15   VANDENBERGHE Viktor      10087960489   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         58
-16   HORNY Clement            10016419858   BEL   BH-WALLONIE MTB TEAM                            62
-17   DE BRUYCKERE Kay         10065053638   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         64
-18   DE MOYER Kenay           10065066065   BEL   ATOM6-CYCLEUR DE LUXE-AUTOSTROO CONT. TEAM      65
-19   FERDINANDE Anton         10016322656   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         91
-20   JAMIN Antoine            10064271877   BEL   AARCO                                          126
-21   HUYBS Ward               10065005542   BEL   RONDE VAN VLAAMS-BRABANT VZW                   163
-22   KING Carden              10065999083   USA   TRIPLE CROWN WORKSHOP                          172
-23   LUKŠAS Dovydas           10036592525   LTU   COLIBRI CYCLING                                178
-24   HERRMANN Lukas           10046134190   GER   HEIZOMAT - CUBE                                183
-25   BAERS Arne               10064979472   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS 196
-26   VAN GRIEKEN Stan         10065097488   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT    198
-27   ANANIE Ugo               10069167953   FRA   VCU SCHWENHEIM                                 241
-28   MARASCO Lorenzo          10023530059   FRA   SEBMOTOBIKES CX TEAM                           259
-29   BOSSAERTS Senn           10065148719   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT    291
-30   CECCHI Filippo           10030196484   ITA   BIKE ACADEMY-MARCHINI COSTRUZIONI              300
-31   PARENTI Nicola           10013694562   ITA   BIKE ACADEMY-MARCHINI COSTRUZIONI              338
-32   DEPRAETERE Gust          10084695330   BEL   THE LEAD OUT CYCLING ACADEMY                   382
-33   OLDHAM Declan            10121126510   GBR   HOPE FACTORY RACING                            387
-34   NUYENS Wies              10065092640   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT        421
-35   VANHOUDT Yoren           10065141039   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT    539
-36   GEENS Keano              10065201057   BEL   WOUTIM CYCLING TEAM                            553
-37   VANCOMPERNOLLE Tibo      10065134470   BEL   DL CHEMICALS - EXPERZA CYCLING TEAM            559
-38   VAN LEE Jari             10065219649   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT        571
-39   VANLAERE Loïc            10065197421   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT        578
-40   STEED Jacob              10127988147   GBR   CLUB CYCLISTE VILLENEUVE ST GERMAIN AISNE      655
-41   LEAERTS Yelle            10009347346   BEL   VAN MOSSEL HEIST CYCLING TEAM
-42   LEZARD William           10127163445   GBR   MAGSPEED RACING
-43   BELLENS Jarno            10016350241   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
-44   ROELS Dima               10105306921   BEL   WIELERCLUB "ONDER - ONS PARIKE" VZW
-45   MEDELINSKAS Martynas     10141319381   LTU   VZW WP DE MOLENSPURTERS MEULEBEKE
-46   MAES Brent               10125216573   BEL   CYCLOCROSS TEAM MJ WOOD
+                                                             DEELNEMERSLIJST
+
+                                         TELENET SUPERPRESTIGE MIDDELKERKE -
+            05/11/2026                            Veldrijden Juniors UCI
+Reeks 1                                                              Hoofdreeks                            Sleut 14801
+Organisator: CYCLOCROSSCOMITE MIDDELKERKE VZW - Rondes of afstand niet ingegeven                           #Dln: 60
+
+RUG Naam                          Nat Cat            Club                          RUG Naam                       Nat Cat          Club
+1    PAUWELS Jonas          BEL MJ              WIELERCLUB "ONDER - ONS PARIKE 55     VAN VAERENBERG Ruben BEL MJ                BIQS-BRAINSQUARE OLYMPIA T
+2    WOOLISCROFT Joseph     GBR JUNIOR MEN      SHIBDEN CC                     56     PÅLSSON GUSTAFSSON Mel SWE JUNIOR MEN      BAUHAUS CYCLING TEAM
+3    SMITS Maxime           BEL MJ              ACROG-TORMANS                  58     SIMONS Jef             BEL MU17            WAC - PART OF MERCI POUPOU
+4    GRAHAM Xander          GBR JUNIOR MEN                                     59     VAN DEN BOER Bas       BEL MU17            GOLAZO YOUNG LIONS
+5    VAN HOECK Sam          BEL MJ              WAC - PART OF MERCI POUPOU ACA 60     BOITTE Emile           BEL MJ              TRUSTUP-CC CHEVIGNY
+6    WILLEMS Lars           BEL MJ              WIELERCLUB "ONDER - ONS PARIKE 62     DE NEEF Jens           BEL MJ              VAN MOER LOGISTICS CYCLING
+7    SKIKAS Lukas           LTU JUNIOR MEN      PANEVŽIO M. MERGIN DVIRAI      63     DESGROUSILLIERS Jacque FRA YOUTH MEN - U17 ETOILE CYCLISTE CHATEAU THI
+8    LANDRIN ZEBERT Jules   FRA JUNIOR MEN      VÉLO CLUB COMMUNAUTÉ HETTANGE 64      DE LOOSE Senne         BEL MJ              AVIA-RUDYCO CYCLING TEAM
+9    KUKLINSKAS Jokbas      LTU JUNIOR MEN      LITHUANIAN CX NATIONAL TEAM    65     DELANGHE Siep          BEL MU17            FRUIT AT WORK - ARGENTA CYC
+10   DELANGHE Flynn         BEL MJ              VAN MOER LOGISTICS CYCLING TEA 66     NIESSEN Lander         BEL MU17            JONGE RAKKERS VOLLEZELE
+11   VAN OIRBEEK Jules      BEL MJ              WOUTIM CYCLING TEAM
+12   JORDENS Finn           BEL MJ              S&S CYCLING TEAM
+13   CAMI Senne             BEL MU17            ACROG-TORMANS
+14   WHITE Noah             GBR JUNIOR MEN      LEE VALLEY YOUTH CYCLE CLUB LV
+15   NOEL Mattis            FRA JUNIOR MEN      PARIS CYCLISTE OLYMPIQUE
+16   BRISSON Maxime         FRA JUNIOR MEN      CLUB MULTISPORT DE MUTIGNY
+17   AERTS Andreas          BEL MU17            GOLAZO YOUNG LIONS
+18   HENDRIKX Thijmen       NED YOUTH MEN - U17 CYCLING TEAM LIMBURG
+20   GEENS Matiz            BEL MJ              WOUTIM CYCLING TEAM
+21   BELMANS Ferre          BEL MJ              WAC - PART OF MERCI POUPOU ACA
+22   SCHILDERS Daan         NED JUNIOR MEN      TWC HET SNELLE WIEL
+23   ROELANDT Alessio       BEL MJ              ACROG-TORMANS
+25   PINOY Adrien           BEL MU17            TEAM WILINK BRUSSELS CYCLING
+26   URBONAS Rapolas        LTU YOUTH MEN - U17 UTENOS DSC
+27   GEENS Lowie            BEL MJ              WIELERCLUB "ONDER - ONS PARIKE
+28   POLLET Milan           BEL MU17            KVC NOORDZEEMEEUW
+29   HENDRIX Sep            NED YOUTH MEN - U17 TWC HET SNELLE WIEL
+30   ROGIER Raphael         FRA YOUTH MEN - U17
+31   MEERSMAN Flor          BEL MJ              ACLAGRO MTB TEAM
+32   JANSEN Jerre           BEL MJ              GMS CYCLING TEAM GLABBEEK
+33   DECOCK Louis           BEL MU17            HOTOND SPORTHOTEL - LITUBRA PA
+34   VAN ALPHEN ENTHOVEN Bo NED YOUTH MEN - U17 WESTLAND WIL VOORUIT
+35   LAMOTE Matteo          BEL MJ              CYCLING TEAM LUC WALLAYS - JON
+36   JONCKHEERE Lars        BEL MU17            KON. VC ´T MEETJESLAND - KNESS
+37   VERSIEREN Remco        BEL MU17            ISOREX CYCLING TEAM
+38   MAES Lenn              BEL MU17            FRUIT AT WORK - ARGENTA CYCLIN
+39   MULVANEY Kieran        IRL JUNIOR MEN      SLIABH LUACHRA CYCLING CLUB
+40   GYSEN Quinten          BEL MJ              AVIA-RUDYCO CYCLING TEAM
+41   LEFEVERE Tibe          BEL MU17            CYCLING TEAM HOUTLAND-WESTKUST
+42   SLOTBOOM Iker          NED YOUTH MEN - U17 WESTLAND WIL VOORUIT
+43   DE WEWEIRE Briek       BEL MU17            Individueel
+44   DE MEYER Bent          BEL MU17            ACLAGRO MTB TEAM
+45   JANSSENS Stan          BEL MJ              ACROG-TORMANS
+47   STOCKMAN Lars          BEL MJ              ACROG-TORMANS
+48   HERMAN Bas             NED JUNIOR MEN      WESTLAND WIL VOORUIT
+49   VAN HOOF Aaron         BEL MJ              KZLWC - AE
+51   MEERE Elias            BEL MU17            ISOREX CYCLING TEAM
+52   MUTSAERS Martijn       NED JUNIOR MEN      TWC PIJNENBURG
+53   VERSCHOORE Robbe       BEL MJ              VZW WP DE MOLENSPURTERS MEULEB
+54   STROOBANTS Viggo       BEL MJ              BIQS-BRAINSQUARE OLYMPIA TIENE
+
+
+
+
+                                                                                                                      05/11/2026 - 16:09:34 - 1 / 1
 
