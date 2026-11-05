@@ -625,12 +625,32 @@
   },
   "E02-ELI-F": {
    "source": "https://www.superprestigecyclocross.be/storage/programs/file_participants/409/409.pdf?t=1793697617",
-   "fetched": "2026-11-05T13:39:10.665Z",
+   "fetched": "2026-11-05T13:40:46.936Z",
    "start": [
     {
      "bib": 1,
      "ath": "amandine-fouquenet",
      "name": "FOUQUENET Amandine"
+    },
+    {
+     "bib": 2,
+     "ath": "aniek-van-alphen",
+     "name": "VAN ALPHEN Aniek"
+    },
+    {
+     "bib": 3,
+     "ath": "inge-van-der-heijden",
+     "name": "VAN DER HEIJDEN Inge"
+    },
+    {
+     "bib": 4,
+     "ath": "leonie-bentveld",
+     "name": "BENTVELD Leonie"
+    },
+    {
+     "bib": 5,
+     "ath": "denise-betsema",
+     "name": "BETSEMA Denise"
     },
     {
      "bib": 6,
@@ -648,6 +668,11 @@
      "name": "GARIBOLDI Rebecca"
     },
     {
+     "bib": 9,
+     "ath": "annemarie-worst",
+     "name": "WORST Annemarie"
+    },
+    {
      "bib": 10,
      "ath": "xan-crees",
      "name": "CREES Xan"
@@ -658,9 +683,24 @@
      "name": "CRABBÉ Kiona"
     },
     {
+     "bib": 12,
+     "ath": "lauren-molengraaf",
+     "name": "MOLENGRAAF Lauren"
+    },
+    {
      "bib": 13,
      "ath": "adele-hurteloup",
      "name": "HURTELOUP Adèle"
+    },
+    {
+     "bib": 14,
+     "ath": "oda-laforce",
+     "name": "LAFORCE Oda"
+    },
+    {
+     "bib": 15,
+     "ath": "puck-langenbarg",
+     "name": "LANGENBARG Puck"
     },
     {
      "bib": 16,
@@ -671,6 +711,11 @@
      "bib": 17,
      "ath": "maite-barthels",
      "name": "BARTHELS Maïté"
+    },
+    {
+     "bib": 18,
+     "ath": "thea-persson",
+     "name": "PERSSON Thea"
     },
     {
      "bib": 19,
@@ -701,6 +746,11 @@
      "bib": 24,
      "ath": "alice-colling",
      "name": "COLLING Alice"
+    },
+    {
+     "bib": 25,
+     "ath": "pem-hoefmans",
+     "name": "HOEFMANS Pem"
     },
     {
      "bib": 26,
