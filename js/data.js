@@ -70,6 +70,8 @@
 
   // Heures provisoires (heure de Paris), tôt par prudence.
   const T_ELITE = { F: '13:00', H: '14:30' };
+  /** Heures confirmées d'une réunion (remplacent T_ELITE, timeKnown = true). Middelkerke : course en soirée, départ 18 h 30. */
+  const EVENT_TIMES = { 2: { F: '18:30', H: '18:30' } };
   // Euros et Mondiaux : 6 courses sur 2 jours. jour 0 = samedi, 1 = dimanche (Euros : bulletin UEC ; Mondiaux : provisoire).
   const BIG = {
     'U19-F': { day: 0, time: '10:30' }, 'U23-H': { day: 0, time: '12:00' }, 'ELI-F': { day: 0, time: '14:00' },
@@ -99,7 +101,7 @@
     } else {
       ['F', 'H'].forEach((g) => {
         const id = raceId(ev, 'ELI', g);
-        addRace({ id, ev, serie, cat: 'ELI', gender: g, n: e.n, place, date, time: T_ELITE[g], mult: 1, kind: 'cx' });
+        addRace({ id, ev, serie, cat: 'ELI', gender: g, n: e.n, place, date, time: (EVENT_TIMES[e.n] || T_ELITE)[g], timeKnown: !!EVENT_TIMES[e.n], mult: 1, kind: 'cx' });
         e.races.push(id);
       });
     }
