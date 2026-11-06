@@ -57,7 +57,7 @@
     if (new Set(rows.map((r) => N.nameKey(r.name))).size !== rows.length) throw new Error('Coureur en double dans la start list.');
     const start = rows.slice().sort(entry ? (a, b) => N.nameKey(a.name).localeCompare(N.nameKey(b.name)) : (a, b) => a.bib - b.bib).map((r) => {
       const x = resolve(r.name);
-      return Object.assign({ bib: r.bib, ath: x.id, name: r.name }, entry && r.nat ? { nat: r.nat } : {}, r.rank ? { rank: r.rank } : {}); // name = écriture de la source, pour rapprocher le classement
+      return Object.assign({ bib: r.bib, ath: x.id, name: r.name }, r.nat ? { nat: r.nat } : {}, r.rank ? { rank: r.rank } : {}); // name = écriture de la source, pour rapprocher le classement
     });
     return { start, unknown: [...new Set(unknown)] };
   }
