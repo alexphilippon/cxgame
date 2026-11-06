@@ -77,6 +77,8 @@
     'U19-F': { day: 0, time: '10:30' }, 'U23-H': { day: 0, time: '12:00' }, 'ELI-F': { day: 0, time: '14:00' },
     'U19-H': { day: 1, time: '10:30' }, 'U23-F': { day: 1, time: '12:00' }, 'ELI-H': { day: 1, time: '14:00' },
   };
+  // Euros de Zeddam : horaires du guide technique UEC (v02/11/2026), « subject to TV adjustment ».
+  const EURO_TIMES = { 'U19-F': '11:00', 'U23-H': '13:00', 'ELI-F': '15:00', 'U19-H': '11:00', 'U23-F': '13:00', 'ELI-H': '15:00' };
   const EURO_DAYS = ['2026-11-07', '2026-11-08'];
   const WORLDS_DAYS = ['2027-01-30', '2027-01-31'];
 
@@ -95,7 +97,7 @@
       Object.keys(BIG).forEach((k) => {
         const [cat, g] = k.split('-');
         const id = raceId(ev, cat, g);
-        addRace({ id, ev, serie, cat, gender: g, n: e.n, place, date: EURO_DAYS[BIG[k].day], time: BIG[k].time, mult: EURO_MULT[cat], kind: 'euro' });
+        addRace({ id, ev, serie, cat, gender: g, n: e.n, place, date: EURO_DAYS[BIG[k].day], time: EURO_TIMES[k], timeKnown: true, mult: EURO_MULT[cat], kind: 'euro' });
         e.races.push(id);
       });
     } else {

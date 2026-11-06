@@ -56,7 +56,7 @@ assert.deepStrictEqual(mults('mondial', 'U23'), [2], 'Mondiaux U23 ×2');
 assert.deepStrictEqual(mults('mondial', 'U19'), [1], 'Mondiaux U19 ×1');
 assert.ok(races.filter((r) => r.kind === 'cx').every((r) => r.mult === 1), 'courses ordinaires ×1');
 // honnêteté sur les données provisoires
-assert.ok(races.every((r) => r.timeKnown === (r.ev === 'E02' && r.kind === 'cx')), 'seules les heures de Middelkerke (18 h 30) sont confirmées');
+assert.ok(races.every((r) => r.timeKnown === ((r.ev === 'E02' && r.kind === 'cx') || r.ev === 'E03')), 'seules les heures de Middelkerke et des Euros sont confirmées');
 assert.ok(D.WORLDS.races.every((id) => D.RACES[id].dateKnown === false), 'jours des Mondiaux non confirmés');
 assert.ok(sess(3).races.every((id) => D.RACES[id].dateKnown === true), 'jours des Euros connus');
 
@@ -194,9 +194,9 @@ assert.strictEqual(G.sessionDeadline(s1).toISOString(), '2026-11-01T12:00:00.000
 assert.strictEqual(G.sessionState(s1, new Date('2026-11-01T11:59:00Z')), 'ouverte');
 assert.strictEqual(G.sessionState(s1, new Date('2026-11-01T12:00:00Z')), 'en cours');
 assert.strictEqual(G.sessionState(s1, new Date('2026-11-02T02:00:00Z')), 'terminée');
-assert.strictEqual(G.sessionDeadline(sess(3)).toISOString(), '2026-11-07T09:30:00.000Z', 'Euros : deadline = 1re course du samedi');
-assert.ok(G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:30:00Z')), 'Euros : toute la session se verrouille à la 1re course');
-assert.ok(!G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:29:00Z')));
+assert.strictEqual(G.sessionDeadline(sess(3)).toISOString(), '2026-11-07T10:00:00.000Z', 'Euros : deadline = 1re course du samedi');
+assert.ok(G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T10:00:00Z')), 'Euros : toute la session se verrouille à la 1re course');
+assert.ok(!G.raceLocked(G.raceOf('E03-ELI-H'), new Date('2026-11-07T09:59:00Z')));
 assert.strictEqual(G.deskIdOf('MO-ELI-H'), 3, 'les Mondiaux comptent dans le Desk 3');
 assert.strictEqual(G.deskIdOf('E22-ELI-F'), 2);
 assert.strictEqual(G.deskIdOf('E23-ELI-F'), 3);
