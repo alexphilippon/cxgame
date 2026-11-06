@@ -13,7 +13,8 @@
       const f = l.split('|'), bib = Number(f[0]);
       if (entry && f.length >= 2 && f[0].trim() === '' && f[1].trim()) return { bib: null, name: f[1].trim(), nat: (f[2] || '').trim() };   // entry list : pas de dossard
       if (f.length < 2 || !Number.isInteger(bib) || bib < 1 || !f[1].trim()) throw new Error('Ligne de départ illisible : ' + l);
-      return { bib, name: f[1].trim(), nat: (f[2] || '').trim() };
+      const rk = Number((f[3] || '').trim());   // rang UCI (facultatif, start lists UEC)
+      return Object.assign({ bib, name: f[1].trim(), nat: (f[2] || '').trim() }, Number.isInteger(rk) && rk > 0 ? { rank: rk } : {});
     });
   }
   /** Classement : « rang|NOM Prénom|pays|temps » ou « DNF|NOM Prénom|pays » (DNF, DNS, DSQ). Un temps vide est permis (coureur doublé : il garde son rang). */
@@ -56,7 +57,7 @@
     if (new Set(rows.map((r) => N.nameKey(r.name))).size !== rows.length) throw new Error('Coureur en double dans la start list.');
     const start = rows.slice().sort(entry ? (a, b) => N.nameKey(a.name).localeCompare(N.nameKey(b.name)) : (a, b) => a.bib - b.bib).map((r) => {
       const x = resolve(r.name);
-      return Object.assign({ bib: r.bib, ath: x.id, name: r.name }, entry && r.nat ? { nat: r.nat } : {}); // name = écriture de la source, pour rapprocher le classement
+      return Object.assign({ bib: r.bib, ath: x.id, name: r.name }, entry && r.nat ? { nat: r.nat } : {}, r.rank ? { rank: r.rank } : {}); // name = écriture de la source, pour rapprocher le classement
     });
     return { start, unknown: [...new Set(unknown)] };
   }
