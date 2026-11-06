@@ -143,7 +143,7 @@
     Object.entries(state.draws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { picks[pid][rid] = Object.assign({}, picks[pid][rid], { d: d.ath, auto: true }); }));
     // Joueurs sans choix sur une course verrouillée : tirage au sort parmi les 15 premiers dossards (start list publiée)
     const slMeta = {};
-    Object.entries((state.startlists && state.startlists.races) || {}).forEach(([rid, r]) => { if (r && r.start) slMeta[rid] = { start: r.start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
+    Object.entries((state.startlists && state.startlists.races) || {}).forEach(([rid, r]) => { if (r && r.start && !r.entry) slMeta[rid] = { start: r.start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
     Object.keys(meta).forEach((rid) => { if (!slMeta[rid]) slMeta[rid] = { start: meta[rid].start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
     state.npDraws = G.noPickDraws(slMeta, picks, state.players.map((p) => p.id), (r) => lockedRace(r), res);
     Object.entries(state.npDraws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { (picks[pid] = picks[pid] || {})[rid] = { a: d.ath, drawn: true, nopick: true, auto: true, redraw: d.redraw || undefined }; }));
@@ -213,7 +213,7 @@
   function startListOf(race) {
     const s = state.startlists && state.startlists.races && state.startlists.races[race.id];
     if (!s || !s.start || !s.start.length) return null;
-    return { rows: s.start.map((r) => { const nm = r.name ? N.displayName(r.name) : nameOf(r.ath); if (!NAMES[r.ath]) NAMES[r.ath] = nm; return { bib: r.bib, name: r.name ? N.displayName(r.name) : nameOf(r.ath), nat: (ATH[r.ath] || {}).nat || '', ath: r.ath }; }), fetched: s.fetched };
+    return { rows: s.start.map((r) => { const nm = r.name ? N.displayName(r.name) : nameOf(r.ath); if (!NAMES[r.ath]) NAMES[r.ath] = nm; return { bib: r.bib, name: r.name ? N.displayName(r.name) : nameOf(r.ath), nat: (ATH[r.ath] || {}).nat || r.nat || '', ath: r.ath }; }), fetched: s.fetched, entry: !!s.entry };
   }
   /** Coureurs proposables pour une course : la start list si elle est publiée, sinon le classement UCI de la catégorie (vide en U23 et U19 : saisie libre). */
   function poolOf(race) {
@@ -237,7 +237,7 @@
     Object.keys(myPicks()).forEach((rid) => {
       const race = G.raceOf(rid), pk = myPicks()[rid];
       if (!race || race.cancelled || lockedRace(race) || !pk) return;
-      const sl = startListOf(race); if (!sl) return;
+      const sl = startListOf(race); if (!sl || sl.entry) return;   // entry list provisoire (réservistes inclus) : pas d'alerte DNS
       const inSl = new Set(sl.rows.map((r) => r.ath));
       ['a', 'b'].forEach((slot) => { if (pk[slot] && !inSl.has(pk[slot])) out.push({ race, slot, ath: pk[slot] }); });
     });
@@ -966,10 +966,10 @@
       if (!picks.b) return `<button type="button" class="sl__btn sl__btn--sub" data-slpick="${race.id}|b|${r.ath}">Remplaçant</button>`;
       return '';
     };
-    const rows = sl.rows.map((r) => `<li class="sl__row${picks.a === r.ath || picks.b === r.ath ? ' is-mine' : ''}"><b class="sl__bib">${esc(r.bib)}</b>${avatarOf(r.ath, 'sm')}<span class="sl__n">${esc(r.name)}<em class="sub">${esc(r.nat)}</em></span><span class="sl__act">${act(r)}</span></li>`).join('');
+    const rows = sl.rows.map((r) => `<li class="sl__row${picks.a === r.ath || picks.b === r.ath ? ' is-mine' : ''}"><b class="sl__bib">${r.bib ? esc(r.bib) : '·'}</b>${avatarOf(r.ath, 'sm')}<span class="sl__n">${esc(r.name)}<em class="sub">${esc(r.nat)}</em></span><span class="sl__act">${act(r)}</span></li>`).join('');
     const mo = $('#modal'), prevM = keep && !mo.hidden ? mo.scrollTop : 0;
     openModal(`<h2 class="rc__title">Start list</h2>
-      <p class="hint">${esc(placeLabel(race))}, ${esc(raceName(race))} · ${sl.rows.length} partants${when ? `<br>Relevée le ${esc(when)}.` : ''} Elle peut encore évoluer avant le départ.${canPick ? '' : lockedRace(race) ? ' Les choix sont verrouillés.' : ''}</p>
+      <p class="hint">${esc(placeLabel(race))}, ${esc(raceName(race))} · ${sl.rows.length} partants${when ? `<br>Relevée le ${esc(when)}.` : ''} ${sl.entry ? ' Liste d’engagés provisoire (sans dossards, réservistes inclus) : la start list officielle la remplacera la veille de la course.' : ' Elle peut encore évoluer avant le départ.'}${canPick ? '' : lockedRace(race) ? ' Les choix sont verrouillés.' : ''}</p>
       <ol class="sl">${rows}</ol>`);
     if (keep) mo.scrollTop = prevM;
   }

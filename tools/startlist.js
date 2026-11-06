@@ -19,16 +19,17 @@ function main() {
   const race = D.RACES[id];
   if (!race) { console.error('Course inconnue : ' + id); process.exit(1); }
   if (!fs.existsSync(file)) { console.error('Fichier introuvable : ' + file); process.exit(1); }
+  const entry = args.includes('--entry');   // entry list : pas de dossards, liste provisoire
   const out = opt('--out') || path.join(__dirname, '..', 'data', 'startlists.json');
   let r;
-  try { r = R.buildStart(fs.readFileSync(file, 'utf8'), R.athletesOf(A, race.gender)); } catch (e) { console.error(e.message); process.exit(1); }
+  try { r = R.buildStart(fs.readFileSync(file, 'utf8'), R.athletesOf(A, race.gender), entry); } catch (e) { console.error(e.message); process.exit(1); }
   const db = fs.existsSync(out) ? JSON.parse(fs.readFileSync(out, 'utf8')) : { races: {} };
   const replaced = !!db.races[id];
   if (replaced && JSON.stringify(db.races[id].start) === JSON.stringify(r.start)) { console.log(`${id} : start list inchangée (${r.start.length} partants)`); return; }
-  db.races[id] = { source: opt('--source') || '', fetched: new Date().toISOString(), start: r.start };
+  db.races[id] = Object.assign({ source: opt('--source') || '', fetched: new Date().toISOString(), start: r.start }, entry ? { entry: true } : {});
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, JSON.stringify(db, null, 1) + '\n');
-  console.log(`${id} : ${r.start.length} partants (dossards ${r.start[0].bib} à ${r.start[r.start.length - 1].bib})${replaced ? ' – start list remplacée' : ''} -> ${out}`);
+  console.log(`${id} : ${r.start.length} partants ${entry ? '(entry list, sans dossards)' : `(dossards ${r.start[0].bib} à ${r.start[r.start.length - 1].bib})`}${replaced ? ' – start list remplacée' : ''} -> ${out}`);
   if (r.unknown.length) console.log(`Hors liste du jeu (identifiant créé depuis le nom) : ${r.unknown.length} coureur(s)`);
 }
 

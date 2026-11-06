@@ -8,9 +8,10 @@
   const lines = (t) => String(t || '').split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
 
   /** Start list : lignes « dossard|NOM Prénom|pays ». */
-  function startRows(text) {
+  function startRows(text, entry) {
     return lines(text).map((l) => {
       const f = l.split('|'), bib = Number(f[0]);
+      if (entry && f.length >= 2 && f[0].trim() === '' && f[1].trim()) return { bib: null, name: f[1].trim(), nat: (f[2] || '').trim() };   // entry list : pas de dossard
       if (f.length < 2 || !Number.isInteger(bib) || bib < 1 || !f[1].trim()) throw new Error('Ligne de départ illisible : ' + l);
       return { bib, name: f[1].trim(), nat: (f[2] || '').trim() };
     });
@@ -47,15 +48,15 @@
   }
 
   /** Start list → [{bib, ath, name?}] triée par dossard. Refuse les dossards ou coureurs en double. */
-  function buildStart(text, athletes) {
+  function buildStart(text, athletes, entry) {
     const unknown = [], resolve = resolver(athletes, unknown);
-    const rows = startRows(text);
+    const rows = startRows(text, entry);
     if (!rows.length) throw new Error('Start list vide.');
-    if (new Set(rows.map((r) => r.bib)).size !== rows.length) throw new Error('Dossards en double.');
+    if (!entry && new Set(rows.map((r) => r.bib)).size !== rows.length) throw new Error('Dossards en double.');
     if (new Set(rows.map((r) => N.nameKey(r.name))).size !== rows.length) throw new Error('Coureur en double dans la start list.');
-    const start = rows.slice().sort((a, b) => a.bib - b.bib).map((r) => {
+    const start = rows.slice().sort(entry ? (a, b) => N.nameKey(a.name).localeCompare(N.nameKey(b.name)) : (a, b) => a.bib - b.bib).map((r) => {
       const x = resolve(r.name);
-      return { bib: r.bib, ath: x.id, name: r.name }; // name = écriture de la source, pour rapprocher le classement
+      return Object.assign({ bib: r.bib, ath: x.id, name: r.name }, entry && r.nat ? { nat: r.nat } : {}); // name = écriture de la source, pour rapprocher le classement
     });
     return { start, unknown: [...new Set(unknown)] };
   }
