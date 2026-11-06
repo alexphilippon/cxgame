@@ -2097,515 +2097,505 @@
    ]
   },
   "E03-U19-H": {
-   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/entry/entry_men_jun.pdf",
-   "fetched": "2026-11-06T10:14:03.371Z",
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/46_Startlist_MJ.pdf (PDF image, transcrit à la main)",
+   "fetched": "2026-11-06T16:17:58.605Z",
    "start": [
     {
-     "bib": null,
-     "ath": "afonso-silva",
-     "name": "SILVA Afonso",
-     "nat": "POR"
-    },
-    {
-     "bib": null,
-     "ath": "albert-belforth",
-     "name": "BELFORTH Albert",
-     "nat": "SWE"
-    },
-    {
-     "bib": null,
+     "bib": 1,
      "ath": "alessio-borile",
      "name": "BORILE Alessio",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 31
     },
     {
-     "bib": null,
-     "ath": "guillermo-garcia-alonso",
-     "name": "GARCIA ALONSO Guillermo",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "pedro-cidras-alvarez",
-     "name": "CIDRAS ALVAREZ Pedro",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "antoine-clemente",
-     "name": "CLEMENTE Antoine",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "aron-dahlberg",
-     "name": "DAHLBERG Aron",
-     "nat": "SWE"
-    },
-    {
-     "bib": null,
-     "ath": "aubin-favre",
-     "name": "FAVRE Aubin",
-     "nat": "SUI"
-    },
-    {
-     "bib": null,
-     "ath": "axel-martineau",
-     "name": "MARTINEAU Axel",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "axel-roy-molina",
-     "name": "ROY MOLINA Axel",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "marco-barenyi",
-     "name": "BARÉNYI Marco",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
-     "ath": "milan-bartha",
-     "name": "BARTHA Milan",
-     "nat": "ROU"
-    },
-    {
-     "bib": null,
-     "ath": "bas-vanden-eynde",
-     "name": "VANDEN EYNDE Bas",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "batiste-vanaelst",
-     "name": "VANAELST Batiste",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "florian-baudouin",
-     "name": "BAUDOUIN Florian",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "beer-van-beurden",
-     "name": "VAN BEURDEN Beer",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "ben-fleming",
-     "name": "FLEMING Ben",
-     "nat": "LUX"
-    },
-    {
-     "bib": null,
-     "ath": "ben-jandrey",
-     "name": "JANDREY Ben",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "ben-koenig",
-     "name": "KOENIG Ben",
-     "nat": "LUX"
-    },
-    {
-     "bib": null,
-     "ath": "benjamin-huber",
-     "name": "HUBER Benjamin",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "gijs-van-den-biggelaar",
-     "name": "VAN DEN BIGGELAAR Gijs",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "jop-van-den-biggelaar",
-     "name": "VAN DEN BIGGELAAR Jop",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
+     "bib": 2,
      "ath": "giovanni-bosio",
      "name": "BOSIO Giovanni",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 9
     },
     {
-     "bib": null,
-     "ath": "ondrej-bukovsky",
-     "name": "BUKOVSKÝ Ondřej",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
+     "bib": 3,
      "ath": "michel-careri",
      "name": "CARERI Michel",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 47
     },
     {
-     "bib": null,
-     "ath": "casper-fransson",
-     "name": "FRANSSON Casper",
-     "nat": "SWE"
-    },
-    {
-     "bib": null,
-     "ath": "charles-jean-kallin",
-     "name": "KALLIN Charles Jean",
-     "nat": "SUI"
-    },
-    {
-     "bib": null,
-     "ath": "filippo-cingolani",
-     "name": "CINGOLANI Filippo",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
+     "bib": 4,
      "ath": "tommaso-cingolani",
      "name": "CINGOLANI Tommaso",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 11
     },
     {
-     "bib": null,
-     "ath": "enzo-conan",
-     "name": "CONAN Enzo",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "pelayo-gancedo-corrales",
-     "name": "GANCEDO CORRALES Pelayo",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "daan-schilders",
-     "name": "SCHILDERS Daan",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "delano-heeren",
-     "name": "HEEREN Delano",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
+     "bib": 5,
      "ath": "francesco-dell-olio",
      "name": "DELL'OLIO Francesco",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 2
     },
     {
-     "bib": null,
-     "ath": "victor-devos",
-     "name": "DEVOS Victor",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "radim-dobry",
-     "name": "DOBRÝ Radim",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "magnus-dollerup",
-     "name": "DOLLERUP Magnus",
-     "nat": "DEN"
-    },
-    {
-     "bib": null,
-     "ath": "dominik-duran",
-     "name": "ĎURAN Dominik",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
-     "ath": "stijn-van-dongen",
-     "name": "VAN DONGEN Stijn",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "eduard-john",
-     "name": "JOHN Eduard",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "egert-tammeleht",
-     "name": "TAMMELEHT Egert",
-     "nat": "EST"
-    },
-    {
-     "bib": null,
-     "ath": "emiel-osaer",
-     "name": "OSAER Emiel",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "emil-petersen",
-     "name": "PETERSEN Emil",
-     "nat": "DEN"
-    },
-    {
-     "bib": null,
-     "ath": "fabian-stimmel",
-     "name": "STIMMEL Fabian",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "felix-kirner",
-     "name": "KIRNER Felix",
-     "nat": "AUT"
-    },
-    {
-     "bib": null,
-     "ath": "xavi-vidal-fernandez",
-     "name": "VIDAL FERNANDEZ Xavi",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "frantisek-hladik",
-     "name": "HLADÍK František",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "pablo-jimenez-vera-y-frias",
-     "name": "JIMENEZ VERA Y FRIAS Pablo",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "xavier-van-geldorp",
-     "name": "VAN GELDORP Xavier",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "sam-genazzini",
-     "name": "GENAZZINI Sam",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "jose-manuel-pintos-gomez",
-     "name": "PINTOS GOMEZ Jose Manuel",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "xander-graham",
-     "name": "GRAHAM Xander",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
+     "bib": 6,
      "ath": "matteo-jacopo-gualtieri",
      "name": "GUALTIERI Matteo Jacopo",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 166
     },
     {
-     "bib": null,
-     "ath": "melvin-palsson-gustafsson",
-     "name": "PÅLSSON GUSTAFSSON Melvin",
-     "nat": "SWE"
+     "bib": 7,
+     "ath": "emiel-osaer",
+     "name": "OSAER Emiel",
+     "nat": "BEL",
+     "rank": 12
     },
     {
-     "bib": null,
-     "ath": "matti-hannover",
-     "name": "HANNÖVER Matti",
-     "nat": "GER"
+     "bib": 8,
+     "ath": "lars-peers",
+     "name": "PEERS Lars",
+     "nat": "BEL",
+     "rank": 52
     },
     {
-     "bib": null,
-     "ath": "kai-van-hoof",
-     "name": "VAN HOOF Kai",
-     "nat": "NED"
+     "bib": 9,
+     "ath": "bas-vanden-eynde",
+     "name": "VANDEN EYNDE Bas",
+     "nat": "BEL",
+     "rank": 6
     },
     {
-     "bib": null,
+     "bib": 10,
+     "ath": "delano-heeren",
+     "name": "HEEREN Delano",
+     "nat": "NED",
+     "rank": 1
+    },
+    {
+     "bib": 11,
      "ath": "loek-hovers",
      "name": "HOVERS Loek",
-     "nat": "NED"
+     "nat": "NED",
+     "rank": 24
     },
     {
-     "bib": null,
+     "bib": 12,
+     "ath": "beer-van-beurden",
+     "name": "VAN BEURDEN Beer",
+     "nat": "NED",
+     "rank": 80
+    },
+    {
+     "bib": 13,
+     "ath": "gijs-van-den-biggelaar",
+     "name": "VAN DEN BIGGELAAR Gijs",
+     "nat": "NED",
+     "rank": 148
+    },
+    {
+     "bib": 14,
+     "ath": "jop-van-den-biggelaar",
+     "name": "VAN DEN BIGGELAAR Jop",
+     "nat": "NED",
+     "rank": 10
+    },
+    {
+     "bib": 15,
+     "ath": "stijn-van-dongen",
+     "name": "VAN DONGEN Stijn",
+     "nat": "NED",
+     "rank": 55
+    },
+    {
+     "bib": 16,
+     "ath": "xavier-van-geldorp",
+     "name": "VAN GELDORP Xavier",
+     "nat": "NED",
+     "rank": 206
+    },
+    {
+     "bib": 17,
+     "ath": "kai-van-hoof",
+     "name": "VAN HOOF Kai",
+     "nat": "NED",
+     "rank": 16
+    },
+    {
+     "bib": 18,
+     "ath": "felix-kirner",
+     "name": "KIRNER Felix",
+     "nat": "AUT",
+     "rank": 134
+    },
+    {
+     "bib": 19,
+     "ath": "michael-kominak",
+     "name": "KOMINAK Michael",
+     "nat": "AUT",
+     "rank": 338
+    },
+    {
+     "bib": 20,
+     "ath": "antoine-clemente",
+     "name": "CLEMENTE Antoine",
+     "nat": "FRA",
+     "rank": 18
+    },
+    {
+     "bib": 21,
+     "ath": "enzo-conan",
+     "name": "CONAN Enzo",
+     "nat": "FRA",
+     "rank": 59
+    },
+    {
+     "bib": 22,
+     "ath": "victor-devos",
+     "name": "DEVOS Victor",
+     "nat": "FRA",
+     "rank": 3
+    },
+    {
+     "bib": 23,
+     "ath": "lilian-moriniere",
+     "name": "MORINIERE Lilian",
+     "nat": "FRA",
+     "rank": 34
+    },
+    {
+     "bib": 24,
+     "ath": "batiste-vanaelst",
+     "name": "VANAELST Batiste",
+     "nat": "FRA",
+     "rank": 13
+    },
+    {
+     "bib": 25,
+     "ath": "ondrej-bukovsky",
+     "name": "BUKOVSKÝ Ondrej",
+     "nat": "CZE",
+     "rank": 8
+    },
+    {
+     "bib": 26,
+     "ath": "radim-dobry",
+     "name": "DOBRÝ Radim",
+     "nat": "CZE",
+     "rank": 104
+    },
+    {
+     "bib": 27,
+     "ath": "frantisek-hladik",
+     "name": "HLADÍK František",
+     "nat": "CZE",
+     "rank": 43
+    },
+    {
+     "bib": 28,
+     "ath": "eduard-john",
+     "name": "JOHN Eduard",
+     "nat": "CZE",
+     "rank": 25
+    },
+    {
+     "bib": 29,
+     "ath": "jakub-panus",
+     "name": "PANUŠ Jakub",
+     "nat": "CZE",
+     "rank": 33
+    },
+    {
+     "bib": 30,
+     "ath": "marco-barenyi",
+     "name": "BARÉNYI Marco",
+     "nat": "SVK",
+     "rank": 61
+    },
+    {
+     "bib": 31,
+     "ath": "dominik-duran",
+     "name": "DURAN Dominik",
+     "nat": "SVK",
+     "rank": 117
+    },
+    {
+     "bib": 32,
      "ath": "milan-husenica",
      "name": "HÚSENICA Milan",
-     "nat": "SVK"
+     "nat": "SVK",
+     "rank": 20
     },
     {
-     "bib": null,
+     "bib": 33,
+     "ath": "jergus-melichercik",
+     "name": "MELICHERCÍK Jerguš",
+     "nat": "SVK",
+     "rank": 21
+    },
+    {
+     "bib": 34,
+     "ath": "tadeas-rybansky",
+     "name": "RYBANSKÝ Tadeáš",
+     "nat": "SVK",
+     "rank": 48
+    },
+    {
+     "bib": 35,
+     "ath": "magnus-dollerup",
+     "name": "DOLLERUP Magnus",
+     "nat": "DEN",
+     "rank": 84
+    },
+    {
+     "bib": 36,
      "ath": "philip-hyldtoft",
      "name": "HYLDTOFT Philip",
-     "nat": "DEN"
+     "nat": "DEN",
+     "rank": 28
     },
     {
-     "bib": null,
-     "ath": "iraklis-magioglou",
-     "name": "MAGIOGLOU Iraklis",
-     "nat": "GRE"
+     "bib": 37,
+     "ath": "oscar-moller",
+     "name": "MØLLER Oscar",
+     "nat": "DEN",
+     "rank": 62
     },
     {
-     "bib": null,
+     "bib": 38,
+     "ath": "emil-petersen",
+     "name": "PETERSEN Emil",
+     "nat": "DEN",
+     "rank": 65
+    },
+    {
+     "bib": 39,
+     "ath": "sam-genazzini",
+     "name": "GENAZZINI Sam",
+     "nat": "GBR",
+     "rank": 103
+    },
+    {
+     "bib": 40,
+     "ath": "xander-graham",
+     "name": "GRAHAM Xander",
+     "nat": "GBR",
+     "rank": 78
+    },
+    {
+     "bib": 41,
      "ath": "isaac-starmer",
      "name": "STARMER Isaac",
      "nat": "GBR"
     },
     {
-     "bib": null,
-     "ath": "jakub-panus",
-     "name": "PANUŠ Jakub",
-     "nat": "CZE"
+     "bib": 42,
+     "ath": "luke-trafford",
+     "name": "TRAFFORD Luke",
+     "nat": "GBR",
+     "rank": 4
     },
     {
-     "bib": null,
+     "bib": 43,
+     "ath": "noah-white",
+     "name": "WHITE Noah",
+     "nat": "GBR",
+     "rank": 209
+    },
+    {
+     "bib": 44,
+     "ath": "joseph-wooliscroft",
+     "name": "WOOLISCROFT Joseph",
+     "nat": "GBR",
+     "rank": 54
+    },
+    {
+     "bib": 45,
+     "ath": "iraklis-magioglou",
+     "name": "MAGIOGLOU Iraklis",
+     "nat": "GRE",
+     "rank": 14
+    },
+    {
+     "bib": 46,
+     "ath": "matti-hannover",
+     "name": "HANNÖVER Matti",
+     "nat": "GER",
+     "rank": 329
+    },
+    {
+     "bib": 47,
+     "ath": "ben-jandrey",
+     "name": "JANDREY Ben",
+     "nat": "GER",
+     "rank": 130
+    },
+    {
+     "bib": 48,
+     "ath": "fabian-stimmel",
+     "name": "STIMMEL Fabian",
+     "nat": "GER",
+     "rank": 156
+    },
+    {
+     "bib": 49,
+     "ath": "josh-tietjen",
+     "name": "TIETJEN Josh",
+     "nat": "GER",
+     "rank": 17
+    },
+    {
+     "bib": 50,
+     "ath": "piet-wurzner",
+     "name": "WÜRZNER Piet",
+     "nat": "GER",
+     "rank": 168
+    },
+    {
+     "bib": 51,
+     "ath": "pelayo-gancedo-corrales",
+     "name": "GANCEDO CORRALES Pelayo",
+     "nat": "ESP",
+     "rank": 22
+    },
+    {
+     "bib": 52,
+     "ath": "guillermo-garcia-alonso",
+     "name": "GARCIA ALONSO Guillermo",
+     "nat": "ESP",
+     "rank": 26
+    },
+    {
+     "bib": 53,
+     "ath": "mikel-llorente-padura",
+     "name": "LLORENTE PADURA Mikel",
+     "nat": "ESP",
+     "rank": 64
+    },
+    {
+     "bib": 54,
+     "ath": "xavi-vidal-fernandez",
+     "name": "VIDAL FERNANDEZ Xavi",
+     "nat": "ESP",
+     "rank": 45
+    },
+    {
+     "bib": 55,
      "ath": "uku-jarv",
      "name": "JÄRV Uku",
      "nat": "EST"
     },
     {
-     "bib": null,
-     "ath": "jergus-melichercik",
-     "name": "MELICHERČÍK Jerguš",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
-     "ath": "jokubas-kuklinskas",
-     "name": "KUKLINSKAS Jokūbas",
-     "nat": "LTU"
-    },
-    {
-     "bib": null,
-     "ath": "joseph-wooliscroft",
-     "name": "WOOLISCROFT Joseph",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "josh-tietjen",
-     "name": "TIETJEN Josh",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "michael-kominak",
-     "name": "KOMINAK Michael",
-     "nat": "AUT"
-    },
-    {
-     "bib": null,
-     "ath": "lars-peers",
-     "name": "PEERS Lars",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "lilian-moriniere",
-     "name": "MORINIERE Lilian",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "mikel-llorente-padura",
-     "name": "LLORENTE PADURA Mikel",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
+     "bib": 56,
      "ath": "niklas-lond",
      "name": "LOND Niklas",
-     "nat": "EST"
+     "nat": "EST",
+     "rank": 60
     },
     {
-     "bib": null,
-     "ath": "lukas-skikas",
-     "name": "SKIKAS Lukas",
-     "nat": "LTU"
+     "bib": 57,
+     "ath": "egert-tammeleht",
+     "name": "TAMMELEHT Egert",
+     "nat": "EST",
+     "rank": 159
     },
     {
-     "bib": null,
-     "ath": "luke-trafford",
-     "name": "TRAFFORD Luke",
-     "nat": "GBR"
+     "bib": 58,
+     "ath": "aubin-favre",
+     "name": "FAVRE Aubin",
+     "nat": "SUI",
+     "rank": 127
     },
     {
-     "bib": null,
-     "ath": "pietro-mantasia",
-     "name": "MANTASIA Pietro",
-     "nat": "ITA"
+     "bib": 59,
+     "ath": "charles-jean-kallin",
+     "name": "KALLIN Charles Jean",
+     "nat": "SUI",
+     "rank": 116
     },
     {
-     "bib": null,
-     "ath": "oscar-moller",
-     "name": "MØLLER Oscar",
-     "nat": "DEN"
-    },
-    {
-     "bib": null,
+     "bib": 60,
      "ath": "nico-ruegg",
      "name": "RÜEGG Nico",
-     "nat": "SUI"
+     "nat": "SUI",
+     "rank": 111
     },
     {
-     "bib": null,
-     "ath": "noah-white",
-     "name": "WHITE Noah",
-     "nat": "GBR"
+     "bib": 61,
+     "ath": "ben-fleming",
+     "name": "FLEMING Ben",
+     "nat": "LUX",
+     "rank": 30
     },
     {
-     "bib": null,
-     "ath": "tadeas-pazourek",
-     "name": "PAZOUREK Tadeáš",
-     "nat": "CZE"
+     "bib": 62,
+     "ath": "ben-koenig",
+     "name": "KOENIG Ben",
+     "nat": "LUX",
+     "rank": 81
     },
     {
-     "bib": null,
-     "ath": "piet-wurzner",
-     "name": "WÜRZNER Piet",
-     "nat": "GER"
+     "bib": 63,
+     "ath": "albert-belforth",
+     "name": "BELFORTH Albert",
+     "nat": "SWE",
+     "rank": 107
     },
     {
-     "bib": null,
-     "ath": "rapolas-urbonas",
-     "name": "URBONAS Rapolas",
-     "nat": "LTU"
+     "bib": 64,
+     "ath": "aron-dahlberg",
+     "name": "DAHLBERG Aron",
+     "nat": "SWE",
+     "rank": 92
     },
     {
-     "bib": null,
+     "bib": 65,
+     "ath": "casper-fransson",
+     "name": "FRANSSON Casper",
+     "nat": "SWE",
+     "rank": 85
+    },
+    {
+     "bib": 66,
+     "ath": "melvin-palsson-gustafsson",
+     "name": "PÅLSSON GUSTAFSSON Melvin",
+     "nat": "SWE",
+     "rank": 19
+    },
+    {
+     "bib": 67,
+     "ath": "afonso-silva",
+     "name": "SILVA Afonso",
+     "nat": "POR",
+     "rank": 72
+    },
+    {
+     "bib": 68,
+     "ath": "jokubas-kuklinskas",
+     "name": "KUKLINSKAS Jokubas",
+     "nat": "LTU",
+     "rank": 89
+    },
+    {
+     "bib": 69,
+     "ath": "lukas-skikas",
+     "name": "SKIKAS Lukas",
+     "nat": "LTU",
+     "rank": 63
+    },
+    {
+     "bib": 70,
+     "ath": "milan-bartha",
+     "name": "BARTHA Milan",
+     "nat": "ROU",
+     "rank": 341
+    },
+    {
+     "bib": 71,
      "ath": "roland-szigyarto",
      "name": "SZIGYARTO Roland",
-     "nat": "ROU"
-    },
-    {
-     "bib": null,
-     "ath": "tadeas-rybansky",
-     "name": "RYBANSKÝ Tadeáš",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
-     "ath": "tijl-vanhaverbeke",
-     "name": "VANHAVERBEKE Tijl",
-     "nat": "BEL"
+     "nat": "ROU",
+     "rank": 255
     }
-   ],
-   "entry": true
+   ]
   }
  }
 }
