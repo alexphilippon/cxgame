@@ -1,76 +1,41 @@
-                   2026 UEC CYCLO-CROSS
-                 EUROPEAN CHAMPIONSHIPS
-                       Zeddam (NED)
-                     7-8 November 2026
+SAT 7 NOV 2026                                                                                  European Championships
+Start Time: 11:00                                                                                         Women Junior
+
+                                                       Start List
+   Nr Name / Team                            NAT YOB UCI          Nr   Name / Team                      NAT YOB UCI
+   1 DRONGOVÁ Eliška                         CZE 2010 73          25   BARTOŠÍKOVÁ Lujza                SVK 2009 12
+   2 KLUCKOVÁ Hana                           CZE 2010 91          26   BORTELOVÁ Karolína               SVK 2009 51
+   3 ROTHBAUEROVÁ Karolína                   CZE 2009 13          27   LETKOVÁ Natália                  SVK 2010 27
+    4 BEUMER Britt                           NED 2009 52          28 HUYBRECHTS Lotta                   BEL 2010 22
+    5 BOUMAN Lotte                           NED 2009 58          29 HUYS Lentel                        BEL 2010 14
+    6 BUNNING Puck                           NED 2010 123         30 BAÑULS PUENTE Carla                ESP 2009 6
+    7 HEESEMANS Lonneke                      NED 2009 47          31 HERRERO HERRERO Gisela             ESP 2010 83
+    8 JOCHEMS Nynke                          NED 2009 2           32 VEGA BILBAO Noa                    ESP 2010 50
+    9 TAKKEN Maxime                          NED 2009 30          33 ALELIUNAITE Irmante                LTU 2009 36
+   10 VAN DEN BOGAARD Damy                   NED 2009 65          34 SELIAVAITE Elžbieta                 LTU 2010 131
+   11 VERSLUIS Isis                          NED 2009 4           35 ANDERSSON Greta                    SWE 2009 29
+   12 BRANDI Nicoletta                        ITA 2009 75         36 ELF BOBERG Elsa                    SWE 2009 34
+   13 CAFUERI Rachele                         ITA 2009 26         37 WIDELL Elsa                        SWE 2010 56
+   14 CARRETTA Matilde                       ITA 2010 39          38 ATTELMANN Beatrix                  GER 2009 31
+   15 RIGHETTO Nicole                        ITA 2009 8           39 MÕTTUS Marta                       EST 2010
+   16 RIZZI Azzurra                          ITA 2009 17          40 RANG Gisele                        EST 2009 70
+   17 ELIZALDE Lucie                         FRA 2009 9           41 KUCHARSKA Antonina                 POL 2009 7
+   18 JURADO ROUMIEUX Noémie                 FRA 2009 10          42 PIRÓG Natalia                      POL 2010 15
+   19 LE GUILLOUX Lana                       FRA 2010 23          43 FONTINHAS Rita                     POR 2009 20
+   20 MESNARD Justine                        FRA 2010 59          44 LEEGAARD Mathilde                  DEN 2010 16
+   21 HUBER Shana                            SUI 2009 1           45   LILDBALLE Sofie Birk             DEN 2010 44
+   22 KNOX Peggy                             GBR 2009 5           46   HEGEDUS Heléna                   HUN 2010 104
+   23 POOLE Olivia                           GBR 2010 84          47   KOENIG Sarah                     LUX 2010 119
+   24 ROSCOE Heidi                           GBR 2009 99          48   STOJANOVSKA Dalija               MKD 2010 226
+
+Entries / Nations: 48 / 19
+
+
+ Legend:
+ NAT: Nation                        UCI: UCI Rank                          YOB: Year of Birth
 
 
 
 
-              Entry list Women Juniors
-                  (including reserve riders)
-
-
-Family name        Given name        UCI ID     Nation
-
-
-HUYBRECHTS         Lotta          10084839921   Belgium
-HUYS               Lentel         10085982703   Belgium
-BAŽANTOVÁ          Anežka         10063273686   Czechia
-DRONGOVÁ           Eliška         10112047310   Czechia
-KLUČKOVÁ           Hana           10113737029   Czechia
-ROTHBAUEROVÁ       Karolína       10093182325   Czechia
-LEEGAARD           Mathilde       10082775942   Denmark
-LILDBALLE          Sofie Birk     10101571815   Denmark
-MÕTTUS             Marta          10075693326   Estonia
-RANG               Gisele         10130760529   Estonia
-ELIZALDE           Lucie          10071336208   France
-JURADO ROUMIEUX    Noémie         10086628155   France
-LE GUILLOUX        Lana           10067508849   France
-LEBRETON           Eloane         10069301127   France
-MESNARD            Justine        10068416306   France
-SERMONET           Jade           10129298859   France
-ATTELMANN          Beatrix        10073783638   Germany
-KNOX               Peggy          10135516862   Great Britain
-POOLE              Olivia         10153264630   Great Britain
-ROSCOE             Heidi          10135580924   Great Britain
-HEGEDŰS            Heléna         10080634464   Hungary
-BRANDI             Nicoletta      10091097128   Italy
-CAFUERI            Rachele        10033802965   Italy
-CARRETTA           Matilde        10061536275   Italy
-MAIFRÈ             Beatrice       10095782531   Italy
-PERUTA             Sara           10063497493   Italy
-RIGHETTO           Nicole         10059853226   Italy
-RIZZI              Azzurra        10064673823   Italy
-ALELIŪNAITĖ        Irmantė        10119119721   Lithuania
-SELIAVAITĖ         Elžbieta       10116180924   Lithuania
-KOENIG             Sarah          10064161743   Luxembourg
-BEUMER             Britt          10116391795   Netherlands
-BOUMAN             Lotte          10094583670   Netherlands
-BUNNING            Puck           10077914929   Netherlands
-HEESEMANS          Lonneke        10023155702   Netherlands
-JOCHEMS            Nynke          10023236736   Netherlands
-TAKKEN             Maxime         10079223015   Netherlands
-                    2026 UEC CYCLO-CROSS
-                  EUROPEAN CHAMPIONSHIPS
-                        Zeddam (NED)
-                      7-8 November 2026
-
-
-VAN DEN BOGAARD     Damy         10023189751   Netherlands
-VERSLUIS            Isis         10082358135   Netherlands
-STOJANOVSKA         Dalija       10088424473   North Macedonia
-KUCHARSKA           Antonina     10088534308   Poland
-PIRÓG               Natalia      10108610072   Poland
-FONTINHAS           Rita         10045136912   Portugal
-BARTOŠÍKOVÁ         Lujza        10080773395   Slovakia
-BORTELOVÁ           Karolína     10067813185   Slovakia
-LETKOVÁ             Natália      10106853867   Slovakia
-BAÑULS PUENTE       Carla        10037706510   Spain
-HERRERO HERRERO     Gisela       10073115752   Spain
-SAIZAR SARALEGI     Maddi        10145523121   Spain
-VEGA BILBAO         Noa          10143681636   Spain
-ANDERSSON           Greta        10117247318   Sweden
-ELF BOBERG          Elsa         10108221567   Sweden
-WIDELL              Elsa         10060589315   Sweden
-HUBER               Shana        10130474680   Switzerland
+Timing and results provided by ChronoRace    Report created FRI 6 NOV 2026 13:21                               Page 1/1
 

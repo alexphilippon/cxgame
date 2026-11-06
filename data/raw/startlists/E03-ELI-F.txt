@@ -1,47 +1,31 @@
-                    2026 UEC CYCLO-CROSS
-                  EUROPEAN CHAMPIONSHIPS
-                         Zeddam (NED)
-                       7-8 November 2026
+SAT 7 NOV 2026                                                                                  European Championships
+Start Time: 15:00                                                                                          Women Elite
+
+                                                       Start List
+   Nr Name / Team                           NAT YOB UCI           Nr   Name / Team                      NAT YOB UCI
+   1 BRAND Lucinda                          NED 1989 1            15   FOUQUENET Amandine               FRA 2001 3
+   2 ALVARADO Ceylin Del Carmen             NED 1998 2            16   BROUWERS Julie                   BEL 2002 14
+   3 BAKKER Manon                           NED 1999 6            17   FRANCK Alicia                    BEL 1994 67
+    4 BENTVELD Leonie                       NED 2004 9            18 VERVLOET Sterre                    BEL 2003 58
+    5 BETSEMA Denise                        NED 1993 12           19 HLADÍKOVÁ Katerina                 CZE 2004 39
+    6 VAN ALPHEN Aniek                      NED 1999 4            20 ZEMANOVÁ Kristýna                  CZE 2003 8
+    7 VAN DER HEIJDEN Inge                  NED 1999 7            21 GONZALEZ BLANCO Lucia              ESP 1990 35
+    8 VAN EMPEL Fem                         NED 2002 366          22 RODRIGUEZ REVERT Sofia             ESP 1999 19
+    9 BORELLO Carlotta                       ITA 2002 30          23 CREES Xan                          GBR 2000 34
+   10 BRAMATI Lucia                          ITA 2003 18          24 ALLIK Ann-Christine                EST 1994 504
+   11 CASASOLA Sara                          ITA 1999 20          25 KRAHL Judith                       GER 2001 99
+   12 GARIBOLDI Rebecca                      ITA 1996 27          26 SCHREIBER Marie                    LUX 2003 13
+   13 CLAUZEL Hélène                         FRA 1998 16          27 LAFORCE Oda                        NOR 2003 84
+   14 DURAFFOURG Lauriane                    FRA 2002 65          28 SANTOS Ana                         POR 2002 142
+
+Entries / Nations: 28 / 12
+
+
+ Legend:
+ NAT: Nation                        UCI: UCI Rank                          YOB: Year of Birth
 
 
 
 
-              Entry list Women Elite
-                   (including reserve riders)
-
-
-Family name         Given name            UCI ID      Nation
-
-
-BROUWERS            Julie               10065009885   Belgium
-FRANCK              Alicia              10008128984   Belgium
-VERVLOET            Sterre              10065040807   Belgium
-HLADÍKOVÁ           Kateřina            10047765309   Czechia
-ZEMANOVÁ            Kristýna            10047782887   Czechia
-ALLIK               Ann-Christine       10129341804   Estonia
-CLAUZEL             Hélène              10009876806   France
-DURAFFOURG          Lauriane            10066750027   France
-FOUQUENET           Amandine            10066772861   France
-KRAHL               Judith              10036382660   Germany
-CREES               Xan                 10023505811   Great Britain
-BORELLO             Carlotta            10029177580   Italy
-BRAMATI             Lucia               10030539523   Italy
-CASASOLA            Sara                10010998972   Italy
-GARIBOLDI           Rebecca             10009420704   Italy
-SCHREIBER           Marie               10034998489   Luxembourg
-ALVARADO            Ceylin del Carmen   10009857305   Netherlands
-BAKKER              Manon               10009521643   Netherlands
-BENTVELD            Leonie              10023336564   Netherlands
-BETSEMA             Denise              10007654694   Netherlands
-BRAND               Lucinda             10006605680   Netherlands
-VAN ALPHEN          Aniek               10015541303   Netherlands
-VAN DER HEIJDEN     Inge                10010592885   Netherlands
-VAN EMPEL           Fem                 10059824126   Netherlands
-WORST               Annemarie           10008082912   Netherlands
-LAFORCE             Oda                 10019552756   Norway
-SANTOS              Ana                 10044124068   Portugal
-CUETO VEGA          Sara                10008981271   Spain
-GONZALEZ BLANCO     Lucia               10005976190   Spain
-RODRIGUEZ REVERT    Sofia               10011037772   Spain
-ESTERMANN           Rebekka             10023561583   Switzerland
+Timing and results provided by ChronoRace    Report created FRI 6 NOV 2026 13:16                               Page 1/1
 

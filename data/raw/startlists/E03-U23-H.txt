@@ -1,68 +1,37 @@
-                    2026 UEC CYCLO-CROSS
-                  EUROPEAN CHAMPIONSHIPS
-                        Zeddam (NED)
-                      7-8 November 2026
+SAT 7 NOV 2026                                                                                  European Championships
+Start Time: 13:00                                                                                         Men Under 23
+
+                                                       Start List
+   Nr Name / Team                            NAT YOB UCI          Nr   Name / Team                      NAT YOB UCI
+   1 GRIGOLINI Filippo                        ITA 2008 64         21   HOJKA František                  CZE 2005 184
+   2 VIEZZI Stefano                           ITA 2006 43         22   JOHN Antonín                     CZE 2008 435
+   3 HAVERDINGS Floris                       NED 2006 112         23   FERNANDEZ GARCIA Martin          ESP 2008 257
+    4 TIMMERMANS Cas                         NED 2008 398         24 GALAN CORTAZAR Unax                ESP 2006 204
+    5 CORSUS Lars                            BEL 2008 287         25 TAKÁCS Zsombor                     HUN 2006 51
+    6 CORSUS Yordi                           BEL 2005 25          26 VAS Barnabás                       HUN 2006 73
+    7 DAELMANS Lars                          BEL 2007 443         27 SOUSA Rafael                       POR 2005 84
+    8 DE BRAUWERE Sil                        BEL 2005 87          28 VIGÁRIO João                       POR 2008 663
+    9 LEJEUNE Giel                           BEL 2008 66          29 AMEY Alfie                         GBR 2006 457
+   10 VAN DEN BOER Arthur                    BEL 2007 75          30 GIBSON Luke                        GBR 2006 596
+   11 VANDEN EYNDE Mats                      BEL 2007 104         31 OLDHAM Declan                      GBR 2007 451
+   12 VANDENBERGHE Viktor                    BEL 2005 58          32 STEED Jacob                        GBR 2008 656
+   13 BRUYERE JOUMARD Soren                  FRA 2008 137         33 GREIJUS Paul                       SWE 2005 173
+   14 COURCIER Thomas                        FRA 2005 114         34 ŠICHTA Michal                      SVK 2008 91
+   15 DAVID Alexis                           FRA 2005 85          35 ŠOLTÉS Peter                       SVK 2007 170
+   16 SIMON Jules                            FRA 2006 106         36 PAPI Lennox                        LUX 2007 154
+   17 SPARFEL Aubin                          FRA 2006 23          37 MÕTTUS Matthias                    EST 2006 210
+   18 TANGUY Louis                           FRA 2006 128         38 KILLEEN Fionn                      IRL 2008
+   19 BAŽANT Kryštof                         CZE 2007 34          39 MEDELINSKAS Martynas               LTU 2008
+   20 HAVEL Matej                            CZE 2006 243         40 NICHVOLODOV Artur                  UKR 2006 450
+
+Entries / Nations: 40 / 16
+
+
+ Legend:
+ NAT: Nation                        UCI: UCI Rank                          YOB: Year of Birth
 
 
 
 
-               Entry list Men Under 23
-                   (including reserve riders)
-
-
-Family name           Given name             UCI ID      Nation
-
-
-CORSUS                Lars                 10065225208   Belgium
-CORSUS                Yordi                10065119518   Belgium
-DAELMANS              Lars                 10119457908   Belgium
-DE BRAUWERE           Sil                  10090915050   Belgium
-LEJEUNE               Giel                 10065224905   Belgium
-VAN DEN BOER          Arthur               10099256343   Belgium
-VANDEN EYNDE          Mats                 10086550858   Belgium
-VANDENBERGHE          Viktor               10087960489   Belgium
-BAŽANT                Kryštof              10092752996   Czechia
-HAVEL                 Matěj                10085962794   Czechia
-HOJKA                 František            10047374073   Czechia
-JOHN                  Antonín              10093382486   Czechia
-LIENERT               Patrik               10059140072   Czechia
-MÕTTUS                Matthias             10075693427   Estonia
-BRUYERE JOUMARD       Soren                10067289385   France
-COURCIER              Thomas               10067607566   France
-DAVID                 Alexis               10091433291   France
-FERY                  Florian              10066052940   France
-SIMON                 Jules                10068414282   France
-SPARFEL               Aubin                10066500958   France
-TANGUY                Louis                10070043882   France
-OERTZEN               Max Heiner           10036147739   Germany
-AMEY                  Alfie                10133349722   Great Britain
-GIBSON                Luke                 10133350732   Great Britain
-OLDHAM                Declan               10121126510   Great Britain
-STEED                 Jacob                10127988147   Great Britain
-TAKÁCS                Zsombor              10059501396   Hungary
-VAS                   Barnabás             10023656462   Hungary
-KILLEEN               Fionn                10107118292   Ireland
-CAFUERI               Tommaso              10029149591   Italy
-GRIGOLINI             Filippo              10033905625   Italy
-VIEZZI                Stefano              10030893975   Italy
-MEDELINSKAS           Martynas             10141319381   Lithuania
-PAPI                  Lennox               10117883272   Luxembourg
-HAVERDINGS            Floris               10049010646   Netherlands
-TIMMERMANS            Cas                  10059308107   Netherlands
-MESSEL                Kevin Andre Sandli   10019684112   Norway
-                     2026 UEC CYCLO-CROSS
-                   EUROPEAN CHAMPIONSHIPS
-                         Zeddam (NED)
-                       7-8 November 2026
-
-
-SOUSA                  Rafael          10044674039   Portugal
-VIGÁRIO                João            10045012327   Portugal
-ŠICHTA                 Michal          10046054570   Slovakia
-ŠOLTÉS                 Peter           10106695031   Slovakia
-FERNANDEZ ECHEVARRIA   Angel           10081574051   Spain
-FERNANDEZ GARCIA       Martin          10041989361   Spain
-GALAN CORTAZAR         Unax            10106961375   Spain
-GREIJUS                Paul            10022628666   Sweden
-NICHVOLODOV            Artur           10104149486   Ukraine
+Timing and results provided by ChronoRace    Report created FRI 6 NOV 2026 13:18                               Page 1/1
 

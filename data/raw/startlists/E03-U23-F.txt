@@ -1,62 +1,34 @@
-                    2026 UEC CYCLO-CROSS
-                  EUROPEAN CHAMPIONSHIPS
-                         Zeddam (NED)
-                       7-8 November 2026
+SUN 8 NOV 2026                                                                                  European Championships
+Start Time: 13:00                                                                                      Women Under 23
+
+                                                       Start List
+   Nr Name / Team                           NAT YOB UCI           Nr   Name / Team                      NAT YOB UCI
+   1 CABACA Mae                             NED 2007 111          18   PELLIZOTTI Giorgia                ITA 2008 23
+   2 LANGENBARG Puck                        NED 2006 105          19   METTIER Chiara                   SUI 2007 284
+   3 MOES Noï                               NED 2007 144          20   COLLING Alice                    GBR 2006 384
+    4 MOLENGRAAF Lauren                     NED 2005 55           21 EYEINGTON Kacey                    GBR 2005 244
+    5 NIEUWENHUIS Rianne                    NED 2008 91           22 INGLIS Hope                        GBR 2005 369
+    6 DESPREZ Lison                         FRA 2007 43           23 MITCHINSON Ellie                   GBR 2007 634
+    7 GERY Célia                            FRA 2006 17           24 ROCHE Zoe                          GBR 2008 80
+    8 LAMBERT Zélie                         FRA 2008 73           25 NIELSEN Mille                      DEN 2007 94
+    9 MULLER Amandine                       FRA 2006 22           26 GOTXI OLARTEKOETXEA Mirari         ESP 2008 107
+   10 VALADE Alexandra                      FRA 2005 70           27 LOPEZ BURGOS Ana                   ESP 2007 100
+   11 DE BRUYCKERE Xenna                    BEL 2005 205          28 ELF BOBERG Saga                    SWE 2007 234
+   12 LAURIJSSEN Sanne                      BEL 2007 458          29 PERSSON Thea                       SWE 2007 136
+   13 PEETERS Zita                          BEL 2008 90           30 WIDELL Clara                       SWE 2007 258
+   14 BUKOVSKÁ Barbora                      CZE 2008 25           31 BUDDE Kaija                        GER 2006 146
+   15 DOUDEROVÁ Katerina                    CZE 2006 68           32 MÄRKL Jule                         GER 2005 235
+   16 STRÁNSKÁ Adéla                        CZE 2008 203          33 WINDELBAND Tomke                   GER 2006 126
+   17 FERRI Elisa                            ITA 2007 44          34 WHITESIDE Freya                     IRL 2005 124
+
+Entries / Nations: 34 / 12
+
+
+ Legend:
+ NAT: Nation                        UCI: UCI Rank                          YOB: Year of Birth
 
 
 
 
-              Entry list Women Under 23
-                    (including reserve riders)
-
-
-
-Family name            Given name        UCI ID     Nation
-
-
-DE BRUYCKERE           Xenna          10065096983   Belgium
-LAURIJSSEN             Sanne          10084938941   Belgium
-PEETERS                Zita           10065229450   Belgium
-BUKOVSKÁ               Barbora        10106803145   Czechia
-DOUDĚROVÁ              Kateřina       10082405726   Czechia
-STRÁNSKÁ               Adéla          10084771617   Czechia
-NIELSEN                Mille          10095601261   Denmark
-DESPREZ                Lison          10065684845   France
-GERY                   Célia          10072699561   France
-LAMBERT                Zélie          10108737990   France
-MULLER                 Amandine       10098058492   France
-PICHON                 Laly           10070619317   France
-VALADE                 Alexandra      10066609072   France
-BUDDE                  Kaija          10100596761   Germany
-MÄRKL                  Jule           10043802352   Germany
-WINDELBAND             Tomke          10158158581   Germany
-COLLING                Alice          10121237452   Great Britain
-EYEINGTON              Kacey          10114698844   Great Britain
-INGLIS                 Hope           10120406383   Great Britain
-MITCHINSON             Ellie          10090914646   Great Britain
-ROCHE                  Zoe            10120246032   Great Britain
-WHITESIDE              Freya          10098971609   Ireland
-AZZETTI                Nicole         10032148410   Italy
-FERRI                  Elisa          10030959855   Italy
-PELLIZOTTI             Giorgia        10032509532   Italy
-RIZZI                  Sabrina        10033827419   Italy
-CABACA                 Mae            10023094670   Netherlands
-KALIS                  Bloeme         10114649334   Netherlands
-LANGENBARG             Puck           10023180455   Netherlands
-MOES                   Noï            10023186418   Netherlands
-MOLENGRAAF             Lauren         10023352126   Netherlands
-NIEUWENHUIS            Rianne         10061143023   Netherlands
-ARANA QUINTANILLA      Nahia          10097772142   Spain
-GOTXI OLARTEKOETXEA Mirari            10131456202   Spain
-LOPEZ BURGOS           Ana            10074872361   Spain
-               2026 UEC CYCLO-CROSS
-             EUROPEAN CHAMPIONSHIPS
-                   Zeddam (NED)
-                 7-8 November 2026
-
-
-ELF BOBERG       Saga         10095169714   Sweden
-PERSSON          Thea         10116040070   Sweden
-WIDELL           Clara        10060589214   Sweden
-METTIER          Chiara       10130911988   Switzerland
+Timing and results provided by ChronoRace    Report created FRI 6 NOV 2026 13:20                               Page 1/1
 

@@ -775,1288 +775,1323 @@
    ]
   },
   "E03-ELI-F": {
-   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/entry/entry_wom_el.pdf",
-   "fetched": "2026-11-06T10:13:52.276Z",
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/61_Startlist_WE.pdf",
+   "fetched": "2026-11-06T16:17:06.191Z",
    "start": [
     {
-     "bib": null,
-     "ath": "alicia-franck",
-     "name": "FRANCK Alicia",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "ann-christine-allik",
-     "name": "ALLIK Ann-Christine",
-     "nat": "EST"
-    },
-    {
-     "bib": null,
-     "ath": "aniek-van-alphen",
-     "name": "VAN ALPHEN Aniek",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "ceylin-del-carmen-alvarado",
-     "name": "ALVARADO Ceylin del Carmen",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "amandine-fouquenet",
-     "name": "FOUQUENET Amandine",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "ana-santos",
-     "name": "SANTOS Ana",
-     "nat": "POR"
-    },
-    {
-     "bib": null,
-     "ath": "annemarie-worst",
-     "name": "WORST Annemarie",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "manon-bakker",
-     "name": "BAKKER Manon",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "leonie-bentveld",
-     "name": "BENTVELD Leonie",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "denise-betsema",
-     "name": "BETSEMA Denise",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "lucia-gonzalez-blanco",
-     "name": "GONZALEZ BLANCO Lucia",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "carlotta-borello",
-     "name": "BORELLO Carlotta",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "lucia-bramati",
-     "name": "BRAMATI Lucia",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
+     "bib": 1,
      "ath": "lucinda-brand",
      "name": "BRAND Lucinda",
-     "nat": "NED"
+     "nat": "NED",
+     "rank": 1
     },
     {
-     "bib": null,
-     "ath": "julie-brouwers",
-     "name": "BROUWERS Julie",
-     "nat": "BEL"
+     "bib": 2,
+     "ath": "ceylin-del-carmen-alvarado",
+     "name": "ALVARADO Ceylin Del Carmen",
+     "nat": "NED",
+     "rank": 2
     },
     {
-     "bib": null,
-     "ath": "sara-casasola",
-     "name": "CASASOLA Sara",
-     "nat": "ITA"
+     "bib": 3,
+     "ath": "manon-bakker",
+     "name": "BAKKER Manon",
+     "nat": "NED",
+     "rank": 6
     },
     {
-     "bib": null,
-     "ath": "helene-clauzel",
-     "name": "CLAUZEL Hélène",
-     "nat": "FRA"
+     "bib": 4,
+     "ath": "leonie-bentveld",
+     "name": "BENTVELD Leonie",
+     "nat": "NED",
+     "rank": 9
     },
     {
-     "bib": null,
-     "ath": "xan-crees",
-     "name": "CREES Xan",
-     "nat": "GBR"
+     "bib": 5,
+     "ath": "denise-betsema",
+     "name": "BETSEMA Denise",
+     "nat": "NED",
+     "rank": 12
     },
     {
-     "bib": null,
-     "ath": "sara-cueto-vega",
-     "name": "CUETO VEGA Sara",
-     "nat": "ESP"
+     "bib": 6,
+     "ath": "aniek-van-alphen",
+     "name": "VAN ALPHEN Aniek",
+     "nat": "NED",
+     "rank": 4
     },
     {
-     "bib": null,
+     "bib": 7,
      "ath": "inge-van-der-heijden",
      "name": "VAN DER HEIJDEN Inge",
-     "nat": "NED"
+     "nat": "NED",
+     "rank": 7
     },
     {
-     "bib": null,
-     "ath": "lauriane-duraffourg",
-     "name": "DURAFFOURG Lauriane",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
+     "bib": 8,
      "ath": "fem-van-empel",
      "name": "VAN EMPEL Fem",
-     "nat": "NED"
+     "nat": "NED",
+     "rank": 366
     },
     {
-     "bib": null,
-     "ath": "rebekka-estermann",
-     "name": "ESTERMANN Rebekka",
-     "nat": "SUI"
+     "bib": 9,
+     "ath": "carlotta-borello",
+     "name": "BORELLO Carlotta",
+     "nat": "ITA",
+     "rank": 30
     },
     {
-     "bib": null,
+     "bib": 10,
+     "ath": "lucia-bramati",
+     "name": "BRAMATI Lucia",
+     "nat": "ITA",
+     "rank": 18
+    },
+    {
+     "bib": 11,
+     "ath": "sara-casasola",
+     "name": "CASASOLA Sara",
+     "nat": "ITA",
+     "rank": 20
+    },
+    {
+     "bib": 12,
      "ath": "rebecca-gariboldi",
      "name": "GARIBOLDI Rebecca",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 27
     },
     {
-     "bib": null,
-     "ath": "katerina-hladikova",
-     "name": "HLADÍKOVÁ Kateřina",
-     "nat": "CZE"
+     "bib": 13,
+     "ath": "helene-clauzel",
+     "name": "CLAUZEL Hélène",
+     "nat": "FRA",
+     "rank": 16
     },
     {
-     "bib": null,
-     "ath": "judith-krahl",
-     "name": "KRAHL Judith",
-     "nat": "GER"
+     "bib": 14,
+     "ath": "lauriane-duraffourg",
+     "name": "DURAFFOURG Lauriane",
+     "nat": "FRA",
+     "rank": 65
     },
     {
-     "bib": null,
-     "ath": "kristyna-zemanova",
-     "name": "ZEMANOVÁ Kristýna",
-     "nat": "CZE"
+     "bib": 15,
+     "ath": "amandine-fouquenet",
+     "name": "FOUQUENET Amandine",
+     "nat": "FRA",
+     "rank": 3
     },
     {
-     "bib": null,
-     "ath": "oda-laforce",
-     "name": "LAFORCE Oda",
-     "nat": "NOR"
+     "bib": 16,
+     "ath": "julie-brouwers",
+     "name": "BROUWERS Julie",
+     "nat": "BEL",
+     "rank": 14
     },
     {
-     "bib": null,
-     "ath": "marie-schreiber",
-     "name": "SCHREIBER Marie",
-     "nat": "LUX"
+     "bib": 17,
+     "ath": "alicia-franck",
+     "name": "FRANCK Alicia",
+     "nat": "BEL",
+     "rank": 67
     },
     {
-     "bib": null,
-     "ath": "sofia-rodriguez-revert",
-     "name": "RODRIGUEZ REVERT Sofia",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
+     "bib": 18,
      "ath": "sterre-vervloet",
      "name": "VERVLOET Sterre",
-     "nat": "BEL"
+     "nat": "BEL",
+     "rank": 58
+    },
+    {
+     "bib": 19,
+     "ath": "katerina-hladikova",
+     "name": "HLADÍKOVÁ Katerina",
+     "nat": "CZE",
+     "rank": 39
+    },
+    {
+     "bib": 20,
+     "ath": "kristyna-zemanova",
+     "name": "ZEMANOVÁ Kristýna",
+     "nat": "CZE",
+     "rank": 8
+    },
+    {
+     "bib": 21,
+     "ath": "lucia-gonzalez-blanco",
+     "name": "GONZALEZ BLANCO Lucia",
+     "nat": "ESP",
+     "rank": 35
+    },
+    {
+     "bib": 22,
+     "ath": "sofia-rodriguez-revert",
+     "name": "RODRIGUEZ REVERT Sofia",
+     "nat": "ESP",
+     "rank": 19
+    },
+    {
+     "bib": 23,
+     "ath": "xan-crees",
+     "name": "CREES Xan",
+     "nat": "GBR",
+     "rank": 34
+    },
+    {
+     "bib": 24,
+     "ath": "ann-christine-allik",
+     "name": "ALLIK Ann-Christine",
+     "nat": "EST",
+     "rank": 504
+    },
+    {
+     "bib": 25,
+     "ath": "judith-krahl",
+     "name": "KRAHL Judith",
+     "nat": "GER",
+     "rank": 99
+    },
+    {
+     "bib": 26,
+     "ath": "marie-schreiber",
+     "name": "SCHREIBER Marie",
+     "nat": "LUX",
+     "rank": 13
+    },
+    {
+     "bib": 27,
+     "ath": "oda-laforce",
+     "name": "LAFORCE Oda",
+     "nat": "NOR",
+     "rank": 84
+    },
+    {
+     "bib": 28,
+     "ath": "ana-santos",
+     "name": "SANTOS Ana",
+     "nat": "POR",
+     "rank": 142
     }
-   ],
-   "entry": true
+   ]
   },
   "E03-ELI-H": {
-   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/entry/entry_men_el.pdf",
-   "fetched": "2026-11-06T10:13:54.796Z",
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/66_Startlist_ME.pdf",
+   "fetched": "2026-11-06T16:17:07.991Z",
    "start": [
     {
-     "bib": null,
-     "ath": "angelos-foteinopoulos",
-     "name": "FOTEINOPOULOS Angelos",
-     "nat": "GRE"
-    },
-    {
-     "bib": null,
-     "ath": "bailey-groenendaal",
-     "name": "GROENENDAAL Bailey",
-     "nat": "DEN"
-    },
-    {
-     "bib": null,
-     "ath": "gioele-bertolini",
-     "name": "BERTOLINI Gioele",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "raul-mira-bonastre",
-     "name": "MIRA BONASTRE Raul",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "michael-boros",
-     "name": "BOROŠ Michael",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "kay-de-bruyckere",
-     "name": "DE BRUYCKERE Kay",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "cameron-mason",
-     "name": "MASON Cameron",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "federico-ceolin",
-     "name": "CEOLIN Federico",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "danny-van-lierop",
-     "name": "VAN LIEROP Danny",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "victor-van-de-putte",
-     "name": "VAN DE PUTTE Victor",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "dean-harvey",
-     "name": "HARVEY Dean",
-     "nat": "IRL"
-    },
-    {
-     "bib": null,
-     "ath": "romain-debord",
-     "name": "DEBORD Romain",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "hannes-degenkolb",
-     "name": "DEGENKOLB Hannes",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "miguel-diaz-perez",
-     "name": "DIAZ PEREZ Miguel",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "dovydas-luksas",
-     "name": "LUKŠAS Dovydas",
-     "nat": "LTU"
-    },
-    {
-     "bib": null,
-     "ath": "felipe-orts-lloret",
-     "name": "ORTS LLORET Felipe",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "tommaso-ferri",
-     "name": "FERRI Tommaso",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "matyas-fiala",
-     "name": "FIALA Matyáš",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
+     "bib": 1,
      "ath": "gerben-kuypers",
      "name": "KUYPERS Gerben",
-     "nat": "BEL"
+     "nat": "BEL",
+     "rank": 13
     },
     {
-     "bib": null,
-     "ath": "gonzalo-inguanzo-macho",
-     "name": "INGUANZO MACHO Gonzalo",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "luca-harter",
-     "name": "HARTER Luca",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "mees-hendrikx",
-     "name": "HENDRIKX Mees",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "lukas-herrmann",
-     "name": "HERRMANN Lukas",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "wout-janssen",
-     "name": "JANSSEN Wout",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "jente-michels",
-     "name": "MICHELS Jente",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "jonas-kopsel",
-     "name": "KÖPSEL Jonas",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "joran-wyseure",
-     "name": "WYSEURE Joran",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "joris-nieuwenhuis",
-     "name": "NIEUWENHUIS Joris",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "mateo-jot",
-     "name": "JOT Matéo",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "mario-junquera-san-millan",
-     "name": "JUNQUERA SAN MILLAN Mario",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "ryan-kamp",
-     "name": "KAMP Ryan",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "kevin-kuhn",
-     "name": "KUHN Kevin",
-     "nat": "SUI"
-    },
-    {
-     "bib": null,
-     "ath": "silas-kuschla",
-     "name": "KUSCHLA Silas",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "lars-sommer",
-     "name": "SOMMER Lars",
-     "nat": "SUI"
-    },
-    {
-     "bib": null,
-     "ath": "laurens-sweeck",
-     "name": "SWEECK Laurens",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "remi-lelandais",
-     "name": "LELANDAIS Rémi",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "matej-ulik",
-     "name": "ULÍK Matej",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
+     "bib": 2,
      "ath": "witse-meeussen",
      "name": "MEEUSSEN Witse",
-     "nat": "BEL"
+     "nat": "BEL",
+     "rank": 26
     },
     {
-     "bib": null,
-     "ath": "thomas-mein",
-     "name": "MEIN Thomas",
-     "nat": "GBR"
+     "bib": 3,
+     "ath": "jente-michels",
+     "name": "MICHELS Jente",
+     "nat": "BEL",
+     "rank": 14
     },
     {
-     "bib": null,
-     "ath": "michael-vanthourenhout",
-     "name": "VANTHOURENHOUT Michael",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "miguel-rodriguez-novoa",
-     "name": "RODRIGUEZ NOVOA Miguel",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "niels-vandeputte",
-     "name": "VANDEPUTTE Niels",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
+     "bib": 4,
      "ath": "thibau-nys",
      "name": "NYS Thibau",
-     "nat": "BEL"
+     "nat": "BEL",
+     "rank": 3
     },
     {
-     "bib": null,
+     "bib": 5,
+     "ath": "laurens-sweeck",
+     "name": "SWEECK Laurens",
+     "nat": "BEL",
+     "rank": 10
+    },
+    {
+     "bib": 6,
+     "ath": "niels-vandeputte",
+     "name": "VANDEPUTTE Niels",
+     "nat": "BEL",
+     "rank": 2
+    },
+    {
+     "bib": 7,
+     "ath": "michael-vanthourenhout",
+     "name": "VANTHOURENHOUT Michael",
+     "nat": "BEL",
+     "rank": 4
+    },
+    {
+     "bib": 8,
+     "ath": "joran-wyseure",
+     "name": "WYSEURE Joran",
+     "nat": "BEL",
+     "rank": 9
+    },
+    {
+     "bib": 9,
+     "ath": "mees-hendrikx",
+     "name": "HENDRIKX Mees",
+     "nat": "NED",
+     "rank": 11
+    },
+    {
+     "bib": 10,
+     "ath": "ryan-kamp",
+     "name": "KAMP Ryan",
+     "nat": "NED",
+     "rank": 17
+    },
+    {
+     "bib": 11,
+     "ath": "joris-nieuwenhuis",
+     "name": "NIEUWENHUIS Joris",
+     "nat": "NED",
+     "rank": 7
+    },
+    {
+     "bib": 12,
      "ath": "pim-ronhaar",
      "name": "RONHAAR Pim",
-     "nat": "NED"
+     "nat": "NED",
+     "rank": 19
     },
     {
-     "bib": null,
-     "ath": "toon-vandebosch",
-     "name": "VANDEBOSCH Toon",
-     "nat": "BEL"
-    }
-   ],
-   "entry": true
-  },
-  "E03-U23-F": {
-   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/entry/entry_wom_u23.pdf",
-   "fetched": "2026-11-06T10:13:57.104Z",
-   "start": [
-    {
-     "bib": null,
-     "ath": "adela-stranska",
-     "name": "STRÁNSKÁ Adéla",
-     "nat": "CZE"
+     "bib": 13,
+     "ath": "danny-van-lierop",
+     "name": "VAN LIEROP Danny",
+     "nat": "NED",
+     "rank": 37
     },
     {
-     "bib": null,
-     "ath": "alexandra-valade",
-     "name": "VALADE Alexandra",
-     "nat": "FRA"
+     "bib": 14,
+     "ath": "cameron-mason",
+     "name": "MASON Cameron",
+     "nat": "GBR",
+     "rank": 16
     },
     {
-     "bib": null,
-     "ath": "alice-colling",
-     "name": "COLLING Alice",
-     "nat": "GBR"
+     "bib": 15,
+     "ath": "thomas-mein",
+     "name": "MEIN Thomas",
+     "nat": "GBR",
+     "rank": 40
     },
     {
-     "bib": null,
-     "ath": "amandine-muller",
-     "name": "MULLER Amandine",
-     "nat": "FRA"
+     "bib": 16,
+     "ath": "raul-mira-bonastre",
+     "name": "MIRA BONASTRE Raul",
+     "nat": "ESP",
+     "rank": 47
     },
     {
-     "bib": null,
-     "ath": "ana-lopez-burgos",
-     "name": "LOPEZ BURGOS Ana",
-     "nat": "ESP"
+     "bib": 17,
+     "ath": "felipe-orts-lloret",
+     "name": "ORTS LLORET Felipe",
+     "nat": "ESP",
+     "rank": 6
     },
     {
-     "bib": null,
-     "ath": "nahia-arana-quintanilla",
-     "name": "ARANA QUINTANILLA Nahia",
-     "nat": "ESP"
+     "bib": 18,
+     "ath": "gioele-bertolini",
+     "name": "BERTOLINI Gioele",
+     "nat": "ITA",
+     "rank": 32
     },
     {
-     "bib": null,
-     "ath": "nicole-azzetti",
-     "name": "AZZETTI Nicole",
-     "nat": "ITA"
+     "bib": 19,
+     "ath": "federico-ceolin",
+     "name": "CEOLIN Federico",
+     "nat": "ITA",
+     "rank": 39
     },
     {
-     "bib": null,
-     "ath": "barbora-bukovska",
-     "name": "BUKOVSKÁ Barbora",
-     "nat": "CZE"
+     "bib": 20,
+     "ath": "michael-boros",
+     "name": "BOROŠ Michael",
+     "nat": "CZE",
+     "rank": 22
     },
     {
-     "bib": null,
-     "ath": "bloeme-kalis",
-     "name": "KALIS Bloeme",
-     "nat": "NED"
+     "bib": 21,
+     "ath": "matyas-fiala",
+     "name": "FIALA Matyáš",
+     "nat": "CZE",
+     "rank": 41
     },
     {
-     "bib": null,
-     "ath": "saga-elf-boberg",
-     "name": "ELF BOBERG Saga",
-     "nat": "SWE"
+     "bib": 22,
+     "ath": "romain-debord",
+     "name": "DEBORD Romain",
+     "nat": "FRA",
+     "rank": 48
     },
     {
-     "bib": null,
-     "ath": "xenna-de-bruyckere",
-     "name": "DE BRUYCKERE Xenna",
-     "nat": "BEL"
+     "bib": 23,
+     "ath": "remi-lelandais",
+     "name": "LELANDAIS Rémi",
+     "nat": "FRA",
+     "rank": 28
     },
     {
-     "bib": null,
-     "ath": "kaija-budde",
-     "name": "BUDDE Kaija",
-     "nat": "GER"
+     "bib": 24,
+     "ath": "kevin-kuhn",
+     "name": "KUHN Kevin",
+     "nat": "SUI",
+     "rank": 15
     },
     {
-     "bib": null,
-     "ath": "mae-cabaca",
-     "name": "CABACA Mae",
-     "nat": "NED"
+     "bib": 25,
+     "ath": "lars-sommer",
+     "name": "SOMMER Lars",
+     "nat": "SUI",
+     "rank": 53
     },
     {
-     "bib": null,
-     "ath": "celia-gery",
-     "name": "GERY Célia",
-     "nat": "FRA"
+     "bib": 26,
+     "ath": "hannes-degenkolb",
+     "name": "DEGENKOLB Hannes",
+     "nat": "GER",
+     "rank": 107
     },
     {
-     "bib": null,
-     "ath": "chiara-mettier",
-     "name": "METTIER Chiara",
-     "nat": "SUI"
+     "bib": 27,
+     "ath": "luca-harter",
+     "name": "HARTER Luca",
+     "nat": "GER",
+     "rank": 81
     },
     {
-     "bib": null,
-     "ath": "clara-widell",
-     "name": "WIDELL Clara",
-     "nat": "SWE"
+     "bib": 28,
+     "ath": "lukas-herrmann",
+     "name": "HERRMANN Lukas",
+     "nat": "GER",
+     "rank": 179
     },
     {
-     "bib": null,
-     "ath": "lison-desprez",
-     "name": "DESPREZ Lison",
-     "nat": "FRA"
+     "bib": 29,
+     "ath": "jonas-kopsel",
+     "name": "KÖPSEL Jonas",
+     "nat": "GER",
+     "rank": 195
     },
     {
-     "bib": null,
-     "ath": "katerina-douderova",
-     "name": "DOUDĚROVÁ Kateřina",
-     "nat": "CZE"
+     "bib": 30,
+     "ath": "silas-kuschla",
+     "name": "KUSCHLA Silas",
+     "nat": "GER",
+     "rank": 108
     },
     {
-     "bib": null,
-     "ath": "elisa-ferri",
-     "name": "FERRI Elisa",
-     "nat": "ITA"
+     "bib": 31,
+     "ath": "dovydas-luksas",
+     "name": "LUKŠAS Dovydas",
+     "nat": "LTU",
+     "rank": 174
     },
     {
-     "bib": null,
-     "ath": "ellie-mitchinson",
-     "name": "MITCHINSON Ellie",
-     "nat": "GBR"
+     "bib": 32,
+     "ath": "bailey-groenendaal",
+     "name": "GROENENDAAL Bailey",
+     "nat": "DEN",
+     "rank": 33
     },
     {
-     "bib": null,
-     "ath": "kacey-eyeington",
-     "name": "EYEINGTON Kacey",
-     "nat": "GBR"
+     "bib": 33,
+     "ath": "dean-harvey",
+     "name": "HARVEY Dean",
+     "nat": "IRL",
+     "rank": 144
     },
     {
-     "bib": null,
-     "ath": "freya-whiteside",
-     "name": "WHITESIDE Freya",
-     "nat": "IRL"
-    },
-    {
-     "bib": null,
-     "ath": "giorgia-pellizotti",
-     "name": "PELLIZOTTI Giorgia",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "mirari-gotxi-olartekoetxea",
-     "name": "GOTXI OLARTEKOETXEA Mirari",
-     "nat": "ESP"
-    },
-    {
-     "bib": null,
-     "ath": "hope-inglis",
-     "name": "INGLIS Hope",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "jule-markl",
-     "name": "MÄRKL Jule",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "laly-pichon",
-     "name": "PICHON Laly",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "zelie-lambert",
-     "name": "LAMBERT Zélie",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "puck-langenbarg",
-     "name": "LANGENBARG Puck",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "lauren-molengraaf",
-     "name": "MOLENGRAAF Lauren",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "sanne-laurijssen",
-     "name": "LAURIJSSEN Sanne",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "mille-nielsen",
-     "name": "NIELSEN Mille",
-     "nat": "DEN"
-    },
-    {
-     "bib": null,
-     "ath": "noi-moes",
-     "name": "MOES Noï",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "rianne-nieuwenhuis",
-     "name": "NIEUWENHUIS Rianne",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "zita-peeters",
-     "name": "PEETERS Zita",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "thea-persson",
-     "name": "PERSSON Thea",
-     "nat": "SWE"
-    },
-    {
-     "bib": null,
-     "ath": "sabrina-rizzi",
-     "name": "RIZZI Sabrina",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "zoe-roche",
-     "name": "ROCHE Zoe",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "tomke-windelband",
-     "name": "WINDELBAND Tomke",
-     "nat": "GER"
-    }
-   ],
-   "entry": true
-  },
-  "E03-U23-H": {
-   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/entry/entry_men_u23.pdf",
-   "fetched": "2026-11-06T10:13:59.166Z",
-   "start": [
-    {
-     "bib": null,
-     "ath": "alexis-david",
-     "name": "DAVID Alexis",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "alfie-amey",
-     "name": "AMEY Alfie",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
+     "bib": 34,
      "ath": "kevin-andre-sandli-messel",
      "name": "MESSEL Kevin Andre Sandli",
-     "nat": "NOR"
+     "nat": "NOR",
+     "rank": 115
     },
     {
-     "bib": null,
-     "ath": "angel-fernandez-echevarria",
-     "name": "FERNANDEZ ECHEVARRIA Angel",
-     "nat": "ESP"
+     "bib": 35,
+     "ath": "matej-ulik",
+     "name": "ULÍK Matej",
+     "nat": "SVK",
+     "rank": 86
+    }
+   ]
+  },
+  "E03-U23-F": {
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/51_Startlist_WU.pdf",
+   "fetched": "2026-11-06T16:17:09.770Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "mae-cabaca",
+     "name": "CABACA Mae",
+     "nat": "NED",
+     "rank": 111
     },
     {
-     "bib": null,
-     "ath": "antonin-john",
-     "name": "JOHN Antonín",
-     "nat": "CZE"
+     "bib": 2,
+     "ath": "puck-langenbarg",
+     "name": "LANGENBARG Puck",
+     "nat": "NED",
+     "rank": 105
     },
     {
-     "bib": null,
-     "ath": "arthur-van-den-boer",
-     "name": "VAN DEN BOER Arthur",
-     "nat": "BEL"
+     "bib": 3,
+     "ath": "noi-moes",
+     "name": "MOES Noï",
+     "nat": "NED",
+     "rank": 144
     },
     {
-     "bib": null,
-     "ath": "artur-nichvolodov",
-     "name": "NICHVOLODOV Artur",
-     "nat": "UKR"
+     "bib": 4,
+     "ath": "lauren-molengraaf",
+     "name": "MOLENGRAAF Lauren",
+     "nat": "NED",
+     "rank": 55
     },
     {
-     "bib": null,
-     "ath": "aubin-sparfel",
-     "name": "SPARFEL Aubin",
-     "nat": "FRA"
+     "bib": 5,
+     "ath": "rianne-nieuwenhuis",
+     "name": "NIEUWENHUIS Rianne",
+     "nat": "NED",
+     "rank": 91
     },
     {
-     "bib": null,
-     "ath": "barnabas-vas",
-     "name": "VAS Barnabás",
-     "nat": "HUN"
+     "bib": 6,
+     "ath": "lison-desprez",
+     "name": "DESPREZ Lison",
+     "nat": "FRA",
+     "rank": 43
     },
     {
-     "bib": null,
-     "ath": "krystof-bazant",
-     "name": "BAŽANT Kryštof",
-     "nat": "CZE"
+     "bib": 7,
+     "ath": "celia-gery",
+     "name": "GERY Célia",
+     "nat": "FRA",
+     "rank": 17
     },
     {
-     "bib": null,
-     "ath": "sil-de-brauwere",
-     "name": "DE BRAUWERE Sil",
-     "nat": "BEL"
+     "bib": 8,
+     "ath": "zelie-lambert",
+     "name": "LAMBERT Zélie",
+     "nat": "FRA",
+     "rank": 73
     },
     {
-     "bib": null,
-     "ath": "soren-bruyere-joumard",
-     "name": "BRUYERE JOUMARD Soren",
-     "nat": "FRA"
+     "bib": 9,
+     "ath": "amandine-muller",
+     "name": "MULLER Amandine",
+     "nat": "FRA",
+     "rank": 22
     },
     {
-     "bib": null,
-     "ath": "tommaso-cafueri",
-     "name": "CAFUERI Tommaso",
-     "nat": "ITA"
+     "bib": 10,
+     "ath": "alexandra-valade",
+     "name": "VALADE Alexandra",
+     "nat": "FRA",
+     "rank": 70
     },
     {
-     "bib": null,
-     "ath": "cas-timmermans",
-     "name": "TIMMERMANS Cas",
-     "nat": "NED"
+     "bib": 11,
+     "ath": "xenna-de-bruyckere",
+     "name": "DE BRUYCKERE Xenna",
+     "nat": "BEL",
+     "rank": 205
     },
     {
-     "bib": null,
-     "ath": "lars-corsus",
-     "name": "CORSUS Lars",
-     "nat": "BEL"
+     "bib": 12,
+     "ath": "sanne-laurijssen",
+     "name": "LAURIJSSEN Sanne",
+     "nat": "BEL",
+     "rank": 458
     },
     {
-     "bib": null,
-     "ath": "yordi-corsus",
-     "name": "CORSUS Yordi",
-     "nat": "BEL"
+     "bib": 13,
+     "ath": "zita-peeters",
+     "name": "PEETERS Zita",
+     "nat": "BEL",
+     "rank": 90
     },
     {
-     "bib": null,
-     "ath": "unax-galan-cortazar",
-     "name": "GALAN CORTAZAR Unax",
-     "nat": "ESP"
+     "bib": 14,
+     "ath": "barbora-bukovska",
+     "name": "BUKOVSKÁ Barbora",
+     "nat": "CZE",
+     "rank": 25
     },
     {
-     "bib": null,
-     "ath": "thomas-courcier",
-     "name": "COURCIER Thomas",
-     "nat": "FRA"
+     "bib": 15,
+     "ath": "katerina-douderova",
+     "name": "DOUDEROVÁ Katerina",
+     "nat": "CZE",
+     "rank": 68
     },
     {
-     "bib": null,
-     "ath": "lars-daelmans",
-     "name": "DAELMANS Lars",
-     "nat": "BEL"
+     "bib": 16,
+     "ath": "adela-stranska",
+     "name": "STRÁNSKÁ Adéla",
+     "nat": "CZE",
+     "rank": 203
     },
     {
-     "bib": null,
-     "ath": "declan-oldham",
-     "name": "OLDHAM Declan",
-     "nat": "GBR"
+     "bib": 17,
+     "ath": "elisa-ferri",
+     "name": "FERRI Elisa",
+     "nat": "ITA",
+     "rank": 44
     },
     {
-     "bib": null,
-     "ath": "mats-vanden-eynde",
-     "name": "VANDEN EYNDE Mats",
-     "nat": "BEL"
+     "bib": 18,
+     "ath": "giorgia-pellizotti",
+     "name": "PELLIZOTTI Giorgia",
+     "nat": "ITA",
+     "rank": 23
     },
     {
-     "bib": null,
-     "ath": "martin-fernandez-garcia",
-     "name": "FERNANDEZ GARCIA Martin",
-     "nat": "ESP"
+     "bib": 19,
+     "ath": "chiara-mettier",
+     "name": "METTIER Chiara",
+     "nat": "SUI",
+     "rank": 284
     },
     {
-     "bib": null,
-     "ath": "florian-fery",
-     "name": "FERY Florian",
-     "nat": "FRA"
+     "bib": 20,
+     "ath": "alice-colling",
+     "name": "COLLING Alice",
+     "nat": "GBR",
+     "rank": 384
     },
     {
-     "bib": null,
+     "bib": 21,
+     "ath": "kacey-eyeington",
+     "name": "EYEINGTON Kacey",
+     "nat": "GBR",
+     "rank": 244
+    },
+    {
+     "bib": 22,
+     "ath": "hope-inglis",
+     "name": "INGLIS Hope",
+     "nat": "GBR",
+     "rank": 369
+    },
+    {
+     "bib": 23,
+     "ath": "ellie-mitchinson",
+     "name": "MITCHINSON Ellie",
+     "nat": "GBR",
+     "rank": 634
+    },
+    {
+     "bib": 24,
+     "ath": "zoe-roche",
+     "name": "ROCHE Zoe",
+     "nat": "GBR",
+     "rank": 80
+    },
+    {
+     "bib": 25,
+     "ath": "mille-nielsen",
+     "name": "NIELSEN Mille",
+     "nat": "DEN",
+     "rank": 94
+    },
+    {
+     "bib": 26,
+     "ath": "mirari-gotxi-olartekoetxea",
+     "name": "GOTXI OLARTEKOETXEA Mirari",
+     "nat": "ESP",
+     "rank": 107
+    },
+    {
+     "bib": 27,
+     "ath": "ana-lopez-burgos",
+     "name": "LOPEZ BURGOS Ana",
+     "nat": "ESP",
+     "rank": 100
+    },
+    {
+     "bib": 28,
+     "ath": "saga-elf-boberg",
+     "name": "ELF BOBERG Saga",
+     "nat": "SWE",
+     "rank": 234
+    },
+    {
+     "bib": 29,
+     "ath": "thea-persson",
+     "name": "PERSSON Thea",
+     "nat": "SWE",
+     "rank": 136
+    },
+    {
+     "bib": 30,
+     "ath": "clara-widell",
+     "name": "WIDELL Clara",
+     "nat": "SWE",
+     "rank": 258
+    },
+    {
+     "bib": 31,
+     "ath": "kaija-budde",
+     "name": "BUDDE Kaija",
+     "nat": "GER",
+     "rank": 146
+    },
+    {
+     "bib": 32,
+     "ath": "jule-markl",
+     "name": "MÄRKL Jule",
+     "nat": "GER",
+     "rank": 235
+    },
+    {
+     "bib": 33,
+     "ath": "tomke-windelband",
+     "name": "WINDELBAND Tomke",
+     "nat": "GER",
+     "rank": 126
+    },
+    {
+     "bib": 34,
+     "ath": "freya-whiteside",
+     "name": "WHITESIDE Freya",
+     "nat": "IRL",
+     "rank": 124
+    }
+   ]
+  },
+  "E03-U23-H": {
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/56_Startlist_MU.pdf",
+   "fetched": "2026-11-06T16:17:13.205Z",
+   "start": [
+    {
+     "bib": 1,
      "ath": "filippo-grigolini",
      "name": "GRIGOLINI Filippo",
-     "nat": "ITA"
+     "nat": "ITA",
+     "rank": 64
     },
     {
-     "bib": null,
+     "bib": 2,
+     "ath": "stefano-viezzi",
+     "name": "VIEZZI Stefano",
+     "nat": "ITA",
+     "rank": 43
+    },
+    {
+     "bib": 3,
+     "ath": "floris-haverdings",
+     "name": "HAVERDINGS Floris",
+     "nat": "NED",
+     "rank": 112
+    },
+    {
+     "bib": 4,
+     "ath": "cas-timmermans",
+     "name": "TIMMERMANS Cas",
+     "nat": "NED",
+     "rank": 398
+    },
+    {
+     "bib": 5,
+     "ath": "lars-corsus",
+     "name": "CORSUS Lars",
+     "nat": "BEL",
+     "rank": 287
+    },
+    {
+     "bib": 6,
+     "ath": "yordi-corsus",
+     "name": "CORSUS Yordi",
+     "nat": "BEL",
+     "rank": 25
+    },
+    {
+     "bib": 7,
+     "ath": "lars-daelmans",
+     "name": "DAELMANS Lars",
+     "nat": "BEL",
+     "rank": 443
+    },
+    {
+     "bib": 8,
+     "ath": "sil-de-brauwere",
+     "name": "DE BRAUWERE Sil",
+     "nat": "BEL",
+     "rank": 87
+    },
+    {
+     "bib": 9,
+     "ath": "giel-lejeune",
+     "name": "LEJEUNE Giel",
+     "nat": "BEL",
+     "rank": 66
+    },
+    {
+     "bib": 10,
+     "ath": "arthur-van-den-boer",
+     "name": "VAN DEN BOER Arthur",
+     "nat": "BEL",
+     "rank": 75
+    },
+    {
+     "bib": 11,
+     "ath": "mats-vanden-eynde",
+     "name": "VANDEN EYNDE Mats",
+     "nat": "BEL",
+     "rank": 104
+    },
+    {
+     "bib": 12,
+     "ath": "viktor-vandenberghe",
+     "name": "VANDENBERGHE Viktor",
+     "nat": "BEL",
+     "rank": 58
+    },
+    {
+     "bib": 13,
+     "ath": "soren-bruyere-joumard",
+     "name": "BRUYERE JOUMARD Soren",
+     "nat": "FRA",
+     "rank": 137
+    },
+    {
+     "bib": 14,
+     "ath": "thomas-courcier",
+     "name": "COURCIER Thomas",
+     "nat": "FRA",
+     "rank": 114
+    },
+    {
+     "bib": 15,
+     "ath": "alexis-david",
+     "name": "DAVID Alexis",
+     "nat": "FRA",
+     "rank": 85
+    },
+    {
+     "bib": 16,
+     "ath": "jules-simon",
+     "name": "SIMON Jules",
+     "nat": "FRA",
+     "rank": 106
+    },
+    {
+     "bib": 17,
+     "ath": "aubin-sparfel",
+     "name": "SPARFEL Aubin",
+     "nat": "FRA",
+     "rank": 23
+    },
+    {
+     "bib": 18,
+     "ath": "louis-tanguy",
+     "name": "TANGUY Louis",
+     "nat": "FRA",
+     "rank": 128
+    },
+    {
+     "bib": 19,
+     "ath": "krystof-bazant",
+     "name": "BAŽANT Kryštof",
+     "nat": "CZE",
+     "rank": 34
+    },
+    {
+     "bib": 20,
+     "ath": "matej-havel",
+     "name": "HAVEL Matej",
+     "nat": "CZE",
+     "rank": 243
+    },
+    {
+     "bib": 21,
+     "ath": "frantisek-hojka",
+     "name": "HOJKA František",
+     "nat": "CZE",
+     "rank": 184
+    },
+    {
+     "bib": 22,
+     "ath": "antonin-john",
+     "name": "JOHN Antonín",
+     "nat": "CZE",
+     "rank": 435
+    },
+    {
+     "bib": 23,
+     "ath": "martin-fernandez-garcia",
+     "name": "FERNANDEZ GARCIA Martin",
+     "nat": "ESP",
+     "rank": 257
+    },
+    {
+     "bib": 24,
+     "ath": "unax-galan-cortazar",
+     "name": "GALAN CORTAZAR Unax",
+     "nat": "ESP",
+     "rank": 204
+    },
+    {
+     "bib": 25,
+     "ath": "zsombor-takacs",
+     "name": "TAKÁCS Zsombor",
+     "nat": "HUN",
+     "rank": 51
+    },
+    {
+     "bib": 26,
+     "ath": "barnabas-vas",
+     "name": "VAS Barnabás",
+     "nat": "HUN",
+     "rank": 73
+    },
+    {
+     "bib": 27,
+     "ath": "rafael-sousa",
+     "name": "SOUSA Rafael",
+     "nat": "POR",
+     "rank": 84
+    },
+    {
+     "bib": 28,
+     "ath": "joao-vigario",
+     "name": "VIGÁRIO João",
+     "nat": "POR",
+     "rank": 663
+    },
+    {
+     "bib": 29,
+     "ath": "alfie-amey",
+     "name": "AMEY Alfie",
+     "nat": "GBR",
+     "rank": 457
+    },
+    {
+     "bib": 30,
+     "ath": "luke-gibson",
+     "name": "GIBSON Luke",
+     "nat": "GBR",
+     "rank": 596
+    },
+    {
+     "bib": 31,
+     "ath": "declan-oldham",
+     "name": "OLDHAM Declan",
+     "nat": "GBR",
+     "rank": 451
+    },
+    {
+     "bib": 32,
+     "ath": "jacob-steed",
+     "name": "STEED Jacob",
+     "nat": "GBR",
+     "rank": 656
+    },
+    {
+     "bib": 33,
+     "ath": "paul-greijus",
+     "name": "GREIJUS Paul",
+     "nat": "SWE",
+     "rank": 173
+    },
+    {
+     "bib": 34,
+     "ath": "michal-sichta",
+     "name": "ŠICHTA Michal",
+     "nat": "SVK",
+     "rank": 91
+    },
+    {
+     "bib": 35,
+     "ath": "peter-soltes",
+     "name": "ŠOLTÉS Peter",
+     "nat": "SVK",
+     "rank": 170
+    },
+    {
+     "bib": 36,
+     "ath": "lennox-papi",
+     "name": "PAPI Lennox",
+     "nat": "LUX",
+     "rank": 154
+    },
+    {
+     "bib": 37,
+     "ath": "matthias-mottus",
+     "name": "MÕTTUS Matthias",
+     "nat": "EST",
+     "rank": 210
+    },
+    {
+     "bib": 38,
      "ath": "fionn-killeen",
      "name": "KILLEEN Fionn",
      "nat": "IRL"
     },
     {
-     "bib": null,
-     "ath": "floris-haverdings",
-     "name": "HAVERDINGS Floris",
-     "nat": "NED"
-    },
-    {
-     "bib": null,
-     "ath": "frantisek-hojka",
-     "name": "HOJKA František",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "luke-gibson",
-     "name": "GIBSON Luke",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "giel-lejeune",
-     "name": "LEJEUNE Giel",
-     "nat": "BEL"
-    },
-    {
-     "bib": null,
-     "ath": "paul-greijus",
-     "name": "GREIJUS Paul",
-     "nat": "SWE"
-    },
-    {
-     "bib": null,
-     "ath": "matej-havel",
-     "name": "HAVEL Matěj",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "max-heiner-oertzen",
-     "name": "OERTZEN Max Heiner",
-     "nat": "GER"
-    },
-    {
-     "bib": null,
-     "ath": "jacob-steed",
-     "name": "STEED Jacob",
-     "nat": "GBR"
-    },
-    {
-     "bib": null,
-     "ath": "joao-vigario",
-     "name": "VIGÁRIO João",
-     "nat": "POR"
-    },
-    {
-     "bib": null,
-     "ath": "jules-simon",
-     "name": "SIMON Jules",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
-     "ath": "lennox-papi",
-     "name": "PAPI Lennox",
-     "nat": "LUX"
-    },
-    {
-     "bib": null,
-     "ath": "patrik-lienert",
-     "name": "LIENERT Patrik",
-     "nat": "CZE"
-    },
-    {
-     "bib": null,
-     "ath": "louis-tanguy",
-     "name": "TANGUY Louis",
-     "nat": "FRA"
-    },
-    {
-     "bib": null,
+     "bib": 39,
      "ath": "martynas-medelinskas",
      "name": "MEDELINSKAS Martynas",
      "nat": "LTU"
     },
     {
-     "bib": null,
-     "ath": "matthias-mottus",
-     "name": "MÕTTUS Matthias",
-     "nat": "EST"
-    },
-    {
-     "bib": null,
-     "ath": "michal-sichta",
-     "name": "ŠICHTA Michal",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
-     "ath": "peter-soltes",
-     "name": "ŠOLTÉS Peter",
-     "nat": "SVK"
-    },
-    {
-     "bib": null,
-     "ath": "rafael-sousa",
-     "name": "SOUSA Rafael",
-     "nat": "POR"
-    },
-    {
-     "bib": null,
-     "ath": "stefano-viezzi",
-     "name": "VIEZZI Stefano",
-     "nat": "ITA"
-    },
-    {
-     "bib": null,
-     "ath": "zsombor-takacs",
-     "name": "TAKÁCS Zsombor",
-     "nat": "HUN"
-    },
-    {
-     "bib": null,
-     "ath": "viktor-vandenberghe",
-     "name": "VANDENBERGHE Viktor",
-     "nat": "BEL"
+     "bib": 40,
+     "ath": "artur-nichvolodov",
+     "name": "NICHVOLODOV Artur",
+     "nat": "UKR",
+     "rank": 450
     }
-   ],
-   "entry": true
+   ]
   },
   "E03-U19-F": {
-   "source": "UEC – Start List Women Junior (PDF officiel)",
-   "fetched": "2026-11-06T16:14:52.399Z",
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/41_Startlist_WJ.pdf",
+   "fetched": "2026-11-06T16:17:14.747Z",
    "start": [
     {
      "bib": 1,
      "ath": "eliska-drongova",
      "name": "DRONGOVÁ Eliška",
+     "nat": "CZE",
      "rank": 73
     },
     {
      "bib": 2,
      "ath": "hana-kluckova",
      "name": "KLUCKOVÁ Hana",
+     "nat": "CZE",
      "rank": 91
     },
     {
      "bib": 3,
      "ath": "karolina-rothbauerova",
      "name": "ROTHBAUEROVÁ Karolína",
+     "nat": "CZE",
      "rank": 13
     },
     {
      "bib": 4,
      "ath": "britt-beumer",
      "name": "BEUMER Britt",
+     "nat": "NED",
      "rank": 52
     },
     {
      "bib": 5,
      "ath": "lotte-bouman",
      "name": "BOUMAN Lotte",
+     "nat": "NED",
      "rank": 58
     },
     {
      "bib": 6,
      "ath": "puck-bunning",
      "name": "BUNNING Puck",
+     "nat": "NED",
      "rank": 123
     },
     {
      "bib": 7,
      "ath": "lonneke-heesemans",
      "name": "HEESEMANS Lonneke",
+     "nat": "NED",
      "rank": 47
     },
     {
      "bib": 8,
      "ath": "nynke-jochems",
      "name": "JOCHEMS Nynke",
+     "nat": "NED",
      "rank": 2
     },
     {
      "bib": 9,
      "ath": "maxime-takken",
      "name": "TAKKEN Maxime",
+     "nat": "NED",
      "rank": 30
     },
     {
      "bib": 10,
      "ath": "damy-van-den-bogaard",
      "name": "VAN DEN BOGAARD Damy",
+     "nat": "NED",
      "rank": 65
     },
     {
      "bib": 11,
      "ath": "isis-versluis",
      "name": "VERSLUIS Isis",
+     "nat": "NED",
      "rank": 4
     },
     {
      "bib": 12,
      "ath": "nicoletta-brandi",
      "name": "BRANDI Nicoletta",
+     "nat": "ITA",
      "rank": 75
     },
     {
      "bib": 13,
      "ath": "rachele-cafueri",
      "name": "CAFUERI Rachele",
+     "nat": "ITA",
      "rank": 26
     },
     {
      "bib": 14,
      "ath": "matilde-carretta",
      "name": "CARRETTA Matilde",
+     "nat": "ITA",
      "rank": 39
     },
     {
      "bib": 15,
      "ath": "nicole-righetto",
      "name": "RIGHETTO Nicole",
+     "nat": "ITA",
      "rank": 8
     },
     {
      "bib": 16,
      "ath": "azzurra-rizzi",
      "name": "RIZZI Azzurra",
+     "nat": "ITA",
      "rank": 17
     },
     {
      "bib": 17,
      "ath": "lucie-elizalde",
      "name": "ELIZALDE Lucie",
+     "nat": "FRA",
      "rank": 9
     },
     {
      "bib": 18,
      "ath": "noemie-jurado-roumieux",
      "name": "JURADO ROUMIEUX Noémie",
+     "nat": "FRA",
      "rank": 10
     },
     {
      "bib": 19,
      "ath": "lana-le-guilloux",
      "name": "LE GUILLOUX Lana",
+     "nat": "FRA",
      "rank": 23
     },
     {
      "bib": 20,
      "ath": "justine-mesnard",
      "name": "MESNARD Justine",
+     "nat": "FRA",
      "rank": 59
     },
     {
      "bib": 21,
      "ath": "shana-huber",
      "name": "HUBER Shana",
+     "nat": "SUI",
      "rank": 1
     },
     {
      "bib": 22,
      "ath": "peggy-knox",
      "name": "KNOX Peggy",
+     "nat": "GBR",
      "rank": 5
     },
     {
      "bib": 23,
      "ath": "olivia-poole",
      "name": "POOLE Olivia",
+     "nat": "GBR",
      "rank": 84
     },
     {
      "bib": 24,
      "ath": "heidi-roscoe",
      "name": "ROSCOE Heidi",
+     "nat": "GBR",
      "rank": 99
     },
     {
      "bib": 25,
      "ath": "lujza-bartosikova",
      "name": "BARTOŠÍKOVÁ Lujza",
+     "nat": "SVK",
      "rank": 12
     },
     {
      "bib": 26,
      "ath": "karolina-bortelova",
      "name": "BORTELOVÁ Karolína",
+     "nat": "SVK",
      "rank": 51
     },
     {
      "bib": 27,
      "ath": "natalia-letkova",
      "name": "LETKOVÁ Natália",
+     "nat": "SVK",
      "rank": 27
     },
     {
      "bib": 28,
      "ath": "lotta-huybrechts",
      "name": "HUYBRECHTS Lotta",
+     "nat": "BEL",
      "rank": 22
     },
     {
      "bib": 29,
      "ath": "lentel-huys",
      "name": "HUYS Lentel",
+     "nat": "BEL",
      "rank": 14
     },
     {
      "bib": 30,
      "ath": "carla-banuls-puente",
      "name": "BAÑULS PUENTE Carla",
+     "nat": "ESP",
      "rank": 6
     },
     {
      "bib": 31,
      "ath": "gisela-herrero-herrero",
      "name": "HERRERO HERRERO Gisela",
+     "nat": "ESP",
      "rank": 83
     },
     {
      "bib": 32,
      "ath": "noa-vega-bilbao",
      "name": "VEGA BILBAO Noa",
+     "nat": "ESP",
      "rank": 50
     },
     {
      "bib": 33,
      "ath": "irmante-aleliunaite",
      "name": "ALELIUNAITE Irmante",
+     "nat": "LTU",
      "rank": 36
     },
     {
      "bib": 34,
      "ath": "elzbieta-seliavaite",
      "name": "SELIAVAITE Elžbieta",
+     "nat": "LTU",
      "rank": 131
     },
     {
      "bib": 35,
      "ath": "greta-andersson",
      "name": "ANDERSSON Greta",
+     "nat": "SWE",
      "rank": 29
     },
     {
      "bib": 36,
      "ath": "elsa-elf-boberg",
      "name": "ELF BOBERG Elsa",
+     "nat": "SWE",
      "rank": 34
     },
     {
      "bib": 37,
      "ath": "elsa-widell",
      "name": "WIDELL Elsa",
+     "nat": "SWE",
      "rank": 56
     },
     {
      "bib": 38,
      "ath": "beatrix-attelmann",
      "name": "ATTELMANN Beatrix",
+     "nat": "GER",
      "rank": 31
     },
     {
      "bib": 39,
      "ath": "marta-mottus",
-     "name": "MÕTTUS Marta"
+     "name": "MÕTTUS Marta",
+     "nat": "EST"
     },
     {
      "bib": 40,
      "ath": "gisele-rang",
      "name": "RANG Gisele",
+     "nat": "EST",
      "rank": 70
     },
     {
      "bib": 41,
      "ath": "antonina-kucharska",
      "name": "KUCHARSKA Antonina",
+     "nat": "POL",
      "rank": 7
     },
     {
      "bib": 42,
      "ath": "natalia-pirog",
      "name": "PIRÓG Natalia",
+     "nat": "POL",
      "rank": 15
     },
     {
      "bib": 43,
      "ath": "rita-fontinhas",
      "name": "FONTINHAS Rita",
+     "nat": "POR",
      "rank": 20
     },
     {
      "bib": 44,
      "ath": "mathilde-leegaard",
      "name": "LEEGAARD Mathilde",
+     "nat": "DEN",
      "rank": 16
     },
     {
      "bib": 45,
      "ath": "sofie-birk-lildballe",
      "name": "LILDBALLE Sofie Birk",
+     "nat": "DEN",
      "rank": 44
     },
     {
      "bib": 46,
      "ath": "helena-hegedus",
      "name": "HEGEDUS Heléna",
+     "nat": "HUN",
      "rank": 104
     },
     {
      "bib": 47,
      "ath": "sarah-koenig",
      "name": "KOENIG Sarah",
+     "nat": "LUX",
      "rank": 119
     },
     {
      "bib": 48,
      "ath": "dalija-stojanovska",
      "name": "STOJANOVSKA Dalija",
+     "nat": "MKD",
      "rank": 226
     }
    ]
