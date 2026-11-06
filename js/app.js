@@ -143,8 +143,8 @@
     Object.entries(state.draws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { picks[pid][rid] = Object.assign({}, picks[pid][rid], { d: d.ath, auto: true }); }));
     // Joueurs sans choix sur une course verrouillée : tirage au sort parmi les 15 premiers dossards (start list publiée)
     const slMeta = {};
-    Object.entries((state.startlists && state.startlists.races) || {}).forEach(([rid, r]) => { if (r && r.start && !r.entry) slMeta[rid] = { start: r.start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
-    Object.keys(meta).forEach((rid) => { if (!slMeta[rid]) slMeta[rid] = { start: meta[rid].start.map((x) => Object.assign({}, x, { ath: canon(x.ath) })) }; });
+    Object.entries((state.startlists && state.startlists.races) || {}).forEach(([rid, r]) => { const rk = G.raceOf(rid); if (r && r.start && (!r.entry || (rk && rk.kind === 'euro'))) slMeta[rid] = { start: r.start.map((x) => { const id = canon(x.ath); return Object.assign({}, x, { ath: id, rank: x.rank || (ATH[id] || {}).rank || null }); }) }; });
+    Object.keys(meta).forEach((rid) => { if (!slMeta[rid]) slMeta[rid] = { start: meta[rid].start.map((x) => { const id = canon(x.ath); return Object.assign({}, x, { ath: id, rank: x.rank || (ATH[id] || {}).rank || null }); }) }; });
     state.npDraws = G.noPickDraws(slMeta, picks, state.players.map((p) => p.id), (r) => lockedRace(r), res);
     Object.entries(state.npDraws).forEach(([rid, byPlayer]) => Object.entries(byPlayer).forEach(([pid, d]) => { (picks[pid] = picks[pid] || {})[rid] = { a: d.ath, drawn: true, nopick: true, auto: true, redraw: d.redraw || undefined }; }));
     state.picks = picks;
@@ -376,7 +376,7 @@
       : swapped
       ? `<span class="who"><s class="who--out">${skn(p.a)}</s> ${skn(p.b)}</span><span class="sub">Remplaçant en piste</span>`
       : p.nopick
-      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix)${p.redraw ? ` · 2ᵉ tirage, ${esc(nameOf(p.redraw))} ne partait pas` : ` · parmi les ${G.NOPICK_TOP} premiers dossards`}</span>`
+      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix)${p.redraw ? ` · 2ᵉ tirage, ${esc(nameOf(p.redraw))} ne partait pas` : (race.kind === 'euro' ? ` · parmi le top ${G.NOPICK_TOP_EURO} UCI` : ` · parmi les ${G.NOPICK_TOP} premiers dossards`)}</span>`
       : `<span class="who">${skn(p.a)}</span>${p.b && !fin ? `<span class="sub">Remplaçant : ${skn(p.b)}</span>` : ''}`;
     return `<div class="pickline">${avatarOf(eff)}<div class="pickline__txt">${text}</div></div>`;
   }

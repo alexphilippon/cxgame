@@ -303,3 +303,13 @@ assert.deepStrictEqual(G.drawRider('s', ['x', 'y', 'z']), G.drawRider('s', ['x',
   assert.ok(Number(d2.p1.ath.slice(1)) <= 15, '2e tirage toujours parmi les 15 premiers');
 }
 console.log('Tous les tests passent.');
+// Euros : tirage sans choix parmi les partants du top 20 UCI (rang), pas les 15 premiers dossards
+{
+  const rid = 'E03-ELI-H', start = [];
+  for (let i = 1; i <= 30; i++) start.push({ bib: null, ath: 'r' + i, rank: i });
+  const d = G.noPickDraws({ [rid]: { start } }, {}, ['p1', 'p2', 'p3'], () => true, {});
+  const c = d[rid].p1.candidates;
+  assert.strictEqual(c.length, 20, 'Euros : 20 candidats (top 20 UCI)');
+  assert.ok(c.every((id) => Number(id.slice(1)) <= 20), 'Euros : rang UCI ≤ 20');
+  console.log('Euros top 20 OK');
+}
