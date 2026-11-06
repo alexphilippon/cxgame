@@ -2097,8 +2097,8 @@
    ]
   },
   "E03-U19-H": {
-   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/46_Startlist_MJ.pdf (PDF image, transcrit à la main)",
-   "fetched": "2026-11-06T16:17:58.605Z",
+   "source": "https://www.uec.ch/resources/2026%20Events/ciclocross/liste/start/46_Startlist_MJ.pdf",
+   "fetched": "2026-11-06T21:02:41.577Z",
    "start": [
     {
      "bib": 1,
@@ -2594,6 +2594,13 @@
      "name": "SZIGYARTO Roland",
      "nat": "ROU",
      "rank": 255
+    },
+    {
+     "bib": 72,
+     "ath": "rapolas-urbonas",
+     "name": "URBONAS Rapolas",
+     "nat": "LTU",
+     "rank": 322
     }
    ]
   }
