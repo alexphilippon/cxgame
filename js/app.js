@@ -376,7 +376,7 @@
       : swapped
       ? `<span class="who"><s class="who--out">${skn(p.a)}</s> ${skn(p.b)}</span><span class="sub">Remplaçant en piste</span>`
       : p.nopick
-      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix)${p.redraw ? ` · 2ᵉ tirage, ${esc(nameOf(p.redraw))} ne partait pas` : (race.kind === 'euro' ? ` · parmi le top ${G.NOPICK_TOP_EURO} UCI` : ` · parmi les ${G.NOPICK_TOP} premiers dossards`)}</span>`
+      ? `<span class="who">${skn(p.a)}</span><span class="sub">Tiré au sort (aucun choix)${p.redraw ? ` · 2ᵉ tirage, ${esc(nameOf(p.redraw))} ne partait pas` : (race.kind === 'euro' ? ` · parmi le top ${G.euroTop(race)} UCI` : ` · parmi les ${G.NOPICK_TOP} premiers dossards`)}</span>`
       : `<span class="who">${skn(p.a)}</span>${p.b && !fin ? `<span class="sub">Remplaçant : ${skn(p.b)}</span>` : ''}`;
     return `<div class="pickline">${avatarOf(eff)}<div class="pickline__txt">${text}</div></div>`;
   }

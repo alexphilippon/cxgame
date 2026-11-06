@@ -313,3 +313,9 @@ console.log('Tous les tests passent.');
   assert.ok(c.every((id) => Number(id.slice(1)) <= 20), 'Euros : rang UCI ≤ 20');
   console.log('Euros top 20 OK');
 }
+{
+  const rid = 'E03-U23-H', start = [];
+  for (let i = 1; i <= 120; i++) start.push({ bib: i, ath: 'u' + i, rank: i });
+  const d = G.noPickDraws({ [rid]: { start } }, {}, ['p1'], () => true, {});
+  assert.strictEqual(d[rid].p1.candidates.length, 100, 'Euros U23 : top 100 UCI');
+}

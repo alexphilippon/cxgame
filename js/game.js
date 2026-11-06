@@ -142,14 +142,15 @@
       un tirage différent par joueur (graine = course|joueur|dossards), hors coureurs déjà grillés par ce joueur (desk, genre, catégorie). Si le coureur tiré est DNS, 2e tirage parmi les partants restants des 15 premiers dossards.
       meta : { raceId: { start:[{bib,ath}] } } ; isLocked(race) → bool. Courses traitées dans l'ordre chronologique : un tirage grille son coureur pour les suivantes.
       Retourne { raceId: { playerId: { ath, index, n, seed, candidates } } }. Fonction pure des données publiques : vérifiable par tous. */
-  const NOPICK_TOP = 15, NOPICK_TOP_EURO = 20;   // Euros uniquement : tirage parmi les partants classés dans le top 20 UCI (rang porté par la start list ou le classement du jeu)
+  const NOPICK_TOP = 15, NOPICK_TOP_EURO = 20, NOPICK_TOP_EURO_U23 = 100;   // Euros : top 20 UCI (Élite, U19), top 100 en U23
+  const euroTop = (race) => (race.cat === 'U23' ? NOPICK_TOP_EURO_U23 : NOPICK_TOP_EURO);   // Euros uniquement : tirage parmi les partants classés dans le top 20 UCI (rang porté par la start list ou le classement du jeu)
   function noPickDraws(meta, picksByPlayer, playerIds, isLocked, results) {
     const out = {}, work = {};
     (playerIds || []).forEach((pid) => { work[pid] = Object.assign({}, picksByPlayer[pid] || {}); });
     Object.keys(meta || {}).map((rid) => raceOf(rid)).filter((r) => r && !r.cancelled && meta[r.id] && meta[r.id].start && isLocked(r))
       .sort((a, b) => raceStart(a) - raceStart(b)).forEach((race) => {
         const top = race.kind === 'euro'
-          ? meta[race.id].start.filter((x) => x.rank && x.rank <= NOPICK_TOP_EURO).sort((x, y) => x.rank - y.rank)
+          ? meta[race.id].start.filter((x) => x.rank && x.rank <= euroTop(race)).sort((x, y) => x.rank - y.rank)
           : meta[race.id].start.slice().sort((x, y) => x.bib - y.bib).slice(0, NOPICK_TOP);
         (playerIds || []).forEach((pid) => {
           const pk = work[pid][race.id];
@@ -291,7 +292,7 @@
   const api = {
     parisInstant, setOverrides, raceOf, raceStart, activeRaces, sessionOfRace, raceLockTime, raceLocked, sessionRaces, sessionDeadline, sessionEnd, sessionState,
     pointsForRank, effectiveAthlete, substitute, dnsPending, hash53, drawRider, DRAW_TOP, autoDraws, scoreRace, worldsWinner, worldsBonus,
-    pickAnalysis, noPickDraws, NOPICK_TOP, NOPICK_TOP_EURO, sessionScore, deskScore, worldsScore, generalScore, categoryScore, genderScore, usedInDesk, deskIdOf,
+    pickAnalysis, noPickDraws, NOPICK_TOP, NOPICK_TOP_EURO, NOPICK_TOP_EURO_U23, euroTop, sessionScore, deskScore, worldsScore, generalScore, categoryScore, genderScore, usedInDesk, deskIdOf,
   };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.CX_GAME = api;
