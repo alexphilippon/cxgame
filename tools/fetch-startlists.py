@@ -20,13 +20,13 @@ def parse(text):
         name = next((x for x in f[1:] if re.search(r'[a-zà-ÿ]', x) and re.search(r'[A-ZÀ-Ý]{2}', x) and not re.fullmatch(r'[A-Z]{3}', x)), None)
         if name and nat: rows.append((int(f[0]), name, nat))
     return rows
-CNAT = {'Belgium':'BEL','Czechia':'CZE','Czech Republic':'CZE','Estonia':'EST','France':'FRA','Germany':'GER','Great Britain':'GBR','Italy':'ITA','Luxembourg':'LUX','Netherlands':'NED','Norway':'NOR','Portugal':'POR','Spain':'ESP','Switzerland':'SUI','Ireland':'IRL','Denmark':'DEN','Austria':'AUT','Poland':'POL','Sweden':'SWE','Finland':'FIN','Hungary':'HUN','Slovakia':'SVK','Slovenia':'SLO','Ukraine':'UKR','Latvia':'LAT','Lithuania':'LTU','Greece':'GRE','Croatia':'CRO','Romania':'ROU','Bulgaria':'BUL','Turkey':'TUR','Türkiye':'TUR','Israel':'ISR','Serbia':'SRB','Iceland':'ISL','Moldova':'MDA','Slovenia ':'SLO'}
+CNAT = {'Belgium':'BEL','Czechia':'CZE','Czech Republic':'CZE','Estonia':'EST','France':'FRA','Germany':'GER','Great Britain':'GBR','Italy':'ITA','Luxembourg':'LUX','Netherlands':'NED','Norway':'NOR','Portugal':'POR','Spain':'ESP','Switzerland':'SUI','Ireland':'IRL','Denmark':'DEN','Austria':'AUT','Poland':'POL','Sweden':'SWE','Finland':'FIN','Hungary':'HUN','Slovakia':'SVK','Slovenia':'SLO','Ukraine':'UKR','Latvia':'LAT','Lithuania':'LTU','Greece':'GRE','Croatia':'CRO','Romania':'ROU','Bulgaria':'BUL','Turkey':'TUR','Türkiye':'TUR','Israel':'ISR','Serbia':'SRB','Iceland':'ISL','Moldova':'MDA','North Macedonia':'MKD','Macedonia':'MKD','Kosovo':'KOS'}
 def parse_entry(text):
     # « NOM Prénom  UCI ID(11 chiffres)  Nation (nom anglais) » ; pas de dossard
     rows = []
     for l in text.splitlines():
         m = re.match(r'^\s*(.+?)\s+(\d{11})\s+(.+?)\s*$', l)
-        if m: rows.append((m.group(1).strip(), CNAT.get(m.group(3).strip(), '')))
+        if m: rows.append((re.sub(r'\s+', ' ', m.group(1).strip()), CNAT.get(m.group(3).strip(), '')))
     return rows
 rc = 0
 for rid, url in src.items():
