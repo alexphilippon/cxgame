@@ -275,6 +275,40 @@
       <div class="rc__act"><button type="button" class="btn" data-sx-copy="${s.id}">Copier le message</button><button type="button" class="btn btn--ghost" data-sx-jpg="${s.id}">Image JPG</button></div><p id="rc-msg" class="hint" role="status"></p></div>`);
     const card = document.querySelector('#modal .modal__card'); if (card) card.classList.add('modal__card--wide');
   }
+  /** Message WhatsApp : les choix de tous les joueurs, course par course (visibles dès le départ de la session). */
+  function sessionPicksText(session) {
+    const { G } = C;
+    const races = G.sessionRaces(session).filter((r) => !r.cancelled).sort((a, b) => G.raceStart(a) - G.raceStart(b));
+    const L = [`🚴 *${session.name}*`, '📋 *Les choix de tous les joueurs*'];
+    races.forEach((race) => {
+      const { shares, show, N } = raceRows(race);
+      L.push('', `🏁 *${raceShort(race)}* · ${C.dayOf(race.date)}`);
+      if (!show) { L.push('🔒 Choix révélés au départ.'); return; }
+      if (!shares.length) { L.push('🤷 Aucun choix.'); return; }
+      shares.forEach((r) => {
+        const who = r.pickers.filter((x) => !x.out).map((x) => x.p.name + (x.kind === 'remplaçant' ? ' (rempl.)' : x.kind === 'tiré au sort' ? ' (tirage)' : '')).join(', ');
+        L.push(`🚴 *${C.nameOf(r.ath)}* (${r.n}/${N}) : ${who}`);
+      });
+    });
+    L.push('', '🔗 cxgame.vercel.app');
+    return L.join('\n');
+  }
+  const sessionById = (sid) => C.D.SESSIONS.concat([C.D.WORLDS]).find((x) => String(x.id) === String(sid));
+  function picksOpen(sid) {
+    const s = sessionById(sid); if (!s) return;
+    C.openModal(`<div class="rc"><h3 class="rc__title">${C.esc(s.name)} · tous les choix</h3><p class="hint">Message WhatsApp : les choix de chaque joueur, course par course.</p>
+      <pre class="rc__pre">${C.esc(sessionPicksText(s))}</pre>
+      <div class="rc__act"><button type="button" class="btn" data-sx-pcopy="${s.id}">Copier le message</button></div><p id="rc-msg" class="hint" role="status"></p></div>`);
+  }
+  async function picksCopy(sid) {
+    const txt = sessionPicksText(sessionById(sid));
+    try { await navigator.clipboard.writeText(txt); say('Message copié : colle-le dans WhatsApp.'); }
+    catch (e) {
+      const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); say('Message copié : colle-le dans WhatsApp.'); } catch (e2) { say('Copie impossible : sélectionne le texte à la main.'); }
+      ta.remove();
+    }
+  }
   async function sessionCopy(sid) {
     const txt = sessionText(C.D.SESSIONS.concat([C.D.WORLDS]).find((x) => String(x.id) === String(sid)));
     try { await navigator.clipboard.writeText(txt); say('Message copié : colle-le dans WhatsApp.'); }
@@ -541,6 +575,6 @@
     toast('Image en préparation…');
     try { await sendCanvas(xpCanvas(sp), 'cx-game-' + String(key).replace(/[^a-z0-9]+/gi, '-').toLowerCase() + '.jpg', sp.title); } catch (err) { console.error(err); toast('Image impossible.'); }
   });
-  const api = { fsOn, fsOpen, xbar, xpText, xpCanvas, init, raceRows, raceText, cardHtml, open, copy, jpg, jpgCanvas, fullHtml, raceResultText, generalText, copyGeneral, jpgGeneral, sessionRows, sessionText, sessionOpen, sessionCopy, sessionJpg, sessionCanvas };
+  const api = { fsOn, fsOpen, xbar, xpText, xpCanvas, init, raceRows, raceText, cardHtml, open, copy, jpg, jpgCanvas, fullHtml, raceResultText, generalText, copyGeneral, jpgGeneral, sessionRows, sessionText, sessionPicksText, picksOpen, picksCopy, sessionOpen, sessionCopy, sessionJpg, sessionCanvas };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.CX_SHARE = api;
 })(typeof window !== 'undefined' ? window : globalThis);

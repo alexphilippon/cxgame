@@ -543,7 +543,7 @@
           <h3 class="session__name">${fl(session.name)}</h3>
           <p class="session__meta">${indexLabel ? indexLabel + ', ' : ''}deadline ${dlShort(dl)}${avgTxt}</p>
         </div>
-        <div class="session__side">${stateBadge(session)}${open
+        <div class="session__side">${live.some((r) => lockedRace(r)) ? `<button type="button" class="linkbtn" data-sx-picks="${session.id}">Message WhatsApp : tous les choix</button>` : ''}${stateBadge(session)}${open
     ? `<span class="count${n === live.length ? ' count--ok' : ''}">${n}/${live.length} choisis</span>${nd ? `<span class="count count--draft">${nd} brouillon${nd > 1 ? 's' : ''}</span>` : ''}${remindBtn(session)}`
     : `<span class="count count--pts">${mine} pts</span>`}</div>
       </header>
@@ -1395,6 +1395,8 @@
     if (e.target.closest('[data-refresh-results]')) { loadResults(true); return; }
     const rgc = e.target.closest('[data-rc-gcopy]'); if (rgc) { SHARE.copyGeneral(rgc.dataset.rcGcopy); return; }
     const rgj = e.target.closest('[data-rc-gjpg]'); if (rgj) { SHARE.jpgGeneral(rgj.dataset.rcGjpg); return; }
+    const spk = e.target.closest('[data-sx-picks]'); if (spk) { SHARE.picksOpen(spk.dataset.sxPicks); return; }
+    const spc = e.target.closest('[data-sx-pcopy]'); if (spc) { SHARE.picksCopy(spc.dataset.sxPcopy); return; }
     const rcc = e.target.closest('[data-rc-copy]'); if (rcc) { SHARE.copy(rcc.dataset.rcCopy); return; }
     const rcj = e.target.closest('[data-rc-jpg]'); if (rcj) { SHARE.jpg(rcj.dataset.rcJpg); return; }
     if (e.target.closest('.brand')) { setTab('next'); return; }
