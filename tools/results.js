@@ -4,7 +4,7 @@
                                   [--validated] [--replace] [--no-startlist] [--out f] [--starts f] [--now ISO (tests)]
    resultats.txt : « rang|NOM Prénom|pays|temps » et « DNF|NOM Prénom|pays » (DNF, DSQ, DNS).
    Garde-fous (rien n'est écrit sinon) :
-     3 la course n'est pas terminée ;
+     3 la course n'est pas terminée (simulation seulement : avec --validated, c'est ta validation qui fait foi) ;
      4 pas de start list enregistrée (tools/startlist.js), sauf --no-startlist ;
      2 un DNS possible n'est pas confirmé : un partant absent du classement n'est PAS déclaré DNS tout seul, il faut --confirm-dns ;
      1 résultat déjà présent (sauf --replace), course inconnue, fichier illisible.
@@ -39,7 +39,7 @@ function main() {
 
   if (race.cancelled) fail(3, `${id} est annulée : pas de résultat.`);
   const end = new Date(G.raceStart(race).getTime() + RACE_MAX_MS);
-  if (now < end) fail(3, `${id} n'est pas terminée (départ ${G.raceStart(race).toISOString()}, résultats acceptés après ${end.toISOString()}).`);
+  if (now < end && !flag('--validated')) fail(3, `${id} n'est pas terminée (départ ${G.raceStart(race).toISOString()}, résultats acceptés après ${end.toISOString()}).`);
 
   const sdb = fs.existsSync(starts) ? JSON.parse(fs.readFileSync(starts, 'utf8')) : { races: {} };
   const sl = sdb.races[id];
