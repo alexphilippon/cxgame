@@ -1616,3 +1616,13 @@ html[data-theme='nuit'] .flk__i { color: rgba(255,255,255,.2); }
   .grid--general .numbtn { padding-left: .3rem; padding-right: .3rem; min-width: 0; }
   .grid--general td.total { font-size: 1.05rem; }
 }
+
+/* ---------- Coureurs pris (tous les joueurs), compteurs : repris du Ski Game ---------- */
+@media (max-width: 640px) { .grid--tk thead th.tk__corner, .grid--tk tbody th { min-width: 6.8rem; max-width: 6.8rem; } }
+
+/* Bouton « Choix de tous » (message WhatsApp) : pastille verte avec picto */
+.wabtn { display: inline-flex; align-items: center; gap: .4rem; font: inherit; font-weight: 700; font-size: .85rem; padding: .35rem .75rem; border-radius: 999px; border: 1.5px solid #1f8a4c; background: #e6f6ec; color: #14683a; cursor: pointer; }
+.wabtn:hover { background: #1f8a4c; color: #fff; }
+.wabtn svg { flex: none; }
+html[data-theme='nuit'] .wabtn { background: #123a27; color: #8fe0b1; border-color: #2fa866; }
+html[data-theme='nuit'] .wabtn:hover { background: #2fa866; color: #0b1f15; }

@@ -454,24 +454,45 @@
     if (state.players.length < 1) return '<p class="empty">Aucun joueur.</p>';
     return ss.map((s) => `<h3 class="subtitle">${fl(s.name)}</h3>${recapTable(s)}`).join('') + '<p class="hint">Les choix des autres joueurs apparaissent au départ de chaque course.</p>';
   }
-  /** Coureurs déjà pris par le joueur, par catégorie et genre (rien de caché : ce sont mes propres choix). */
+  /** Coureurs pris par tous les joueurs dans ce desk : un tableau hommes, un tableau femmes (joueurs en lignes, coureurs en colonnes).
+      Les choix des autres n'apparaissent qu'au départ de chaque course ; les miens, toujours (brouillons compris). */
   function takenView(key) {
-    const ids = new Set(scopeSessions(key).flatMap((s) => active(G.sessionRaces(s))).map((r) => r.id));
-    const mine = myPicks();
-    const by = {};
-    Object.keys(mine).forEach((rid) => {
-      if (!ids.has(rid)) return;
-      const race = G.raceOf(rid), pk = mine[rid]; if (!race || !pk || !pk.a) return;
-      const eff = G.effectiveAthlete(pk, state.results, rid), k = `${race.cat}-${race.gender}`;
-      (by[k] = by[k] || []).push({ race, eff, draft: isDraft(pk, race) });
+    const races = scopeSessions(key).flatMap((s) => G.sessionRaces(s)).filter((r) => !r.cancelled && passF(r));
+    const takes = {}, totals = { H: {}, F: {} };   // coureur -> joueur -> [{tag, sc, dft}] ; genre -> joueur -> points
+    races.forEach((r) => {
+      state.players.forEach((p) => {
+        if (!visible(p.id, r)) return;
+        const pk = (state.picks[p.id] || {})[r.id];
+        if (!pk || !pk.a) return;
+        const sc = G.scoreRace(r, pk, state.results), dft = p.id === state.me && isDraft(pk, r);
+        ((takes[pk.a] = takes[pk.a] || {})[p.id] = (takes[pk.a][p.id] || [])).push({ tag: raceTag(r), sc, dft, g: r.gender });
+        totals[r.gender][p.id] = (totals[r.gender][p.id] || 0) + (sc || 0);
+      });
     });
-    const blocks = Object.keys(by).sort().map((k) => {
-      const [cat, g] = k.split('-');
-      return `<div class="tablewrap"><table class="grid grid--rank"><caption>${esc(D.CATS[cat].short)} ${g === 'H' ? 'hommes' : 'femmes'}</caption>
-        <thead><tr><th scope="col">Coureur</th><th scope="col">Course</th></tr></thead>
-        <tbody>${by[k].sort((a, b) => a.race.date.localeCompare(b.race.date)).map((x) => `<tr><th scope="row">${avatarOf(x.eff, 'sm')} ${skn(x.eff)}${x.draft ? ' <span class="draftflag">📝</span>' : ''}</th><td>${fl(placeLabel(x.race))} <span class="sub">${esc(dayOf(x.race.date))}</span></td></tr>`).join('')}</tbody></table></div>`;
+    const sumOf = (id) => Object.values(takes[id]).reduce((n, l) => n + l.reduce((m, x) => m + (x.sc || 0), 0), 0);
+    const cntOf = (id) => Object.values(takes[id]).reduce((n, l) => n + l.length, 0);
+    const isDr = (id) => Object.values(takes[id]).every((l) => l.every((x) => x.dft));
+    const filters = `<div class="filters"><label class="sr" for="ath-q">Chercher un coureur</label>
+      <input type="search" id="ath-q" class="search" placeholder="Chercher un coureur ou une nation" autocomplete="off"></div>`;
+    const tables = ['H', 'F'].map((g) => {
+      const ids = Object.keys(takes).filter((id) => Object.values(takes[id]).some((l) => l.some((x) => x.g === g)))
+        .sort((a, b) => sumOf(b) - sumOf(a) || cntOf(b) - cntOf(a) || nameOf(a).localeCompare(nameOf(b), 'fr'));
+      const title = g === 'H' ? 'Hommes' : 'Femmes';
+      if (!ids.length) return `<div class="tablewrap"><table class="grid"><caption>${title}</caption><tbody><tr><td>Aucun coureur pris pour l’instant.</td></tr></tbody></table></div>`;
+      const attrs = (id) => `data-a="${esc(id)}" data-name="${esc(norm(nameOf(id) + ' ' + (natOf(id) || '')))}"`;
+      const head = ids.map((id) => `<th scope="col" class="sk ${isDr(id) ? 'is-draft' : 'is-taken'}" ${attrs(id)}>${avatarOf(id, 'sm')}<span class="sk__n">${skn(id)}</span><em class="sub">${esc(natOf(id) || '')}</em></th>`).join('');
+      const rows = playersRanked().map((p) => {
+        const cells = ids.map((id) => {
+          const l = ((takes[id] || {})[p.id] || []).filter((x) => x.g === g);
+          const inner = l.map((x) => `<span class="mark${x.dft ? ' mark--draft' : ''}" title="${esc(x.tag)}${x.dft ? ' (brouillon)' : ''}"><span class="mark__l">${esc(x.tag)}</span>${x.sc === null ? '' : `<b class="mark__p ${x.sc > 0 ? 'on' : 'off'}">${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span>`).join('');
+          return `<td ${attrs(id)}>${inner}</td>`;
+        }).join('');
+        return `<tr class="${p.id === state.me ? 'me' : ''}"><th scope="row"><strong>${pln(p)}</strong><span class="sub">${totals[g][p.id] || 0} pts rapportés</span></th>${cells}</tr>`;
+      }).join('');
+      return `<div class="tablewrap tablewrap--scroll"><table class="grid grid--tk"><caption>${title}, ${ids.length} coureur${ids.length > 1 ? 's' : ''} pris</caption>
+        <thead><tr><th scope="col" class="tk__corner">Joueur</th>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
     }).join('');
-    return blocks ? `<p class="hint">Les coureurs que tu as déjà utilisés dans ce desk ne sont plus disponibles dans leur catégorie.</p><div class="grid2">${blocks}</div>` : '<p class="hint">Tu n’as encore choisi personne dans ce desk.</p>';
+    return filters + tables + '<p class="hint">Les coureurs sont classés par points rapportés. En pointillés : brouillon (visible de toi seul). Les choix des autres apparaissent au départ de chaque course.</p>';
   }
 
   /* ---------- Courses d'une session (suite) ---------- */
@@ -543,7 +564,7 @@
           <h3 class="session__name">${fl(session.name)}</h3>
           <p class="session__meta">${indexLabel ? indexLabel + ', ' : ''}deadline ${dlShort(dl)}${avgTxt}</p>
         </div>
-        <div class="session__side">${live.some((r) => lockedRace(r)) ? `<button type="button" class="linkbtn" data-sx-picks="${session.id}">Message WhatsApp : tous les choix</button>` : ''}${stateBadge(session)}${open
+        <div class="session__side">${live.some((r) => lockedRace(r)) ? `<button type="button" class="wabtn" data-sx-picks="${session.id}" title="Message WhatsApp : les choix de tous les joueurs" aria-label="Message WhatsApp : les choix de tous les joueurs">${WA_SVG}<span>Choix de tous</span></button>` : ''}${stateBadge(session)}${open
     ? `<span class="count${n === live.length ? ' count--ok' : ''}">${n}/${live.length} choisis</span>${nd ? `<span class="count count--draft">${nd} brouillon${nd > 1 ? 's' : ''}</span>` : ''}${remindBtn(session)}`
     : `<span class="count count--pts">${mine} pts</span>`}</div>
       </header>
@@ -734,6 +755,7 @@
     return `<ul class="gauges sh rs__l">${ids.map(row).join('')}</ul>
       <p class="sub sh__foot">${N} joueur${N > 1 ? 's ont validé leur choix' : ' a validé son choix'}${mine ? '' : ' (pas toi : aucun choix)'}</p>`;
   }
+  const WA_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20l1.2-4.1A8 8 0 1 1 8.2 19z"/><path d="M9.2 8.6c.3-.6.9-.6 1.2 0l.7 1.5c.1.3 0 .6-.2.8l-.5.6c.6 1.2 1.6 2.1 2.8 2.7l.6-.6c.2-.2.5-.3.8-.1l1.4.7c.5.3.5.9 0 1.3-.7.7-1.7.9-2.7.5-2.4-.9-4.2-2.7-5-5.1-.2-.8 0-1.4.9-1.3z"/></svg>';
   const LOCK_SVG = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2" fill="currentColor" fill-opacity=".18"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3" fill="currentColor"/></svg>';
   const FLAG_SVG = '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h13l-2.5 4 2.5 4H5" fill="currentColor" fill-opacity=".2"/></svg>';
   function liveRaceRow(race) {
@@ -856,8 +878,26 @@
     const total = rows.reduce((a, x) => a + x.pts, 0) + bonus.reduce((a, b) => a + b.pts, 0);
     openModal(`<h2>${esc(p.name)} · ${esc(label)}</h2><ul class="dtls">${li}${bl}${!li && !bl ? '<li class="none">Aucun point.</li>' : ''}</ul><p class="dtl__tot">Total : <b>${total} pts</b></p>`);
   }
+  /** Classement par compteur : rows = [{ p, v, sub, bd }], déjà classées. */
+  function countRanking(title, rows, unit, cls, note) {
+    return `<div class="tablewrap"><table class="grid grid--rank ${cls || ''}"><caption>${esc(title)}${note ? ' ' + info(note) : ''}</caption>
+      <thead><tr><th scope="col" class="num">Rang</th><th scope="col">Joueur</th><th scope="col" class="num">${esc(unit)}</th></tr></thead>
+      <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pln(r.p)}${r.sub ? `<span class="sub"> ${esc(r.sub)}</span>` : ''}</th><td class="num total">${r.v && r.bd ? `<button type="button" class="numbtn" data-bd="${esc(r.bd)}" title="Voir le détail">${r.v}</button>` : r.v}</td></tr>`).join('')}</tbody></table></div>`;
+  }
+  /** Fenêtre de détail d'un compteur : bulles, victoires ou plus longue série d'un joueur. */
+  function detailModal(spec) {
+    const [kind, pid, sid] = spec.split('|'), p = state.players.find((x) => x.id === pid); if (!p) return;
+    const evs = STATS.events(state, G, state.results), mine = evs.filter((e) => e.p.id === pid);
+    let list, title;
+    if (kind === 'bub') { list = mine.filter((e) => e.bubble); title = `Bulles de ${p.name}`; }
+    else if (kind === 'win') { list = mine.filter((e) => e.win); title = `Victoires de ${p.name}`; }
+    else { const sd = STATS.STREAKS.find((x) => x.id === sid); if (!sd) return; list = STATS.longestRun(mine, sd.f); title = `${sd.label} : meilleure série de ${p.name}`; }
+    const li = list.map((e) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(e.race))}</strong> <span class="sub">${esc(raceName(e.race))} · ${esc(dayOf(e.race.date))}</span></span><span class="dtl__a">${skn(e.eff)}${e.eff !== e.pk.a ? ' <em class="sub">(remplaçant)</em>' : ''}</span><span class="dtl__k ${e.bubble ? 'bad' : ''}">${e.status ? esc(e.status) : e.rank ? esc(ordinal(e.rank)) : '–'} <b>${e.pts > 0 ? '+' : ''}${e.pts}</b></span></li>`).join('');
+    openModal(`<h2>${esc(title)}</h2><ul class="dtls">${li || '<li class="none">Aucun.</li>'}</ul>`);
+  }
   function generalPanel() {
-    const R = state.results;
+    const R = state.results, sub = state.gsub || 'globes';
+    const seg = `<div class="seg gseg" role="tablist" aria-label="Classements">${[['globes', 'Classement général'], ['bonus', 'Bulles et victoires'], ['series', 'Séries']].map(([id, l]) => `<button type="button" role="tab" class="seg__btn" aria-selected="${sub === id}" data-gsub="${id}">${l}</button>`).join('')}</div>`;
     const none = Object.keys(R).length === 0 ? '<p class="hint">Aucun résultat pour l’instant.</p>' : '';
     const rows = rankRows((pk) => G.generalScore(pk, R));
     const main = `${SHARE.fsOpen()}<div class="tablewrap"><table class="grid grid--rank grid--general cap--gen"><caption>Classement général ${info('Somme des points des trois desks. Les Mondiaux (bonus compris) comptent dans le Desk 3.')}</caption>
@@ -865,10 +905,24 @@
       <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pname(r.p)}</th><td class="num total">${ptsBtn(r.v.total, 'tot', r.p.id)}</td>${r.v.desks.map((d, i) => `<td class="num">${ptsBtn(d, 'd' + D.DESKS[i].id, r.p.id)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;
     const cats = [['H', 'hommes', 'ELI'], ['F', 'femmes', 'U19']].map(([g, n, k]) => smallRanking(`Classement ${n}`, (pk) => G.genderScore(g, pk, R), 'cap--' + k, 'g:' + g)).join('');
     const dk = (d) => smallRanking(`Classement du ${d.name}`, (pk) => G.deskScore(d.id, pk, R), 'cap--d' + d.id, 'd' + d.id);
-    return `<section class="genpanel"><header class="deskhead"><div><h2>Classements</h2>
-      <p class="deskhead__meta">Général : trois desks (Mondiaux et bonus dans le Desk 3)</p></div></header>${none}${main}
+    let body;
+    if (sub === 'globes') body = `${main}
       <h3 class="subtitle">Quête annexe : hommes et femmes</h3><div class="grid2">${cats}</div>
-      <h3 class="subtitle">Par desk</h3><div class="grid2">${dk(D.DESKS[0])}${dk(D.DESKS[1])}</div><div class="grid2">${dk(D.DESKS[2])}</div></section>`;
+      <h3 class="subtitle">Par desk</h3><div class="grid2">${dk(D.DESKS[0])}${dk(D.DESKS[1])}</div><div class="grid2">${dk(D.DESKS[2])}</div>`;
+    else {
+      const evs = STATS.events(state, G, R), tot = STATS.totals(state, evs);
+      if (sub === 'bonus') {
+        const bub = STATS.rank(tot.map((t) => ({ p: t.p, v: t.bubbles, sub: `sur ${t.n}`, bd: `bub|${t.p.id}` })), (r) => r.v, true);
+        const win = STATS.rank(tot.map((t) => ({ p: t.p, v: t.wins, sub: `sur ${t.n}`, bd: `win|${t.p.id}` })), (r) => r.v);
+        body = `<div class="grid2">${countRanking('Classement des bulles', bub, 'Bulles', 'cap--bub', 'Une bulle : ton coureur fait 0 point (DNF, DSQ ou hors des points). Un DNS n’en est pas une. Le premier est le joueur qui en a subi le moins.')}
+          ${countRanking('Classement des victoires', win, 'Victoires', 'cap--vic', 'Nombre de fois où le coureur que tu avais choisi a gagné la course.')}</div>`;
+      } else {
+        const st = STATS.streaks(evs);
+        body = `<p class="hint">Plus longue série de courses consécutives de la saison. Une course sans choix, ou un échec, interrompt la série.</p><div class="grid2">${STATS.STREAKS.map((sd) => countRanking(sd.label, STATS.rank(state.players.map((p) => ({ p, v: (st[p.id] || {})[sd.id] ? st[p.id][sd.id].best : 0, bd: `st|${p.id}|${sd.id}`, sub: (st[p.id] && st[p.id][sd.id] && st[p.id][sd.id].now) ? `(en cours : ${st[p.id][sd.id].now})` : '' })), (r) => r.v), 'Série', 'cap--st')).join('')}</div>`;
+      }
+    }
+    return `<section class="genpanel"><header class="deskhead"><div><h2>Classements</h2>
+      <p class="deskhead__meta">Général : trois desks (Mondiaux et bonus dans le Desk 3)</p></div></header>${none}<div class="deskbar">${seg}</div>${body}</section>`;
   }
 
   /* ---------- Onglets ---------- */
@@ -1128,6 +1182,11 @@
 
   /* ---------- Rendu ---------- */
   function applyTakenFilter() {}
+  document.addEventListener('input', (e) => {
+    if (e.target.id !== 'ath-q') return;
+    const t = norm(e.target.value.trim()).split(/\s+/).filter(Boolean);
+    document.querySelectorAll('.grid--tk [data-name]').forEach((c) => { c.hidden = !!t.length && !t.every((x) => c.dataset.name.includes(x)); });
+  });
   function renderPanel() {
     if (!state.authReady && !state.demo) { $('#panel').innerHTML = '<p class="hint">Chargement…</p>'; return; }
     if (!state.user) { $('#panel').innerHTML = authPanel(); return; }
@@ -1411,7 +1470,8 @@
       else { const [k, x] = v.split(':'); const a = state.ff[k]; state.ff[k] = a.includes(x) ? a.filter((y) => y !== x) : a.concat(x); }
       renderPanel(); return;
     }
-    const bdb = e.target.closest('[data-bd]'); if (bdb) { const [, pp, sc] = bdb.dataset.bd.split('|'); pointsModal(pp, sc); return; }
+    const bdb = e.target.closest('[data-bd]'); if (bdb) { const sp = bdb.dataset.bd; if (sp.startsWith('pts|')) { const [, pp, sc] = sp.split('|'); pointsModal(pp, sc); } else detailModal(sp); return; }
+    const gsb = e.target.closest('[data-gsub]'); if (gsb) { state.gsub = gsb.dataset.gsub; renderPanel(); return; }
     const sub = e.target.closest('[data-sub]'); if (sub) { state.sub[Number(sub.dataset.key)] = sub.dataset.sub; renderPanel(); return; }
     const fr = e.target.closest('[data-free]'); if (fr) { onPick({ dataset: { race: fr.dataset.free, slot: fr.dataset.slot }, value: '__free__', id: `pa-${fr.dataset.free}` }); return; }
     const au = e.target.closest('[data-auth]'); if (au) { authAction(au.dataset.auth); return; }
