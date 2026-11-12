@@ -56,7 +56,7 @@ assert.deepStrictEqual(mults('mondial', 'U23'), [2], 'Mondiaux U23 ×2');
 assert.deepStrictEqual(mults('mondial', 'U19'), [1], 'Mondiaux U19 ×1');
 assert.ok(races.filter((r) => r.kind === 'cx').every((r) => r.mult === 1), 'courses ordinaires ×1');
 // honnêteté sur les données provisoires
-assert.ok(races.every((r) => r.timeKnown === ((r.ev === 'E02' && r.kind === 'cx') || r.ev === 'E03' || r.ev === 'E04')), 'seules les heures de Middelkerke, des Euros et de Niel sont confirmées');
+assert.ok(races.every((r) => r.timeKnown === ((r.ev === 'E02' && r.kind === 'cx') || r.ev === 'E03' || r.ev === 'E04' || r.ev === 'E05' || r.ev === 'E06')), 'seules les heures de Middelkerke, des Euros et de Niel sont confirmées');
 assert.ok(D.WORLDS.races.every((id) => D.RACES[id].dateKnown === false), 'jours des Mondiaux non confirmés');
 assert.ok(sess(3).races.every((id) => D.RACES[id].dateKnown === true), 'jours des Euros connus');
 
