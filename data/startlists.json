@@ -3175,6 +3175,1050 @@
      "nat": "BEL"
     }
    ]
+  },
+  "E05-ELI-F": {
+   "source": "https://www.superprestigecyclocross.be/storage/programs/file_participants/417/417.pdf?t=1794578145",
+   "fetched": "2026-11-13T17:50:11.641Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "lucinda-brand",
+     "name": "BRAND Lucinda",
+     "nat": "NED"
+    },
+    {
+     "bib": 2,
+     "ath": "ceylin-del-carmen-alvarado",
+     "name": "ALVARADO Ceylin Del Carmen",
+     "nat": "NED"
+    },
+    {
+     "bib": 3,
+     "ath": "amandine-fouquenet",
+     "name": "FOUQUENET Amandine",
+     "nat": "FRA"
+    },
+    {
+     "bib": 4,
+     "ath": "aniek-van-alphen",
+     "name": "VAN ALPHEN Aniek",
+     "nat": "NED"
+    },
+    {
+     "bib": 5,
+     "ath": "manon-bakker",
+     "name": "BAKKER Manon",
+     "nat": "NED"
+    },
+    {
+     "bib": 6,
+     "ath": "inge-van-der-heijden",
+     "name": "VAN DER HEIJDEN Inge",
+     "nat": "NED"
+    },
+    {
+     "bib": 7,
+     "ath": "kristyna-zemanova",
+     "name": "ZEMANOVÁ Kristýna",
+     "nat": "CZE"
+    },
+    {
+     "bib": 8,
+     "ath": "leonie-bentveld",
+     "name": "BENTVELD Leonie",
+     "nat": "NED"
+    },
+    {
+     "bib": 9,
+     "ath": "denise-betsema",
+     "name": "BETSEMA Denise",
+     "nat": "NED"
+    },
+    {
+     "bib": 10,
+     "ath": "julie-brouwers",
+     "name": "BROUWERS Julie",
+     "nat": "BEL"
+    },
+    {
+     "bib": 11,
+     "ath": "helene-clauzel",
+     "name": "CLAUZEL Hélène",
+     "nat": "FRA"
+    },
+    {
+     "bib": 12,
+     "ath": "sara-casasola",
+     "name": "CASASOLA Sara",
+     "nat": "ITA"
+    },
+    {
+     "bib": 13,
+     "ath": "rebecca-gariboldi",
+     "name": "GARIBOLDI Rebecca",
+     "nat": "ITA"
+    },
+    {
+     "bib": 14,
+     "ath": "xan-crees",
+     "name": "CREES Xan",
+     "nat": "GBR"
+    },
+    {
+     "bib": 15,
+     "ath": "perrine-clauzel",
+     "name": "CLAUZEL Perrine",
+     "nat": "FRA"
+    },
+    {
+     "bib": 16,
+     "ath": "sterre-vervloet",
+     "name": "VERVLOET Sterre",
+     "nat": "BEL"
+    },
+    {
+     "bib": 17,
+     "ath": "lauren-molengraaf",
+     "name": "MOLENGRAAF Lauren",
+     "nat": "NED"
+    },
+    {
+     "bib": 18,
+     "ath": "alicia-franck",
+     "name": "FRANCK Alicia",
+     "nat": "BEL"
+    },
+    {
+     "bib": 19,
+     "ath": "zita-peeters",
+     "name": "PEETERS Zita",
+     "nat": "BEL"
+    },
+    {
+     "bib": 20,
+     "ath": "anna-kay",
+     "name": "KAY Anna",
+     "nat": "GBR"
+    },
+    {
+     "bib": 21,
+     "ath": "noi-moes",
+     "name": "MOES Noï",
+     "nat": "NED"
+    },
+    {
+     "bib": 22,
+     "ath": "anniek-mos",
+     "name": "MOS Anniek",
+     "nat": "NED"
+    },
+    {
+     "bib": 23,
+     "ath": "anna-flynn",
+     "name": "FLYNN Anna",
+     "nat": "GBR"
+    },
+    {
+     "bib": 24,
+     "ath": "amy-perryman",
+     "name": "PERRYMAN Amy",
+     "nat": "GBR"
+    },
+    {
+     "bib": 25,
+     "ath": "grace-inglis",
+     "name": "INGLIS Grace",
+     "nat": "GBR"
+    },
+    {
+     "bib": 26,
+     "ath": "alderney-baker",
+     "name": "BAKER Alderney",
+     "nat": "GBR"
+    },
+    {
+     "bib": 27,
+     "ath": "elena-van-der-veken",
+     "name": "VAN DER VEKEN Elena",
+     "nat": "NED"
+    },
+    {
+     "bib": 28,
+     "ath": "fem-van-empel",
+     "name": "VAN EMPEL Fem",
+     "nat": "NED"
+    },
+    {
+     "bib": 29,
+     "ath": "nette-coppens",
+     "name": "COPPENS Nette",
+     "nat": "BEL"
+    },
+    {
+     "bib": 30,
+     "ath": "ann-christine-allik",
+     "name": "ALLIK Ann-Christine",
+     "nat": "EST"
+    },
+    {
+     "bib": 31,
+     "ath": "larissa-rossner",
+     "name": "ROSSNER Larissa",
+     "nat": "SUI"
+    },
+    {
+     "bib": 32,
+     "ath": "alana-polfliet",
+     "name": "POLFLIET Alana",
+     "nat": "BEL"
+    },
+    {
+     "bib": 33,
+     "ath": "liene-meeusen",
+     "name": "MEEUSEN Liene",
+     "nat": "BEL"
+    },
+    {
+     "bib": 34,
+     "ath": "rebecca-woodvine",
+     "name": "WOODVINE Rebecca",
+     "nat": "GBR"
+    },
+    {
+     "bib": 35,
+     "ath": "laure-huybrechts",
+     "name": "HUYBRECHTS Laure",
+     "nat": "BEL"
+    },
+    {
+     "bib": 36,
+     "ath": "arabella-blackburn",
+     "name": "BLACKBURN Arabella",
+     "nat": "GBR"
+    },
+    {
+     "bib": 37,
+     "ath": "tessa-zwaenepoel",
+     "name": "ZWAENEPOEL Tessa",
+     "nat": "BEL"
+    },
+    {
+     "bib": 38,
+     "ath": "kirstine-rysbjerg",
+     "name": "RYSBJERG Kirstine",
+     "nat": "DEN"
+    },
+    {
+     "bib": 39,
+     "ath": "ishbel-strathdee",
+     "name": "STRATHDEE Ishbel",
+     "nat": "GBR"
+    },
+    {
+     "bib": 40,
+     "ath": "emily-de-cuyper",
+     "name": "DE CUYPER Emily",
+     "nat": "BEL"
+    }
+   ]
+  },
+  "E05-ELI-H": {
+   "source": "https://www.superprestigecyclocross.be/storage/programs/file_participants/418/418.pdf?t=1794578145",
+   "fetched": "2026-11-13T17:50:12.615Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "niels-vandeputte",
+     "name": "VANDEPUTTE Niels",
+     "nat": "BEL"
+    },
+    {
+     "bib": 2,
+     "ath": "michael-vanthourenhout",
+     "name": "VANTHOURENHOUT Michael",
+     "nat": "BEL"
+    },
+    {
+     "bib": 3,
+     "ath": "felipe-orts-lloret",
+     "name": "ORTS LLORET Felipe",
+     "nat": "ESP"
+    },
+    {
+     "bib": 4,
+     "ath": "joris-nieuwenhuis",
+     "name": "NIEUWENHUIS Joris",
+     "nat": "NED"
+    },
+    {
+     "bib": 5,
+     "ath": "joran-wyseure",
+     "name": "WYSEURE Joran",
+     "nat": "BEL"
+    },
+    {
+     "bib": 6,
+     "ath": "laurens-sweeck",
+     "name": "SWEECK Laurens",
+     "nat": "BEL"
+    },
+    {
+     "bib": 7,
+     "ath": "mees-hendrikx",
+     "name": "HENDRIKX Mees",
+     "nat": "NED"
+    },
+    {
+     "bib": 8,
+     "ath": "gerben-kuypers",
+     "name": "KUYPERS Gerben",
+     "nat": "BEL"
+    },
+    {
+     "bib": 9,
+     "ath": "kevin-kuhn",
+     "name": "KUHN Kevin",
+     "nat": "SUI"
+    },
+    {
+     "bib": 10,
+     "ath": "jente-michels",
+     "name": "MICHELS Jente",
+     "nat": "BEL"
+    },
+    {
+     "bib": 11,
+     "ath": "cameron-mason",
+     "name": "MASON Cameron",
+     "nat": "GBR"
+    },
+    {
+     "bib": 12,
+     "ath": "ryan-kamp",
+     "name": "KAMP Ryan",
+     "nat": "NED"
+    },
+    {
+     "bib": 13,
+     "ath": "toon-vandebosch",
+     "name": "VANDEBOSCH Toon",
+     "nat": "BEL"
+    },
+    {
+     "bib": 14,
+     "ath": "michael-boros",
+     "name": "BOROŠ Michael",
+     "nat": "CZE"
+    },
+    {
+     "bib": 15,
+     "ath": "yordi-corsus",
+     "name": "CORSUS Yordi",
+     "nat": "BEL"
+    },
+    {
+     "bib": 16,
+     "ath": "witse-meeussen",
+     "name": "MEEUSSEN Witse",
+     "nat": "BEL"
+    },
+    {
+     "bib": 17,
+     "ath": "bailey-groenendaal",
+     "name": "GROENENDAAL Bailey",
+     "nat": "DEN"
+    },
+    {
+     "bib": 18,
+     "ath": "krystof-bazant",
+     "name": "BAŽANT Kryštof",
+     "nat": "CZE"
+    },
+    {
+     "bib": 19,
+     "ath": "thomas-mein",
+     "name": "MEIN Thomas",
+     "nat": "GBR"
+    },
+    {
+     "bib": 20,
+     "ath": "andrew-strohmeyer",
+     "name": "STROHMEYER Andrew",
+     "nat": "USA"
+    },
+    {
+     "bib": 21,
+     "ath": "stefano-viezzi",
+     "name": "VIEZZI Stefano",
+     "nat": "ITA"
+    },
+    {
+     "bib": 22,
+     "ath": "victor-van-de-putte",
+     "name": "VAN DE PUTTE Victor",
+     "nat": "BEL"
+    },
+    {
+     "bib": 23,
+     "ath": "wout-janssen",
+     "name": "JANSSEN Wout",
+     "nat": "BEL"
+    },
+    {
+     "bib": 24,
+     "ath": "max-heiner-oertzen",
+     "name": "OERTZEN Max Heiner",
+     "nat": "GER"
+    },
+    {
+     "bib": 25,
+     "ath": "kay-de-bruyckere",
+     "name": "DE BRUYCKERE Kay",
+     "nat": "BEL"
+    },
+    {
+     "bib": 26,
+     "ath": "mats-vanden-eynde",
+     "name": "VANDEN EYNDE Mats",
+     "nat": "BEL"
+    },
+    {
+     "bib": 27,
+     "ath": "hannes-degenkolb",
+     "name": "DEGENKOLB Hannes",
+     "nat": "GER"
+    },
+    {
+     "bib": 28,
+     "ath": "ward-huybs",
+     "name": "HUYBS Ward",
+     "nat": "BEL"
+    },
+    {
+     "bib": 29,
+     "ath": "carden-king",
+     "name": "KING Carden",
+     "nat": "USA"
+    },
+    {
+     "bib": 30,
+     "ath": "lukas-herrmann",
+     "name": "HERRMANN Lukas",
+     "nat": "GER"
+    },
+    {
+     "bib": 31,
+     "ath": "remon-delnoije",
+     "name": "DELNOIJE Remon",
+     "nat": "NED"
+    },
+    {
+     "bib": 32,
+     "ath": "raphael-kockelmann",
+     "name": "KOCKELMANN Raphaël",
+     "nat": "LUX"
+    },
+    {
+     "bib": 33,
+     "ath": "yuta-okayama",
+     "name": "OKAYAMA Yuta",
+     "nat": "JPN"
+    },
+    {
+     "bib": 34,
+     "ath": "lorenzo-marasco",
+     "name": "MARASCO Lorenzo",
+     "nat": "FRA"
+    },
+    {
+     "bib": 35,
+     "ath": "jarno-bellens",
+     "name": "BELLENS Jarno",
+     "nat": "BEL"
+    },
+    {
+     "bib": 36,
+     "ath": "ingmar-uytdewilligen",
+     "name": "UYTDEWILLIGEN Ingmar",
+     "nat": "BEL"
+    },
+    {
+     "bib": 37,
+     "ath": "spencer-corder",
+     "name": "CORDER Spencer",
+     "nat": "GBR"
+    },
+    {
+     "bib": 38,
+     "ath": "lennert-meeusen",
+     "name": "MEEUSEN Lennert",
+     "nat": "BEL"
+    },
+    {
+     "bib": 39,
+     "ath": "jody-mills",
+     "name": "MILLS Jody",
+     "nat": "GBR"
+    },
+    {
+     "bib": 40,
+     "ath": "bengt-daelmans",
+     "name": "DAELMANS Bengt",
+     "nat": "BEL"
+    },
+    {
+     "bib": 41,
+     "ath": "levi-van-dijk",
+     "name": "VAN DIJK Levi",
+     "nat": "NED"
+    },
+    {
+     "bib": 42,
+     "ath": "thomas-verheyen",
+     "name": "VERHEYEN Thomas",
+     "nat": "BEL"
+    },
+    {
+     "bib": 43,
+     "ath": "william-lezard",
+     "name": "LEZARD William",
+     "nat": "GBR"
+    },
+    {
+     "bib": 44,
+     "ath": "torben-aerts",
+     "name": "AERTS Torben",
+     "nat": "BEL"
+    },
+    {
+     "bib": 45,
+     "ath": "rune-smits",
+     "name": "SMITS Rune",
+     "nat": "BEL"
+    },
+    {
+     "bib": 46,
+     "ath": "ieben-jacobs",
+     "name": "JACOBS Ieben",
+     "nat": "BEL"
+    }
+   ]
+  },
+  "E06-ELI-F": {
+   "source": "https://www.bollekescross.be/content/files/1311-35961-hamme-startlist-women-elite-42fe84d96bd44974.pdf",
+   "fetched": "2026-11-13T17:50:13.489Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "lucinda-brand",
+     "name": "BRAND Lucinda",
+     "nat": "NED"
+    },
+    {
+     "bib": 2,
+     "ath": "amandine-fouquenet",
+     "name": "FOUQUENET Amandine",
+     "nat": "FRA"
+    },
+    {
+     "bib": 3,
+     "ath": "manon-bakker",
+     "name": "BAKKER Manon",
+     "nat": "NED"
+    },
+    {
+     "bib": 4,
+     "ath": "inge-van-der-heijden",
+     "name": "VAN DER HEIJDEN Inge",
+     "nat": "NED"
+    },
+    {
+     "bib": 5,
+     "ath": "kristyna-zemanova",
+     "name": "ZEMANOVÁ Kristýna",
+     "nat": "CZE"
+    },
+    {
+     "bib": 6,
+     "ath": "leonie-bentveld",
+     "name": "BENTVELD Leonie",
+     "nat": "NED"
+    },
+    {
+     "bib": 7,
+     "ath": "denise-betsema",
+     "name": "BETSEMA Denise",
+     "nat": "NED"
+    },
+    {
+     "bib": 8,
+     "ath": "julie-brouwers",
+     "name": "BROUWERS Julie",
+     "nat": "BEL"
+    },
+    {
+     "bib": 9,
+     "ath": "helene-clauzel",
+     "name": "CLAUZEL Hélène",
+     "nat": "FRA"
+    },
+    {
+     "bib": 10,
+     "ath": "sara-casasola",
+     "name": "CASASOLA Sara",
+     "nat": "ITA"
+    },
+    {
+     "bib": 11,
+     "ath": "rebecca-gariboldi",
+     "name": "GARIBOLDI Rebecca",
+     "nat": "ITA"
+    },
+    {
+     "bib": 12,
+     "ath": "annemarie-worst",
+     "name": "WORST Annemarie",
+     "nat": "NED"
+    },
+    {
+     "bib": 13,
+     "ath": "xan-crees",
+     "name": "CREES Xan",
+     "nat": "GBR"
+    },
+    {
+     "bib": 14,
+     "ath": "kiona-crabbe",
+     "name": "CRABBÉ Kiona",
+     "nat": "BEL"
+    },
+    {
+     "bib": 15,
+     "ath": "perrine-clauzel",
+     "name": "CLAUZEL Perrine",
+     "nat": "FRA"
+    },
+    {
+     "bib": 16,
+     "ath": "sterre-vervloet",
+     "name": "VERVLOET Sterre",
+     "nat": "BEL"
+    },
+    {
+     "bib": 17,
+     "ath": "alicia-franck",
+     "name": "FRANCK Alicia",
+     "nat": "BEL"
+    },
+    {
+     "bib": 18,
+     "ath": "zita-peeters",
+     "name": "PEETERS Zita",
+     "nat": "BEL"
+    },
+    {
+     "bib": 19,
+     "ath": "layla-barthels",
+     "name": "BARTHELS Layla",
+     "nat": "LUX"
+    },
+    {
+     "bib": 20,
+     "ath": "maite-barthels",
+     "name": "BARTHELS Maïté",
+     "nat": "LUX"
+    },
+    {
+     "bib": 21,
+     "ath": "anna-flynn",
+     "name": "FLYNN Anna",
+     "nat": "GBR"
+    },
+    {
+     "bib": 22,
+     "ath": "ilken-seynave",
+     "name": "SEYNAVE Ilken",
+     "nat": "BEL"
+    },
+    {
+     "bib": 23,
+     "ath": "camille-devigne",
+     "name": "DEVIGNE Camille",
+     "nat": "FRA"
+    },
+    {
+     "bib": 24,
+     "ath": "amy-perryman",
+     "name": "PERRYMAN Amy",
+     "nat": "GBR"
+    },
+    {
+     "bib": 25,
+     "ath": "xenna-de-bruyckere",
+     "name": "DE BRUYCKERE Xenna",
+     "nat": "BEL"
+    },
+    {
+     "bib": 26,
+     "ath": "grace-inglis",
+     "name": "INGLIS Grace",
+     "nat": "GBR"
+    },
+    {
+     "bib": 27,
+     "ath": "kim-van-de-steene",
+     "name": "VAN DE STEENE Kim",
+     "nat": "BEL"
+    },
+    {
+     "bib": 28,
+     "ath": "alderney-baker",
+     "name": "BAKER Alderney",
+     "nat": "GBR"
+    },
+    {
+     "bib": 29,
+     "ath": "lisa-maes",
+     "name": "MAES Lisa",
+     "nat": "BEL"
+    },
+    {
+     "bib": 30,
+     "ath": "elena-van-der-veken",
+     "name": "VAN DER VEKEN Elena",
+     "nat": "NED"
+    },
+    {
+     "bib": 31,
+     "ath": "juline-delcommune",
+     "name": "DELCOMMUNE Juline",
+     "nat": "BEL"
+    },
+    {
+     "bib": 32,
+     "ath": "ann-christine-allik",
+     "name": "ALLIK Ann-Christine",
+     "nat": "EST"
+    },
+    {
+     "bib": 33,
+     "ath": "jana-dobbelaere",
+     "name": "DOBBELAERE Jana",
+     "nat": "BEL"
+    },
+    {
+     "bib": 34,
+     "ath": "larissa-rossner",
+     "name": "ROSSNER Larissa",
+     "nat": "SUI"
+    },
+    {
+     "bib": 35,
+     "ath": "selena-bas",
+     "name": "BAS Selena",
+     "nat": "NED"
+    },
+    {
+     "bib": 36,
+     "ath": "tine-rombouts",
+     "name": "ROMBOUTS Tine",
+     "nat": "BEL"
+    },
+    {
+     "bib": 37,
+     "ath": "leonie-paulissen",
+     "name": "PAULISSEN Leonie",
+     "nat": "BEL"
+    },
+    {
+     "bib": 38,
+     "ath": "meadow-willems",
+     "name": "WILLEMS Meadow",
+     "nat": "NED"
+    },
+    {
+     "bib": 39,
+     "ath": "meg-de-bruyne",
+     "name": "DE BRUYNE Meg",
+     "nat": "BEL"
+    },
+    {
+     "bib": 40,
+     "ath": "rebecca-woodvine",
+     "name": "WOODVINE Rebecca",
+     "nat": "GBR"
+    },
+    {
+     "bib": 41,
+     "ath": "tessa-zwaenepoel",
+     "name": "ZWAENEPOEL Tessa",
+     "nat": "BEL"
+    },
+    {
+     "bib": 42,
+     "ath": "kirstine-rysbjerg",
+     "name": "RYSBJERG Kirstine",
+     "nat": "DEN"
+    },
+    {
+     "bib": 43,
+     "ath": "emily-de-cuyper",
+     "name": "DE CUYPER Emily",
+     "nat": "BEL"
+    },
+    {
+     "bib": 44,
+     "ath": "ishbel-strathdee",
+     "name": "STRATHDEE Ishbel",
+     "nat": "GBR"
+    },
+    {
+     "bib": 45,
+     "ath": "nele-de-vos",
+     "name": "DE VOS Nele",
+     "nat": "BEL"
+    },
+    {
+     "bib": 46,
+     "ath": "arabella-blackburn",
+     "name": "BLACKBURN Arabella",
+     "nat": "GBR"
+    },
+    {
+     "bib": 47,
+     "ath": "sterre-hendrickx",
+     "name": "HENDRICKX Sterre",
+     "nat": "BEL"
+    }
+   ]
+  },
+  "E06-ELI-H": {
+   "source": "https://www.bollekescross.be/content/files/1310-35961-hamme-startlist-men-elite-348af1fe1b9ca7b4.pdf",
+   "fetched": "2026-11-13T17:50:14.330Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "thibau-nys",
+     "name": "NYS Thibau",
+     "nat": "BEL"
+    },
+    {
+     "bib": 2,
+     "ath": "niels-vandeputte",
+     "name": "VANDEPUTTE Niels",
+     "nat": "BEL"
+    },
+    {
+     "bib": 3,
+     "ath": "michael-vanthourenhout",
+     "name": "VANTHOURENHOUT Michael",
+     "nat": "BEL"
+    },
+    {
+     "bib": 4,
+     "ath": "felipe-orts-lloret",
+     "name": "ORTS LLORET Felipe",
+     "nat": "ESP"
+    },
+    {
+     "bib": 5,
+     "ath": "joris-nieuwenhuis",
+     "name": "NIEUWENHUIS Joris",
+     "nat": "NED"
+    },
+    {
+     "bib": 6,
+     "ath": "joran-wyseure",
+     "name": "WYSEURE Joran",
+     "nat": "BEL"
+    },
+    {
+     "bib": 7,
+     "ath": "laurens-sweeck",
+     "name": "SWEECK Laurens",
+     "nat": "BEL"
+    },
+    {
+     "bib": 8,
+     "ath": "mees-hendrikx",
+     "name": "HENDRIKX Mees",
+     "nat": "NED"
+    },
+    {
+     "bib": 9,
+     "ath": "gerben-kuypers",
+     "name": "KUYPERS Gerben",
+     "nat": "BEL"
+    },
+    {
+     "bib": 10,
+     "ath": "kevin-kuhn",
+     "name": "KUHN Kevin",
+     "nat": "SUI"
+    },
+    {
+     "bib": 11,
+     "ath": "jente-michels",
+     "name": "MICHELS Jente",
+     "nat": "BEL"
+    },
+    {
+     "bib": 12,
+     "ath": "cameron-mason",
+     "name": "MASON Cameron",
+     "nat": "GBR"
+    },
+    {
+     "bib": 13,
+     "ath": "ryan-kamp",
+     "name": "KAMP Ryan",
+     "nat": "NED"
+    },
+    {
+     "bib": 14,
+     "ath": "toon-vandebosch",
+     "name": "VANDEBOSCH Toon",
+     "nat": "BEL"
+    },
+    {
+     "bib": 15,
+     "ath": "pim-ronhaar",
+     "name": "RONHAAR Pim",
+     "nat": "NED"
+    },
+    {
+     "bib": 16,
+     "ath": "michael-boros",
+     "name": "BOROŠ Michael",
+     "nat": "CZE"
+    },
+    {
+     "bib": 17,
+     "ath": "witse-meeussen",
+     "name": "MEEUSSEN Witse",
+     "nat": "BEL"
+    },
+    {
+     "bib": 18,
+     "ath": "bailey-groenendaal",
+     "name": "GROENENDAAL Bailey",
+     "nat": "DEN"
+    },
+    {
+     "bib": 19,
+     "ath": "thomas-mein",
+     "name": "MEIN Thomas",
+     "nat": "GBR"
+    },
+    {
+     "bib": 20,
+     "ath": "andrew-strohmeyer",
+     "name": "STROHMEYER Andrew",
+     "nat": "USA"
+    },
+    {
+     "bib": 21,
+     "ath": "victor-van-de-putte",
+     "name": "VAN DE PUTTE Victor",
+     "nat": "BEL"
+    },
+    {
+     "bib": 22,
+     "ath": "wout-janssen",
+     "name": "JANSSEN Wout",
+     "nat": "BEL"
+    },
+    {
+     "bib": 23,
+     "ath": "kenay-de-moyer",
+     "name": "DE MOYER Kenay",
+     "nat": "BEL"
+    },
+    {
+     "bib": 24,
+     "ath": "clement-horny",
+     "name": "HORNY Clement",
+     "nat": "BEL"
+    },
+    {
+     "bib": 25,
+     "ath": "kay-de-bruyckere",
+     "name": "DE BRUYCKERE Kay",
+     "nat": "BEL"
+    },
+    {
+     "bib": 26,
+     "ath": "tristan-verrier",
+     "name": "VERRIER Tristan",
+     "nat": "FRA"
+    },
+    {
+     "bib": 27,
+     "ath": "anton-ferdinande",
+     "name": "FERDINANDE Anton",
+     "nat": "BEL"
+    },
+    {
+     "bib": 28,
+     "ath": "hannes-degenkolb",
+     "name": "DEGENKOLB Hannes",
+     "nat": "GER"
+    },
+    {
+     "bib": 29,
+     "ath": "arne-baers",
+     "name": "BAERS Arne",
+     "nat": "BEL"
+    },
+    {
+     "bib": 30,
+     "ath": "lukas-herrmann",
+     "name": "HERRMANN Lukas",
+     "nat": "GER"
+    },
+    {
+     "bib": 31,
+     "ath": "yuta-okayama",
+     "name": "OKAYAMA Yuta",
+     "nat": "JPN"
+    },
+    {
+     "bib": 32,
+     "ath": "lorenzo-marasco",
+     "name": "MARASCO Lorenzo",
+     "nat": "FRA"
+    },
+    {
+     "bib": 33,
+     "ath": "milan-de-nys",
+     "name": "DE NYS Milan",
+     "nat": "BEL"
+    },
+    {
+     "bib": 34,
+     "ath": "jarno-bellens",
+     "name": "BELLENS Jarno",
+     "nat": "BEL"
+    },
+    {
+     "bib": 35,
+     "ath": "miles-gevaert",
+     "name": "GEVAERT Miles",
+     "nat": "BEL"
+    },
+    {
+     "bib": 37,
+     "ath": "toon-van-den-bergh",
+     "name": "VAN DEN BERGH Toon",
+     "nat": "BEL"
+    },
+    {
+     "bib": 38,
+     "ath": "senne-d-hollander",
+     "name": "D´HOLLANDER Senne",
+     "nat": "BEL"
+    }
+   ]
   }
  }
 }

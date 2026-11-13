@@ -1,0 +1,44 @@
+                                    AARDBEIENCROSS MERKSPLAS
+                                  STARTLIST WOMEN ELITE 14/11/2026
+Nr   Naam                             UCI ID      Nat   Club                                      UCI Rank
+1    BRAND Lucinda                  10006605680   NED BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS   1
+2    ALVARADO Ceylin Del Carmen     10009857305   NED FENIX-PREMIER TECH                              2
+3    FOUQUENET Amandine             10066772861   FRA   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT       3
+4    VAN ALPHEN Aniek               10015541303   NED 777TV CX TEAM                                   4
+5    BAKKER Manon                   10009521643   NED VELOSPORT VELUWE                                6
+6    VAN DER HEIJDEN Inge           10010592885   NED CRELAN-CORENDON                                 7
+7    ZEMANOVÁ Kristýna              10047782887   CZE   CRELAN-CORENDON                               8
+8    BENTVELD Leonie                10023336564   NED PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         9
+9    BETSEMA Denise                 10007654694   NED DE CEUSTER BOUWKRANEN                           11
+10   BROUWERS Julie                 10065009885   BEL   CHARLES LIÉGEOIS CX TEAM                      14
+11   CLAUZEL Hélène                 10009876806   FRA   SEVEN RACING                                  16
+12   CASASOLA Sara                  10010998972   ITA   CRELAN-CORENDON                               21
+13   GARIBOLDI Rebecca              10009420704   ITA   DE CEUSTER BOUWKRANEN                         24
+14   CREES Xan                      10023505811   GBR   XC RACING                                     34
+15   CLAUZEL Perrine                10007703194   FRA   SEBMOTOBIKES CX TEAM                          53
+16   VERVLOET Sterre                10065040807   BEL   CHARLES LIÉGEOIS CX TEAM                      56
+17   MOLENGRAAF Lauren              10023352126   NED D.O.S. VZW                                      58
+18   FRANCK Alicia                  10008128984   BEL   X-OATS-LOTTO ATHLETES FOR HOPE                68
+19   PEETERS Zita                   10065229450   BEL   DE CEUSTER BOUWKRANEN                         87
+20   KAY Anna                       10015470672   GBR   ESSEC CYCLING TEAM                            112
+21   MOES Noï                       10023186418   NED WV SCHIJNDEL                                    137
+22   MOS Anniek                     10085934203   NED KDM-PACK CYCLING TEAM                           155
+23   FLYNN Anna                     10064102836   GBR   HANDSLING ALBA DEVELOPMENT ROAD TEAM          156
+24   PERRYMAN Amy                   10023876431   GBR   RAPHA CYCLING CLUB                            195
+25   INGLIS Grace                   10050878706   GBR   TEAM HUP                                      201
+26   BAKER Alderney                 10023855516   GBR   TEAM EMPELLA                                  232
+27   VAN DER VEKEN Elena            10023156106   NED ACROG-TORMANS                                   300
+28   VAN EMPEL Fem                  10059824126   NED SPECIALIZED TMRW                                335
+29   COPPENS Nette                  10065082132   BEL   DE CEUSTER-ACROG                              457
+30   ALLIK Ann-Christine            10129341804   EST   OP KOP CYCLING TEAM                           515
+31   ROSSNER Larissa                10109635848   SUI   VC ESCHENBACH                                 702
+32   POLFLIET Alana                 10115279834   BEL   NEVER GIVE UP BY JOLIEN VERSCHUEREN           774
+33   MEEUSEN Liene                  10082649741   BEL   Individueel
+34   WOODVINE Rebecca               10133003047   GBR   FOSSA RACING
+35   HUYBRECHTS Laure               10108371313   BEL   ESSEC CYCLING TEAM
+36   BLACKBURN Arabella             10077870570   GBR   HANDSLING ALBA DEVELOPMENT ROAD TEAM
+37   ZWAENEPOEL Tessa               10064952594   BEL   KASSEIEN FIETS HUIS CT
+38   RYSBJERG Kirstine              10097672819   DEN NUCLI CC
+39   STRATHDEE Ishbel               10023886737   GBR   TEAM HUP
+40   DE CUYPER Emily                10098755983   BEL   SUPER HELP - EVIL EYE
+

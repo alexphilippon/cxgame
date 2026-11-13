@@ -1,0 +1,47 @@
+                              BOLLEKESCROSS-HAMME 15/11/2026
+                                    STARTLIST MEN ELITE
+
+Nr   Naam                        UCI ID      Nat   Club                                            UCI Rank
+1    NYS Thibau                10065004835   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS      3
+2    VANDEPUTTE Niels          10016327609   BEL   ALPECIN-PREMIER TECH                               1
+3    VANTHOURENHOUT Michael    10007155651   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            4
+4    ORTS LLORET Felipe        10009004715   ESP   EUSKALTEL - EUSKADI                                6
+5    NIEUWENHUIS Joris         10008705833   NED   HEIZOMAT - CUBE                                    7
+6    WYSEURE Joran             10064921777   BEL   CRELAN-CORENDON                                    9
+7    SWEECK Laurens            10006912646   BEL   CRELAN-CORENDON                                    10
+8    HENDRIKX Mees             10016519484   NED   TEAM BOMBA JOIN                                    11
+9    KUYPERS Gerben            10016322757   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            13
+10   KUHN Kevin                10009746763   SUI   HEIZOMAT - CUBE                                    14
+11   MICHELS Jente             10065014333   BEL   ALPECIN-PREMIER TECH DEVELOPMENT TEAM              15
+12   MASON Cameron             10023574923   GBR   SEVEN RACING                                       16
+13   KAMP Ryan                 10023356166   NED   TEAM BOMBA JOIN                                    17
+14   VANDEBOSCH Toon           10010943604   BEL   CRELAN-CORENDON                                    19
+15   RONHAAR Pim               10023108212   NED   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS      20
+16   BOROŠ Michael             10006629326   CZE   KASPER CRYPRO4ME                                   22
+17   MEEUSSEN Witse            10064931679   BEL   CRELAN-CORENDON                                    25
+18   GROENENDAAL Bailey        10022873085   DEN   WV SCHIJNDEL                                       33
+19   MEIN Thomas               10016225959   GBR   HOPE FACTORY RACING                                38
+20   STROHMEYER Andrew         10071735019   USA   COMPETITIVE EDGE RACING                            41
+21   VAN DE PUTTE Victor       10064985940   BEL   CHARLES LIÉGEOIS CX TEAM                           44
+22   JANSSEN Wout              10064972095   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT        45
+23   DE MOYER Kenay            10065066065   BEL   ATOM6-CYCLEUR DE LUXE-AUTOSTROO CONT. TEAM         63
+24   HORNY Clement             10016419858   BEL   BH-WALLONIE MTB TEAM                               65
+25   DE BRUYCKERE Kay          10065053638   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            77
+26   VERRIER Tristan           10071758661   FRA   CA EVRON                                           88
+27   FERDINANDE Anton          10016322656   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            89
+28   DEGENKOLB Hannes          10048529282   GER   HEIZOMAT - CUBE                                   107
+29   BAERS Arne                10064979472   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS     170
+30   HERRMANN Lukas            10046134190   GER   HEIZOMAT - CUBE                                   179
+31   OKAYAMA Yuta              10021324321   JPN   OLANDA BASE/WATERSLEY                             203
+32   MARASCO Lorenzo           10023530059   FRA   SEBMOTOBIKES CX TEAM                              306
+33   DE NYS Milan              10065078795   BEL   TEAM CIBEL CEBON                                  354
+34   BELLENS Jarno             10016350241   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS     393
+35   GEVAERT Miles             10065066671   BEL   TOMABEL-INOFEC CYCLINGTEAM                        572
+38   D´HOLLANDER Senne         10064985132   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT
+37   VAN DEN BERGH Toon        10065075159   BEL   DVZ-CYCLING
+
+
+
+
+                                             Pagina 1 van 1
+

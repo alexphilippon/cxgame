@@ -1,0 +1,50 @@
+                              AARDBEIENCROSS MERKSPLAS
+                              STARTLIST MEN ELITE 14/11/2026
+Nr   Naam                       UCI ID      Nat   Club                                         UCI Rank
+1    VANDEPUTTE Niels         10016327609   BEL   ALPECIN-PREMIER TECH                            1
+2    VANTHOURENHOUT Michael   10007155651   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         4
+3    ORTS LLORET Felipe       10009004715   ESP   EUSKALTEL - EUSKADI                             6
+4    NIEUWENHUIS Joris        10008705833   NED HEIZOMAT - CUBE                                   7
+5    WYSEURE Joran            10064921777   BEL   CRELAN-CORENDON                                 9
+6    SWEECK Laurens           10006912646   BEL   CRELAN-CORENDON                                 10
+7    HENDRIKX Mees            10016519484   NED TEAM BOMBA JOIN                                   11
+8    KUYPERS Gerben           10016322757   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         13
+9    KUHN Kevin               10009746763   SUI   HEIZOMAT - CUBE                                 14
+10   MICHELS Jente            10065014333   BEL   ALPECIN-PREMIER TECH DEVELOPMENT TEAM           15
+11   MASON Cameron            10023574923   GBR   SEVEN RACING                                    16
+12   KAMP Ryan                10023356166   NED TEAM BOMBA JOIN                                   17
+13   VANDEBOSCH Toon          10010943604   BEL   CRELAN-CORENDON                                 19
+14   BOROŠ Michael            10006629326   CZE   KASPER CRYPRO4ME                                22
+15   CORSUS Yordi             10065119518   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         24
+16   MEEUSSEN Witse           10064931679   BEL   CRELAN-CORENDON                                 25
+17   GROENENDAAL Bailey       10022873085   DEN WV SCHIJNDEL                                      33
+18   BAŽANT Kryštof           10092752996   CZE   CYKLOSTAR RACING TEAM                           34
+19   MEIN Thomas              10016225959   GBR   HOPE FACTORY RACING                             38
+20   STROHMEYER Andrew        10071735019   USA   COMPETITIVE EDGE RACING                         41
+21   VIEZZI Stefano           10030893975   ITA   ALPECIN-PREMIER TECH DEVELOPMENT TEAM           43
+22   VAN DE PUTTE Victor      10064985940   BEL   CHARLES LIÉGEOIS CX TEAM                        44
+23   JANSSEN Wout             10064972095   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DENPLAS CT      45
+24   OERTZEN Max Heiner       10036147739   GER   RADSPORT NAGEL CX TEAM                          74
+25   DE BRUYCKERE Kay         10065053638   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT         77
+26   VANDEN EYNDE Mats        10086550858   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS   98
+27   DEGENKOLB Hannes         10048529282   GER   HEIZOMAT - CUBE                                 107
+28   HUYBS Ward               10065005542   BEL   RONDE VAN VLAAMS-BRABANT VZW                    160
+29   KING Carden              10065999083   USA   TRIPLE CROWN WORKSHOP                           167
+30   HERRMANN Lukas           10046134190   GER   HEIZOMAT - CUBE                                 179
+31   DELNOIJE Remon           10022684139   NED TWC DE KEMPEN                                     185
+32   KOCKELMANN Raphaël       10015333155   LUX   SEBMOTOBIKES CX TEAM                            190
+33   OKAYAMA Yuta             10021324321   JPN   OLANDA BASE/WATERSLEY                           203
+34   MARASCO Lorenzo          10023530059   FRA   SEBMOTOBIKES CX TEAM                            306
+35   BELLENS Jarno            10016350241   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS 393
+36   UYTDEWILLIGEN Ingmar     10008892052   BEL   VP CONSULTING CYCLING TEAM                      591
+37   CORDER Spencer           10083471817   GBR   ROTOR RACE TEAM                                 644
+38   MEEUSEN Lennert          10065190953   BEL   LRG-CYCLING TEAM
+39   MILLS Jody               10064336848   GBR   HUP CC
+40   DAELMANS Bengt           10066080020   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DENPLAS CT
+41   VAN DIJK Levi            10076756787   NED ZRTC THEO MIDDELKAMP
+42   VERHEYEN Thomas          10009523057   BEL   ATAR - VAN GORP PROJECTS CT
+43   LEZARD William           10127163445   GBR   MAGSPEED RACING
+44   AERTS Torben             10065215407   BEL   TEAM KEMPEN CYCLING VZW
+45   SMITS Rune               10015530589   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DENPLAS CT
+46   JACOBS Ieben             10065160035   BEL   VP CONSULTING CYCLING TEAM
+

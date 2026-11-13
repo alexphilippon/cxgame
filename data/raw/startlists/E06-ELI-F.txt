@@ -1,0 +1,57 @@
+                            BOLLEKESCROSS-HAMME 15/11/2026
+                                STARTLIST WOMEN ELITE
+
+Nr   Naam                       UCI ID     Nat   Club                                            UCI Rank
+ 1   BRAND Lucinda           10006605680   NED   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS       1
+ 2   FOUQUENET Amandine      10066772861   FRA   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT             3
+ 3   BAKKER Manon            10009521643   NED   VELOSPORT VELUWE                                    6
+ 4   VAN DER HEIJDEN Inge    10010592885   NED   CRELAN-CORENDON                                     7
+ 5   ZEMANOVÁ Kristýna       10047782887   CZE   CRELAN-CORENDON                                     8
+ 6   BENTVELD Leonie         10023336564   NED   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT             9
+ 7   BETSEMA Denise          10007654694   NED   DE CEUSTER BOUWKRANEN                              11
+ 8   BROUWERS Julie          10065009885   BEL   CHARLES LIÉGEOIS CX TEAM                           14
+ 9   CLAUZEL Hélène          10009876806   FRA   SEVEN RACING                                       16
+10   CASASOLA Sara           10010998972   ITA   CRELAN-CORENDON                                    21
+11   GARIBOLDI Rebecca       10009420704   ITA   DE CEUSTER BOUWKRANEN                              24
+12   WORST Annemarie         10008082912   NED   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS      32
+13   CREES Xan               10023505811   GBR   XC RACING                                          34
+14   CRABBÉ Kiona            10064929760   BEL   OP KOP CYCLING TEAM                                47
+15   CLAUZEL Perrine         10007703194   FRA   SEBMOTOBIKES CX TEAM                               53
+16   VERVLOET Sterre         10065040807   BEL   CHARLES LIÉGEOIS CX TEAM                           56
+17   FRANCK Alicia           10008128984   BEL   X-OATS-LOTTO ATHLETES FOR HOPE                     68
+18   PEETERS Zita            10065229450   BEL   DE CEUSTER BOUWKRANEN                              87
+19   BARTHELS Layla          10096078581   LUX   KDM-PACK CYCLING TEAM                             118
+20   BARTHELS Maïté          10084449901   LUX   CYCLING TEAM ATERTDAUL                            121
+21   FLYNN Anna              10064102836   GBR   HANDSLING ALBA DEVELOPMENT ROAD TEAM              156
+22   SEYNAVE Ilken           10065162964   BEL   CHARLES LIÉGEOIS CX TEAM                          182
+23   DEVIGNE Camille         10067517438   FRA   ESPOIR CYCLISTE WAMBRECHIES MARQUETTE             190
+24   PERRYMAN Amy            10023876431   GBR   RAPHA CYCLING CLUB                                195
+25   DE BRUYCKERE Xenna      10065096983   BEL   DE CEUSTER-ACROG                                  196
+26   INGLIS Grace            10050878706   GBR   TEAM HUP                                          201
+27   VAN DE STEENE Kim       10007952566   BEL   Individueel                                       211
+28   BAKER Alderney          10023855516   GBR   TEAM EMPELLA                                      232
+29   MAES Lisa               10125216674   BEL   DE CEUSTER-ACROG                                  238
+30   VAN DER VEKEN Elena     10023156106   NED   ACROG-TORMANS                                     300
+31   DELCOMMUNE Juline       10078333140   BEL   TEAM WILINK BRUSSELS CYCLING                      313
+32   ALLIK Ann-Christine     10129341804   EST   OP KOP CYCLING TEAM                               515
+33   DOBBELAERE Jana         10010618349   BEL   Individueel                                       651
+34   ROSSNER Larissa         10109635848   SUI   VC ESCHENBACH                                     702
+35   BAS Selena              10023192478   NED   ACROG-TORMANS                                     776
+36   ROMBOUTS Tine           10014850983   BEL   Individueel
+37   PAULISSEN Leonie        10122989213   BEL   GOLAZO YOUNG LIONS
+38   WILLEMS Meadow          10079467232   NED   WV BREDA
+39   DE BRUYNE Meg           10009112526   BEL   SUPER HELP - EVIL EYE
+40   WOODVINE Rebecca        10133003047   GBR   FOSSA RACING
+41   ZWAENEPOEL Tessa        10064952594   BEL   KASSEIEN FIETS HUIS CT
+42   RYSBJERG Kirstine       10097672819   DEN   NUCLI CC
+43   DE CUYPER Emily         10098755983   BEL   SUPER HELP - EVIL EYE
+44   STRATHDEE Ishbel        10023886737   GBR   TEAM HUP
+45   DE VOS Nele             10065452752   BEL   NEVER GIVE UP BY JOLIEN VERSCHUEREN
+46   BLACKBURN Arabella      10077870570   GBR   HANDSLING ALBA DEVELOPMENT ROAD TEAM
+47   HENDRICKX Sterre        10098968979   BEL   FOCA - DYNAPLUS PRO CYCLING TEAM
+
+
+
+
+                                           Pagina 1 van 1
+
