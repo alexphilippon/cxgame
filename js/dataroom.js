@@ -95,6 +95,24 @@
     return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Classements par compétition, résultats complets par course et bulles</p></div></header>
       <div class="deskbar"><div class="seg" role="tablist" aria-label="Data room">${tab('comp', 'Compétitions')}${tab('course', 'Par course')}${tab('bub', 'Bulles')}${tab('past', '2025-26', ' seg__btn--past')}</div></div>${body}</section>`;
   }
+  /** Classements du coureur dans la saison en cours : total et par série (barème du jeu), dans sa catégorie : [{ label, rank, of, pts }]. */
+  function seriesRanks(id) {
+    const H = H_(SEASONS[0]); if (!H) return [];
+    const mine = H.races.filter((r) => !r.nowc && r.res.some((x) => x[0] === id));
+    const groups = [...new Set(mine.map((r) => r.g + '|' + r.cat))], out = [];
+    groups.forEach((gk) => {
+      const [g, cat] = gk.split('|'), base = H.races.filter((r) => !r.nowc && r.g === g && r.cat === cat);
+      const tag = groups.length > 1 ? ' ' + C.D.CATS[cat].short : '';
+      [['all', 'Total saison']].concat(['CdM', 'SP', 'XO', 'HG'].map((k) => [k, SER[k]])).forEach(([k, label]) => {
+        const rs = k === 'all' ? base : base.filter((r) => r.series === k), by = {};
+        rs.forEach((r) => r.res.forEach(([x, e]) => { const o = (by[x] = by[x] || { pts: 0 }); o.pts += pts(e); }));
+        if (!by[id]) return;
+        const list = Object.values(by), me = by[id].pts;
+        out.push({ label: label + tag, rank: 1 + list.filter((o) => o.pts > me).length, of: list.length, pts: me });
+      });
+    });
+    return out;
+  }
   /** Saison 2025-26 d'un coureur : [{race, e}] (toutes catégories). */
   function historyOf(id, y) {
     const H = H_(y);
@@ -134,6 +152,6 @@
   }
   /** Un onglet par saison (2026-27, 2025-26) : { id, label, html }. */
   const seasonTabs = (id) => SEASONS.map((y) => { load(y); return { id: 's' + y, label: short(y).replace('-', '-'), html: seasonHtml(id, y) }; });
-  const api = { init, render, click, histHtml, historyOf, seasonTabs, preload, ready };
+  const api = { init, render, click, histHtml, historyOf, seriesRanks, seasonTabs, preload, ready };
   if (typeof module !== 'undefined' && module.exports) module.exports = api; else root.CX_DATAROOM = api;
 })(typeof self !== 'undefined' ? self : this);

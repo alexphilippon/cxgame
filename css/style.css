@@ -1627,3 +1627,13 @@ html[data-theme='nuit'] .flk__i { color: rgba(255,255,255,.2); }
 html[data-theme='nuit'] .wabtn { background: #123a27; color: #8fe0b1; border-color: #2fa866; }
 html[data-theme='nuit'] .wabtn:hover { background: #2fa866; color: #0b1f15; }
 .sub--draw{color:var(--accent,#b45309);font-weight:600}
+.fiche__eval { margin: .2rem 0 .6rem; }
+.evl { list-style: none; margin: .6rem 0; padding: 0; display: flex; flex-direction: column; }
+.evl__row { display: grid; grid-template-columns: 4.2rem minmax(0, 1fr); gap: .2rem .8rem; padding: .6rem 0; border-top: 1px solid var(--filet); align-items: center; }
+.evl__d { font-size: .8rem; font-weight: 700; color: var(--encre-douce); text-transform: uppercase; grid-row: span 2; }
+.evl__n { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; } .evl__n .flk { font-size: 1.15rem; }
+@media (min-width: 760px) { .evl__row { grid-template-columns: 4.2rem minmax(0, 1.1fr) minmax(0, 1.2fr) 11rem; } .evl__d { grid-row: auto; } }
+.rk__chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: .3rem 0 .6rem; }
+.rkchip { display: inline-flex; align-items: baseline; gap: .3rem; padding: .15rem .6rem; border: 1.5px solid var(--filet); border-radius: 99px; font-size: .82rem; background: var(--neige); }
+.rkchip small { color: var(--encre-douce); }
+.flk { --flk: #c0562b; } .flk__i svg { display: block; width: 1em; height: 1em; } .flk__i i { line-height: 0; }

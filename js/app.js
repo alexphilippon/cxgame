@@ -424,7 +424,7 @@
     const ini = (p.name || '?').trim().split(/\s+/).map((w) => w[0]).slice(0, 2).join('').toUpperCase();
     return `<span class="pav pav--${size || 'md'}${p.theme ? ' pav--' + p.theme : ''}" aria-hidden="true">${p.photo ? `<img src="${esc(p.photo)}" alt="">` : esc(ini)}</span>`;
   }
-  const pname = (p) => `<span class="pn">${pav(p, 'xs')}<span>${esc(p.name)}</span></span>`;
+  const pname = (p) => `<span class="pn">${pav(p, 'xs')}<button type="button" class="lnk" data-player="${esc(p.id)}" title="Voir la fiche">${esc(p.name)}</button></span>`;
   const ptsBtn = (v, scope, pid) => (scope && v ? `<button type="button" class="numbtn" data-bd="${esc('pts|' + pid + '|' + scope)}" title="Voir le détail">${v}</button>` : v);
 
   function recapTable(session) {
@@ -511,10 +511,12 @@
       <span class="rcard__time">Départ ${esc(hourText(start))}${race.timeKnown ? '' : ' <em class="sub">(provisoire)</em>'}</span>${wait}${opts.extra ? `<span class="rcard__x">${opts.extra}</span>` : ''}
       ${race.cancelled || !lockedRace(race) ? '' : `<button type="button" class="morebtn" data-racecard="${race.id}">${done ? 'Résultat détaillé' : 'Stats'}</button>`}${!done && !race.cancelled && startListOf(race) ? `<button type="button" class="morebtn morebtn--sl" data-startlist="${race.id}">Start list</button>` : ''}</div>`;
   }
-  /* ---------- Rentabilité de mon choix : coureur et course comparés aux autres joueurs, note en étoiles ---------- */
+  /* ---------- Rentabilité de mon choix : coureur et course comparés aux autres joueurs, note en roues ---------- */
   const f1 = (x) => (Math.round(x * 10) / 10).toString().replace('.', ',');
+  const WHEEL = '<svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="M12 2.8v6.6M12 14.6v6.6M2.8 12h6.6M14.6 12h6.6M5.5 5.5l4.8 4.8M13.7 13.7l4.8 4.8M18.5 5.5l-4.8 4.8M10.3 13.7l-4.8 4.8"/></svg>';
+  /** Note sur 5 roues (fractions de roue par demi-point). */
   function starRow(v) {
-    return `<span class="flk" role="img" aria-label="${f1(v)} étoiles sur 5">${[0, 1, 2, 3, 4].map((i) => `<span class="flk__i"><i style="width:${Math.round(100 * Math.max(0, Math.min(1, v - i)))}%">★</i>★</span>`).join('')}</span>`;
+    return `<span class="flk" role="img" aria-label="${f1(v)} roues sur 5">${[0, 1, 2, 3, 4].map((i) => `<span class="flk__i"><i style="width:${Math.round(100 * Math.max(0, Math.min(1, v - i)))}%">${WHEEL}</i>${WHEEL}</span>`).join('')}</span>`;
   }
   function anaCmp(title, who, mine, avg, n, max, min) {
     const head = `<h4 class="anab__t">${esc(title)}</h4>`;
@@ -852,23 +854,64 @@
       .sort((a, b) => G.raceStart(a) - G.raceStart(b))
       .map((r) => { const pk = picks[r.id], eff = pk && pk.a ? G.effectiveAthlete(pk, state.results, r.id) : null; return { r, pk, has: !!eff, eff, e: eff && (state.results[r.id] || []).find((x) => x.ath === eff), pts: G.scoreRace(r, pk, state.results) || 0 }; });
   }
-  /** Fiche joueur : classement, points par desk, statistiques et détail course par course. */
+  /** Évolution : points cumulés course après course. */
+  function sparkline(rows) {
+    const vals = []; let t = 0; rows.forEach((x) => { t += x.pts; vals.push(t); });
+    if (vals.length < 2) return '';
+    const W = 300, H = 64, max = Math.max(...vals, 1);
+    const pts = vals.map((v, i) => `${(i / (vals.length - 1) * (W - 8) + 4).toFixed(1)},${(H - 6 - v / max * (H - 14)).toFixed(1)}`).join(' ');
+    return `<svg class="fsp" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Points cumulés course après course"><polyline points="${pts}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></svg>`;
+  }
+  const playerOrMe = (pid) => state.players.find((x) => x.id === pid) || (pid === state.me && state.user ? { id: pid, name: state.user.name || '', photo: '' } : null);
+  /** Liste exhaustive des choix d'un joueur avec leur note en roues, le plus récent en premier (course par course). */
+  function evalModal(pid) {
+    const p = playerOrMe(pid); if (!p) return;
+    const ids = state.players.map((x) => x.id), picks = state.picks[pid] || {};
+    const rows = Object.keys(D.RACES).map((id) => G.raceOf(id)).filter((r) => r && !r.cancelled && resOf(r) && picks[r.id] && picks[r.id].a)
+      .sort((a, b) => G.raceStart(b) - G.raceStart(a))
+      .map((r) => ({ r, an: G.pickAnalysis(r, pid, state.picks, state.results, ids), pk: picks[r.id] })).filter((x) => x.an);
+    const rated = rows.filter((x) => x.an.flakes != null), mean = rated.length ? rated.reduce((a, x) => a + x.an.flakes, 0) / rated.length : null;
+    const li = rows.map(({ r, an, pk }) => {
+      const e = resOf(r).find((x) => x.ath === an.ath), how = e ? (e.status || ordinal(e.rank)) : 'non classé';
+      return `<li class="evl__row"><span class="evl__d">${esc(dayOf(r.date))}</span><span class="evl__r">${fl(placeLabel(r))} ${discBadge(r)} <span class="gender gender--${r.gender}">${genderLabel(r)}</span></span>
+        <span class="evl__a">${skn(an.ath)}${pk.auto ? ' <em class="sub sub--draw">🎲 tiré au sort</em>' : ''} <em class="sub">${esc(how)} · ${an.mine} pt${an.mine > 1 ? 's' : ''}</em></span>
+        <span class="evl__n">${an.flakes == null ? '<em class="sub">en attente de données</em>' : `${starRow(an.flakes)}<b>${f1(an.flakes)}</b>${an.provisional ? '<em class="sub">provisoire</em>' : ''}`}</span></li>`;
+    }).join('');
+    openModal(`<div class="fiche"><header class="fiche__head">${pav(Object.assign({}, p), 'lg')}<div><h2 class="fiche__name">Évaluation des choix${pid === state.me ? ' <em>(toi)</em>' : ''}</h2><p class="fiche__sum">${esc(p.name)}${mean != null ? ` · note moyenne ${f1(mean)} / 5 roues` : ''}</p></div></header>
+      <p class="hint">Note de 0 à 5 roues par choix, du plus récent au plus ancien. Elle compare les points du coureur à ceux des autres joueurs (sur la course et sur ce coureur dans le desk) ; elle peut évoluer quand d’autres joueurs le prennent.</p>
+      ${li ? `<ul class="evl">${li}</ul>` : '<p class="hint">Aucune course terminée pour ce joueur.</p>'}
+      <p class="fiche__foot"><button type="button" class="btn btn--ghost btn--sm" data-player="${esc(pid)}">← Retour à la fiche</button></p></div>`, 'modal__card--wide');
+  }
+  /** Fiche joueur : classement, statistiques, évolution, rentabilité des choix. Le détail course par course est dans « Évaluation des choix ». */
   function ficheModal(pid) {
-    const p = state.players.find((x) => x.id === pid) || (pid === state.me && state.user ? { id: pid, name: state.user.name || '', photo: '' } : null);
-    if (!p) return;
+    const p = playerOrMe(pid); if (!p) return;
     const R = state.results, picks = state.picks[pid] || {}, rows = playerRows(pid), played = rows.filter((x) => x.has);
-    const gen = rankRows((pk) => ({ total: G.generalScore(pk, R).total })).find((r) => r.p.id === pid);
-    const gs = G.generalScore(picks, R);
-    const wins = played.filter((x) => x.e && !x.e.status && x.e.rank === 1).length, pod = played.filter((x) => x.e && !x.e.status && x.e.rank <= 3).length;
+    const rk = myRanks(pid), gs = G.generalScore(picks, R), total = gs.total;
     const avg = played.length ? Math.round(played.reduce((a, x) => a + x.pts, 0) / played.length * 10) / 10 : 0;
-    const tile = (v, l) => `<div class="ftile"><b>${v}</b><span>${l}</span></div>`;
-    const desks = D.DESKS.map((d, i) => [d.name, gs.desks[i]]), mx = Math.max(1, ...desks.map((d) => d[1]));
-    const bars = `<ul class="fbars">${desks.map(([l, v]) => `<li><span class="fbars__l">${esc(l)}</span><span class="fbars__b"><i style="width:${Math.round(v / mx * 100)}%"></i></span><b>${v}</b></li>`).join('')}</ul>`;
-    const li = rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.r))}</strong> <span class="sub">${esc(raceName(x.r))} · ${esc(dayOf(x.r.date))}</span></span><span class="dtl__a">${x.has ? skn(x.eff) : '<span class="none">Pas de choix</span>'}${x.e ? ' ' + skierResult(x.r, x.eff, R[x.r.id]) : ''}</span><span class="dtl__k"><b>${x.pts > 0 ? '+' : ''}${x.pts}</b></span></li>`).join('');
-    const body = rows.length ? `<div class="ftiles">${tile(wins, wins > 1 ? 'victoires' : 'victoire')}${tile(pod, pod > 1 ? 'podiums' : 'podium')}${tile(avg, 'pts par course')}</div>
-      <h3 class="fh">Par desk</h3>${bars}<h3 class="fh">Course par course</h3><ul class="dtls">${li}</ul>` : '<p class="hint">Aucune course terminée pour l’instant : les statistiques apparaîtront après la première.</p>';
+    const bars = (items) => { const mx = Math.max(1, ...items.map((i) => i[1])); return `<ul class="fbars">${items.map(([l, v]) => `<li><span class="fbars__l">${esc(l)}</span><span class="fbars__b"><i style="width:${Math.round(v / mx * 100)}%"></i></span><b>${v}</b></li>`).join('')}</ul>`; };
+    const desks = D.DESKS.map((d, i) => [d.name, gs.desks[i]]);
+    const gens = [['Hommes', G.genderScore('H', picks, R)], ['Femmes', G.genderScore('F', picks, R)]];
+    const evs = STATS.events(state, G, R), tt = STATS.totals(state, evs).find((t) => t.p.id === pid) || { n: 0, bubbles: 0, tas: 0, tasPts: 0, wins: 0, podiums: 0 };
+    const stile = (v, l, k) => `<div class="sk__t sk__t--${k}"><b>${v}</b><span>${l}</span></div>`;
+    const wr = STATS.worth(evs, pid).filter((x) => x.ath);
+    const wl = (arr) => arr.length ? `<ul class="fbars fbars--w">${arr.map((x) => `<li><span class="fbars__l">${skn(x.ath)}</span><span class="sub">${x.n} fois</span><b class="${x.diff >= 0 ? 'pos' : 'neg'}">${x.diff >= 0 ? '+' : ''}${Math.round(x.diff * 10) / 10}</b></li>`).join('')}</ul>` : '<p class="hint">Pas encore assez de courses.</p>';
+    const bestW = wr.slice().sort((a, b) => b.diff - a.diff).filter((x) => x.diff > 0).slice(0, 5), worstW = wr.slice().sort((a, b) => a.diff - b.diff).filter((x) => x.diff < 0).slice(0, 5);
+    const prov = STATS.providers(evs, pid).filter((x) => x.pts > 0), provShown = state.ficheMore === pid ? prov : prov.slice(0, 10);
+    const st = (STATS.streaks(evs)[pid]) || {};
+    const strk = `<ul class="fbars fbars--w">${STATS.STREAKS.map((sd) => `<li><span class="fbars__l">${sd.label}</span><span class="sub">${st[sd.id] && st[sd.id].now ? 'en cours : ' + st[sd.id].now : ''}</span><b>${st[sd.id] ? st[sd.id].best : 0}</b></li>`).join('')}</ul>`;
+    const body = !rows.length ? '<p class="hint">Aucune course terminée pour l’instant : les statistiques apparaîtront après la première.</p>' : `
+      <div class="ftiles">${stile(tt.wins, tt.wins > 1 ? 'victoires' : 'victoire', 'win')}${stile(tt.podiums, tt.podiums > 1 ? 'podiums' : 'podium', 'pod')}${stile(avg, 'pts par course', 'top')}
+        ${stile(`${tt.bubbles} <small>sur ${tt.n}</small>`, tt.bubbles > 1 ? 'bulles' : 'bulle', 'bub')}${stile(tt.tas, 'TAS subis', 'c')}${stile(tt.tas ? Math.round(tt.tasPts / tt.tas * 10) / 10 : '–', 'pts moyens sur TAS', 'c')}</div>
+      <h3 class="fh">Évolution</h3><div class="fchart">${sparkline(rows) || '<span class="hint">Pas encore assez de courses.</span>'}</div>
+      <div class="fcols"><div><h3 class="fh">Par desk</h3>${bars(desks)}</div><div><h3 class="fh">Hommes / femmes</h3>${bars(gens)}</div></div>
+      <div class="fcols"><div><h3 class="fh">Top 5 des coureurs mieux rentabilisés que les autres ${info('Points que le coureur t’a rapportés, comparés à la moyenne des autres joueurs qui l’ont pris eux aussi, cumulé sur tous les desks. Les coureurs que personne d’autre n’a pris sont ignorés.')}</h3>${wl(bestW)}</div>
+        <div><h3 class="fh">Top 5 des moins bien rentabilisés</h3>${wl(worstW)}</div></div>
+      <h3 class="fh">Coureurs les plus pourvoyeurs de points</h3>${prov.length ? `<ul class="fbars fbars--w">${provShown.map((x) => `<li><span class="fbars__l">${skn(x.ath)}</span><span class="sub">${x.n} fois</span><b>${x.pts}</b></li>`).join('')}</ul>${prov.length > 10 ? `<p><button type="button" class="linkbtn" data-fmore="${esc(pid)}">${state.ficheMore === pid ? 'Réduire' : `Voir plus… (${prov.length})`}</button></p>` : ''}` : '<p class="hint">Pas encore de points.</p>'}
+      <h3 class="fh">Séries les plus longues</h3>${strk}`;
     openModal(`<div class="fiche"><header class="fiche__head">${pav(Object.assign({}, p), 'lg')}<div><h2 class="fiche__name">${esc(p.name)}${pid === state.me ? ' <em>(toi)</em>' : ''}</h2>
-      <p class="fiche__sum">${gen && Object.keys(R).length ? `${esc(ordinal(gen.rank))} au général · ${gen.v.total} pts` : 'Pas encore de classement'}</p></div></header>${body}</div>`, 'modal__card--wide');
+      <p class="fiche__sum">${rk && rk.gen ? `${esc(ordinal(rk.gen.rank))} au général · ${total} pts` : 'Pas encore de classement'}</p></div></header>
+      ${globeBoard(rk)}${rows.length ? `<p class="fiche__eval"><button type="button" class="btn btn--ghost btn--sm" data-evalpicks="${esc(pid)}">Évaluation des choix du joueur →</button></p>` : ''}${body}
+      ${pid === state.me ? '<p class="fiche__foot"><button type="button" class="btn btn--ghost btn--sm" data-settings>Mes réglages</button></p>' : ''}</div>`, 'modal__card--wide');
   }
   function pointsModal(pid, scope) {
     const p = state.players.find((x) => x.id === pid); if (!p) return;
@@ -1055,15 +1098,30 @@
     state.players.forEach((p) => Object.keys(state.picks[p.id] || {}).forEach((rid) => {
       const race = G.raceOf(rid), pk = state.picks[p.id][rid];
       if (!race || race.cancelled || !visible(p.id, race) || !pk || !pk.a) return;
-      if (G.effectiveAthlete(pk, state.results, rid) === id) rows.push({ p, race, sc: G.scoreRace(race, pk, state.results) });
+      if (G.effectiveAthlete(pk, state.results, rid) === id) rows.push({ p, race, sc: G.scoreRace(race, pk, state.results), tas: !!pk.nopick || !!pk.auto, desk: G.deskIdOf(rid) });
     }));
     rows.sort((a, b) => G.raceStart(a.race) - G.raceStart(b.race));
-    const picks = rows.length ? `<ul class="dtls">${rows.map((x) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(x.race))}</strong> <span class="sub">${esc(raceName(x.race))}</span></span><span class="dtl__a">${pln(x.p)}</span><span class="dtl__k">${x.sc === null || x.sc === undefined ? '' : `<b>${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span></li>`).join('')}</ul>` : '<p class="hint">Personne ne l’a encore choisi (les choix se dévoilent à la deadline).</p>';
+    const curDesk = (() => { const s = upcomingSession(); return s ? s.desk : null; })();
+    const deskBlocks = D.DESKS.slice().sort((a, b) => (a.id === curDesk ? -1 : b.id === curDesk ? 1 : 0)).map((d) => {
+      const took = [], not = [];
+      state.players.forEach((p) => {
+        const mine = rows.filter((x) => x.p.id === p.id && x.desk === d.id);
+        if (mine.length) took.push({ p, n: mine.length, pts: mine.reduce((a, x) => a + (x.sc || 0), 0), tas: mine.some((x) => x.tas), done: mine.some((x) => x.sc !== null && x.sc !== undefined) });
+        else not.push(p);
+      });
+      took.sort((a, b) => b.pts - a.pts);
+      const chip = (x) => `<button type="button" class="pkchip is-took${x.p.id === state.me ? ' me' : ''}" data-player="${esc(x.p.id)}">${pav(x.p, 'xs')}<span>${esc(x.p.name)}${x.tas ? ' 🎲' : ''}</span>${x.done ? `<b class="${x.pts > 0 ? 'on' : 'off'}">${x.pts > 0 ? '+' : ''}${x.pts}</b>` : ''}</button>`;
+      const nchip = (p) => `<button type="button" class="pkchip${p.id === state.me ? ' me' : ''}" data-player="${esc(p.id)}">${pav(p, 'xs')}<span>${esc(p.name)}</span></button>`;
+      return `<section class="pk${d.id === curDesk ? ' pk--cur' : ''}"><h3 class="fh">${esc(d.name)}${d.id === curDesk ? ' <small class="sub">desk en cours</small>' : ''}</h3>
+        <div class="pk__l"><span class="pk__t">Déjà pris</span><div class="pk__chips">${took.length ? took.map(chip).join('') : '<span class="none">personne</span>'}</div></div>
+        <div class="pk__l"><span class="pk__t">Pas encore pris ou révélé</span><div class="pk__chips">${not.length ? not.map(nchip).join('') : '<span class="none">personne</span>'}</div></div></section>`;
+    }).join('');
+    const picks = `<div class="sk__picks">${deskBlocks}<p class="hint">Seuls les choix déjà révélés (deadline passée) sont affichés ; les tiens le sont toujours. Points : ceux de la course du coureur (remplaçant ou tirage au sort compris, 🎲 = tirage au sort).</p></div>`;
     const tabs = window.CX_DATAROOM.seasonTabs(id).map((t) => ({ id: t.id, label: t.label, html: t.html || '<p class="hint">Aucun résultat enregistré sur cette saison.</p>', has: !!t.html }));
-    tabs.push({ id: 'picks', label: 'Choix des joueurs', html: picks, has: rows.length > 0 });
+    tabs.push({ id: 'picks', label: 'Choix des joueurs', html: picks, has: true });
     const first = (tabs.find((t) => t.has) || tabs[0]).id;
     const a = ATH[id];
-    openModal(`<div class="rfiche"><h2>${esc(nameOf(id))}</h2>${natOf(id) || a ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))}${a ? ` · rang UCI ${esc(a.rank || '–')}${a.team ? ' · ' + esc(a.team) : ''}` : ''}</p>` : ''}
+    openModal(`<div class="rfiche"><h2>${esc(nameOf(id))}</h2>${natOf(id) || a ? `<p class="hint">${flagOf(natOf(id))} ${esc(natOf(id))}${a ? ` · rang UCI ${esc(a.rank || '–')}${a.team ? ' · ' + esc(a.team) : ''}` : ''}</p>` : ''}${(() => { const sr = window.CX_DATAROOM.seriesRanks(id); return sr.length ? `<p class="fchips rk__chips">${sr.map((x) => `<span class="rkchip"><b>${esc(ordinal(x.rank))}</b> ${esc(x.label)} <small>${x.pts} pts · sur ${x.of}</small></span>`).join('')}</p>` : ''; })()}
       <div class="seg" role="tablist" aria-label="Fiche coureur">${tabs.map((t) => `<button type="button" role="tab" class="seg__btn" data-rtab="${t.id}" aria-selected="${t.id === first}">${esc(t.label)}</button>`).join('')}</div>
       ${tabs.map((t) => `<div class="rfiche__p" data-rpanel="${t.id}"${t.id === first ? '' : ' hidden'}>${t.html}</div>`).join('')}</div>`);
   }
@@ -1129,10 +1187,11 @@
       <rect x="12" y="45" width="24" height="7" rx="2" fill="#1b2b44"/><rect x="17" y="40" width="14" height="6" fill="#2b3f5f"/>
       <circle cx="24" cy="22" r="19" fill="url(#${id})" stroke="#1b2b44" stroke-width="1.6"/><path d="M12 14c4-6 10-8 15-7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity=".85"/></svg>`;
   }
-  function myRanks() {
+  function myRanks(pid) {
+    pid = pid || state.me;
     const R = state.results, n = state.players.length;
     if (!Object.keys(R).length || !n) return null;
-    const rankOf = (fn) => { const r = rankRows((pk) => ({ total: fn(pk) })).find((x) => x.p.id === state.me); return r ? { rank: r.rank, pts: r.v.total } : null; };
+    const rankOf = (fn) => { const r = rankRows((pk) => ({ total: fn(pk) })).find((x) => x.p.id === pid); return r ? { rank: r.rank, pts: r.v.total } : null; };
     const done = Object.keys(R).map((rid) => G.raceOf(rid)).filter((r) => r && !r.cancelled);
     return { n, gen: done.length ? rankOf((pk) => G.generalScore(pk, R).total) : null, cats: ['H', 'F'].map((g) => (done.some((r) => r.gender === g) ? rankOf((pk) => G.genderScore(g, pk, R)) : null)) };
   }
@@ -1455,6 +1514,8 @@
     if (sendIdea) { const t = ($('#idea-t') || {}).value; if (t && t.trim() && store.addIdea) store.addIdea({ uid: state.me, name: state.user.name, text: t.trim() }).then(closeModal).catch(fail); return; }
     const th = e.target.closest('[data-theme-set]'); if (th) { setTheme(th.dataset.themeSet, true); return; }
     if (window.CX_DATAROOM.click(e.target)) return;
+    const ev = e.target.closest('[data-evalpicks]'); if (ev) { evalModal(ev.dataset.evalpicks); return; }
+    const fm = e.target.closest('[data-fmore]'); if (fm) { state.ficheMore = state.ficheMore === fm.dataset.fmore ? null : fm.dataset.fmore; ficheModal(fm.dataset.fmore); return; }
     const pl = e.target.closest('[data-player]'); if (pl) { ficheModal(pl.dataset.player); return; }
     const rid = e.target.closest('[data-rider]'); if (rid) { riderModal(rid.dataset.rider); return; }
     const rc = e.target.closest('[data-racecard]'); if (rc) { SHARE.open(rc.dataset.racecard); return; }
