@@ -1626,3 +1626,4 @@ html[data-theme='nuit'] .flk__i { color: rgba(255,255,255,.2); }
 .wabtn svg { flex: none; }
 html[data-theme='nuit'] .wabtn { background: #123a27; color: #8fe0b1; border-color: #2fa866; }
 html[data-theme='nuit'] .wabtn:hover { background: #2fa866; color: #0b1f15; }
+.sub--draw{color:var(--accent,#b45309);font-weight:600}

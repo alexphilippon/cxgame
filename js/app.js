@@ -6,11 +6,11 @@
   const PHOTO_DIR = 'img/athletes/'; // une photo par coureur : img/athletes/<id>.jpg (facultatif)
 
   /* ---------- Coureurs : classement UCI (js/athletes.js) + noms lus dans les start lists, résultats et choix libres ---------- */
-  const NAMES = {}, ATH = {}, LIST = { H: [], F: [] };
+  const NAMES = {}, RAW = {}, ATH = {}, LIST = { H: [], F: [] };
   Object.keys(BASE.lists).forEach((k) => {
     const [cat, g] = k.split('-');
     BASE.lists[k].forEach((a) => {
-      NAMES[a.id] = a.name;
+      NAMES[a.id] = a.name; if (a.src) RAW[a.id] = a.src;
       if (!ATH[a.id]) { ATH[a.id] = Object.assign({}, a, { gender: g, cat }); LIST[g].push(ATH[a.id]); }
     });
   });
@@ -87,7 +87,10 @@
     .sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time) || a.gender.localeCompare(b.gender));
   const upcomingSession = () => allSessions().find((s) => G.sessionState(s, now()) !== 'terminée');
   const sessionOf = (race) => G.sessionOfRace(race.id);
-  const nameOf = (id) => NAMES[id] || id;
+  /** « NOM Prénom » (écriture des classements) -> « Prénom NOM ». */
+  const prettyRaw = (n) => { const w = String(n).trim().split(/\s+/); let k = 0; while (k < w.length - 1 && w[k] === w[k].toUpperCase() && w[k] !== w[k].toLowerCase()) k++; return k && k < w.length ? w.slice(k).join(' ') + ' ' + w.slice(0, k).join(' ') : NAMES_FALLBACK(n); };
+  const NAMES_FALLBACK = (n) => n;
+  const nameOf = (id) => (RAW[id] ? prettyRaw(RAW[id]) : NAMES[id] || id);
 
   /* ---------- Stockage partagé (Firebase) ou local ---------- */
   const store = window.CX_STORE.create(CONFIG);
@@ -102,7 +105,7 @@
   /** Coureurs ajoutés (Firestore) : intégrés aux noms et aux listes, sauf s'ils ont été fusionnés avec un autre. */
   const ADDED = {};
   function rebuildAthletes() {
-    Object.keys(ADDED).forEach((id) => { delete NAMES[id]; delete ATH[id]; });
+    Object.keys(ADDED).forEach((id) => { delete NAMES[id]; delete RAW[id]; delete ATH[id]; });
     ['H', 'F'].forEach((g) => { LIST[g] = LIST[g].filter((a) => !ADDED[a.id]); });
     Object.keys(ADDED).forEach((k) => delete ADDED[k]);
     state.extra.forEach((x) => {
@@ -129,7 +132,7 @@
     const res = {}, meta = {};
     Object.entries((state.file && state.file.races) || {}).forEach(([rid, r]) => {   // résultats officiels du dépôt (data/results.json)
       res[rid] = (r.entries || []).map((e) => Object.assign({}, e, { ath: canon(e.ath) }));
-      (r.entries || []).forEach((e) => { if (e.name && !NAMES[e.ath]) NAMES[e.ath] = e.name; });
+      (r.entries || []).forEach((e) => { if (e.name && !NAMES[e.ath]) { NAMES[e.ath] = e.name; RAW[e.ath] = e.name; } });
       if (r.start) meta[rid] = { start: r.start };
     });
     Object.entries(state.raw.results).forEach(([rid, entries]) => { res[rid] = (entries || []).map((e) => Object.assign({}, e, { ath: canon(e.ath) })); delete meta[rid]; });
@@ -213,7 +216,7 @@
   function startListOf(race) {
     const s = state.startlists && state.startlists.races && state.startlists.races[race.id];
     if (!s || !s.start || !s.start.length) return null;
-    return { rows: s.start.map((r) => { const nm = r.name ? N.displayName(r.name) : nameOf(r.ath); if (!NAMES[r.ath]) NAMES[r.ath] = nm; return { bib: r.bib, name: r.name ? N.displayName(r.name) : nameOf(r.ath), nat: (ATH[r.ath] || {}).nat || r.nat || '', ath: r.ath }; }), fetched: s.fetched, entry: !!s.entry };
+    return { rows: s.start.map((r) => { const nm = r.name ? N.displayName(r.name) : nameOf(r.ath); if (!NAMES[r.ath]) { NAMES[r.ath] = nm; if (r.name) RAW[r.ath] = r.name; } return { bib: r.bib, name: r.name ? N.displayName(r.name) : nameOf(r.ath), nat: (ATH[r.ath] || {}).nat || r.nat || '', ath: r.ath }; }), fetched: s.fetched, entry: !!s.entry };
   }
   /** Coureurs proposables pour une course : la start list si elle est publiée, sinon le classement UCI de la catégorie (vide en U23 et U19 : saisie libre). */
   function poolOf(race) {
@@ -437,7 +440,7 @@
         if (!pk || !pk.a) return `<td class="${cls}"><span class="none">Aucun choix</span></td>`;
         const eff = G.effectiveAthlete(pk, state.results, r.id);
         const sc = G.scoreRace(r, pk, state.results);
-        return `<td class="${cls}"><div class="cell">${avatarOf(eff, 'sm')}<div class="cell__txt"><span class="who" title="${esc(nameOf(eff))}">${skn(eff, surname(nameOf(eff)))}</span>${eff !== pk.a ? '<span class="sub">Remplaçant</span>' : ''}${sc === null || sc === undefined ? '' : `<span class="cellpts ${sc > 0 ? 'on' : 'off'}">${sc > 0 ? '+' : ''}${sc}</span>`}</div></div></td>`;
+        return `<td class="${cls}"><div class="cell">${avatarOf(eff, 'sm')}<div class="cell__txt"><span class="who" title="${esc(nameOf(eff))}">${skn(eff, surname(nameOf(eff)))}</span>${pk.auto ? '<span class="sub sub--draw" title="Tirage au sort">🎲 Tiré au sort</span>' : eff !== pk.a ? '<span class="sub">Remplaçant</span>' : ''}${sc === null || sc === undefined ? '' : `<span class="cellpts ${sc > 0 ? 'on' : 'off'}">${sc > 0 ? '+' : ''}${sc}</span>`}</div></div></td>`;
       }).join('');
       return `<tr><th scope="row"><span class="rowhead__day">${dayOf(r.date)}</span> ${fl(placeLabel(r))}<br>${discBadge(r)}<span class="gender gender--${r.gender}">${genderLabel(r)}</span>${r.cancelled || !lockedRace(r) ? '' : `<br><button type="button" class="linkbtn rcbtn" data-racecard="${r.id}">Voir plus…</button>`}</th>${cells}</tr>`;
     }).join('');
@@ -465,7 +468,7 @@
         const pk = (state.picks[p.id] || {})[r.id];
         if (!pk || !pk.a) return;
         const sc = G.scoreRace(r, pk, state.results), dft = p.id === state.me && isDraft(pk, r);
-        ((takes[pk.a] = takes[pk.a] || {})[p.id] = (takes[pk.a][p.id] || [])).push({ tag: raceTag(r), sc, dft, g: r.gender });
+        ((takes[pk.a] = takes[pk.a] || {})[p.id] = (takes[pk.a][p.id] || [])).push({ tag: raceTag(r), sc, dft, g: r.gender, dr: !!pk.nopick });
         totals[r.gender][p.id] = (totals[r.gender][p.id] || 0) + (sc || 0);
       });
     });
@@ -484,7 +487,7 @@
       const rows = playersRanked().map((p) => {
         const cells = ids.map((id) => {
           const l = ((takes[id] || {})[p.id] || []).filter((x) => x.g === g);
-          const inner = l.map((x) => `<span class="mark${x.dft ? ' mark--draft' : ''}" title="${esc(x.tag)}${x.dft ? ' (brouillon)' : ''}"><span class="mark__l">${esc(x.tag)}</span>${x.sc === null ? '' : `<b class="mark__p ${x.sc > 0 ? 'on' : 'off'}">${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span>`).join('');
+          const inner = l.map((x) => `<span class="mark${x.dft ? ' mark--draft' : ''}" title="${esc(x.tag)}${x.dr ? ' (tiré au sort)' : ''}${x.dft ? ' (brouillon)' : ''}"><span class="mark__l">${x.dr ? '🎲 ' : ''}${esc(x.tag)}</span>${x.sc === null ? '' : `<b class="mark__p ${x.sc > 0 ? 'on' : 'off'}">${x.sc > 0 ? '+' : ''}${x.sc}</b>`}</span>`).join('');
           return `<td ${attrs(id)}>${inner}</td>`;
         }).join('');
         return `<tr class="${p.id === state.me ? 'me' : ''}"><th scope="row"><strong>${pln(p)}</strong><span class="sub">${totals[g][p.id] || 0} pts rapportés</span></th>${cells}</tr>`;
@@ -624,7 +627,7 @@
     const live = scopeSessions(key).flatMap((s) => sortedRaces(s)).filter((r) => !r.cancelled && lockedRace(r) && passF(r));
     if (!live.length) return '<p class="empty">Les tendances apparaissent à la deadline de la première session.</p>';
     const cum = shareOf(live).list.slice(0, topCum || 8);
-    const g = (id) => (ATH[id] ? ` <span class="gender gender--${ATH[id].gender}">${ATH[id].gender === 'M' ? 'H' : 'F'}</span>` : '');
+    const g = () => '';
     return `<p class="hint">Indicatif et partiel : on ne montre que les coureurs les plus pris.</p>
       <div class="trend"><h3 class="subtitle">Les coureurs les plus pris depuis le début ${info('Part des joueurs qui ont déjà choisi ce coureur au moins une fois dans ce desk, sur les courses dont la deadline est passée. Mise à jour à chaque deadline.')}</h3>
       <ul class="gauges">${cum.map((x) => gauge(x.id, x.pct, g(x.id))).join('')}</ul></div>`;
@@ -768,11 +771,11 @@
     const mine = active(races).map((r) => {
       const pk = (state.picks[state.me] || {})[r.id];
       const eff = pk && pk.a ? G.effectiveAthlete(pk, state.results, r.id) : null;
-      let tail = '';
+      let tail = pk && pk.auto ? '<span class="sub sub--draw">🎲 tiré au sort</span>' : '';
       if (eff && resOf(r)) {
         const e = resOf(r).find((x) => x.ath === eff), sc = G.scoreRace(r, pk, state.results) || 0;
         const how = e ? (e.status || ordinal(e.rank)) : 'non classé', bad = !e || !!e.status;
-        tail = `${eff !== pk.a ? `<span class="sub">remp. de ${skn(pk.a)}</span>` : ''}<span class="lb__rk${bad ? ' lb__rk--bad' : ''}" data-racecard="${r.id}">${FLAG_SVG}<span>Classement</span> <b>${esc(how)}</b></span><button type="button" class="lb__pts ${sc > 0 ? 'lb__pts--pos' : 'lb__pts--neg'}" data-racecard="${r.id}" title="Voir le résultat complet">${sc > 0 ? '+' : ''}${sc} pt${Math.abs(sc) > 1 ? 's' : ''}</button>`;
+        tail = `${pk.auto ? '<span class="sub sub--draw">🎲 tiré au sort</span>' : ''}${eff !== pk.a && !pk.auto ? `<span class="sub">remp. de ${skn(pk.a)}</span>` : ''}<span class="lb__rk${bad ? ' lb__rk--bad' : ''}" data-racecard="${r.id}">${FLAG_SVG}<span>Classement</span> <b>${esc(how)}</b></span><button type="button" class="lb__pts ${sc > 0 ? 'lb__pts--pos' : 'lb__pts--neg'}" data-racecard="${r.id}" title="Voir le résultat complet">${sc > 0 ? '+' : ''}${sc} pt${Math.abs(sc) > 1 ? 's' : ''}</button>`;
       }
       return `<li class="lb lb--${r.gender}"><span class="lb__tag">${discBadge(r)} <span class="gender gender--${r.gender}">${genderLabel(r)}</span></span>${eff ? `<strong>${skn(eff)}</strong>${tail}` : '<span class="none">aucun choix</span>'}</li>`;
     }).join('');
@@ -880,9 +883,10 @@
   }
   /** Classement par compteur : rows = [{ p, v, sub, bd }], déjà classées. */
   function countRanking(title, rows, unit, cls, note) {
-    return `<div class="tablewrap"><table class="grid grid--rank ${cls || ''}"><caption>${esc(title)}${note ? ' ' + info(note) : ''}</caption>
+    const xb = SHARE.xbar({ key: 'ct:' + title, title, sub: 'CX Game · Cyclo-cross 2026-27', head: ['Rang', 'Joueur', unit], rows: rows.map((r) => ({ c: [String(r.rank), r.p.name + (r.sub ? ' ' + r.sub : ''), String(r.v)], me: r.p.id === state.me })) });
+    return `${SHARE.fsOpen()}<div class="tablewrap"><table class="grid grid--rank ${cls || ''}"><caption>${esc(title)}${note ? ' ' + info(note) : ''} ${xb}</caption>
       <thead><tr><th scope="col" class="num">Rang</th><th scope="col">Joueur</th><th scope="col" class="num">${esc(unit)}</th></tr></thead>
-      <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pln(r.p)}${r.sub ? `<span class="sub"> ${esc(r.sub)}</span>` : ''}</th><td class="num total">${r.v && r.bd ? `<button type="button" class="numbtn" data-bd="${esc(r.bd)}" title="Voir le détail">${r.v}</button>` : r.v}</td></tr>`).join('')}</tbody></table></div>`;
+      <tbody>${rows.map((r) => `<tr class="${r.p.id === state.me ? 'me' : ''}"><td class="num">${rnkCell(r.rank)}</td><th scope="row">${pln(r.p)}${r.sub ? `<span class="sub"> ${esc(r.sub)}</span>` : ''}</th><td class="num total">${r.v && r.bd ? `<button type="button" class="numbtn" data-bd="${esc(r.bd)}" title="Voir le détail">${r.v}</button>` : r.v}</td></tr>`).join('')}</tbody></table></div></div>`;
   }
   /** Fenêtre de détail d'un compteur : bulles, victoires ou plus longue série d'un joueur. */
   function detailModal(spec) {
@@ -894,6 +898,19 @@
     else { const sd = STATS.STREAKS.find((x) => x.id === sid); if (!sd) return; list = STATS.longestRun(mine, sd.f); title = `${sd.label} : meilleure série de ${p.name}`; }
     const li = list.map((e) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(e.race))}</strong> <span class="sub">${esc(raceName(e.race))} · ${esc(dayOf(e.race.date))}</span></span><span class="dtl__a">${skn(e.eff)}${e.eff !== e.pk.a ? ' <em class="sub">(remplaçant)</em>' : ''}</span><span class="dtl__k ${e.bubble ? 'bad' : ''}">${e.status ? esc(e.status) : e.rank ? esc(ordinal(e.rank)) : '–'} <b>${e.pts > 0 ? '+' : ''}${e.pts}</b></span></li>`).join('');
     openModal(`<h2>${esc(title)}</h2><ul class="dtls">${li || '<li class="none">Aucun.</li>'}</ul>`);
+  }
+  /** Data room, onglet « Bulles » : coureurs choisis qui ont fait 0 point (victimes = joueurs touchés, bulles = une par course). */
+  function bubblesHtml() {
+    const evs = STATS.events(state, G, state.results).filter((e) => e.bubble && e.eff);
+    const rank = (list) => { let last = null, rk = 0; list.forEach((r, i) => { if (r.n !== last) { rk = i + 1; last = r.n; } r.rank = rk; }); return list; };
+    const group = (items, keyF, subF) => { const m = {}; items.forEach((x) => { const o = (m[keyF(x)] = m[keyF(x)] || { k: keyF(x), n: 0, sub: {} }); o.n++; const t = subF(x); o.sub[t] = (o.sub[t] || 0) + 1; }); return rank(Object.values(m).sort((a, b) => b.n - a.n || nameOf(a.k).localeCompare(nameOf(b.k), 'fr'))); };
+    const seen = new Set(), once = evs.filter((x) => { const k = x.eff + '|' + x.race.id; if (seen.has(k)) return false; seen.add(k); return true; });
+    const victims = group(evs, (x) => x.eff, (x) => x.p.name), bub = group(once, (x) => x.eff, (x) => placeLabel(x.race) + ' ' + genderLabel(x.race));
+    const list = (rows, title, unit, key) => { const xb = SHARE.xbar({ key: 'dr:bub:' + key, title, sub: 'Bulles · CX Game 2026-27', head: ['Rang', 'Coureur', unit], rows: rows.slice(0, 30).map((r) => ({ c: [String(r.rank), nameOf(r.k), String(r.n)] })) });
+      return `<ol class="bblist">${rows.slice(0, 15).map((r) => `<li class="bb">${rnkCell(r.rank)}<div class="bb__main"><div class="bb__h"><b>${skn(r.k)}</b><span class="bb__n">${r.n} <small>✗</small></span></div><div class="bb__d">${Object.entries(r.sub).sort((a, b) => b[1] - a[1]).map(([t, n]) => `<span class="bb__c">${esc(t)}${n > 1 ? ` <b>×${n}</b>` : ''}</span>`).join('')}</div></div></li>`).join('') || '<li class="none">Aucune bulle pour l’instant.</li>'}</ol>`.replace('<ol', `<h3 class="subtitle">${esc(title)} ${xb}<span class="bb__tot">${rows.reduce((a, r) => a + r.n, 0)} au total</span></h3><ol`); };
+    return `<p class="hint">Une bulle : le coureur choisi fait 0 point (DNF, disqualifié ou hors des points). Un DNS n’en est pas une. Tous desks confondus, remplaçants pris en compte.</p>
+      ${list(victims, 'Les coureurs qui ont fait le plus de victimes', 'Victimes', 'victimes')}<p class="hint">Un coureur à 0 point choisi par 5 joueurs compte pour 5 victimes.</p>
+      ${list(bub, 'Les coureurs qui font le plus de bulles', 'Bulles', 'bulles')}<p class="hint">Une bulle par course, quel que soit le nombre de joueurs touchés.</p>`;
   }
   function generalPanel() {
     const R = state.results, sub = state.gsub || 'globes';
@@ -1132,7 +1149,7 @@
     return `<div class="acct"><div class="acct__who"><span class="acct__avw"><button type="button" class="acct__avb" data-photo aria-label="${me.photo ? 'Changer ma photo' : 'Ajouter ma photo'}">${pav(Object.assign({}, me, { name }), 'lg')}</button>${cam}</span>
       <div class="acct__id"><span class="acct__hi">Mon compte</span><strong class="acct__name">${esc(name)}</strong></div></div>
       ${globeBoard(rk)}
-      <div class="acct__btns"><button type="button" class="btn btn--sm btn--ghost acct__ib" data-settings aria-label="Mes réglages" title="Mes réglages"><span class="lbl-lg">Mes réglages</span><svg class="ico-sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></button></div></div>`;
+      <div class="acct__btns">${FICHE_ON ? `<button type="button" class="btn btn--sm acct__ib" data-player="${esc(state.me)}" aria-label="Ma fiche" title="Ma fiche"><span class="lbl-lg">Ma fiche</span><svg class="ico-sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.7"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></svg></button>` : ''}<button type="button" class="btn btn--sm btn--ghost acct__ib" data-settings aria-label="Mes réglages" title="Mes réglages"><span class="lbl-lg">Mes réglages</span><svg class="ico-sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></button></div></div>`;
   }
   function renderUserbar() {
     const el = $('#userbar'); if (!el) return;
@@ -1530,7 +1547,7 @@
     });
     return { races, ath };
   }
-  window.CX_DATAROOM.init({ extra: extraHistory, rider: (id) => riderModal(id), esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
+  window.CX_DATAROOM.init({ extra: extraHistory, bubbles: bubblesHtml, share: SHARE, rider: (id) => riderModal(id), esc, ATH: () => ATH, G, D, flag: flagOf, ordinal, openModal, rerender: () => render() });
   const adminCtx = () => ({ state, G, D, store, LIST, ATH, esc, norm, at, F_DAY, hourText, dlShort, shortOf, placeLabel, discLabel, genderLabel, nameOf, avatarOf, sortedRaces, lockedRace, active, canon, newPlayers, markPlayersSeen, rerender: render, fail, isAdmin, ov: () => Object.assign({}, state.overrides, state.ovStore) });
   const hash = location.hash.replace('#', '');
   if (TAB_IDS.includes(hash)) state.tab = hash;

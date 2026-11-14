@@ -5,7 +5,7 @@
   let C = null;
   const SEASONS = ['2026-2027', '2025-2026'], short = (y) => y.slice(2, 4) + '-' + y.slice(7);
   const store = {};                                   // saison -> { H, loading }
-  const ui = { y: SEASONS[0], g: 'H', cat: 'ELI', s: 'all', more: false };
+  const ui = { y: SEASONS[0], g: 'H', cat: 'ELI', s: 'all', more: false, sub: 'comp', open: {} };
   const SER = { CdM: 'Coupe du monde', SP: 'Superprestige', XO: 'X²O Trofee', HG: 'HG Cross', EU: 'Euros', MO: 'Mondiaux' };
   /** Historique d'une saison + courses du jeu saisies au jour le jour (C.extra(y) → { races, ath }), sans doublon (même date, catégorie, genre). */
   const H_ = (y) => {
@@ -42,7 +42,7 @@
     let last = null, rk = 0; rows.forEach((r, i) => { if (r.pts !== last) { rk = i + 1; last = r.pts; } r.rank = rk; });
     return { races, rows };
   }
-  function render() {
+  function course() {
     load();
     const H = cur();
     if (!H) return '<p class="hint">Chargement des résultats…</p>';
@@ -52,14 +52,48 @@
     const body = shown.map((r) => `<tr>
       <th scope="row"><button type="button" class="dr__sk dr__lnk" data-hist="${C.esc(r.id)}">${C.flag(natOf(r.id))}<span class="dr__nm">${C.esc(nameOf(r.id))}</span></button></th>
       <td class="num">${r.n}</td>${races.map((x) => { const e = r.cells[x.id]; return `<td class="num dr__c ${cellCls(e)}">${e == null ? '' : e}</td>`; }).join('')}</tr>`).join('');
-    return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Saison ${short(ui.y)} · ${sers.map((k) => SER[k]).join(', ')}, résultats complets par course</p></div></header>
-      <div class="ff dr__filters" role="group" aria-label="Filtres"><span class="ff__g">${SEASONS.map((y) => chip('y', y, short(y), ui.y === y).replace('ffc--' + y, 'ffc--all')).join('')}</span><span class="ff__g">${chip('g', 'H', 'Hommes', ui.g === 'H')}${chip('g', 'F', 'Femmes', ui.g === 'F')}</span>
+    return `<p class="hint">Saison ${short(ui.y)} · ${sers.map((k) => SER[k]).join(', ')}, résultats complets par course</p>
+      <div class="ff dr__filters" role="group" aria-label="Filtres"><span class="ff__g">${chip('g', 'H', 'Hommes', ui.g === 'H')}${chip('g', 'F', 'Femmes', ui.g === 'F')}</span>
       <span class="ff__g">${chip('s', 'all', 'Toutes', ui.s === 'all')}${sers.map((k) => chip('s', k, SER[k], ui.s === k)).join('')}</span>
       <span class="ff__g">${['ELI', 'U23', 'U19'].map((c) => chip('cat', c, C.D.CATS[c].short, ui.cat === c)).join('')}</span></div>
       <div class="tablewrap tablewrap--scroll"><table class="grid grid--rank dr__tab"><caption>${ui.g === 'H' ? 'Hommes' : 'Femmes'} ${C.esc(C.D.CATS[ui.cat].fr.toLowerCase())}, ${races.length} courses</caption>
       <thead><tr><th scope="col">Coureur</th><th class="num" scope="col" title="Courses disputées">Crs</th>${head}</tr></thead><tbody>${body || `<tr><td colspan="${2 + races.length}"><span class="none">Aucun résultat.</span></td></tr>`}</tbody></table></div>
       ${rows.length > 40 ? `<p class="dr__more"><button type="button" class="btn btn--ghost btn--sm" data-dr="more:1">${ui.more ? 'Réduire' : `Voir les ${rows.length} coureurs`}</button></p>` : ''}
-      <p class="hint">Cases : place d’arrivée (DNF : abandon). Crs : courses disputées. Les coureurs sont classés selon leurs résultats dans le barème du jeu, mais les points ne sont pas affichés (barèmes différents selon les séries). Clique sur un coureur pour voir sa saison. Sources : UCI, Superprestige, X²O Trofee, HG Cross.</p></section>`;
+      <p class="hint">Cases : place d’arrivée (DNF : abandon). Crs : courses disputées. Les coureurs sont classés selon leurs résultats dans le barème du jeu, mais les points ne sont pas affichés (barèmes différents selon les séries). Clique sur un coureur pour voir sa saison. Sources : UCI, Superprestige, X²O Trofee, HG Cross.</p>`;
+  }
+  /** Onglet « Compétitions » : total de la saison puis un classement par série (barème du jeu). */
+  function comp() {
+    load(SEASONS[0]);
+    const H = H_(SEASONS[0]);
+    if (!H) return '<p class="hint">Chargement des résultats…</p>';
+    const base = H.races.filter((r) => r.g === ui.g && r.cat === ui.cat && !r.nowc);
+    const rank = (races) => {
+      const by = {};
+      races.forEach((r) => r.res.forEach(([id, e]) => { const o = (by[id] = by[id] || { id, pts: 0, n: 0 }); o.n++; o.pts += pts(e); }));
+      const rows = Object.values(by).sort((a, b) => b.pts - a.pts || a.n - b.n || nameOf(a.id).localeCompare(nameOf(b.id), 'fr'));
+      let last = null, rk = 0; rows.forEach((r, i) => { if (r.pts !== last) { rk = i + 1; last = r.pts; } r.rank = rk; });
+      return rows;
+    };
+    const who = (ui.g === 'H' ? 'Hommes' : 'Femmes') + ' ' + C.D.CATS[ui.cat].fr.toLowerCase();
+    const block = (key, title, races) => {
+      const rows = rank(races), open = !!ui.open[key], shown = open ? rows : rows.slice(0, 15);
+      const xb = C.share ? C.share.xbar({ key: 'dr:comp:' + key + ui.g + ui.cat, title, sub: who + ' · CX Game 2026-27', unit: ' pts', head: ['Rang', 'Coureur', 'Points'], rows: rows.slice(0, 30).map((r) => ({ c: [String(r.rank), nameOf(r.id), String(r.pts)] })) }) : '';
+      const body = shown.map((r) => `<tr><td class="num">${r.rank}</td><th scope="row"><button type="button" class="dr__sk dr__lnk" data-hist="${C.esc(r.id)}">${C.flag(natOf(r.id))}<span class="dr__nm">${C.esc(nameOf(r.id))}</span></button></th><td class="num"><b>${r.pts}</b></td><td class="num">${r.n}</td></tr>`).join('');
+      return `${C.share ? C.share.fsOpen() : ''}<div class="tablewrap"><table class="grid grid--rank dr__light"><caption>${C.esc(title)} · ${races.length} course${races.length > 1 ? 's' : ''}${xb}</caption>
+        <thead><tr><th class="num" scope="col">Rang</th><th scope="col">Coureur</th><th class="num" scope="col">Pts</th><th class="num" scope="col" title="Courses disputées">Crs</th></tr></thead><tbody>${body || '<tr><td colspan="4"><span class="none">Aucun résultat.</span></td></tr>'}</tbody></table></div>${C.share ? '</div>' : ''}
+        ${rows.length > 15 ? `<p class="dr__more"><button type="button" class="btn btn--ghost btn--sm" data-dr="open:${key}">${open ? 'Réduire' : `Voir les ${rows.length} coureurs`}</button></p>` : ''}`;
+    };
+    const sers = ['SP', 'XO', 'HG', 'CdM'].filter((k) => base.some((r) => r.series === k));
+    return `<div class="ff dr__filters" role="group" aria-label="Filtres"><span class="ff__g">${chip('g', 'H', 'Hommes', ui.g === 'H')}${chip('g', 'F', 'Femmes', ui.g === 'F')}</span><span class="ff__g">${['ELI', 'U23', 'U19'].map((c) => chip('cat', c, C.D.CATS[c].short, ui.cat === c)).join('')}</span></div>
+      <h3 class="subtitle">Total de la saison</h3>${block('all', 'Toutes compétitions', base)}
+      ${sers.map((k) => `<h3 class="subtitle">${C.esc(SER[k])}</h3>${block(k, SER[k], base.filter((r) => r.series === k))}`).join('')}
+      <p class="hint">Points au barème du jeu (100, 80, 60…) d’après les résultats complets de chaque course : ils ne reprennent pas les barèmes officiels des séries.</p>`;
+  }
+  function render() {
+    const body = ui.sub === 'bub' ? (C.bubbles ? C.bubbles() : '') : ui.sub === 'comp' ? comp() : (ui.y = ui.sub === 'past' ? SEASONS[1] : SEASONS[0], course());
+    const tab = (id, l, cls) => `<button type="button" role="tab" class="seg__btn${cls || ''}" aria-selected="${ui.sub === id}" data-dr="sub:${id}">${l}</button>`;
+    return `<section class="genpanel"><header class="deskhead"><div><h2>Data room</h2><p class="deskhead__meta">Classements par compétition, résultats complets par course et bulles</p></div></header>
+      <div class="deskbar"><div class="seg" role="tablist" aria-label="Data room">${tab('comp', 'Compétitions')}${tab('course', 'Par course')}${tab('bub', 'Bulles')}${tab('past', '2025-26', ' seg__btn--past')}</div></div>${body}</section>`;
   }
   /** Saison 2025-26 d'un coureur : [{race, e}] (toutes catégories). */
   function historyOf(id, y) {
@@ -94,7 +128,7 @@
   /** Clic dans la Data room : true si traité. */
   function click(t) {
     const d = t.closest('[data-dr]');
-    if (d) { const [k, v] = d.dataset.dr.split(':'); if (k === 'g') ui.g = v; else if (k === 'y') { ui.y = v; ui.s = 'all'; } else if (k === 'cat') ui.cat = v; else if (k === 's') ui.s = v; else if (k === 'more') ui.more = !ui.more; ui.more = k === 'more' ? ui.more : false; C.rerender(); return true; }
+    if (d) { const [k, v] = d.dataset.dr.split(':'); if (k === 'fs') { const w = d.closest('.fswrap'); if (w) { const on = w.classList.toggle('is-fs'); document.body.classList.toggle('fs-lock', on); if (w.dataset.keep && C.share) C.share.fsOn(on); d.setAttribute('aria-pressed', on); } return true; } if (k === 'g') ui.g = v; else if (k === 'sub') { ui.sub = v; ui.s = 'all'; ui.more = false; } else if (k === 'open') ui.open[v] = !ui.open[v]; else if (k === 'y') { ui.y = v; ui.s = 'all'; } else if (k === 'cat') ui.cat = v; else if (k === 's') ui.s = v; else if (k === 'more') ui.more = !ui.more; ui.more = k === 'more' ? ui.more : false; C.rerender(); return true; }
     const h = t.closest('[data-hist]'); if (h) { if (C.rider) C.rider(h.dataset.hist); else histModal(h.dataset.hist); return true; }
     return false;
   }
