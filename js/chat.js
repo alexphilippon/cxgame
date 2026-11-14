@@ -57,8 +57,12 @@
       <ul class="chat__msgs" aria-live="polite"></ul>
       <form class="chat__form" data-chat-send><textarea id="chat-in" rows="2" maxlength="${MAX}" placeholder="Ton message…" aria-label="Ton message"></textarea><button type="submit" class="btn btn--sm">Envoyer</button></form>
       <p class="hint chat__note" id="chat-note">Privé entre vous deux. Tu peux supprimer tes messages ; « Signaler » prévient l’organisateur.</p></div>`, 'modal__card--chat');
-    cur.unsub = C.store.listenMsgs(cid, (ms) => { if (!cur || cur.cid !== cid) return; cur.msgs = ms; paintMsgs(true); markSeen(); });
-    markSeen();
+    // la conversation doit exister avant d'écouter ses messages (sinon les règles refusent la lecture et l'écoute s'arrête)
+    const mine = cur;
+    Promise.resolve(C.store.ensureChat(cid, me, other)).catch(() => {}).then(() => {
+      if (cur !== mine) return;
+      cur.unsub = C.store.listenMsgs(cid, (ms) => { if (!cur || cur.cid !== cid) return; cur.msgs = ms; paintMsgs(true); markSeen(); });
+    });
   }
   const say = (t) => { const n = document.querySelector('#modal #chat-note'); if (n) n.textContent = t; };
   async function send(form) {

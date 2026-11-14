@@ -61,6 +61,7 @@
         const c = chatsOf()[cid] || (chatsOf()[cid] = { members: [from, other].sort(), msgs: [], seen: {} }), ts = Date.now();
         c.msgs.push({ id: 'm' + ts + Math.random().toString(36).slice(2, 5), from, text, ts }); c.last = { from, text, ts }; c.seen[from] = ts; persist(); emitChats(); emitMsgs(cid);
       },
+      async ensureChat(cid, me, other) { if (!chatsOf()[cid]) { chatsOf()[cid] = { members: [me, other].sort(), msgs: [], seen: {} }; persist(); } },
       async markSeen(cid, me) { const c = chatsOf()[cid]; if (!c) return; c.seen[me] = Date.now(); persist(); emitChats(); },
       async deleteMsg(cid, mid) { const c = chatsOf()[cid]; if (!c) return; c.msgs = c.msgs.filter((m) => m.id !== mid); const l = c.msgs[c.msgs.length - 1]; c.last = l ? { from: l.from, text: l.text, ts: l.ts } : null; persist(); emitChats(); emitMsgs(cid); },
       async reportMsg(r) { (db.reports || (db.reports = [])).push(Object.assign({ id: 'r' + Date.now(), ts: Date.now() }, r)); persist(); if (repCb) repCb(db.reports.slice().reverse()); },
@@ -145,6 +146,7 @@
         await ref.collection('msgs').add({ from, text, ts });
         await ref.update({ last: { from, text, ts }, ['seen.' + from]: ts });
       },
+      async ensureChat(cid, me, other) { await ready; await db.doc('chats/' + cid).set({ members: [me, other].sort() }, { merge: true }); },
       async markSeen(cid, me) { await ready; try { await db.doc('chats/' + cid).update({ ['seen.' + me]: Date.now() }); } catch (e) { /* ignoré */ } },
       async deleteMsg(cid, mid) { await ready; await db.doc('chats/' + cid + '/msgs/' + mid).delete(); },
       async reportMsg(r) { await ready; await db.collection('reports').add(Object.assign({}, r, { ts: Date.now() })); },
