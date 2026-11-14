@@ -58,7 +58,7 @@
       listenChats(me, cb) { chatsCb = { me, cb }; emitChats(); return () => { chatsCb = null; }; },
       listenMsgs(cid, cb) { msgCbs[cid] = cb; emitMsgs(cid); return () => { delete msgCbs[cid]; }; },
       async sendMsg(cid, from, other, text) {
-        const c = chatsOf()[cid] || (chatsOf()[cid] = { members: [from, other].sort(), msgs: [], seen: {} }), ts = Date.now();
+        const c = chatsOf()[cid] || (chatsOf()[cid] = { members: [from, other].sort(), msgs: [], seen: {} }), prev = c.msgs.length ? c.msgs[c.msgs.length - 1].ts : 0, ts = Math.max(Date.now(), prev + 1);
         c.msgs.push({ id: 'm' + ts + Math.random().toString(36).slice(2, 5), from, text, ts }); c.last = { from, text, ts }; c.seen[from] = ts; persist(); emitChats(); emitMsgs(cid);
       },
       async ensureChat(cid, me, other) { if (!chatsOf()[cid]) { chatsOf()[cid] = { members: [me, other].sort(), msgs: [], seen: {} }; persist(); } },
@@ -139,11 +139,11 @@
       async addIdea(i) { await ready; await db.collection('ideas').add(Object.assign({}, i, { ts: FV.serverTimestamp() })); },
       chatId: (a, b) => [a, b].sort().join('_'),
       listenChats(me, cb) { let un = () => {}; ready.then(() => { un = db.collection('chats').where('members', 'array-contains', me).onSnapshot((s) => cb(s.docs.map((d) => Object.assign({ id: d.id }, d.data()))), (e) => console.error('Messages :', e)); }); return () => un(); },
-      listenMsgs(cid, cb) { let un = () => {}; ready.then(() => { un = db.collection('chats/' + cid + '/msgs').orderBy('ts').limitToLast(300).onSnapshot((s) => cb(s.docs.map((d) => Object.assign({ id: d.id }, d.data()))), (e) => console.error('Messages :', e)); }); return () => un(); },
+      listenMsgs(cid, cb) { let un = () => {}; ready.then(() => { un = db.collection('chats/' + cid + '/msgs').orderBy('ts').limitToLast(300).onSnapshot((s) => cb(s.docs.map((d) => { const m = d.data({ serverTimestamps: 'estimate' }); return Object.assign({ id: d.id }, m, { ts: ms(m.ts) }); })), (e) => console.error('Messages :', e)); }); return () => un(); },
       async sendMsg(cid, from, other, text) {
         await ready; const ref = db.doc('chats/' + cid), ts = Date.now();
         await ref.set({ members: [from, other].sort() }, { merge: true });
-        await ref.collection('msgs').add({ from, text, ts });
+        await ref.collection('msgs').add({ from, text, ts: FV.serverTimestamp() });   // l'ordre vient de l'horloge du serveur, pas de celles des joueurs
         await ref.update({ last: { from, text, ts }, ['seen.' + from]: ts });
       },
       async ensureChat(cid, me, other) { await ready; await db.doc('chats/' + cid).set({ members: [me, other].sort() }, { merge: true }); },

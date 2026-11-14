@@ -61,7 +61,7 @@
     const mine = cur;
     Promise.resolve(C.store.ensureChat(cid, me, other)).catch(() => {}).then(() => {
       if (cur !== mine) return;
-      cur.unsub = C.store.listenMsgs(cid, (ms) => { if (!cur || cur.cid !== cid) return; cur.msgs = ms; paintMsgs(true); markSeen(); });
+      cur.unsub = C.store.listenMsgs(cid, (ms) => { if (!cur || cur.cid !== cid) return; cur.msgs = ms.slice().sort((a, b) => a.ts - b.ts || (a.id < b.id ? -1 : 1)); paintMsgs(true); markSeen(); });
     });
   }
   const say = (t) => { const n = document.querySelector('#modal #chat-note'); if (n) n.textContent = t; };
