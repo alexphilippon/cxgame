@@ -3,7 +3,7 @@
   'use strict';
   let C = null; // contexte fourni par app.js à chaque rendu
   const A = { sub: 'ctl', race: '', parsed: null, text: '', msg: '', calRace: '' };
-  const SUBS = [['ctl', 'Contrôles'], ['res', 'Résultats'], ['cal', 'Calendrier'], ['ath', 'Coureurs'], ['idea', 'Idées et questions']];
+  const SUBS = [['ctl', 'Contrôles'], ['res', 'Résultats'], ['cal', 'Calendrier'], ['ath', 'Coureurs'], ['idea', 'Idées et questions'], ['rep', 'Signalements']];
   const $ = (s) => document.querySelector(s);
   const norm = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const tokens = (s) => norm(s).split(/[^a-z0-9]+/).filter(Boolean);
@@ -192,9 +192,20 @@
     return `<ul class="adm__list">${A.ideas.map((i) => `<li><strong>${C.esc(i.name || '?')}</strong> ${i.kind === 'question' ? '<span class="flag flag--moved">Question</span>' : '<span class="flag flag--idea">Idée</span>'} ${i.contact ? `<span class="sub">Contact : ${C.esc(i.contact)}</span>` : ''}<span class="sub">${C.esc(new Date(i.ts).toLocaleString('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'short', timeStyle: 'short' }))}</span><br>${C.esc(i.text).replace(/\n/g, '<br>')}</li>`).join('')}</ul>`;
   }
 
+  function repView() {
+    if (!C.store.listenReports) return '<p class="hint">Non disponible.</p>';
+    if (!A.repOn) { A.repOn = true; A.reps = []; C.store.listenReports((l) => { A.reps = l; C.rerender(); }); }
+    if (!A.reps.length) return '<p class="hint">Aucun message signalé.</p>';
+    const t = (ts) => new Date(ts).toLocaleString('fr-FR', { timeZone: 'Europe/Paris', dateStyle: 'short', timeStyle: 'short' });
+    return `<ul class="adm__list">${A.reps.map((r) => `<li><strong>${C.esc(r.fromName || '?')}</strong> <span class="flag flag--moved">signalé par ${C.esc(r.byName || '?')}</span> <span class="sub">${C.esc(t(r.ts))}</span>
+      <blockquote class="rep__q">${C.esc(r.text).replace(/\n/g, '<br>')}</blockquote>
+      <details><summary class="sub">Contexte (derniers messages)</summary><ul class="rep__ctx">${(r.ctx || []).map((m) => `<li><b>${C.esc(m.from)}</b> : ${C.esc(m.text)} <span class="sub">${C.esc(t(m.ts))}</span></li>`).join('')}</ul></details>
+      <p><button type="button" class="btn btn--sm" data-rep-del="${C.esc(r.cid)}|${C.esc(r.mid)}|${C.esc(r.id)}">Supprimer le message</button> <button type="button" class="btn btn--ghost btn--sm" data-rep-ok="${C.esc(r.id)}">Classer sans suite</button></p></li>`).join('')}</ul>`;
+  }
+
   function render(ctx) {
     C = ctx;
-    const body = { ctl: ctlView, res: resView, cal: calView, ath: athView, idea: ideaView }[A.sub]();
+    const body = { ctl: ctlView, res: resView, cal: calView, ath: athView, idea: ideaView, rep: repView }[A.sub]();
     const drawN = 0;
     const tabs = SUBS.map(([id, l]) => `<button type="button" role="tab" class="seg__btn" aria-selected="${A.sub === id}" data-adm-sub="${id}">${l}${id === 'draw' && drawN ? ` (${drawN})` : ''}</button>`).join('');
     return `<section class="adm"><header class="deskhead"><div><h2>Administration</h2><p class="deskhead__meta">Réservé à l’organisateur</p></div></header>
@@ -206,6 +217,8 @@
   document.addEventListener('click', async (e) => {
     if (!C) return;
     const sub = e.target.closest('[data-adm-sub]');
+    const rd = e.target.closest('[data-rep-del]'); if (rd) { const [cid, mid, id] = rd.dataset.repDel.split('|'); Promise.resolve(C.store.deleteMsg(cid, mid)).catch(() => {}).then(() => C.store.deleteReport(id)); return; }
+    const rk = e.target.closest('[data-rep-ok]'); if (rk) { C.store.deleteReport(rk.dataset.repOk); return; }
     if (sub) { A.sub = sub.dataset.admSub; A.msg = ''; C.rerender(); return; }
     const b = e.target.closest('[data-adm]'); if (!b) return;
     const act = b.dataset.adm;

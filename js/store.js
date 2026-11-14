@@ -21,7 +21,10 @@
     const emit = (k) => { if (!handlers[k]) return; const d = db[k];
       handlers[k](k === 'players' ? Object.keys(d).map((id) => Object.assign({ id }, d[id])) : k === 'athletes' ? Object.keys(d).map((id) => Object.assign({ id }, d[id])) : JSON.parse(JSON.stringify(d === undefined ? {} : d))); };
     const emitAll = () => Object.keys(handlers).forEach(emit);
-    let ideasCb = null;
+    let ideasCb = null, chatsCb = null, repCb = null; const msgCbs = {};
+    const chatsOf = () => db.chats || (db.chats = {});
+    const emitChats = () => { if (!chatsCb) return; const me = chatsCb.me; chatsCb.cb(Object.keys(chatsOf()).filter((k) => chatsOf()[k].members.includes(me)).map((k) => ({ id: k, members: chatsOf()[k].members, last: chatsOf()[k].last || null, seen: chatsOf()[k].seen || {} }))); };
+    const emitMsgs = (cid) => { if (msgCbs[cid]) msgCbs[cid](((chatsOf()[cid] || {}).msgs || []).slice()); };
     const api = {
       mode: 'local', ready: Promise.resolve(),
       onAuth(cb) { authCbs.push(cb); cb(userObj()); },
@@ -51,6 +54,18 @@
       async touchPresence(u) { db.players[u] = Object.assign({}, db.players[u], { lastSeen: Date.now() }); persist(); },
       async setPhotoBlock(u, blocked) { db.players[u] = Object.assign({}, db.players[u], { photo: '', photoBlocked: !!blocked }); persist(); emit('players'); },
       async addIdea(i) { (db.ideas || (db.ideas = [])).push(Object.assign({ id: 'i' + Date.now(), ts: Date.now() }, i)); persist(); if (ideasCb) ideasCb(db.ideas.slice().reverse()); },
+      chatId: (a, b) => [a, b].sort().join('_'),
+      listenChats(me, cb) { chatsCb = { me, cb }; emitChats(); return () => { chatsCb = null; }; },
+      listenMsgs(cid, cb) { msgCbs[cid] = cb; emitMsgs(cid); return () => { delete msgCbs[cid]; }; },
+      async sendMsg(cid, from, other, text) {
+        const c = chatsOf()[cid] || (chatsOf()[cid] = { members: [from, other].sort(), msgs: [], seen: {} }), ts = Date.now();
+        c.msgs.push({ id: 'm' + ts + Math.random().toString(36).slice(2, 5), from, text, ts }); c.last = { from, text, ts }; c.seen[from] = ts; persist(); emitChats(); emitMsgs(cid);
+      },
+      async markSeen(cid, me) { const c = chatsOf()[cid]; if (!c) return; c.seen[me] = Date.now(); persist(); emitChats(); },
+      async deleteMsg(cid, mid) { const c = chatsOf()[cid]; if (!c) return; c.msgs = c.msgs.filter((m) => m.id !== mid); const l = c.msgs[c.msgs.length - 1]; c.last = l ? { from: l.from, text: l.text, ts: l.ts } : null; persist(); emitChats(); emitMsgs(cid); },
+      async reportMsg(r) { (db.reports || (db.reports = [])).push(Object.assign({ id: 'r' + Date.now(), ts: Date.now() }, r)); persist(); if (repCb) repCb(db.reports.slice().reverse()); },
+      listenReports(cb) { repCb = cb; cb((db.reports || []).slice().reverse()); },
+      async deleteReport(id) { db.reports = (db.reports || []).filter((x) => x.id !== id); persist(); if (repCb) repCb(db.reports.slice().reverse()); },
       listenContacts(cb) { const o = {}; db.users.forEach((u) => { o[u.uid] = u.email; }); cb(o); },
       listenIdeas(cb) { ideasCb = cb; cb((db.ideas || []).slice().reverse()); },
     };
@@ -121,6 +136,20 @@
       async updateAthlete(id, patch) { await ready; await db.doc('athletes/' + id).set(patch, { merge: true }); },
       async setAlias(from, to) { await ready; await setField('config/aliases', from, to || null); },
       async addIdea(i) { await ready; await db.collection('ideas').add(Object.assign({}, i, { ts: FV.serverTimestamp() })); },
+      chatId: (a, b) => [a, b].sort().join('_'),
+      listenChats(me, cb) { let un = () => {}; ready.then(() => { un = db.collection('chats').where('members', 'array-contains', me).onSnapshot((s) => cb(s.docs.map((d) => Object.assign({ id: d.id }, d.data()))), (e) => console.error('Messages :', e)); }); return () => un(); },
+      listenMsgs(cid, cb) { let un = () => {}; ready.then(() => { un = db.collection('chats/' + cid + '/msgs').orderBy('ts').limitToLast(300).onSnapshot((s) => cb(s.docs.map((d) => Object.assign({ id: d.id }, d.data()))), (e) => console.error('Messages :', e)); }); return () => un(); },
+      async sendMsg(cid, from, other, text) {
+        await ready; const ref = db.doc('chats/' + cid), ts = Date.now();
+        await ref.set({ members: [from, other].sort() }, { merge: true });
+        await ref.collection('msgs').add({ from, text, ts });
+        await ref.update({ last: { from, text, ts }, ['seen.' + from]: ts });
+      },
+      async markSeen(cid, me) { await ready; try { await db.doc('chats/' + cid).update({ ['seen.' + me]: Date.now() }); } catch (e) { /* ignoré */ } },
+      async deleteMsg(cid, mid) { await ready; await db.doc('chats/' + cid + '/msgs/' + mid).delete(); },
+      async reportMsg(r) { await ready; await db.collection('reports').add(Object.assign({}, r, { ts: Date.now() })); },
+      listenReports(cb) { ready.then(() => db.collection('reports').orderBy('ts', 'desc').onSnapshot((s) => cb(s.docs.map((d) => Object.assign({ id: d.id }, d.data()))), (e) => console.error('Signalements :', e))); },
+      async deleteReport(id) { await ready; await db.doc('reports/' + id).delete(); },
       listenContacts(cb) { ready.then(() => db.collection('contacts').onSnapshot((s) => { const o = {}; s.docs.forEach((d) => { o[d.id] = d.data().email || ''; }); cb(o); }, (e) => console.error('Contacts :', e))); },
       listenIdeas(cb) { ready.then(() => db.collection('ideas').orderBy('ts', 'desc').onSnapshot((s) => cb(s.docs.map((d) => { const m = d.data(); return Object.assign({ id: d.id }, m, { ts: m.ts ? ms(m.ts) : Date.now() }); })), (e) => console.error('Idées :', e))); },
       async setPlayerName(uid, name) { await ready; await db.doc('players/' + uid).set({ name }, { merge: true }); if (current && current.uid === uid) { current.name = name; authCbs.forEach((cb) => cb(current)); } },

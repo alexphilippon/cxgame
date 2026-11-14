@@ -38,6 +38,26 @@ service cloud.firestore {
         || (request.resource.data.kind == 'question' && request.resource.data.text is string && request.resource.data.text.size() < 1600);
       allow read, delete: if isAdmin();
     }
+    // Messages privés entre deux joueurs : le document de conversation (members = les deux uid triés, id = « uidA_uidB ») et ses messages.
+    // Seuls les deux membres lisent ; chacun n'écrit que sous son nom et ne supprime que ses propres messages (l'admin peut supprimer un message signalé).
+    function chatMember(cid) { return signedIn() && request.auth.uid in get(/databases/$(database)/documents/chats/$(cid)).data.members; }
+    match /chats/{cid} {
+      allow read: if signedIn() && request.auth.uid in resource.data.members;
+      allow create: if signedIn() && request.auth.uid in request.resource.data.members && request.resource.data.members.size() == 2
+        && cid == request.resource.data.members[0] + '_' + request.resource.data.members[1];
+      allow update: if signedIn() && request.auth.uid in resource.data.members && request.resource.data.members == resource.data.members;
+      match /msgs/{mid} {
+        allow read: if chatMember(cid);
+        allow create: if chatMember(cid) && request.resource.data.from == request.auth.uid
+          && request.resource.data.text is string && request.resource.data.text.size() > 0 && request.resource.data.text.size() <= 600;
+        allow delete: if (chatMember(cid) && resource.data.from == request.auth.uid) || isAdmin();
+      }
+    }
+    // Signalements d'un message problématique : un joueur connecté signale (copie du message et du contexte), seul l'admin lit.
+    match /reports/{id} {
+      allow create: if signedIn() && request.resource.data.by == request.auth.uid;
+      allow read, delete: if isAdmin();
+    }
     // Coureurs ajoutés : un joueur peut proposer un nom libre (pending), l'admin gère le reste.
     match /athletes/{id} {
       allow read: if signedIn();
