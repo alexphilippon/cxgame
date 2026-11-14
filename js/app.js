@@ -790,23 +790,19 @@
       ${done.length ? `<h3 class="subtitle">Courses passées</h3><div class="session"><ul class="races">${done.map((r) => liveRaceRow(r)).join('')}</ul></div>` : ''}
     </section>`;
   }
-  function termineePanel(hm) {
+  function termineePanel(hm, nxt) {
     const s = hm.session;
     const mine = G.sessionScore(s, myPicks(), state.results);
     LS.set('cxgame.seen.' + s.id, String(Date.now()));
     return `<section>
-      <p class="backlink">${hm.next ? `<button type="button" class="linkbtn" data-skip="${s.id}">Passer à la session suivante →</button>` : ''}</p>
+      <p class="backlink">${hm.next ? `<button type="button" class="linkbtn" data-skip="${s.id}">Passer à la session suivante →</button>` : ''}</p>${nxt || ''}
       <article class="forfait forfait--done"><div class="forfait__main">${stateBadge(s)}<h2 class="forfait__name">${fl(s.name)}</h2><p class="forfait__where">Tu as marqué <strong>${mine} pts</strong> sur cette session.</p></div></article>
       ${(() => { const bc = bestContrarian(s); return bc ? `<div class="bilan__card"><h4>Le coup à contre-courant</h4><p><span class="wp__sk">${avatarOf(bc.ath, 'sm')}<b>${skn(bc.ath)}</b></span> à ${fl(placeLabel(bc.race))} ${discBadge(bc.race)}<span class="gender gender--${bc.race.gender}">${genderLabel(bc.race)}</span></p><p class="sub">Choisi par ${esc(bc.who.map((p) => p.name).join(', '))} seulement (${bc.n} sur ${bc.N}), alors que ${bc.top} joueurs en avaient pris un autre. Résultat : +${bc.pts} points.</p></div>` : ''; })()}
       <h3 class="subtitle">Choix de tous les joueurs</h3>${recapTable(s)}
     </section>`;
   }
-  function nextPanel() {
-    const hm = homeMode();
-    if (hm.kind === 'cours') return coursPanel(hm.session);
-    if (hm.kind === 'fin') return termineePanel(hm);
-    const up = hm.session;
-    if (!up) return '<p class="empty">La saison est terminée.</p>';
+  /** Carte d'une session (courses, choix du joueur, deadline). */
+  function homeSessionCard(up, title) {
     const isW = up.id === 'MO';
     const races = sortedRaces(up);
     const dl = G.sessionDeadline(up);
@@ -825,9 +821,7 @@
     const stub = open
       ? `<p class="forfait__label">Deadline dans ${info('Tes choix se modifient librement jusqu’au départ de la première course de la session. Ensuite ils sont verrouillés, et les choix de tous les joueurs deviennent visibles.')}</p><p class="countdown" id="countdown" data-dl="${dl.toISOString()}">${countdownText(dl)}</p><p class="forfait__dl">${dlShort(dl)}</p>`
       : '<p class="forfait__label">Choix verrouillés</p><p class="countdown countdown--shut">Course en cours</p>';
-    return `<section>
-      ${hm.back ? `<p class="backlink"><button type="button" class="linkbtn" data-unskip="${hm.back.id}">← Revoir la dernière session (${esc(hm.back.name)})</button></p>` : ''}
-      <article class="forfait">
+    return `${title ? `<h3 class="subtitle">${title}</h3>` : ''}<article class="forfait">
         <div class="forfait__main">
           ${stateBadge(up)}
           <h2 class="forfait__name">${fl(up.name)}</h2>
@@ -836,7 +830,20 @@
           <button type="button" class="btn btn--brique" data-goto="${up.desk}">${open ? (n === live.length ? 'Modifier mes choix' : 'Faire mes choix') : 'Voir le desk'}</button>
         </div>
         <div class="forfait__stub">${stub}</div>
-      </article>
+      </article>`;
+  }
+  function nextPanel() {
+    const hm = homeMode();
+    const upNext = (hm.kind === 'cours' || hm.kind === 'fin') ? (hm.kind === 'cours' ? allSessions().find((x) => G.sessionState(x, now()) === 'ouverte') : hm.next) : null;
+    const nxt = upNext ? `<div class="nextcard">${homeSessionCard(upNext, 'Prochaine session : mes choix')}</div>` : '';
+    if (hm.kind === 'cours') return nxt + coursPanel(hm.session);
+    if (hm.kind === 'fin') return termineePanel(hm, nxt);
+    const up = hm.session;
+    if (!up) return '<p class="empty">La saison est terminée.</p>';
+    const open = active(sortedRaces(up)).some((r) => !lockedRace(r));
+    return `<section>
+      ${hm.back ? `<p class="backlink"><button type="button" class="linkbtn" data-unskip="${hm.back.id}">← Revoir la dernière session (${esc(hm.back.name)})</button></p>` : ''}
+      ${homeSessionCard(up)}
       ${open ? '' : `<h3 class="subtitle">Choix de tous les joueurs</h3>${recapTable(up)}`}
     </section>`;
   }
