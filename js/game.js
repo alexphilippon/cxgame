@@ -110,6 +110,15 @@
     return { ath: candidates[index], index, n: candidates.length };
   }
   const DRAW_TOP = 15;
+  /** À partir de ce moment (lundi 16 nov. 2026, 0 h Paris), deux joueurs tirés au sort pour une même course ne reçoivent jamais le même coureur tant qu'il reste d'autres candidats. Avant, tirages indépendants. */
+  const DISTINCT_FROM = Date.UTC(2026, 10, 15, 23, 0);
+  const distinctOn = (race) => raceStart(race) >= DISTINCT_FROM;
+  /** Tirage en évitant les coureurs déjà attribués dans cette course (si la règle s'applique et qu'il en reste d'autres). */
+  function drawAvoiding(race, seed, cands, taken) {
+    const free = distinctOn(race) ? cands.filter((id) => !taken.has(id)) : cands;
+    const d = drawRider(seed, free.length ? free : cands);
+    return d;
+  }
   const deskIdOf = (raceId) => sessionOfRace(raceId).desk;   // les Mondiaux comptent dans le Desk 3
   const deskScope = (deskId) => D.SESSIONS.filter((s) => s.desk === deskId).concat(D.WORLDS.desk === deskId ? [D.WORLDS] : []);
 
@@ -123,7 +132,8 @@
     Object.keys(meta || {}).forEach((raceId) => {
       const m = meta[raceId], race = raceOf(raceId);
       if (!race || race.cancelled || !results || !results[raceId] || !m.start) return;
-      Object.keys(picksByPlayer).forEach((pid) => {
+      const taken = new Set();
+      Object.keys(picksByPlayer).sort().forEach((pid) => {
         const pk = (picksByPlayer[pid] || {})[raceId];
         if (!pk || !pk.a || pk.d || !isDNS(results, raceId, pk.a)) return;
         if (pk.b && !isDNS(results, raceId, pk.b)) return;
@@ -131,7 +141,8 @@
         const top = m.start.slice().sort((x, y) => x.bib - y.bib).slice(0, DRAW_TOP);
         const cands = top.map((x) => x.ath).filter((id) => id && !burnt.has(id) && !isDNS(results, raceId, id));
         const seed = `${raceId}|${pid}|${top.map((x) => x.ath || '?').join(',')}`;
-        const d = drawRider(seed, cands);
+        const d = drawAvoiding(race, seed, cands, taken);
+        if (d) taken.add(d.ath);
         if (d) (out[raceId] = out[raceId] || {})[pid] = Object.assign({ seed, candidates: cands }, d);
       });
     });
@@ -152,18 +163,20 @@
         const top = race.kind === 'euro'
           ? meta[race.id].start.filter((x) => x.rank && x.rank <= euroTop(race)).sort((x, y) => x.rank - y.rank)
           : meta[race.id].start.slice().sort((x, y) => x.bib - y.bib).slice(0, NOPICK_TOP);
-        (playerIds || []).forEach((pid) => {
+        const taken = new Set();
+        (distinctOn(race) ? (playerIds || []).slice().sort() : (playerIds || [])).forEach((pid) => {
           const pk = work[pid][race.id];
           if (pk && pk.a) return;
           const burnt = usedInDesk(deskIdOf(race.id), race.gender, race.cat, work[pid], race.id, results);
           const cands = top.map((x) => x.ath).filter((id) => id && !burnt.has(id));
           const seed = `${race.id}|${pid}|nopick|${top.map((x) => x.ath || '?').join(',')}`;
-          let d = drawRider(seed, cands), redraw = null;
+          let d = drawAvoiding(race, seed, cands, taken), redraw = null;
           if (!d) return;
           if (results && results[race.id] && isDNS(results, race.id, d.ath)) {   // le coureur tiré ne prend pas le départ : 2e tirage parmi les partants restants
-            const left = cands.filter((id) => !isDNS(results, race.id, id)), d2 = drawRider(seed + '|2', left);
+            const left = cands.filter((id) => !isDNS(results, race.id, id)), d2 = drawAvoiding(race, seed + '|2', left, taken);
             if (d2) { redraw = d.ath; d = d2; }
           }
+          taken.add(d.ath);
           work[pid][race.id] = { a: d.ath, drawn: true, nopick: true, auto: true, redraw: redraw || undefined };
           (out[race.id] = out[race.id] || {})[pid] = Object.assign({ seed, candidates: cands, redraw }, d);
         });

@@ -319,3 +319,15 @@ console.log('Tous les tests passent.');
   const d = G.noPickDraws({ [rid]: { start } }, {}, ['p1'], () => true, {});
   assert.strictEqual(d[rid].p1.candidates.length, 100, 'Euros U23 : top 100 UCI');
 }
+
+/* Tirages distincts (à partir du 16 nov. 2026) : deux joueurs sans choix ne reçoivent pas le même coureur tant qu'il reste des candidats */
+{
+  const g = require('../js/game.js'), meta = {}, race = g.raceOf('E07-ELI-F') || g.raceOf(Object.keys(require('../js/data.js').RACES).find((id) => g.raceStart(g.raceOf(id)) >= Date.UTC(2026, 10, 15, 23)));
+  if (race) {
+    meta[race.id] = { start: Array.from({ length: 20 }, (_, i) => ({ bib: i + 1, ath: 'r' + i })) };
+    const pids = ['a', 'b', 'c', 'd', 'e', 'f'], d = g.noPickDraws(meta, {}, pids, () => true, {})[race.id];
+    const got = pids.map((p) => d[p].ath);
+    if (new Set(got).size !== got.length) { console.error('Tirages distincts KO', got); process.exit(1); }
+    console.log('Tirages distincts OK');
+  }
+}
