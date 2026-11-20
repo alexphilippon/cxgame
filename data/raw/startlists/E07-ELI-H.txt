@@ -1,0 +1,43 @@
+                           RAPENCROSS LOKEREN 21/11/2026
+                                STARTLIST MEN ELITE
+Nr   Naam                    UCI ID      Nat   Team                                            UCI Rank
+1    VANDEPUTTE Niels      10016327609   BEL   ALPECIN-PREMIER TECH                               1
+3    NIEUWENHUIS Joris     10008705833   NED   HEIZOMAT - CUBE                                    7
+4    WYSEURE Joran         10064921777   BEL   CRELAN-CORENDON                                    8
+5    HENDRIKX Mees         10016519484   NED   TEAM BOMBA JOIN                                    10
+6    KUYPERS Gerben        10016322757   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            12
+7    SWEECK Laurens        10006912646   BEL   CRELAN-CORENDON                                    13
+8    MICHELS Jente         10065014333   BEL   ALPECIN-PREMIER TECH DEVELOPMENT TEAM              16
+9    MASON Cameron         10023574923   GBR   SEVEN RACING                                       17
+10   VANDEBOSCH Toon       10010943604   BEL   CRELAN-CORENDON                                    20
+11   MEEUSSEN Witse        10064931679   BEL   CRELAN-CORENDON                                    26
+12   GROENENDAAL Bailey    10022873085   DEN   WV SCHIJNDEL                                       32
+13   BAŽANT Kryštof        10092752996   CZE   CYKLOSTAR RACING TEAM                              34
+14   STROHMEYER Andrew     10071735019   USA   COMPETITIVE EDGE RACING                            41
+15   VAN DE PUTTE Victor   10064985940   BEL   CHARLES LIÉGEOIS CX TEAM                           43
+16   JANSSEN Wout          10064972095   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT        48
+17   LEJEUNE Giel          10065224905   BEL   D.O.S. VZW                                         54
+18   DE MOYER Kenay        10065066065   BEL   ATOM6-CYCLEUR DE LUXE-AUTOSTROO CONT. TEAM         64
+19   HORNY Clement         10016419858   BEL   BH-WALLONIE MTB TEAM                               72
+20   DE BRUYCKERE Kay      10065053638   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            89
+21   DEGENKOLB Hannes      10048529282   GER   HEIZOMAT - CUBE                                   103
+22   HARVEY Dean           10016653264   IRL   INDIVIDUEEL                                       148
+23   PAPI Lennox           10117883272   LUX   CYCLING TEAM TOPROAD ROESERBANN                   158
+24   BAERS Arne            10064979472   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS     169
+25   BELLENS Jarno         10016350241   BEL   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS     311
+26   DE NYS Milan          10065078795   BEL   TEAM CIBEL CEBON                                  359
+27   NUYENS Wies           10065092640   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT           432
+28   VAN LOOY Stan         10110031225   BEL   LRG-CYCLING TEAM                                  452
+29   HEIRBAUT Toon         10065094256   BEL   DCR CYCLING TEAM                                  545
+30   GEVAERT Miles         10065066671   BEL   TOMABEL-INOFEC CYCLINGTEAM                        567
+31   VANCOMPERNOLLE Tibo   10065134470   BEL   DL CHEMICALS - EXPERZA CYCLING TEAM               568
+32   VANLAERE Loïc         10065197421   BEL   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT           592
+33   JANSSENS Arthur       10065223588   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT       687
+34   FLESCH Pol            10007730072   LUX   LG ALZENG CYCLING TEAM
+35   KILLEEN Fionn         10107118292   IRL   TEAM WORC
+36   GEERTS Len            10077916848   BEL   WAC - PART OF MERCI POUPOU ACADEMY
+37   LARDENOIT Lennert     10155206549   BEL   DVZ-CYCLING
+38   VAN DIJK Levi         10076756787   NED   ZRTC THEO MIDDELKAMP
+39   DAELMANS Bengt        10066080020   BEL   CYCLIS - ROOFS FOR ENERGY - VAN DEN PLAS CT
+40   KAJI Tetsuki          10011058889   JPN                                                     404
+

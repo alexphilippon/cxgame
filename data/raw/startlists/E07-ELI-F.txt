@@ -1,0 +1,39 @@
+                                RAPENCROSS LOKEREN 21/11/2026
+                                    STARTLIST WOMEN ELITE
+Nr   Naam                         UCI ID      Nat   Team                                            UCI Rank
+1    BRAND Lucinda              10006605680   NED   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS      1
+2    ALVARADO Ceylin Del Carmen 10009857305   NED   FENIX-PREMIER TECH                                 2
+3    BAKKER Manon               10009521643   NED   VELOSPORT VELUWE                                   5
+4    ZEMANOVÁ Kristýna          10047782887   CZE   CRELAN-CORENDON                                    7
+5    VAN DER HEIJDEN Inge       10010592885   NED   CRELAN-CORENDON                                    8
+6    BENTVELD Leonie            10023336564   NED   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CT            9
+7    SCHREIBER Marie            10034998489   LUX   TEAM SD WORX PROTIME                               14
+8    BROUWERS Julie             10065009885   BEL   CHARLES LIÉGEOIS CX TEAM                           15
+9    CASASOLA Sara              10010998972   ITA   CRELAN-CORENDON                                    19
+10   GARIBOLDI Rebecca          10009420704   ITA   DE CEUSTER BOUWKRANEN                              25
+11   ASELTINE Mia               10061847382   USA   COMPETITIVE EDGE RACING                            49
+12   VERVLOET Sterre            10065040807   BEL   CHARLES LIÉGEOIS CX TEAM                           55
+13   MOLENGRAAF Lauren          10023352126   NED   D.O.S. VZW                                         58
+14   FRANCK Alicia              10008128984   BEL   X-OATS-LOTTO ATHLETES FOR HOPE                     64
+15   WENZEL Liv                 10035000513   LUX   SEBMOTOBIKES CX TEAM                               77
+16   KAY Anna                   10015470672   GBR   ESSEC CYCLING TEAM                                109
+17   WINDELBAND Tomke           10158158581   GER                                                     124
+18   MOES Noï                   10023186418   NED   WV SCHIJNDEL                                      136
+19   DEFOUR Lara                10015518364   BEL   CYCLING TEAM JADE - LDL                           151
+20   FLYNN Anna                 10064102836   GBR   HANDSLING ALBA DEVELOPMENT ROAD TEAM              154
+21   INGLIS Grace               10050878706   GBR   TEAM HUP                                          164
+22   SEYNAVE Ilken              10065162964   BEL   CHARLES LIÉGEOIS CX TEAM                          179
+23   DE BRUYCKERE Xenna         10065096983   BEL   DE CEUSTER-ACROG                                  196
+24   MAES Lisa                  10125216674   BEL   DE CEUSTER-ACROG                                  237
+25   MÄRKL Jule                 10043802352   GER   CANYON//SRAM ZONDACRYPTO GENERATION               241
+26   DELCOMMUNE Juline          10078333140   BEL   TEAM WILINK BRUSSELS CYCLING                      247
+27   VAN DER VEKEN Elena        10023156106   NED   ACROG-TORMANS                                     300
+28   BAKER Alderney             10023855516   GBR   TEAM EMPELLA                                      335
+29   COPPENS Nette              10065082132   BEL   DE CEUSTER-ACROG                                  448
+30   DE VOS Nele                10065452752   BEL   NEVER GIVE UP BY JOLIEN VERSCHUEREN
+31   DE CUYPER Emily            10098755983   BEL   SUPER HELP - EVIL EYE
+32   STRATHDEE Ishbel           10023886737   GBR   TEAM HUP
+33   WOODVINE Rebecca           10133003047   GBR   FOSSA RACING
+34   ZWAENEPOEL Tessa           10064952594   BEL   KASSEIEN FIETS HUIS CT
+35   NORBERT RIBEROLLE Marion   10026268388   BEL   CRELAN-CORENDON                                    12
+
