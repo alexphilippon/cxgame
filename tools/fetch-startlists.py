@@ -18,6 +18,7 @@ def parse(text):
             m = re.search(r'\b\d{9,11}\s+([A-Z]{3})\b', l)
             if m and m.group(1) in NAT: nat = m.group(1)
         name = next((x for x in f[1:] if re.search(r'[a-zà-ÿ]', x) and re.search(r'[A-ZÀ-Ý]{2}', x) and not re.fullmatch(r'[A-Z]{3}', x)), None)
+        if name: name = re.sub(r'\s*\b\d{9,11}\b\s*', ' ', name).strip()   # identifiant UCI parfois collé au nom
         if name and nat: rows.append((int(f[0]), name, nat))
     return rows
 CNAT = {'Belgium':'BEL','Czechia':'CZE','Czech Republic':'CZE','Estonia':'EST','France':'FRA','Germany':'GER','Great Britain':'GBR','Italy':'ITA','Luxembourg':'LUX','Netherlands':'NED','Norway':'NOR','Portugal':'POR','Spain':'ESP','Switzerland':'SUI','Ireland':'IRL','Denmark':'DEN','Austria':'AUT','Poland':'POL','Sweden':'SWE','Finland':'FIN','Hungary':'HUN','Slovakia':'SVK','Slovenia':'SLO','Ukraine':'UKR','Latvia':'LAT','Lithuania':'LTU','Greece':'GRE','Croatia':'CRO','Romania':'ROU','Bulgaria':'BUL','Turkey':'TUR','Türkiye':'TUR','Israel':'ISR','Serbia':'SRB','Iceland':'ISL','Moldova':'MDA','North Macedonia':'MKD','Macedonia':'MKD','Kosovo':'KOS'}
