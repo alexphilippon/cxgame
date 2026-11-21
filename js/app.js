@@ -816,7 +816,7 @@
       return `<li class="mini">
         <span class="mini__when"><b>${F_NUM.format(d)}</b> ${F_MO.format(d)}</span>
         <span class="mini__what"><strong class="mini__place">${fl(placeLabel(r))}</strong><span class="mini__tags">${discBadge(r)}<span class="gender gender--${r.gender}">${genderLabel(r)}</span></span></span>
-        <span class="mini__pick">${r.cancelled ? '<span class="none">Annulée</span>' : (myPicks()[r.id] || {}).a ? `${pickSummary(state.me, r)}${isDraft(myPicks()[r.id], r) ? '<span class="draftflag">📝 brouillon</span>' : ''}` : '<span class="todo">À choisir</span>'}${r.cancelled ? '' : slLink(r)}</span></li>`;
+        <span class="mini__pick">${r.cancelled ? '<span class="none">Annulée</span>' : (state.hedit || {})[r.id] && !lockedRace(r) ? `${pickEditor(r, up)}<button type="button" class="linkbtn" data-hedit="${r.id}">Fermer</button>` : `${(myPicks()[r.id] || {}).a ? `${pickSummary(state.me, r)}${isDraft(myPicks()[r.id], r) ? '<span class="draftflag">📝 brouillon</span>' : ''}` : '<span class="todo">À choisir</span>'}${lockedRace(r) ? '' : `<button type="button" class="linkbtn mini__edit" data-hedit="${r.id}">${(myPicks()[r.id] || {}).a ? 'Changer' : 'Choisir'}</button>`}${slLink(r)}`}</span></li>`;
     }).join('');
     const stub = open
       ? `<p class="forfait__label">Deadline dans ${info('Tes choix se modifient librement jusqu’au départ de la première course de la session. Ensuite ils sont verrouillés, et les choix de tous les joueurs deviennent visibles.')}</p><p class="countdown" id="countdown" data-dl="${dl.toISOString()}">${countdownText(dl)}</p><p class="forfait__dl">${dlShort(dl)}</p>`
@@ -827,7 +827,7 @@
           <h2 class="forfait__name">${fl(up.name)}</h2>
           <p class="forfait__where">${esc(where)}</p>
           <ul class="minis">${list}</ul>
-          <button type="button" class="btn btn--brique" data-goto="${up.desk}">${open ? (n === live.length ? 'Modifier mes choix' : 'Faire mes choix') : 'Voir le desk'}</button>
+          <button type="button" class="btn btn--brique" data-goto="${up.desk}" data-sess="${up.id}">${open ? (n === live.length ? 'Modifier mes choix' : 'Faire mes choix') : 'Voir le desk'}</button>
         </div>
         <div class="forfait__stub">${stub}</div>
       </article>`;
@@ -1301,6 +1301,11 @@
     const f = document.querySelector('.atelier'); if (f) f.hidden = store.mode !== 'local';
     const ir = $('#installrow'); if (ir) ir.hidden = !(window.__cxInstall) || (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches);
   }
+  /** Après un changement d'onglet : descend sur la session demandée (carte « s-ID » du desk). */
+  function scrollToSession(sid) {
+    const go = (tries) => { const el = document.getElementById('s-' + sid); if (el) { const top = el.getBoundingClientRect().top + window.scrollY - 70; window.scrollTo({ top: Math.max(0, top) }); } else if (tries) setTimeout(() => go(tries - 1), 80); };
+    requestAnimationFrame(() => go(5));
+  }
   function setTab(id) {
     state.tab = id; state.sub = freshSubs();
     try { history.replaceState(null, '', '#' + id); } catch (e) { /* ignoré */ }
@@ -1460,7 +1465,7 @@
         <h2 class="gate__title">Tu as plus de temps pour choisir</h2>
         ${group.map((x) => `<p class="gate__lead"><strong>${fl(placeLabel(x))}</strong> ${discBadge(x)} <span class="gender gender--${x.gender}">${genderLabel(x)}</span> : départ reporté de ${esc(seen[x.id].split('T')[1].replace(':', ' h '))} à <strong>${esc(hourText(G.raceStart(x)))}</strong>.</p>`).join('')}
         <p class="gate__lead">Les choix de <strong>${fl(sess.name)}</strong> restent ouverts jusqu’au <strong>${esc(dlShort(dl))}</strong>.${todo.length ? ` Il te reste <strong>${todo.length}</strong> choix à faire.` : ' Tous tes choix sont déjà faits : tu peux encore les modifier.'}</p>
-        <button type="button" class="btn btn--brique gate__go" data-goto="${sess.id === 'MO' ? D.WORLDS.desk : sess.desk}" data-close>Voir mes choix</button></div>`);
+        <button type="button" class="btn btn--brique gate__go" data-goto="${sess.id === 'MO' ? D.WORLDS.desk : sess.desk}" data-sess="${sess.id}" data-close>Voir mes choix</button></div>`);
       return;
     }
   }
@@ -1545,7 +1550,8 @@
     const rcj = e.target.closest('[data-rc-jpg]'); if (rcj) { SHARE.jpg(rcj.dataset.rcJpg); return; }
     if (e.target.closest('.brand')) { setTab('next'); return; }
     const tab = e.target.closest('[data-tab]'); if (tab) { setTab(tab.dataset.tab); return; }
-    const go = e.target.closest('[data-goto]'); if (go) { setTab(go.dataset.goto === '0' ? '3' : go.dataset.goto); return; }
+    const he = e.target.closest('[data-hedit]'); if (he) { state.hedit = state.hedit || {}; state.hedit[he.dataset.hedit] = !state.hedit[he.dataset.hedit]; render(); return; }
+    const go = e.target.closest('[data-goto]'); if (go) { setTab(go.dataset.goto === '0' ? '3' : go.dataset.goto); if (go.dataset.sess) scrollToSession(go.dataset.sess); return; }
     const skp = e.target.closest('[data-skip]'); if (skp) { LS.set('cxgame.skip.' + skp.dataset.skip, '1'); render(); window.scrollTo(0, 0); return; }
     const usk = e.target.closest('[data-unskip]'); if (usk) { LS.del('cxgame.skip.' + usk.dataset.unskip); render(); window.scrollTo(0, 0); return; }
     const ffb = e.target.closest('[data-ff]');
@@ -1584,7 +1590,7 @@
     if (!todo.length) return;
     openModal(`<h2>Ligne de départ</h2><p>Demain, ça part : <strong>${fl(s.name)}</strong>. Il te reste ${plural(todo.length, 'choix', 'choix')} à confirmer avant ${esc(dlShort(dl))}.</p>
       <ul class="dtls">${todo.map((r) => `<li class="dtl"><span class="dtl__r"><strong>${fl(placeLabel(r))}</strong> <span class="sub">${esc(raceName(r))}</span></span></li>`).join('')}</ul>
-      <div class="remindbtns"><button type="button" class="btn btn--brique" data-goto="${s.id === 'MO' ? 0 : s.desk}" data-close>Faire mes choix</button><button type="button" class="btn btn--ghost" data-gate-off="${s.id}" data-close>Plus tard</button></div>`);
+      <div class="remindbtns"><button type="button" class="btn btn--brique" data-goto="${s.id === 'MO' ? 0 : s.desk}" data-sess="${s.id}" data-close>Faire mes choix</button><button type="button" class="btn btn--ghost" data-gate-off="${s.id}" data-close>Plus tard</button></div>`);
   }
   function F_YMD(d, offsetDays) { const t = new Date(d.getTime() + offsetDays * H24); return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(t); }
   document.addEventListener('click', (e) => { const g = e.target.closest('[data-gate-off]'); if (g) LS.set('cxgame.gate.' + g.dataset.gateOff, '1'); });

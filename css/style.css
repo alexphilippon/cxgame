@@ -1655,3 +1655,5 @@ html[data-theme='nuit'] .wabtn:hover { background: #2fa866; color: #0b1f15; }
 .chat__form { display: flex; gap: .5rem; margin-top: .6rem; align-items: flex-end; } .chat__form textarea { flex: 1; padding: .4rem; font: inherit; resize: none; }
 .rep__q { margin: .4rem 0; padding: .4rem .7rem; border-left: 3px solid #d4443a; background: var(--neige); } .rep__ctx { margin: .3rem 0; padding-left: 1rem; font-size: .85rem; }
 .nextcard { margin-bottom: 1.4rem; }
+.mini__edit { margin-left: .5rem; font-size: .85rem; }
+.mini__pick .pickbox { margin: .3rem 0; }
