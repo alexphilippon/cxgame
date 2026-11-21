@@ -4675,6 +4675,307 @@
      "nat": "JPN"
     }
    ]
+  },
+  "E08-ELI-F": {
+   "source": "https://beminecross.be/wp-content/uploads/sites/277/2026/11/Women-Elite-website.pdf",
+   "fetched": "2026-11-21T09:43:43.233Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "lucinda-brand",
+     "name": "BRAND Lucinda",
+     "nat": "NED"
+    },
+    {
+     "bib": 3,
+     "ath": "aniek-van-alphen",
+     "name": "VAN ALPHEN Aniek",
+     "nat": "NED"
+    },
+    {
+     "bib": 4,
+     "ath": "denise-betsema",
+     "name": "BETSEMA Denise",
+     "nat": "NED"
+    },
+    {
+     "bib": 5,
+     "ath": "julie-brouwers",
+     "name": "BROUWERS Julie",
+     "nat": "BEL"
+    },
+    {
+     "bib": 6,
+     "ath": "sara-casasola",
+     "name": "CASASOLA Sara",
+     "nat": "ITA"
+    },
+    {
+     "bib": 7,
+     "ath": "fleur-moors",
+     "name": "MOORS Fleur"
+    },
+    {
+     "bib": 8,
+     "ath": "rebecca-gariboldi",
+     "name": "GARIBOLDI Rebecca",
+     "nat": "ITA"
+    },
+    {
+     "bib": 9,
+     "ath": "annemarie-worst",
+     "name": "WORST Annemarie",
+     "nat": "NED"
+    },
+    {
+     "bib": 10,
+     "ath": "kiona-crabbe",
+     "name": "CRABBÉ Kiona",
+     "nat": "BEL"
+    },
+    {
+     "bib": 11,
+     "ath": "mia-aseltine",
+     "name": "ASELTINE Mia",
+     "nat": "USA"
+    },
+    {
+     "bib": 12,
+     "ath": "alicia-franck",
+     "name": "FRANCK Alicia",
+     "nat": "BEL"
+    },
+    {
+     "bib": 13,
+     "ath": "zita-peeters",
+     "name": "PEETERS Zita",
+     "nat": "BEL"
+    },
+    {
+     "bib": 14,
+     "ath": "mae-cabaca",
+     "name": "CABACA Mae",
+     "nat": "NED"
+    },
+    {
+     "bib": 15,
+     "ath": "anniek-mos",
+     "name": "MOS Anniek",
+     "nat": "NED"
+    },
+    {
+     "bib": 16,
+     "ath": "tomke-windelband",
+     "name": "WINDELBAND Tomke",
+     "nat": "GER"
+    },
+    {
+     "bib": 17,
+     "ath": "liese-geuens",
+     "name": "GEUENS Liese"
+    },
+    {
+     "bib": 18,
+     "ath": "anna-flynn",
+     "name": "FLYNN Anna",
+     "nat": "GBR"
+    },
+    {
+     "bib": 19,
+     "ath": "grace-inglis",
+     "name": "INGLIS Grace",
+     "nat": "GBR"
+    },
+    {
+     "bib": 20,
+     "ath": "ilken-seynave",
+     "name": "SEYNAVE Ilken",
+     "nat": "BEL"
+    },
+    {
+     "bib": 21,
+     "ath": "xenna-de-bruyckere",
+     "name": "DE BRUYCKERE Xenna",
+     "nat": "BEL"
+    },
+    {
+     "bib": 22,
+     "ath": "jule-markl",
+     "name": "MÄRKL Jule",
+     "nat": "GER"
+    },
+    {
+     "bib": 23,
+     "ath": "fem-van-empel",
+     "name": "VAN EMPEL Fem",
+     "nat": "NED"
+    },
+    {
+     "bib": 24,
+     "ath": "pem-hoefmans",
+     "name": "HOEFMANS Pem",
+     "nat": "NED"
+    },
+    {
+     "bib": 25,
+     "ath": "alderney-baker",
+     "name": "BAKER Alderney",
+     "nat": "GBR"
+    },
+    {
+     "bib": 26,
+     "ath": "femke-lenferink",
+     "name": "LENFERINK Femke",
+     "nat": "NED"
+    },
+    {
+     "bib": 27,
+     "ath": "ishbel-strathdee",
+     "name": "STRATHDEE Ishbel",
+     "nat": "GBR"
+    }
+   ]
+  },
+  "E08-ELI-H": {
+   "source": "https://beminecross.be/wp-content/uploads/sites/277/2026/11/Men-Elite-website.pdf",
+   "fetched": "2026-11-21T09:43:43.377Z",
+   "start": [
+    {
+     "bib": 1,
+     "ath": "thibau-nys",
+     "name": "NYS Thibau",
+     "nat": "BEL"
+    },
+    {
+     "bib": 2,
+     "ath": "michael-vanthourenhout",
+     "name": "VANTHOURENHOUT Michael",
+     "nat": "BEL"
+    },
+    {
+     "bib": 3,
+     "ath": "joris-nieuwenhuis",
+     "name": "NIEUWENHUIS Joris",
+     "nat": "NED"
+    },
+    {
+     "bib": 4,
+     "ath": "joran-wyseure",
+     "name": "WYSEURE Joran",
+     "nat": "BEL"
+    },
+    {
+     "bib": 5,
+     "ath": "mees-hendrikx",
+     "name": "HENDRIKX Mees",
+     "nat": "NED"
+    },
+    {
+     "bib": 6,
+     "ath": "gerben-kuypers",
+     "name": "KUYPERS Gerben",
+     "nat": "BEL"
+    },
+    {
+     "bib": 7,
+     "ath": "ryan-kamp",
+     "name": "KAMP Ryan",
+     "nat": "NED"
+    },
+    {
+     "bib": 8,
+     "ath": "jente-michels",
+     "name": "MICHELS Jente",
+     "nat": "BEL"
+    },
+    {
+     "bib": 9,
+     "ath": "cameron-mason",
+     "name": "MASON Cameron",
+     "nat": "GBR"
+    },
+    {
+     "bib": 10,
+     "ath": "toon-vandebosch",
+     "name": "VANDEBOSCH Toon",
+     "nat": "BEL"
+    },
+    {
+     "bib": 11,
+     "ath": "witse-meeussen",
+     "name": "MEEUSSEN Witse",
+     "nat": "BEL"
+    },
+    {
+     "bib": 12,
+     "ath": "danny-van-lierop",
+     "name": "VAN LIEROP Danny",
+     "nat": "NED"
+    },
+    {
+     "bib": 13,
+     "ath": "andrew-strohmeyer",
+     "name": "STROHMEYER Andrew",
+     "nat": "USA"
+    },
+    {
+     "bib": 14,
+     "ath": "victor-van-de-putte",
+     "name": "VAN DE PUTTE Victor",
+     "nat": "BEL"
+    },
+    {
+     "bib": 15,
+     "ath": "wout-janssen",
+     "name": "JANSSEN Wout",
+     "nat": "BEL"
+    },
+    {
+     "bib": 16,
+     "ath": "dylan-zakrajsek",
+     "name": "ZAKRAJSEK Dylan"
+    },
+    {
+     "bib": 17,
+     "ath": "kay-de-bruyckere",
+     "name": "DE BRUYCKERE Kay",
+     "nat": "BEL"
+    },
+    {
+     "bib": 18,
+     "ath": "dean-harvey",
+     "name": "HARVEY Dean",
+     "nat": "IRL"
+    },
+    {
+     "bib": 19,
+     "ath": "arne-baers",
+     "name": "BAERS Arne",
+     "nat": "BEL"
+    },
+    {
+     "bib": 20,
+     "ath": "remon-delnoije",
+     "name": "DELNOIJE Remon",
+     "nat": "NED"
+    },
+    {
+     "bib": 21,
+     "ath": "jarno-bellens",
+     "name": "BELLENS Jarno",
+     "nat": "BEL"
+    },
+    {
+     "bib": 22,
+     "ath": "nick-klijn",
+     "name": "KLIJN Nick"
+    },
+    {
+     "bib": 23,
+     "ath": "arthur-soontjens",
+     "name": "SOONTJENS Arthur"
+    }
+   ]
   }
  }
 }

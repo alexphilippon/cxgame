@@ -8,6 +8,13 @@ today = datetime.date.today().isoformat()
 src = json.load(open('data/startlist-sources.json'))
 sys.path.insert(0, 'tools')
 os.makedirs('data/raw/startlists', exist_ok=True)
+def _natbyname():
+    try:
+        d = json.load(open('data/startlists.json'))['races']
+        return {x['name'].upper(): x['nat'] for v in d.values() for x in v['start'] if x.get('nat') and x.get('name')}
+    except Exception:
+        return {}
+NATBYNAME = _natbyname()
 def parse(text):
     rows = []
     for l in text.splitlines():
@@ -19,6 +26,7 @@ def parse(text):
             if m and m.group(1) in NAT: nat = m.group(1)
         name = next((x for x in f[1:] if re.search(r'[a-zà-ÿ]', x) and re.search(r'[A-ZÀ-Ý]{2}', x) and not re.fullmatch(r'[A-Z]{3}', x)), None)
         if name: name = re.sub(r'\s*\b\d{9,11}\b\s*', ' ', name).strip()   # identifiant UCI parfois collé au nom
+        if name and not nat and any(re.fullmatch(r'(?i)(men|women)\s+elite', x) for x in f[1:]): nat = '-'   # liste sans colonne nationalité (Beringen) : nat inconnue
         if name and nat: rows.append((int(f[0]), name, nat))
     return rows
 CNAT = {'Belgium':'BEL','Czechia':'CZE','Czech Republic':'CZE','Estonia':'EST','France':'FRA','Germany':'GER','Great Britain':'GBR','Italy':'ITA','Luxembourg':'LUX','Netherlands':'NED','Norway':'NOR','Portugal':'POR','Spain':'ESP','Switzerland':'SUI','Ireland':'IRL','Denmark':'DEN','Austria':'AUT','Poland':'POL','Sweden':'SWE','Finland':'FIN','Hungary':'HUN','Slovakia':'SVK','Slovenia':'SLO','Ukraine':'UKR','Latvia':'LAT','Lithuania':'LTU','Greece':'GRE','Croatia':'CRO','Romania':'ROU','Bulgaria':'BUL','Turkey':'TUR','Türkiye':'TUR','Israel':'ISR','Serbia':'SRB','Iceland':'ISL','Moldova':'MDA','North Macedonia':'MKD','Macedonia':'MKD','Kosovo':'KOS'}
@@ -66,10 +74,11 @@ for rid, url in src.items():
         r = subprocess.run(['node', 'tools/startlist.js', rid, f'/tmp/sl-{rid}.txt', '--source', url], capture_output=True, text=True)
         print(r.stdout.strip(), r.stderr.strip()); rc = rc or r.returncode; continue
     rows = parse(txt)
+    rows = [(a, b_, NATBYNAME.get(b_.upper(), c) if c == '-' else c) for a, b_, c in rows]   # nationalité connue par d'autres start lists
     bibs = [r[0] for r in rows]
     if len(rows) < 10 or len(set(bibs)) != len(bibs):
         print(rid, ': lecture douteuse (', len(rows), 'lignes ), start list inchangée'); rc = 1; continue
-    open(f'/tmp/sl-{rid}.txt', 'w').write('\n'.join(f'{a}|{b_}|{c}' for a, b_, c in rows) + '\n')
+    open(f'/tmp/sl-{rid}.txt', 'w').write('\n'.join(f'{a}|{b_}|{"" if c == "-" else c}' for a, b_, c in rows) + '\n')
     r = subprocess.run(['node', 'tools/startlist.js', rid, f'/tmp/sl-{rid}.txt', '--source', url], capture_output=True, text=True)
     print(r.stdout.strip(), r.stderr.strip()); rc = rc or r.returncode
 sys.exit(0)
