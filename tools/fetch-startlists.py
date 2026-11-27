@@ -37,6 +37,26 @@ def parse_uec(text):
         for m in re.finditer(r'(?<!\d)(\d{1,3})\s+([^\d]+?)\s+([A-Z]{3})\s+(\d{4})(?:[ ]{1,15}(\d{1,3})(?=\s{3,}|\s*$))?', l):
             rows.append((int(m.group(1)), re.sub(r'\s+', ' ', m.group(2).strip()), m.group(3), m.group(5) or ''))
     return rows
+def parse_wc(text):
+    # Start list Coupe du monde (ChronoRace, deux colonnes) : flux « [rang] dossard [marqueurs] NOM Prénom / club … NAT YOB [rang] ». On coupe à chaque « NAT YOB ».
+    text = text.split('Legend:')[0]
+    text = '\n'.join(l for l in text.splitlines() if not re.search(r'Name / Team|^(Entries|Report created|Timing and results|Start time|CYCLO-CROSS|FRI )|^(Men|Women) Elite$', l.strip()))
+    rows = []; pos = 0
+    for m in re.finditer(r'\b([A-Z]{3})\s+(?:19|20)\d\d\b', text):
+        chunk = text[pos:m.start()]; pos = m.end()
+        if m.group(1) not in NAT: continue
+        toks = []; name = None
+        for l in chunk.splitlines():
+            l = l.strip()
+            while True:
+                l2 = re.sub(r'^(\d{1,3})\b\s*', lambda mm: (toks.append(mm.group(1)), '')[1], l)
+                l2 = re.sub(r'^(?:WCh|NCh|CCh|WCL|S-|\*)\s*', '', l2)
+                if l2 == l: break
+                l = l2
+            if l: name = l; break
+        if not name or not toks: continue
+        rows.append((int(toks[-1]), re.sub(r'\s+', ' ', name), m.group(1)))
+    return rows
 def parse_entry(text):
     # « NOM Prénom  UCI ID(11 chiffres)  Nation (nom anglais) » ; pas de dossard
     rows = []
@@ -46,7 +66,7 @@ def parse_entry(text):
     return rows
 rc = 0
 for rid, url in src.items():
-    entry = isinstance(url, dict) and bool(url.get('entry')); uec = isinstance(url, dict) and bool(url.get('uec'))
+    entry = isinstance(url, dict) and bool(url.get('entry')); uec = isinstance(url, dict) and bool(url.get('uec')); wc = isinstance(url, dict) and bool(url.get('wc'))
     if isinstance(url, dict): url = url['url']
     ev = rid.split('-')[0]
     date = subprocess.run(['node', '-e', f"console.log(require('./js/data.js').RACES['{rid}'].date)"], capture_output=True, text=True).stdout.strip()
@@ -66,6 +86,13 @@ for rid, url in src.items():
         if len(er) < 5 or len({a for a, _ in er}) != len(er): print(rid, ': entry list douteuse (', len(er), 'lignes )'); rc = 1; continue
         open(f'/tmp/sl-{rid}.txt', 'w').write('\n'.join(f'|{a}|{b_}' for a, b_ in er) + '\n')
         r = subprocess.run(['node', 'tools/startlist.js', rid, f'/tmp/sl-{rid}.txt', '--source', url, '--entry'], capture_output=True, text=True)
+        print(r.stdout.strip(), r.stderr.strip()); rc = rc or r.returncode; continue
+    if wc:
+        txt = subprocess.run(['pdftotext', '-raw', f'data/raw/startlists/{rid}.pdf', '-'], capture_output=True, text=True).stdout
+        ur = sorted(parse_wc(txt))
+        if len(ur) < 5 or len({r[0] for r in ur}) != len(ur): print(rid, ': start list CM douteuse (', len(ur), 'lignes ), inchangée'); rc = 1; continue
+        open(f'/tmp/sl-{rid}.txt', 'w').write('\n'.join(f'{a}|{b_}|{c}' for a, b_, c in ur) + '\n')
+        r = subprocess.run(['node', 'tools/startlist.js', rid, f'/tmp/sl-{rid}.txt', '--source', url], capture_output=True, text=True)
         print(r.stdout.strip(), r.stderr.strip()); rc = rc or r.returncode; continue
     if uec:
         ur = sorted(parse_uec(txt))

@@ -35,6 +35,12 @@
   "E07-ELI-H": "https://hgcross.be/wp-content/uploads/sites/273/2026/11/Lokeren-Startlist-Men-Elite.pdf",
   "E08-ELI-F": "https://beminecross.be/wp-content/uploads/sites/277/2026/11/Women-Elite-website.pdf",
   "E08-ELI-H": "https://beminecross.be/wp-content/uploads/sites/277/2026/11/Men-Elite-website.pdf",
-  "E09-ELI-F": "https://www.ucicyclocrossworldcup.com/storage/programs/file_participants/560/560.pdf?t=1795521771",
-  "E09-ELI-H": "https://www.ucicyclocrossworldcup.com/storage/programs/file_participants/583/583.pdf?t=1795521772"
+  "E09-ELI-F": {
+    "url": "https://www.ucicyclocrossworldcup.com/storage/programs/file_participants/560/560.pdf?t=1795521771",
+    "wc": true
+  },
+  "E09-ELI-H": {
+    "url": "https://www.ucicyclocrossworldcup.com/storage/programs/file_participants/583/583.pdf?t=1795521772",
+    "wc": true
+  }
 }
