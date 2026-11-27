@@ -1,205 +1,192 @@
-FRI 27 NOV 2026                                                                                                                          CYCLO-CROSS
-Start time: 19:45                                                                                                                             Men Elite
+FRI 27 NOV 2026
+Start time: 19:45                                                                                                                                            Men Elite
 
 
-                                                                          Entries
-   Nr Name / Team                                        NAT   YOB WCS     UCI       Nr Name / Team                                NAT   YOB WCS   UCI
-    2 DEL GROSSO Tibor                                   NED   2003         5        34 SOMMER Lars                                SUI   2002      54
-   NCh ALPECIN-PREMIER TECH
+                                                                            Start Order
+ Line      Nr Name / Team                                           NAT   WCS   UCI    Line      Nr Name / Team                                        NAT   WCS   UCI
+  1        11 VANDEPUTTE Niels                                      BEL           2      5       62 MATTERN     Miles                                  USA         48
+                ALPECIN-PREMIER TECH DEVELOPMENT TEAM                                               CXD TREK BIKES
 
-     3 NIEUWENHUIS
-       HEIZOMAT - CUBE
-                       Joris                             NED   1996         8        35 OERTZEN   Max Heiner
-                                                                                        RADSPORT NAGEL CX TEAM
-                                                                                                                                   GER   2006      86
+  1        12 NYS Thibau                                            BEL           3      5       47 MEIN Thomas                                        GBR         50
+          CCh BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS                                            HOPE FACTORY RACING
 
-     4 HENDRIKX Mees
-         Team BOMBA JOIN
-                                                         NED   2000        11        36 DEGENKOLB Hannes
-                                                                                           HEIZOMAT - CUBE
-                                                                                                                                   GER   2004      106
+  1        13 VANTHOURENHOUT          Michael
+              PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING TEAM
+                                                                    BEL           4      5       34 SOMMER Lars                                        SUI         54
 
-     5 KAMP Ryan
-         TEAM BOMBA JOIN
-                                                         NED   2000        15        37 KUSCHLA Silas                              GER   2004      113
+  1         2 DEL GROSSO Tibor                                      NED           5      5       63 ZAKRAJSEK     Dylan                                USA         56
+          NCh ALPECIN-PREMIER TECH                                                                  COMPETITIVE EDGE RACING
 
-     6 HAVERDINGS David
-         ALPECIN-PREMIER TECH DEVELOPMENT TEAM
-                                                         NED   2004        29        38 KÖPSEL Jonas
-                                                                                           RADSPORT NAGEL CX TEAM
-                                                                                                                                   GER   2002      202
+  1        30 ORTS LLORET Felipe                                    ESP           6      5        8 VAN DEN EIJNDEN Guus                               NED         59
+          NCh                                                                                          777tv CX TEAM
 
-     7 VAN  LIEROP Danny
-       HEIZOMAT - CUBE
-                                                         NED   2003        39        39 VAN DER LINDE Til                          GER   2006      578
+  1        14 WYSEURE Joran
+                CRELAN-CORENDON
+                                                                    BEL           7      5       23 VAN DEN BOER Arthur
+                                                                                                       BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
+                                                                                                                                                       BEL         62
 
-     8 VAN    DEN EIJNDEN Guus
-       777tv CX TEAM
-                                                         NED   2005        59        40 WENDEL   Tom
-                                                                                        BRUDEK DUKLA BRATISLAVA
-                                                                                                                                   GER   2007      688
+  1         3 NIEUWENHUIS Joris                                     NED           8      5       51 RÍMAN Jakub                                        CZE         73
+                HEIZOMAT - CUBE                                                                        ATT INVESTMENTS
 
-     9 DELNOIJE Remon                                    NED   2001        178       41 KOBER Lukas                                GER   2006
+  1        15 KUYPERS Gerben
+                PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING TEAM
+                                                                    BEL          10      5       64 CONAWAY Calvin                                     USA         74
 
- S- 10 STORMS Miel                                       NED   2002        182       42 BERTOLINI Gioele
-                                                                                           ALE CX TEAM
-                                                                                                                                   ITA   1995      36
+  2         4 HENDRIKX Mees                                         NED          11      6       71 RISBERG David                                      SWE         76
+                Team BOMBA JOIN                                                                  NCh
 
-    11 VANDEPUTTE Niels
-         ALPECIN-PREMIER TECH DEVELOPMENT TEAM
-                                                         BEL   2000         2        43 CEOLIN Federico
-                                                                                           FAS AIRPORT SERVICES - GUERCIOTTI
-                                                                                                                                   ITA   2000      38
-   12 NYS Thibau                                         BEL   2002         3        44 VIEZZI Stefano                             ITA   2006      46
-   CCh BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS                                       ALPECIN-PREMIER TECH DEVELOPMENT TEAM
-      VANTHOURENHOUT Michael
-   13 PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING       BEL   1993         4        45 FABBRO    Ettore
-                                                                                        ALE CX TEAM
-                                                                                                                                   ITA   2007      168
-         TEAM
+  2        33 KUHN Kevin                                            SUI          12      6       35 OERTZEN Max Heiner                                 GER         86
+          NCh HEIZOMAT - CUBE                                                                          RADSPORT NAGEL CX TEAM
 
-   14 WYSEURE    Joran
-      CRELAN-CORENDON
-                                                         BEL   2001         7        46 MASON Cameron
-                                                                                     NCh 777tv CX TEAM
-                                                                                                                                   GBR   2000      13
-         KUYPERS Gerben
-   15 PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING       BEL   2000        10        47 MEIN  Thomas
-                                                                                        HOPE FACTORY RACING
-                                                                                                                                   GBR   1999      50
-         TEAM
+  2        46 MASON Cameron                                         GBR          13      6       65 FREDERICK Ben                                      USA         88
+          NCh 777tv CX TEAM
 
-   16 MICHELS    Jente
-      ALPECIN-PREMIER TECH DEVELOPMENT TEAM
-                                                         BEL   2003        14        48 BOROŠ   Michael
-                                                                                        KASPER CRYPTO4ME
-                                                                                                                                   CZE   1992      22
+  2        16 MICHELS Jente                                         BEL          14      6       66 BROWN Ethan                                        USA         91
+                ALPECIN-PREMIER TECH DEVELOPMENT TEAM
 
-   17 SWEECK Laurens
-         CRELAN-CORENDON
-                                                         BEL   1993        17        49 BAŽANT Kryštof
-                                                                                     NCh
-                                                                                                                                   CZE   2007      34
-      CORSUS Yordi
-   18 PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING       BEL   2005        20        50 FIALA Matyáš                               CZE   2003      43
-         TEAM
+  2         5 KAMP Ryan                                             NED          15      6       52 KERL Maximilian                                    CZE         92
+                TEAM BOMBA JOIN
 
- S- 19 VANDEBOSCH    Toon
-       CRELAN-CORENDON
-                                                         BEL   1999        21        51 RÍMAN   Jakub
-                                                                                        ATT INVESTMENTS
-                                                                                                                                   CZE   2000      73
+  2        17 SWEECK Laurens
+                CRELAN-CORENDON
+                                                                    BEL          17      6       67 COOTE Henry
+                                                                                                       TRINITY RACING
+                                                                                                                                                       USA         96
 
-   20 MEEUSSEN Witse
-         CRELAN-CORENDON
-                                                         BEL   2001        25        52 KERL Maximilian
-                                                                                           FANY GASTRO_INTEGRAY_L27
-                                                                                                                                   CZE   2004      92
+  2        18 CORSUS Yordi
+                PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING TEAM
+                                                                    BEL          20      6       68 HAYNES Dylan
+                                                                                                       CXD TREK BIKES
+                                                                                                                                                       USA         102
 
-   21 VAN DE PUTTE Victor
-      CHARLES LIEGEOIS CX TEAM
-                                                         BEL   2002        45        53 LIENERT Patrik                             CZE   2006      136
+  2        48 BOROŠ   Michael
+              KASPER CRYPTO4ME
+                                                                    CZE          22      6       36 DEGENKOLB
+                                                                                                    HEIZOMAT - CUBE
+                                                                                                                    Hannes                             GER         106
 
- S- 22 JANSSEN Wout                                      BEL   2002        49        54 KRATOCHVÍL Václav                          CZE   2006      142
+  3        20 MEEUSSEN    Witse
+              CRELAN-CORENDON
+                                                                    BEL          25      7       37 KUSCHLA Silas                                      GER         113
 
-   23 VAN DEN BOER Arthur
-         BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
-                                                         BEL   2007        62        55 JINDRICH Pavel                             CZE   2003      183
+  3        25 GROSLAMBERT Martin                                    FRA          28      7       27 JOT Hugo                                           FRA         116
+                SEBMOTOBIKES CX TEAM
 
-   24 BELLENS Jarno
-         BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
-                                                         BEL   2000        291       56 HAVEL Matej                                CZE   2006      236
+  3         6 HAVERDINGS     David
+              ALPECIN-PREMIER TECH DEVELOPMENT TEAM
+                                                                    NED          29      7       69 KING Carden                                        USA         126
 
-   25 GROSLAMBERT Martin
-         SEBMOTOBIKES CX TEAM
-                                                         FRA   2002        28        57 KRISTL Lukáš
-                                                                                           BRILON RACING TEAM MB
-                                                                                                                                   CZE   2007      290
+  3        73 KONWA Marek                                           POL          30      7       53 LIENERT Patrik                                     CZE         136
 
-   26 GABRIEL Timothé
-         TEAM CX TPM
-                                                         FRA   2002        31        58 JOHN Antonín
-                                                                                           BRILON RACING TEAM MB
-                                                                                                                                   CZE   2008      440
+  3        26 GABRIEL Timothé
+                TEAM CX TPM
+                                                                    FRA          31      7       74 SWIDER Brajan
+                                                                                                       JBG2 TEAM
+                                                                                                                                                       POL         138
 
-   27 JOT Hugo                                           FRA   2001        116       59 JANOUT Jan                                 CZE   2006      580
+  3        31 MIRA BONASTRE Raul                                    ESP          33      7       54 KRATOCHVÍL Václav                                  CZE         142
+                NESTA - MMR CYCLING TEAM
 
-   28 FERY  Florian
-      TEAM CX TPM
-                                                         FRA   2007        167       60 BRUNNER Eric
-                                                                                     CCh COMPETITIVE EDGE RACING
-                                                                                                                                   USA   1998      40
+  3        49 BAŽANT Kryštof                                        CZE          34      7       82 HARVEY Dean                                        IRL         152
+          NCh                                                                                    NCh
 
-   29 LEMARDELE Maxence                                  FRA   2003        296       61 STROHMEYER Andrew
-                                                                                           COMPETITIVE EDGE RACING
-                                                                                                                                   USA   2002      47
-   30 ORTS LLORET Felipe                                 ESP   1995         6        62 MATTERN Miles                              USA   2006      48
-   NCh                                                                                     CXD TREK BIKES
+  3        42 BERTOLINI
+              ALE CX TEAM
+                          Gioele                                    ITA          36      7       28 FERY  Florian
+                                                                                                    TEAM CX TPM
+                                                                                                                                                       FRA         167
 
-   31 MIRA BONASTRE Raul
-         NESTA - MMR CYCLING TEAM
-                                                         ESP   2004        33        63 ZAKRAJSEK Dylan
-                                                                                           COMPETITIVE EDGE RACING
-                                                                                                                                   USA   2003      56
+  4        72 GROENENDAAL Bailey                                    DEN          37      8       45 FABBRO    Ettore
+                                                                                                    ALE CX TEAM
+                                                                                                                                                       ITA         168
 
-   32 FERNANDEZ      GARCIA Martin
-      NESTA - MMR CYCLING TEAM
-                                                         ESP   2008        206       64 CONAWAY Calvin                             USA   2006      74
-   33 KUHN Kevin                                         SUI   1998        12        65 FREDERICK Ben                              USA   1989      88
-   NCh HEIZOMAT - CUBE
+  4        43 CEOLIN   Federico
+              FAS AIRPORT SERVICES - GUERCIOTTI
+                                                                    ITA          38      8       75 DOPPKE    Kacper
+                                                                                                    WIBATECH LUBELSKIE PERLA POLSKI
+                                                                                                                                                       POL         172
+
+  4         7 VAN LIEROP Danny
+                HEIZOMAT - CUBE
+                                                                    NED          39      8       70 JUNGE Frederick                                    USA         174
+
+  4        60 BRUNNER Eric                                          USA          40      8        9 DELNOIJE Remon                                     NED         178
+          CCh COMPETITIVE EDGE RACING
+
+  4        79 VAS Barnabás
+                TEAM UNITED SHIPPING
+                                                                    HUN          41      8       55 JINDRICH Pavel                                     CZE         183
+
+  4        50 FIALA Matyáš                                          CZE          43      8       38 KÖPSEL Jonas
+                                                                                                       RADSPORT NAGEL CX TEAM
+                                                                                                                                                       GER         202
+
+  4        21 VAN DE PUTTE Victor
+              CHARLES LIEGEOIS CX TEAM
+                                                                    BEL          45      8       76 PIETRZAK Piotr                                     POL         204
+
+  4        44 VIEZZI Stefano
+                ALPECIN-PREMIER TECH DEVELOPMENT TEAM
+                                                                    ITA          46      8       32 FERNANDEZ GARCIA Martin
+                                                                                                       NESTA - MMR CYCLING TEAM
+                                                                                                                                                       ESP         206
 
 
 
 
-Timing and results provided by ChronoRace                      Report created TUE 24 NOV 2026 12:42                                             Page 1/2
-FRI 27 NOV 2026                                                                                                                                     CYCLO-CROSS
-Start time: 19:45                                                                                                                                        Men Elite
+Timing and results provided by ChronoRace                           Report created FRI 27 NOV 2026 15:06                                                       Page 7/8
+FRI 27 NOV 2026
+Start time: 19:45                                                                                                                                       Men Elite
 
 
-                                                                       Entries
-    Nr Name / Team                                 NAT   YOB WCS        UCI        Nr Name / Team                                            NAT     YOB WCS       UCI
-    66 BROWN Ethan                                 USA   2008           91         75 DOPPKE    Kacper
-                                                                                      WIBATECH LUBELSKIE PERLA POLSKI
-                                                                                                                                             POL     2006          172
+                                                                           Start Order
+ Line         Nr Name / Team                                     NAT     WCS     UCI    Line       Nr Name / Team                               NAT    WCS    UCI
+   9          56 HAVEL Matej                                     CZE             236
 
-    67 COOTE    Henry
-       TRINITY RACING
-                                                   USA   2006           96         76 PIETRZAK Piotr                                         POL     2007          204
+   9          57 KRISTL Lukáš                                    CZE             290
+                 BRILON RACING TEAM MB
 
-    68 HAYNES Dylan
-         CXD TREK BIKES
-                                                   USA   2007           102        77 GDULA Krzysztof                                        POL     2008          431
+   9          24 BELLENS    Jarno
+                 BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
+                                                                 BEL             291
 
- S- 69 KING Carden                                 USA   2005           126        78 KOCUR Franciszek
-                                                                                        TUFO - PARDUS PROSTEJOV
-                                                                                                                                             POL     2005          637
+   9          29 LEMARDELE Maxence                               FRA             296
 
-    70 JUNGE Frederick                             USA   1996           174        79 VAS Barnabás
-                                                                                        TEAM UNITED SHIPPING
-                                                                                                                                             HUN     2006          41
-    71 RISBERG David                              SWE    1999           76         80 BRUYNSEELS     Dries                                   SVK     2001          201
-   NCh                                                                                BRUDEK DUKLA BRATISLAVA
+   9          77 GDULA Krzysztof                                 POL             431
 
-    72 GROENENDAAL Bailey                          DEN   2003           37         81 BRŠEL   Samuel
-                                                                                      BRUDEK DUKLA BRATISLAVA
-                                                                                                                                             SVK     2001
+   9          58 JOHN Antonín
+                 BRILON RACING TEAM MB
+                                                                 CZE             440
 
-    73 KONWA Marek                                 POL   1990           30         82 HARVEY Dean                                            IRL     2003          152
-                                                                                  NCh
+   9          39 VAN DER LINDE Til                               GER             578
 
-    74 SWIDER Brajan
-         JBG2 TEAM
-                                                   POL   2005           138
+   9          59 JANOUT Jan                                      CZE             580
 
-Entries / Nations: 81 / 16
+  10          78 KOCUR Franciszek
+                 TUFO - PARDUS PROSTEJOV
+                                                                 POL             637
 
+  10          40 WENDEL Tom
+                 BRUDEK DUKLA BRATISLAVA
+                                                                 GER             688
+
+  10          41 KOBER Lukas                                     GER
+
+  10          81 BRŠEL   Samuel
+                 BRUDEK DUKLA BRATISLAVA
+                                                                 SVK
+
+
+
+
+Entries / Nations: 76 / 16
 
   Legend:
-  NCh: National Champion         WCL: World Cup Leader          CCh: Continental Champion            NAT: Nation        N: National Outfit         UCI: UCI Rank
-  YOB: Year of Birth             S: Substitute
+  NCh: National Champion                 WCL: World Cup Leader         CCh: Continental Champion           N: National Outfit   NAT: Nation   UCI: UCI Rank
 
 
 
 
-Timing and results provided by ChronoRace                Report created TUE 24 NOV 2026 12:42                                                                 Page 2/2
+Timing and results provided by ChronoRace                        Report created FRI 27 NOV 2026 15:06                                                     Page 8/8
 

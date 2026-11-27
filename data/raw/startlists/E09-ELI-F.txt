@@ -1,171 +1,138 @@
-FRI 27 NOV 2026                                                                                                                      CYCLO-CROSS
-Start time: 18:15                                                                                                                      Women Elite
+FRI 27 NOV 2026
+Start time: 18:15                                                                                                                                                  Women Elite
 
 
-                                                                          Entries
-   Nr Name / Team                                        NAT   YOB WCS     UCI       Nr Name / Team                            NAT   YOB WCS   UCI
-    1 BRAND Lucinda                                      NED   1989         1        33 *FENIX-PREMIER
-                                                                                           BUKOVSKÁ Barbora                    CZE   2008      26
-  WCh BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS                                                    TECH
-     2 ALVARADO Ceylin del Carmen                        NED   1998         2        34 HLADÍKOVÁ     Katerina                 CZE   2004      42
-   NCh FENIX-PREMIER TECH                                                               BRILON RACING TEAM MB
+                                                                                 Start Order
+ Line         Nr Name / Team                                            NAT    WCS    UCI     Line   Nr Name / Team                                          NAT      WCS        UCI
+   1           1 BRAND Lucinda                                          NED             1      5     18 DURAFFOURG Lauriane                                  FRA                 48
+            WCh BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
 
-     3 VAN ALPHEN Aniek
-         777tv CX TEAM
-                                                         NED   1999         4        35 CZECZINKAROVÁ Jana
-                                                                                           DUKLA WOMEN CYCLING
-                                                                                                                               CZE   1997      69
+   1           2 ALVARADO Ceylin del Carmen                             NED             2      5     28 * ASELTINE Mia                                       USA                 50
+             NCh FENIX-PREMIER TECH                                                                        COMPETITIVE EDGE RACING
 
-     4 BAKKER Manon                                      NED   1999         6        36 DRBOHLAVOVÁ Eliška                     CZE   2003      103
+   1          15 FOUQUENET    Amandine
+                 PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING TEAM
+                                                                        FRA             3      5     19 *TEAM
+                                                                                                           HURTELOUP Adèle
+                                                                                                              CX TPM
+                                                                                                                                                             FRA                 54
 
-     5 VAN DER HEIJDEN Inge
-         CRELAN-CORENDON
-                                                         NED   1999         8        37 * STRÁNSKÁ Adéla                       CZE   2008      153
-         BENTVELD Leonie                                                             38 SCHREIBER Marie
-     6 PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING      NED   2004         9        NCh TEAM SD WORX - PROTIME
-                                                                                                                               LUX   2003      12
-         TEAM
+   1           3 VAN   ALPHEN Aniek                                     NED             4      5     49 VERVLOET    Sterre                                   BEL                 59
+                 777tv CX TEAM                                                                          CHARLES LIEGEOIS CX TEAM
 
-     7 VAN   ANROOIJ Shirin
-       LIDL-TREK
-                                                         NED   2002        10        39 WENZEL   Liv
-                                                                                        SEBMOTOBIKES CX TEAM
-                                                                                                                               LUX   2004      85
+   1           4 BAKKER Manon                                           NED             6      5     50 FRANCK Alicia                                        BEL                 60
 
-     8 BETSEMA Denise
-         DE CEUSTER BOUWKRANEN
-                                                         NED   1993        11        40 VAS Blanka
-                                                                                           LIDL-TREK
-                                                                                                                               HUN   2001      21
+   1          32 ZEMANOVÁ Kristýna                                      CZE             7      5     58 * AZZETTI Nicole                                     ITA                 61
+             NCh CRELAN-CORENDON                                                                           ALE CX TEAM
 
-     9 WORST Annemarie
-         BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
-                                                         NED   1995        36        41 * BRUCHNER Regina
-                                                                                     NCh
-                                                                                                                               HUN   2006      72
+   1           5 VAN DER HEIJDEN Inge
+                   CRELAN-CORENDON
+                                                                        NED             8      5     20 * LAMBERT Zélie
+                                                                                                           SEBMOTOBIKES CX TEAM
+                                                                                                                                                             FRA                 65
 
-   10 *777tv
-         MOLENGRAAF Lauren
-             CX TEAM
-                                                         NED   2005        66        42 KRZYSTALA Zuzanna
-                                                                                     NCh
-                                                                                                                               POL   1990      32
+   1           6 * BENTVELD Leonie                                      NED             9      5     10 * MOLENGRAAF Lauren                                  NED                 66
+                   PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING TEAM                                       777tv CX TEAM
 
-    11 *HEIZOMAT
-          CABACA Mae
-                 - CUBE
-                                                         NED   2007        92        43 BIALEK Antonina                        POL   1998      94
+   2           7 VAN ANROOIJ Shirin                                     NED            10      6     35 CZECZINKAROVÁ Jana                                   CZE                 69
 
- S- 12 MOS Anniek                                        NED   2001        131       44 * AUGUSTYNIAK Aniela                   POL   2008      234
+   2           8 BETSEMA Denise                                         NED            11      6     41 * BRUCHNER Regina                                    HUN                 72
+                   DE CEUSTER BOUWKRANEN                                                             NCh
 
-   13 * MOES Noï                                         NED   2007        148       45 * DUTCZAK Rozalia                      POL   2006      256
+   2          38 SCHREIBER Marie                                        LUX            12      6     39 * WENZEL Liv                                         LUX                 85
+             NCh TEAM SD WORX - PROTIME                                                                    SEBMOTOBIKES CX TEAM
 
-   14 VAN EMPEL Fem
-         SPECIALIZED TMRW
-                                                         NED   2002        190       46 * NIELSEN Mille                        DEN   2007      97
-      FOUQUENET Amandine
-   15 PAUWELS SAUZEN - ALTEZ INDUSTRIEBOUW CYCLING       FRA   2001         3        47 BROUWERS     Julie
-                                                                                        CHARLES LIEGEOIS CX TEAM
-                                                                                                                               BEL   2002      16
-         TEAM
+   2          24 MCGILL Sidney                                          CAN            13      6     59 KRAHL Judith                                         GER                 91
+             NCh                                                                                     NCh
 
-   16 CLAUZEL     Hélène
-      777tv CX TEAM
-                                                         FRA   1998        18        48 *LIDL-TREK
-                                                                                            MOORS Fleur                        BEL   2005      25
+   2          47 BROUWERS Julie
+                   CHARLES LIEGEOIS CX TEAM
+                                                                        BEL            16      6     11 * CABACA Mae
+                                                                                                           HEIZOMAT - CUBE
+                                                                                                                                                             NED                 92
 
-   17 * REVOL Lise
-         FENIX-PREMIER TECH
-                                                         FRA   2008        24        49 VERVLOET Sterre
-                                                                                           CHARLES LIEGEOIS CX TEAM
-                                                                                                                               BEL   2003      59
+   2          54 BRAMATI    Lucia
+                 FAS AIRPORT SERVICES - GUERCIOTTI
+                                                                        ITA            17      6     43 BIALEK Antonina                                      POL                 94
 
-   18 DURAFFOURG     Lauriane
-      SCOTT CREUSE OXYGENE GUERET
-                                                         FRA   2002        48        50 FRANCK Alicia                          BEL   1994      60
+   2          16 CLAUZEL     Hélène
+                 777tv CX TEAM
+                                                                        FRA            18      6     51 *DEPEETERS   Zita
+                                                                                                           CEUSTER BOUWKRANEN
+                                                                                                                                                             BEL                 95
 
-   19 HURTELOUP
-      TEAM CX TPM
-                  Adèle                                  FRA   2004        54        51 *DEPEETERS   Zita
-                                                                                           CEUSTER BOUWKRANEN
-                                                                                                                               BEL   2008      95
+   2          55 CASASOLA Sara                                          ITA            19      6     46 * NIELSEN Mille                                      DEN                 97
+             NCh CRELAN-CORENDON
 
-   20 * LAMBERT Zélie
-         SEBMOTOBIKES CX TEAM
-                                                         FRA   2008        65        52 * SEYNAVE Ilken
-                                                                                           CHARLES LIEGEOIS CX TEAM
-                                                                                                                               BEL   2006      184
-   21 RODRIGUEZ REVERT Sofia                             ESP   1999        20        53 * DE BRUYCKERE Xenna                   BEL   2005      196
-   NCh NESTA - MMR CYCLING TEAM
+   3          21 RODRIGUEZ REVERT Sofia                                 ESP            20      7     36 DRBOHLAVOVÁ Eliška                                   CZE                 103
+             NCh NESTA - MMR CYCLING TEAM
 
-   22 GONZALEZ BLANCO Lucia
-         NESTA - MMR CYCLING TEAM
-                                                         ESP   1990        37        54 BRAMATI Lucia
-                                                                                           TRINX FACTORY TEAM
-                                                                                                                               ITA   2003      17
+   3          40 VAS Blanka
+                   LIDL-TREK
+                                                                        HUN            21      7     23 * LOPEZ BURGOS Ana                                   ESP                 106
 
-   23 * LOPEZ BURGOS Ana                                 ESP   2007        106       55 CASASOLA Sara                          ITA   1999      19
-                                                                                     NCh CRELAN-CORENDON
-   24 MCGILL Sidney                                      CAN   1999        13        56 GARIBOLDI    Rebecca                   ITA   1996      23
-   NCh                                                                                  DE CEUSTER BOUWKRANEN
-   25 * SARKISOV Alyssa                                  USA   2007        30        57 * FERRI Elisa                          ITA   2007      47
-   CCh CXD TREK BIKES                                                                      FAS AIRPORT SERVICES - GUERCIOTTI
+   3          56 GARIBOLDI Rebecca
+                   DE CEUSTER BOUWKRANEN
+                                                                        ITA            23      7     13 * MOES Noï                                           NED                 148
 
-   26 * CUSACK Lidia
-         CXD TREK BIKES
-                                                         USA   2007        41        58 * AZZETTI Nicole
-                                                                                           ALE CX TEAM
-                                                                                                                               ITA   2008      61
+   3          48 * MOORS Fleur                                          BEL            25      7     37 * STRÁNSKÁ Adéla                                     CZE                 153
+                   LIDL-TREK
 
-   27 * MUSGRAVE Kaya
-         COMPETITIVE EDGE RACING
-                                                         USA   2005        43        59 KRAHL Judith
-                                                                                     NCh
-                                                                                                                               GER   2001      91
+   3          33 * BUKOVSKÁ Barbora
+                   FENIX-PREMIER TECH
+                                                                        CZE            26      7     65 * VOJTÍŠKOVÁ Dorota
+                                                                                                           BRUDEK DUKLA BRATISLAVA
+                                                                                                                                                             SVK                 160
 
-   28 ASELTINE   Mia
-      COMPETITIVE EDGE RACING
-                                                         USA   2004        50        60 * DWORATZEK Klara                      GER   2008      288
+   3          30 *CANYON//SRAM
+                    BACKSTEDT Zoe                                       GBR            27      7     52 *CHARLES
+                                                                                                           SEYNAVE Ilken
+                                                                                                                 LIEGEOIS CX TEAM
+                                                                                                                                                             BEL                 184
 
-   29 *CXD
-         BOND Jorja
-           TREK BIKES
-                                                         USA   2006        625       61 HEIGL Nadja
-                                                                                     NCh KTM SPADA POWERED BY BRENTA BRAKES
-                                                                                                                               AUT   1996      39
+   3          64 * CHLADONOVÁ Viktória                                  SVK            29      7     14 VAN EMPEL Fem                                        NED                 190
+             NCh TEAM VISMA | LEASE A BIKE                                                                 SPECIALIZED TMRW
 
-   30 BACKSTEDT Zoe
-         CANYON//SRAM
-                                                         GBR   2004        27        62 * DENK Rosalie                         AUT   2007      192
+   3          25 * SARKISOV Alyssa                                      USA            30      7     62 * DENK Rosalie                                       AUT                 192
+             CCh CXD TREK BIKES
 
-   31 CREES Xan                                          GBR   2000        38        63 * FISCHER Nora                         AUT   2005      211
-   32 ZEMANOVÁ Kristýna                                  CZE   2003         7        64 * CHLADONOVÁ Viktória                  SVK   2006      29
-   NCh CRELAN-CORENDON                                                               NCh TEAM VISMA | LEASE A BIKE
+   4          42 KRZYSTALA Zuzanna                                      POL            32      8     53 * DE BRUYCKERE Xenna                                 BEL                 196
+             NCh
+
+   4           9 WORST Annemarie
+                   BALOISE VERZEKERINGEN - HET POETSBUREAU LIONS
+                                                                        NED            36      8     63 * FISCHER Nora                                       AUT                 211
+
+   4          22 GONZALEZ BLANCO Lucia
+                   NESTA - MMR CYCLING TEAM
+                                                                        ESP            37      8     44 * AUGUSTYNIAK Aniela                                 POL                 234
+
+   4          31 CREES Xan                                              GBR            38      8     45 * DUTCZAK Rozalia                                    POL                 256
+
+   4          61 HEIGL Nadja                                            AUT            39      8     60 * DWORATZEK Klara                                    GER                 288
+             NCh KTM SPADA POWERED BY BRENTA BRAKES
+
+   4          26 * CUSACK Lidia
+                   CXD TREK BIKES
+                                                                        USA            41      8     29 * BOND Jorja
+                                                                                                           CXD TREK BIKES
+                                                                                                                                                             USA                 625
+
+   4          34 * HLADÍKOVÁ Katerina
+                   BRILON RACING TEAM MB
+                                                                        CZE            42      8     66 * JOZKOWICZ Maja                                     POL                 626
+
+   4          27 * MUSGRAVE Kaya                                        USA            43
+                   COMPETITIVE EDGE RACING
 
 
-
-
-Timing and results provided by ChronoRace                      Report created TUE 24 NOV 2026 12:42                                         Page 1/2
-FRI 27 NOV 2026                                                                                                                                  CYCLO-CROSS
-Start time: 18:15                                                                                                                                  Women Elite
-
-
-                                                                          Entries
-    Nr Name / Team                                    NAT   YOB WCS        UCI        Nr Name / Team                                      NAT     YOB WCS       UCI
-    65 *BRUDEK
-          VOJTÍŠKOVÁ Dorota
-               DUKLA BRATISLAVA
-                                                      SVK   2006           160
-
-Entries / Nations: 65 (27 Under 23 *) / 16
-
+Entries / Nations: 63 (32 Under 23 *) / 16
 
   Legend:
-  NCh: National Champion            WCL: World Cup Leader          CCh: Continental Champion           NAT: Nation   N: National Outfit         UCI: UCI Rank
-  YOB: Year of Birth                S: Substitute                  *: Under 23
+  NCh: National Champion                WCL: World Cup Leader          CCh: Continental Champion     N: National Outfit        NAT: Nation   UCI: UCI Rank         *: Under 23
 
 
 
 
-Timing and results provided by ChronoRace                   Report created TUE 24 NOV 2026 12:42                                                           Page 2/2
+Timing and results provided by ChronoRace                               Report created FRI 27 NOV 2026 15:06                                                              Page 4/8
 
